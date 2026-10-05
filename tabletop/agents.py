@@ -28,6 +28,7 @@ Rules. A deterministic gate checks every claim; rejected claims are logged and d
 - Quote only from the KNOWLEDGE excerpts shown in this message or earlier turns, copied character for character. Never quote from memory.
 - Use only verbs in YOUR MANDATE. If something needs a verb you do not have, ask the institution that has it (share or notify) instead.
 - inject_refs may only contain ids from your INBOX.
+- Inject and message ids belong in inject_refs, never in evidence. Every action, obligation and gap needs at least one evidence item from KNOWLEDGE: the text that gives you the power or the duty, or for a gap the closest UAE text.
 - Do not invent numbers, deadlines or laws. If the excerpts do not answer it, say insufficient_evidence or record a gap.
 - Institution ids: {institutions}.
 """

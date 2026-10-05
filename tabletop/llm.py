@@ -47,7 +47,8 @@ class DeepSeek:
                 {"role": "user", "content": user},
             ],
             "response_format": {"type": "json_object"},
-            "max_tokens": 8000,
+            "max_tokens": 32000,  # reasoning tokens count against this; 8000 truncated the JSON
+            "reasoning_effort": "high",
         }
         req = urllib.request.Request(
             DEEPSEEK_URL,

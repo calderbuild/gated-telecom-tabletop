@@ -8,7 +8,7 @@ from fastapi import FastAPI, HTTPException
 from fastapi.responses import FileResponse
 
 from tabletop import audit
-from tabletop.engine import load_scenario
+from tabletop.engine import load_rules, load_scenario
 from tabletop.kb import chunks, load_manifest
 
 ROOT = Path(__file__).resolve().parent.parent
@@ -41,6 +41,7 @@ def run(scenario: str, name: str):
         "chain_ok": ok,
         "chain": msg,
         "scenario": load_scenario(scenario),
+        "rules": load_rules(),
         "events": audit.load(path),
     }
 

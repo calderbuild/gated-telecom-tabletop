@@ -188,6 +188,8 @@ class Twin:
             self.net["cores"][core]["route_filter"] = False
 
     def _rollback_change(self, change_id):
+        if change_id not in self.net["changes"]:
+            raise ValueError(f"no applied change {change_id} to roll back")
         ch = self.net["changes"].pop(change_id)
         self.net["cores"][ch["core"]] = ch["snapshot"]
 

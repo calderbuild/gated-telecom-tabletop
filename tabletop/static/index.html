@@ -1,0 +1,471 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Incident Tabletop Replay</title>
+<meta name="description" content="Replay of a recorded multi-institution telecom incident exercise. Every claim is shown with its gate verdict, its source quote and its place in a hash-chained audit log.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@125,600;125,700&family=IBM+Plex+Mono:wght@400;500&family=Public+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root {
+  --ground: #ecede9;
+  --panel: #f8f8f5;
+  --ink: #1b2225;
+  --ink-2: #4a5357;
+  --rule: #c9ccc4;
+  --reject: #b8322a;
+  --reject-wash: #f6e3e0;
+  --mark: #fff1a8;
+  /* TIA-598 fibre colour code, in order: each institution is one strand */
+  --f-NOC: #1f5fa8;
+  --f-REG: #b0560c;
+  --f-DPA: #2a7a37;
+  --f-CSC: #7a4a26;
+  --f-EMS: #64707a;
+  --f-FIN: #6d3f9c;
+  --display: "Archivo", "Arial Narrow", sans-serif;
+  --body: "Public Sans", system-ui, sans-serif;
+  --mono: "IBM Plex Mono", ui-monospace, monospace;
+}
+* { box-sizing: border-box; }
+body { margin: 0; background: var(--ground); color: var(--ink); font: 15px/1.5 var(--body); }
+h1, h2 { font-family: var(--display); font-stretch: 125%; font-weight: 700; letter-spacing: -0.01em; margin: 0; }
+h1 { font-size: 1.35rem; line-height: 1.2; }
+h2 { font-size: 0.95rem; margin-bottom: 10px; }
+code, .mono { font-family: var(--mono); font-size: 0.82em; }
+button, select { font: inherit; color: inherit; }
+:focus-visible { outline: 2px solid var(--ink); outline-offset: 2px; }
+a { color: var(--f-NOC); }
+
+header { display: grid; grid-template-columns: 1fr auto; gap: 12px 24px; align-items: start; padding: 20px 24px 16px; border-bottom: 1px solid var(--rule); }
+header .sub { color: var(--ink-2); margin-top: 4px; max-width: 72ch; }
+.controls { display: flex; gap: 8px; align-items: center; flex-wrap: wrap; justify-content: flex-end; }
+select, .btn { background: var(--panel); border: 1px solid var(--rule); border-radius: 4px; padding: 6px 10px; cursor: pointer; }
+.btn:hover, select:hover { border-color: var(--ink-2); }
+.btn:active { transform: translateY(1px); }
+.chain { font-family: var(--mono); font-size: 12px; padding: 6px 10px; border-radius: 4px; border: 1px solid var(--ink); white-space: nowrap; }
+.chain.bad { background: var(--reject); color: #fff; border-color: var(--reject); }
+
+.scrub { display: grid; grid-template-columns: auto auto 1fr auto; gap: 12px; align-items: center; padding: 12px 24px; border-bottom: 1px solid var(--rule); background: var(--panel); position: sticky; top: 0; z-index: 3; }
+.scrub input[type=range] { width: 100%; accent-color: var(--ink); }
+.scrub .pos { font-family: var(--mono); font-size: 12px; color: var(--ink-2); min-width: 15ch; text-align: right; }
+.tally { display: flex; gap: 16px; padding: 10px 24px; font-size: 13px; color: var(--ink-2); flex-wrap: wrap; }
+.tally b { color: var(--ink); font-weight: 600; }
+.tally .rj b { color: var(--reject); }
+
+main { display: grid; grid-template-columns: minmax(0, 1fr) 420px; gap: 0; }
+.col { padding: 16px 24px 32px; min-width: 0; }
+.col + aside { border-left: 1px solid var(--rule); }
+section { margin-bottom: 28px; }
+
+/* the bundle */
+.bundle { position: relative; background: var(--panel); border: 1px solid var(--rule); border-radius: 4px; padding: 40px 12px 8px 0; overflow-x: auto; }
+.bundle-inner { position: relative; min-width: 640px; }
+.lane { display: grid; grid-template-columns: 112px 1fr; align-items: center; height: 58px; }
+.lane-label { padding-left: 12px; font-weight: 600; font-size: 13px; display: flex; gap: 8px; align-items: center; }
+.lane-label .sw { width: 10px; height: 10px; border-radius: 50%; background: var(--c); flex: none; }
+.lane-label small { display: block; font-weight: 400; color: var(--ink-2); font-size: 12px; line-height: 1.2; }
+.track { position: relative; height: 100%; }
+.strand { position: absolute; left: 0; right: 0; top: 22px; height: 3px; background: var(--c); border-radius: 2px; }
+.strand.dim { opacity: 0.25; }
+.node { position: absolute; width: 14px; height: 14px; margin-left: -7px; border-radius: 50%; border: 2px solid var(--c); background: var(--c); cursor: pointer; padding: 0; top: 16px; }
+.node.rej { top: 38px; background: var(--panel); border-color: var(--reject); border-radius: 2px; transform: rotate(45deg); width: 11px; height: 11px; margin-left: -5.5px; }
+.node.act { border-radius: 2px; }
+.node.sel { box-shadow: 0 0 0 3px var(--panel), 0 0 0 5px var(--ink); }
+.recv { position: absolute; top: 12px; width: 2px; height: 23px; margin-left: -1px; background: var(--ink); }
+.injline { position: absolute; top: -34px; bottom: 0; width: 0; border-left: 1px dashed var(--rule); pointer-events: none; }
+.injline span { position: absolute; top: var(--ly, 0px); left: 4px; font-family: var(--mono); font-size: 12px; color: var(--ink-2); white-space: nowrap; }
+.cursor { position: absolute; top: -34px; bottom: 0; border-left: 2px solid var(--ink); pointer-events: none; }
+.legend { display: flex; gap: 18px; flex-wrap: wrap; font-size: 12px; color: var(--ink-2); margin-top: 8px; }
+.legend i { display: inline-block; vertical-align: -1px; margin-right: 6px; }
+.lg-acc { width: 11px; height: 11px; border-radius: 50%; background: var(--ink); }
+.lg-act { width: 11px; height: 11px; border-radius: 2px; background: var(--ink); }
+.lg-rej { width: 9px; height: 9px; border: 2px solid var(--reject); transform: rotate(45deg); }
+.lg-recv { width: 2px; height: 12px; background: var(--ink); }
+
+/* inject feed */
+.feed { list-style: none; margin: 0; padding: 0; border-top: 1px solid var(--rule); }
+.feed li { display: grid; grid-template-columns: 84px 1fr; gap: 12px; padding: 10px 0; border-bottom: 1px solid var(--rule); }
+.feed .lbl { font-family: var(--mono); font-size: 12px; }
+.feed .to { display: flex; gap: 4px; margin-top: 4px; flex-wrap: wrap; }
+.chip { font-size: 12px; font-weight: 600; padding: 1px 6px; border-radius: 3px; color: #fff; background: var(--c); }
+.feed .unans { font-size: 12px; color: var(--ink-2); }
+
+/* twin */
+.metrics { display: grid; grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); gap: 8px; }
+.metric { background: var(--panel); border: 1px solid var(--rule); border-radius: 4px; padding: 8px 10px; }
+.metric .k { font-family: var(--mono); font-size: 12px; color: var(--ink-2); overflow-wrap: anywhere; }
+.metric .v { font-family: var(--display); font-stretch: 125%; font-weight: 600; font-size: 1.05rem; margin-top: 2px; }
+.metric.broken { border-color: var(--reject); background: var(--reject-wash); }
+.metric.broken .v { color: var(--reject); }
+.metric .want { font-size: 12px; color: var(--ink-2); }
+.twin-log { font-size: 13px; margin: 10px 0 0; padding-left: 18px; overflow-wrap: anywhere; }
+.twin-log li { margin: 2px 0; }
+
+table { border-collapse: collapse; width: 100%; font-size: 13px; }
+th, td { text-align: left; vertical-align: top; padding: 8px 10px 8px 0; border-bottom: 1px solid var(--rule); }
+th { font-weight: 600; font-size: 12px; color: var(--ink-2); }
+td .q { font-family: var(--mono); font-size: 12px; color: var(--ink-2); display: block; margin-top: 3px; }
+.tag { font-family: var(--mono); font-size: 12px; padding: 1px 5px; border: 1px solid var(--rule); border-radius: 3px; white-space: nowrap; }
+.met-no { color: var(--reject); font-weight: 600; }
+.wrap { overflow-x: auto; }
+
+/* drawer */
+aside { padding: 16px 20px 32px; background: var(--panel); min-width: 0; }
+aside .sticky { position: sticky; top: 64px; max-height: calc(100vh - 80px); overflow-y: auto; }
+.empty { color: var(--ink-2); font-size: 14px; }
+.verdict { display: inline-block; font-family: var(--mono); font-size: 12px; padding: 2px 8px; border-radius: 3px; border: 1px solid var(--ink); }
+.verdict.rej { border-color: var(--reject); color: var(--reject); }
+.claim-head { display: flex; gap: 8px; align-items: center; flex-wrap: wrap; margin-bottom: 8px; }
+.stmt { font-size: 15px; margin: 6px 0 12px; }
+.reasons { margin: 0 0 14px; padding: 0; list-style: none; }
+.reasons li { font-family: var(--mono); font-size: 12px; color: var(--reject); background: var(--reject-wash); padding: 6px 8px; border-radius: 3px; margin-bottom: 4px; }
+dl.rat { display: grid; grid-template-columns: 92px 1fr; gap: 4px 10px; margin: 0 0 14px; font-size: 13px; }
+dl.rat dt { color: var(--ink-2); }
+dl.rat dd { margin: 0; }
+.ev { border: 1px solid var(--rule); border-radius: 4px; margin-bottom: 10px; background: #fff; }
+.ev header { display: block; padding: 8px 10px; border-bottom: 1px solid var(--rule); font-size: 12px; }
+.ev header .st { font-family: var(--mono); font-size: 12px; padding: 0 4px; border: 1px solid var(--rule); border-radius: 2px; margin-left: 4px; }
+.ev .body { font-family: var(--mono); font-size: 12px; line-height: 1.55; padding: 8px 10px; max-height: 240px; overflow-y: auto; white-space: pre-wrap; word-break: break-word; color: var(--ink-2); }
+.ev mark { background: var(--mark); color: var(--ink); padding: 1px 0; }
+.ev .note { font-size: 12px; color: var(--ink-2); padding: 0 10px 8px; }
+.prov { font-family: var(--mono); font-size: 12px; color: var(--ink-2); word-break: break-all; border-top: 1px solid var(--rule); padding-top: 10px; margin-top: 14px; }
+details { margin-top: 12px; font-size: 13px; }
+details summary { cursor: pointer; color: var(--ink-2); }
+details pre { white-space: pre-wrap; font-family: var(--mono); font-size: 12px; max-height: 260px; overflow-y: auto; background: #fff; border: 1px solid var(--rule); padding: 8px; }
+
+footer { padding: 16px 24px 28px; border-top: 1px solid var(--rule); font-size: 12px; color: var(--ink-2); }
+.err { padding: 24px; color: var(--reject); }
+
+@media (max-width: 1080px) {
+  main { grid-template-columns: 1fr; }
+  .col + aside { border-left: 0; border-top: 1px solid var(--rule); }
+  aside .sticky { position: static; max-height: none; }
+}
+@media (max-width: 640px) {
+  header { grid-template-columns: 1fr; padding: 16px; }
+  .controls { justify-content: flex-start; }
+  .scrub { grid-template-columns: auto auto 1fr; padding: 10px 16px; }
+  .scrub .pos { grid-column: 1 / -1; text-align: left; }
+  .col, aside { padding-left: 16px; padding-right: 16px; }
+  .tally { padding: 10px 16px; }
+  .feed li { grid-template-columns: 1fr; gap: 2px; }
+}
+@media (prefers-reduced-motion: reduce) { * { transition: none !important; animation: none !important; } }
+</style>
+</head>
+<body>
+<header>
+  <div>
+    <h1 id="title">Incident tabletop replay</h1>
+    <div class="sub" id="summary">Loading recorded runs...</div>
+  </div>
+  <div class="controls">
+    <label for="run" class="mono" style="color:var(--ink-2)">Run</label>
+    <select id="run" aria-label="Recorded run"></select>
+    <span class="chain" id="chain" title="">chain not checked</span>
+  </div>
+</header>
+
+<div class="scrub" role="group" aria-label="Replay position">
+  <button class="btn" id="play" type="button">Play</button>
+  <button class="btn" id="step" type="button" title="Next claim (key: right arrow)">Next claim</button>
+  <input type="range" id="pos" min="0" max="0" value="0" aria-label="Audit log position">
+  <span class="pos" id="posl">seq 0 / 0</span>
+</div>
+<div class="tally" id="tally" aria-live="polite"></div>
+
+<main>
+  <div class="col">
+    <section>
+      <h2>Institutions and what each one saw</h2>
+      <div class="bundle"><div class="bundle-inner" id="bundle"></div></div>
+      <div class="legend">
+        <span><i class="lg-recv"></i>inject received</span>
+        <span><i class="lg-acc"></i>claim accepted by the gate</span>
+        <span><i class="lg-act"></i>action accepted</span>
+        <span><i class="lg-rej"></i>claim rejected (select for reasons)</span>
+      </div>
+    </section>
+
+    <section>
+      <h2>Network twin</h2>
+      <div class="metrics" id="metrics"></div>
+      <ol class="twin-log" id="twinlog"></ol>
+    </section>
+
+    <section>
+      <h2>Policy gaps found</h2>
+      <div class="wrap"><table id="gaps"></table></div>
+    </section>
+
+    <section>
+      <h2>Notification clocks</h2>
+      <div class="wrap"><table id="clocks"></table></div>
+    </section>
+
+    <section>
+      <h2>Injects</h2>
+      <ul class="feed" id="feed"></ul>
+    </section>
+  </div>
+
+  <aside aria-label="Claim detail">
+    <div class="sticky" id="drawer">
+      <p class="empty">Select a claim on any strand to see what the agent said, the source text it quoted, and why the gate accepted or rejected it.</p>
+    </div>
+  </aside>
+</main>
+<footer id="foot">Read-only replay. The server re-verifies the hash chain each time a run is loaded; nothing here calls a model.</footer>
+
+<script>
+const INST = {
+  NOC: "Operator NOC", REG: "Telecom regulator", DPA: "Data authority",
+  CSC: "Cyber security council", EMS: "Emergency services", FIN: "Central bank"
+};
+const REASON = {
+  SCHEMA: "Claim is malformed", NO_EVIDENCE: "No source quoted", NOT_RETRIEVED: "Cites a chunk this institution was never shown",
+  NOT_VERBATIM: "Quote is not word for word in the cited chunk", SHORT_QUOTE: "Quote too short to prove anything",
+  NOT_VERIFIED: "Source is not verified", NOT_GLOBAL: "Global example is not from a global source",
+  MANDATE: "Action is outside this institution's mandate", INJECT: "Cites an inject this institution never received",
+  DEADLINE: "Deadline does not match the rule table", ROUTE: "Unknown recipient"
+};
+const $ = (id) => document.getElementById(id);
+const esc = (s) => String(s ?? "").replace(/[&<>"']/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]));
+const fmt = (v) => typeof v === "boolean" ? (v ? "yes" : "no") : typeof v === "number" && !Number.isInteger(v) ? v.toFixed(4) : String(v);
+
+let R = null;      // loaded run
+let pos = 0;       // current seq (inclusive)
+let selected = null;
+let timer = null;
+
+async function getJSON(url) {
+  const r = await fetch(url);
+  if (!r.ok) throw new Error(`${url}: ${r.status}`);
+  return r.json();
+}
+
+async function init() {
+  let runs;
+  try { runs = await getJSON("/api/runs"); }
+  catch (e) { $("summary").innerHTML = `<span class="err">Could not reach the server (${esc(e.message)}). Start it with <code>python -m tabletop serve</code>.</span>`; return; }
+  if (!runs.length) { $("summary").textContent = "No recorded runs in runs/. Record one with python -m tabletop run S1 --out runs/S1/run1.jsonl."; return; }
+  const sel = $("run");
+  sel.innerHTML = runs.map((r) => `<option value="${esc(r.scenario)}/${esc(r.name)}">${esc(r.scenario)} / ${esc(r.name)}${r.chain_ok ? "" : " (chain broken)"}</option>`).join("");
+  const want = new URLSearchParams(location.search).get("run");
+  if (want && runs.some((r) => `${r.scenario}/${r.name}` === want)) sel.value = want;
+  sel.onchange = () => load(sel.value).catch(showErr);
+  load(sel.value).catch(showErr);
+}
+
+function showErr(e) { $("summary").innerHTML = `<span class="err">Could not load this run (${esc(e.message)}).</span>`; }
+
+async function load(key) {
+  stop();
+  const [s, n] = key.split("/");
+  const d = await getJSON(`/api/runs/${encodeURIComponent(s)}/${encodeURIComponent(n)}`);
+  const ev = d.events;
+  const insts = d.scenario.institutions;
+  const claims = ev.filter((e) => e.type === "claim" || e.type === "baseline_claim");
+  const calls = Object.fromEntries(ev.filter((e) => e.type === "model_call").map((e) => [e.data.tag + "#" + e.seq, e]));
+  R = { d, ev, insts, claims, calls, sc: d.scenario, rules: d.rules, last: ev.length - 1 };
+  history.replaceState(null, "", `?run=${encodeURIComponent(key)}`);
+  $("title").textContent = d.scenario.title;
+  $("summary").textContent = d.scenario.summary || "";
+  const ch = $("chain");
+  ch.textContent = d.chain_ok ? `chain verified · ${ev.length} events` : "chain broken";
+  ch.className = "chain" + (d.chain_ok ? "" : " bad");
+  ch.title = d.chain;
+  const start = ev[0].data;
+  $("foot").innerHTML = `Model: <code>${esc(start.model)}</code> via ${esc(start.provider)} · HITL: ${esc(start.hitl_policy || "n/a")} · answer key sha256 <code>${esc((start.hashes?.answer_key || "").slice(0, 16))}</code> · git <code>${esc((start.git_head || "").slice(0, 10))}</code>. ${esc(d.chain)}. Read-only replay; nothing here calls a model.`;
+  $("pos").max = R.last;
+  selected = null;
+  $("drawer").innerHTML = `<p class="empty">Select a claim on any strand to see what the agent said, the source text it quoted, and why the gate accepted or rejected it.</p>`;
+  setPos(R.last);
+  renderFeed();
+}
+
+function setPos(p) {
+  pos = Math.max(0, Math.min(R.last, p));
+  $("pos").value = pos;
+  $("posl").textContent = `seq ${pos} / ${R.last}`;
+  render();
+}
+
+const upTo = (type) => R.ev.filter((e) => e.seq <= pos && (!type || e.type === type));
+
+function render() {
+  renderTally();
+  renderBundle();
+  renderTwin();
+  renderGaps();
+  renderClocks();
+}
+
+function renderTally() {
+  const c = R.claims.filter((e) => e.seq <= pos);
+  const rej = c.filter((e) => !e.data.accepted);
+  const why = {};
+  rej.forEach((e) => e.data.reasons.forEach((r) => { const k = r.split(":")[0]; why[k] = (why[k] || 0) + 1; }));
+  const parts = Object.entries(why).sort((a, b) => b[1] - a[1]).map(([k, v]) => `${k} ${v}`).join(", ");
+  $("tally").innerHTML = `<span><b>${c.length}</b> claims proposed</span><span><b>${c.length - rej.length}</b> accepted</span><span class="rj"><b>${rej.length}</b> rejected${parts ? ` (${esc(parts)})` : ""}</span>`;
+}
+
+function renderBundle() {
+  const x = (seq) => `${(seq / R.last) * 100}%`;
+  const injects = R.ev.filter((e) => e.type === "inject_released");
+  const routed = R.ev.filter((e) => e.type === "message_routed");
+  let lines = injects.map((e, i) => `<div class="injline" style="--ly:${(i % 2) * 15}px;left:calc(112px + (100% - 112px) * ${e.seq / R.last})"><span>${esc(e.data.inject.label)}</span></div>`).join("");
+  lines += `<div class="cursor" style="left:calc(112px + (100% - 112px) * ${pos / R.last})"></div>`;
+  const lanes = R.insts.map((a) => {
+    const recv = injects.filter((e) => e.data.inject.to.includes(a) && e.seq <= pos).map((e) => `<span class="recv" style="left:${x(e.seq)}" title="${esc(e.data.inject.id)} received"></span>`)
+      .concat(routed.filter((e) => e.data.to.includes(a) && e.seq <= pos).map((e) => `<span class="recv" style="left:${x(e.seq)};opacity:.45" title="message from ${esc(e.data.from_)}"></span>`)).join("");
+    const nodes = R.claims.filter((e) => e.data.agent === a && e.seq <= pos).map((e) => {
+      const c = e.data.claim, ok = e.data.accepted;
+      const label = `${a} ${c.type}${c.verb ? " " + c.verb : ""}: ${ok ? "accepted" : "rejected"}`;
+      return `<button type="button" class="node${ok ? "" : " rej"}${c.type === "action" && ok ? " act" : ""}${selected === e.seq ? " sel" : ""}" style="left:${x(e.seq)}" data-seq="${e.seq}" aria-label="${esc(label)}" title="${esc(label)}"></button>`;
+    }).join("");
+    const saw = injects.some((e) => e.data.inject.to.includes(a) && e.seq <= pos);
+    return `<div class="lane" style="--c:var(--f-${a})"><div class="lane-label"><span class="sw"></span><span>${a}<small>${esc(INST[a] || "")}</small></span></div><div class="track"><div class="strand${saw ? "" : " dim"}"></div>${recv}${nodes}</div></div>`;
+  }).join("");
+  $("bundle").innerHTML = lines + lanes;
+  $("bundle").querySelectorAll(".node").forEach((b) => b.onclick = () => select(+b.dataset.seq));
+}
+
+function renderTwin() {
+  const inv = upTo("invariants").concat(upTo("state_change"), upTo("twin_event"), upTo("run_end"));
+  const latest = inv.sort((a, b) => a.seq - b.seq).pop();
+  const m = latest ? (latest.data.metrics || latest.data.change?.after || {}) : {};
+  const wanted = R.sc.invariants;
+  $("metrics").innerHTML = wanted.map((w) => {
+    const v = m[w.metric];
+    const holds = v === undefined ? true : (w.op === "==" ? v === w.value : w.op === ">=" ? v >= w.value : w.op === "<=" ? v <= w.value : true);
+    return `<div class="metric${holds ? "" : " broken"}"><div class="k">${esc(w.metric)}</div><div class="v">${v === undefined ? "–" : esc(fmt(v))}</div><div class="want">needs ${esc(w.op)} ${esc(fmt(w.value))}</div></div>`;
+  }).join("");
+  const steps = R.ev.filter((e) => e.seq <= pos && (e.type === "twin_event" || e.type === "state_change"));
+  $("twinlog").innerHTML = steps.map((e) => {
+    const who = e.type === "twin_event" ? `exercise control (${esc(e.data.inject)})` : esc(e.data.agent);
+    const err = e.data.change?.error ? ` <span class="met-no">refused: ${esc(e.data.change.error)}</span>` : "";
+    return `<li><code>seq ${e.seq}</code> ${who}: <code>${esc(e.data.verb)}</code> ${esc(JSON.stringify(e.data.params))}${err}</li>`;
+  }).join("") || `<li class="empty">No changes applied yet.</li>`;
+}
+
+function ruleCell(id) {
+  const r = R.rules[id];
+  if (!r) return esc(id);
+  return `${esc(r.jurisdiction)} <span class="tag">${r.hours == null ? "no fixed time" : esc(r.hours) + " h"}</span><span class="q">${esc(r.doc_id)} ${esc(r.ref)}: "${esc(r.quote)}"</span>`;
+}
+
+function renderGaps() {
+  const gaps = upTo("gap_detected");
+  if (!gaps.length) { $("gaps").innerHTML = `<tr><td class="empty">Gaps are derived at the debrief. Move the replay to the end.</td></tr>`; return; }
+  const byseq = Object.fromEntries(R.claims.map((e) => [e.seq, e]));
+  const rows = gaps.map((e) => {
+    const g = e.data;
+    let prec = "";
+    if (g.global_rules) prec = g.global_rules.map(ruleCell).join("<br>");
+    else if (g.claim_seq != null && byseq[g.claim_seq]) prec = byseq[g.claim_seq].data.claim.evidence.map((x) => `<a href="#" data-seq="${g.claim_seq}">${esc(x.chunk_id)}</a>`).join("<br>");
+    else if (g.expected_owner) prec = `expected owner: ${esc(g.expected_owner)}`;
+    const uae = g.uae_rule ? ruleCell(g.uae_rule) : "";
+    return `<tr><td><span class="tag">${esc(g.gap_type)}</span><span class="q">${esc(g.origin)}</span></td><td>${esc(g.description)}${uae ? `<span class="q">${uae}</span>` : ""}</td><td>${prec}</td></tr>`;
+  }).join("");
+  $("gaps").innerHTML = `<thead><tr><th>Type</th><th>Gap</th><th>Global comparison</th></tr></thead><tbody>${rows}</tbody>`;
+  $("gaps").querySelectorAll("a[data-seq]").forEach((a) => a.onclick = (ev) => { ev.preventDefault(); select(+a.dataset.seq); });
+}
+
+function renderClocks() {
+  const cc = upTo("clock_check");
+  if (!cc.length) { $("clocks").innerHTML = `<tr><td class="empty">Clocks are checked at the debrief.</td></tr>`; return; }
+  const rows = cc.flatMap((e) => e.data.rules.map((r, i) => `<tr>${i === 0 ? `<td rowspan="${e.data.rules.length}"><code>${esc(e.data.check)}</code><span class="q">${e.data.notified_after_min == null ? "never notified" : `notified after ${esc(e.data.notified_after_min)} min`}</span></td>` : ""}<td>${esc(r.jurisdiction)}</td><td>${r.hours == null ? "no fixed time" : esc(r.hours) + " h"}</td><td>${r.hours == null ? "no clock to check" : e.data.notified_after_min == null ? "not notified during the exercise" : r.met == null ? "cannot be checked" : r.met ? "met" : `<span class="met-no">missed</span>`}</td></tr>`)).join("");
+  $("clocks").innerHTML = `<thead><tr><th>Duty</th><th>Jurisdiction</th><th>Deadline</th><th>This run</th></tr></thead><tbody>${rows}</tbody>`;
+}
+
+function renderFeed() {
+  const ua = new Set(R.sc.injects.filter((i) => i.unanswerable).map((i) => i.id));
+  $("feed").innerHTML = R.sc.injects.map((i) => `<li><div class="lbl">${esc(i.label)}<br><code>${esc(i.id)}</code></div><div>${esc(i.text)}<div class="to">${i.to.map((a) => `<span class="chip" style="--c:var(--f-${a})">${a}</span>`).join("")}${ua.has(i.id) || i.unanswerable ? `<span class="unans">no source in the KB answers this; abstaining is correct</span>` : ""}</div></div></li>`).join("");
+}
+
+// ---- drawer ----
+function normMap(text) {
+  // mirrors tabletop/kb.py norm(): NFKC, unify quotes/dashes, drop soft hyphen, collapse whitespace, casefold
+  const MAP = { "‘": "'", "’": "'", "“": '"', "”": '"', "–": "-", "—": "-", "­": "" };
+  let out = "", idx = [], space = false;
+  for (let i = 0; i < text.length; i++) {
+    let c = text[i].normalize("NFKC");
+    c = MAP[c] ?? c;
+    if (/^\s+$/.test(c)) { if (!space && out.length) { out += " "; idx.push(i); } space = true; continue; }
+    space = false;
+    for (const ch of c.toLowerCase()) { out += ch; idx.push(i); }
+  }
+  return { out, idx };
+}
+function norm(s) { return normMap(s).out.trim(); }
+
+function highlight(text, quote) {
+  const { out, idx } = normMap(text);
+  const q = norm(quote);
+  const at = q ? out.indexOf(q) : -1;
+  if (at < 0) return { html: esc(text), found: false };
+  const a = idx[at], b = idx[at + q.length - 1] + 1;
+  return { html: esc(text.slice(0, a)) + "<mark>" + esc(text.slice(a, b)) + "</mark>" + esc(text.slice(b)), found: true };
+}
+
+async function select(seq) {
+  selected = seq;
+  renderBundle();
+  const e = R.ev[seq];
+  const d = e.data, c = d.claim, ok = d.accepted;
+  const call = R.ev.slice(0, seq).reverse().find((x) => x.type === "model_call" && x.data.tag === d.tag);
+  const head = `<div class="claim-head"><span class="chip" style="--c:var(--f-${esc(d.agent)})">${esc(d.agent)}</span><span class="tag">${esc(c.type)}${c.verb ? " · " + esc(c.verb) : ""}${c.gap_type ? " · " + esc(c.gap_type) : ""}</span><span class="verdict${ok ? "" : " rej"}">${ok ? "accepted" : "rejected"}</span></div>`;
+  const stmt = c.statement || (c.verb ? `${c.verb} ${JSON.stringify(c.params || {})}` : "");
+  const reasons = ok ? "" : `<ul class="reasons">${d.reasons.map((r) => `<li>${esc(REASON[r.split(":")[0]] || r)}<br><code>${esc(r)}</code></li>`).join("")}</ul>`;
+  const rat = c.rationale || {};
+  const ratHtml = ["observation", "rule", "inference"].filter((k) => rat[k]).map((k) => `<dt>${k}</dt><dd>${esc(rat[k])}</dd>`).join("");
+  const refs = (c.inject_refs || []).map((r) => `<code>${esc(r)}</code>`).join(" ");
+  const evs = c.evidence || [];
+  $("drawer").innerHTML = head + `<p class="stmt">${esc(stmt)}</p>` + reasons +
+    (ratHtml ? `<h2>Rationale given</h2><dl class="rat">${ratHtml}${refs ? `<dt>injects cited</dt><dd>${refs}</dd>` : ""}${c.deadline_hours != null ? `<dt>deadline</dt><dd>${esc(c.deadline_hours)} h</dd>` : ""}</dl>` : "") +
+    `<h2>Evidence quoted</h2><div id="evs">${evs.length ? evs.map((x, i) => `<div class="ev" id="ev${i}"><header><code>${esc(x.chunk_id)}</code> loading...</header></div>`).join("") : `<p class="empty">No evidence attached.</p>`}</div>` +
+    (call && call.data.reasoning ? `<details><summary>Model-reported reasoning text (as returned by the API; not a verified chain of thought)</summary><pre>${esc(call.data.reasoning)}</pre></details>` : "") +
+    `<div class="prov">seq ${e.seq} · ${esc(e.type)}<br>hash ${esc(e.hash)}<br>prev ${esc(e.prev_hash)}${call ? `<br>model call ${esc(d.tag)} · request sha256 ${esc(call.data.request_sha256)}` : ""}</div>`;
+  evs.forEach(async (x, i) => {
+    const box = $("ev" + i);
+    try {
+      const ch = await getJSON(`/api/chunk/${encodeURIComponent(x.chunk_id)}`);
+      if (selected !== seq) return;
+      const h = highlight(ch.text, x.quote || "");
+      const src = ch.source;
+      box.innerHTML = `<header><b>${esc(src.title)}</b><span class="st">${esc(src.status)}</span><br>${esc(src.issuer)} · ${esc(ch.ref)} · <code>${esc(x.chunk_id)}</code>${src.url ? ` · <a href="${esc(src.url)}" target="_blank" rel="noopener">source</a>` : ""}</header><div class="body">${h.html}</div>${h.found ? "" : `<div class="note">The quoted text <code>"${esc((x.quote || "").slice(0, 160))}"</code> is not in this chunk as shown.</div>`}`;
+      const mk = box.querySelector("mark"), body = box.querySelector(".body");
+      if (mk) body.scrollTop = mk.offsetTop - body.offsetTop - 40;
+    } catch {
+      box.innerHTML = `<header><code>${esc(x.chunk_id)}</code></header><div class="note">This chunk id does not exist in the KB. Quoted: "${esc(x.quote || "")}"</div>`;
+    }
+  });
+  $("drawer").scrollTop = 0;
+}
+
+// ---- replay controls ----
+function stop() { clearInterval(timer); timer = null; $("play").textContent = "Play"; }
+$("play").onclick = () => {
+  if (timer) return stop();
+  if (pos >= R.last) setPos(0);
+  $("play").textContent = "Pause";
+  timer = setInterval(() => { if (pos >= R.last) return stop(); setPos(pos + 1); }, 120);
+};
+function nextClaim() {
+  const n = R.claims.find((e) => e.seq > pos) || R.claims[0];
+  if (n) { setPos(n.seq); select(n.seq); }
+}
+$("step").onclick = () => { stop(); nextClaim(); };
+$("pos").oninput = (e) => { stop(); setPos(+e.target.value); };
+document.addEventListener("keydown", (e) => {
+  if (e.target.matches("input, select, textarea")) return;
+  if (e.key === "ArrowRight") { e.preventDefault(); stop(); nextClaim(); }
+});
+init();
+</script>
+</body>
+</html>
