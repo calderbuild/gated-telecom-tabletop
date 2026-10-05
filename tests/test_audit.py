@@ -8,6 +8,7 @@ def test_chain_verifies_and_detects_tampering(tmp_path):
     log = AuditLog(path)
     for i in range(5):
         log.append("claim", n=i, text="x" * i)
+    log.append("run_end")
     assert verify(path)[0]
 
     lines = path.read_text().splitlines()
@@ -31,5 +32,24 @@ def test_deleting_a_line_breaks_the_chain(tmp_path):
 
 def test_line_separator_inside_a_value_does_not_split_the_event(tmp_path):
     path = tmp_path / "log.jsonl"
-    AuditLog(path).append("claim", text="before after")
+    log = AuditLog(path)
+    log.append("claim", text="before after")
+    log.append("run_end")
     assert verify(path)[0]
+
+
+def test_cut_tail_is_not_a_complete_log(tmp_path):
+    path = tmp_path / "log.jsonl"
+    log = AuditLog(path)
+    log.append("claim", n=0)
+    log.append("run_end")
+    lines = path.read_text().splitlines()
+    path.write_text(lines[0] + "\n")
+    ok, msg = verify(path)
+    assert not ok and "no run_end" in msg
+
+
+def test_non_event_line_is_reported_not_raised(tmp_path):
+    path = tmp_path / "log.jsonl"
+    path.write_text("[1, 2]\n")
+    assert not verify(path)[0]

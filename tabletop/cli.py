@@ -39,7 +39,9 @@ def cmd_kb(args):
         print("\n".join(problems) or "all sources: text present, raw hashes match")
         return 1 if any("mismatch" in p or "missing text" in p for p in problems) else 0
     elif args.action == "fetch":
-        print("\n".join(kb.fetch()) or "nothing to fetch")
+        report = kb.fetch()
+        print("\n".join(report) or "nothing to fetch")
+        return 1 if any("FAILED" in r for r in report) else 0
     elif args.action == "search":
         for c in kb.Index().search(args.query, 8):
             print(f"{c['score']:7.2f} {c['chunk_id']:32} {c['ref'][:60]}")
@@ -80,6 +82,12 @@ def cmd_check_data(args):
     return 1 if bad else 0
 
 
+def fresh(out: Path) -> Path:
+    if out.exists():
+        raise SystemExit(f"{out} already exists; recorded logs are never overwritten. Pick another --out.")
+    return out
+
+
 def cmd_run(args):
     scenario = load_scenario(args.scenario)
     out = (
@@ -87,7 +95,7 @@ def cmd_run(args):
         if args.out
         else ROOT / "runs" / "scratch" / f"{args.scenario}-{args.provider}.jsonl"
     )
-    path = Run(scenario, provider_for(args, scenario), out).run()
+    path = Run(scenario, provider_for(args, scenario), fresh(out)).run()
     print(path, audit.verify(path)[1])
     return 0
 
@@ -119,7 +127,7 @@ def cmd_baseline(args):
         if args.out
         else ROOT / "runs" / "scratch" / f"{args.scenario}-baseline.jsonl"
     )
-    path = baseline(scenario, provider_for(args, scenario), out)
+    path = baseline(scenario, provider_for(args, scenario), fresh(out))
     print(path, audit.verify(path)[1])
     return 0
 

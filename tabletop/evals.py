@@ -9,6 +9,7 @@ from collections import Counter
 from pathlib import Path
 from statistics import mean
 
+from tabletop import audit
 from tabletop.audit import load, verify
 from tabletop.engine import DATA, load_json
 from tabletop.kb import chunks, load_manifest
@@ -69,6 +70,7 @@ def claims_of(events: list[dict]) -> list[dict]:
             "claim": e["data"]["claim"],
             "accepted": e["data"]["accepted"],
             "reasons": e["data"]["reasons"],
+            "seq": e["seq"],
         }
         for e in events
         if e["type"] in ("claim", "baseline_claim")
@@ -99,6 +101,13 @@ def score_run(path: Path, key: dict) -> dict:
         )
     ]
     actions = [c for c in cl if c["claim"].get("type") == "action"]
+    # an accepted action the twin refused (e.g. rolling back a change never applied) did nothing
+    twin_failed = {
+        e["data"]["claim_seq"]
+        for e in events
+        if e["type"] == "state_change" and e["data"]["change"]["error"]
+    }
+    effective = [c for c in acc if c["seq"] not in twin_failed]
     gaps_acc = [c for c in acc if c["claim"].get("type") == "gap"]
     mech = [
         e["data"]
@@ -141,7 +150,8 @@ def score_run(path: Path, key: dict) -> dict:
         "inject_boundary_attempts": sum(
             any(r.startswith("INJECT") for r in c["reasons"]) for c in cl
         ),
-        "action_recall": recall(key["actions"], acc, match_action)[:2],
+        "action_recall": recall(key["actions"], effective, match_action)[:2],
+        "actions_failed_in_twin": len(twin_failed),
         "obligation_recall": recall(key["obligations"], acc, match_obligation)[:2],
         "gap_recall_agent": agent_gap_hits[:2],
         "gap_recall_any": (
@@ -185,7 +195,21 @@ def frac(pair) -> float:
     return pair[0] / pair[1] if pair[1] else 0.0
 
 
+def check_logs(scenarios: list[str]) -> list[str]:
+    """Every scored log must verify: an incomplete or tampered run would skew the numbers."""
+    bad = []
+    for sid in scenarios:
+        for p in sorted((ROOT / "runs" / sid).glob("*.jsonl")):
+            ok, msg = audit.verify(p)
+            if not ok:
+                bad.append(f"{p.relative_to(ROOT)}: {msg}")
+    return bad
+
+
 def evaluate(scenarios: list[str]) -> dict:
+    bad = check_logs(scenarios)
+    if bad:
+        raise SystemExit("cannot evaluate, these logs do not verify:\n" + "\n".join(bad))
     out = {"scenarios": {}, "kb": kb_stats()}
     for sid in scenarios:
         key = load_json(DATA / "keys" / f"{sid}.json")

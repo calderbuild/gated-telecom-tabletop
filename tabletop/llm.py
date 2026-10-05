@@ -4,11 +4,13 @@ Providers:
   deepseek  OpenAI-compatible chat API (default), key DEEPSEEK_API_KEY
   replay    returns responses recorded in an earlier audit log, in order, so a run can be
             re-executed and its gate verdicts compared byte for byte
-  mock      deterministic fixture for tests and selftest (see agents.mock_response)
+  mock      deterministic fixture for tests and selftest (see agents.mock_responder)
 """
 
+import http.client
 import json
 import os
+import random
 import time
 import urllib.error
 import urllib.request
@@ -58,18 +60,21 @@ class DeepSeek:
                 "Content-Type": "application/json",
             },
         )
+        t0 = time.time()
         for attempt in range(4):
-            t0 = time.time()
             try:
                 resp = json.loads(urllib.request.urlopen(req, timeout=600).read())
+                if not resp.get("choices"):
+                    raise ValueError(f"response without choices: {str(resp)[:200]}")
                 break
-            except (urllib.error.URLError, TimeoutError) as e:
+            # connection resets and cut-off bodies surface as HTTPException/OSError/JSON errors, not URLError
+            except (OSError, http.client.HTTPException, ValueError) as e:
                 status = getattr(e, "code", None)
                 if attempt == 3 or (
                     status is not None and status < 500 and status != 429
                 ):
                     raise
-                time.sleep(5 * 2**attempt)
+                time.sleep(5 * 2**attempt + random.uniform(0, 5))
         msg = resp["choices"][0]["message"]
         return {
             "text": msg.get("content") or "",
@@ -92,6 +97,8 @@ class Replay:
                 self.calls.setdefault(ev["data"]["tag"], []).append(ev["data"])
 
     def complete(self, system: str, user: str, tag: str) -> dict:
+        if not self.calls.get(tag):
+            raise SystemExit(f"replay diverged at {tag}: the recorded run made no such model call")
         recorded = self.calls[tag].pop(0)
         if recorded["request_sha256"] != sha256({"system": system, "user": user}):
             raise SystemExit(

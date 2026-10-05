@@ -9,7 +9,7 @@ Read before working:
 
 ## Hard rules for this repo
 - Deterministic code decides; the LLM only retrieves, proposes and explains. No claim counts unless it passes the gates (verbatim quote match, mandate allow-list, inject provenance).
-- Never claim a raw chain of thought. Claude 5.x thinking is hidden or summarized, so traces are the agent's structured rationale plus the audit log. Say exactly that in the report.
+- Never claim a raw chain of thought. The model's reasoning text (DeepSeek returns one) is not a verified chain of thought, so traces are the agent's structured rationale, the API-returned reasoning text labelled as such, and the audit log. Say exactly that in the report.
 - Every number in the report or the demo comes from a CLI run whose output is committed. No hand-typed metrics.
 - The demo replays a recorded, hash-verified run by default; live mode is optional.
 - Knowledge base: official sources only, each pinned by SHA-256 with a URL and section reference. Mark anything unverified as unverified. Never fabricate a clause.

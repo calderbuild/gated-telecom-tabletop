@@ -74,3 +74,24 @@ def test_gap_global_example_must_be_global_and_verified():
 
 def test_share_to_self_is_rejected():
     assert any(r.startswith("ROUTE") for r in check({"type": "share", "to": ["NOC"], "inject_refs": ["S1-I1"]}, CTX))
+
+
+def test_malformed_model_shapes_are_rejected_not_raised():
+    shapes = [
+        claim(evidence="the Licensee shall inform the TDRA as soon as possible"),
+        claim(evidence=[None]),
+        claim(evidence=[{"chunk_id": ["UAE-LIC#1"], "quote": "the Licensee shall inform the TDRA"}]),
+        claim(type=["action"]),
+        claim(verb=["notify"]),
+        claim(inject_refs="S1-I2"),
+        claim(params={"to": ["REG"]}),
+        {"type": "share", "to": "REG", "inject_refs": ["S1-I2"]},
+        {"type": "gap", "gap_type": ["no_rule"], "inject_refs": ["S1-I2"], "evidence": EV},
+    ]
+    for c in shapes:
+        assert check(c, CTX), c
+
+
+def test_notify_to_self_or_unknown_is_a_route_error():
+    assert any(r.startswith("ROUTE") for r in check(claim(params={"to": "NOC"}), CTX))
+    assert any(r.startswith("ROUTE") for r in check(claim(params={"to": "FBI"}), CTX))

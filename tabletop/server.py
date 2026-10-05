@@ -37,12 +37,16 @@ def run(scenario: str, name: str):
     if path.parent.parent != RUNS.resolve() or not path.exists():
         raise HTTPException(404, "no such run")
     ok, msg = audit.verify(path)
+    try:
+        events = audit.load(path)
+    except json.JSONDecodeError:
+        raise HTTPException(422, f"log is not valid JSONL: {msg}")
     return {
         "chain_ok": ok,
         "chain": msg,
         "scenario": load_scenario(scenario),
         "rules": load_rules(),
-        "events": audit.load(path),
+        "events": events,
     }
 
 

@@ -2,7 +2,8 @@
 
 Each line is one event. Its hash is the SHA-256 of the canonical JSON of
 {seq, prev_hash, type, data}; changing any byte of an earlier line breaks every
-later link, and `verify` reports the first broken one.
+later link, and `verify` reports the first broken one. A complete log ends with a
+run_end event, so a cut-off tail is reported too.
 """
 
 import hashlib
@@ -34,7 +35,6 @@ class AuditLog:
         self.path.write_text("")
         self.seq = 0
         self.prev = GENESIS
-        self.events = []
 
     def append(self, type_: str, **data) -> dict:
         h = event_hash(self.seq, self.prev, type_, data)
@@ -47,7 +47,6 @@ class AuditLog:
         }
         with self.path.open("a") as f:
             f.write(json.dumps(ev, ensure_ascii=False) + "\n")
-        self.events.append(ev)
         self.seq += 1
         self.prev = h
         return ev
@@ -69,6 +68,8 @@ def verify(path: Path) -> tuple[bool, str]:
     if not events:
         return False, "empty log"
     for i, ev in enumerate(events):
+        if not isinstance(ev, dict) or not {"type", "data"} <= ev.keys():
+            return False, f"line {i + 1}: not an audit event"
         if ev.get("seq") != i:
             return False, f"line {i + 1}: seq {ev.get('seq')} != {i}"
         if ev.get("prev_hash") != prev:
@@ -76,4 +77,7 @@ def verify(path: Path) -> tuple[bool, str]:
         if event_hash(i, prev, ev["type"], ev["data"]) != ev.get("hash"):
             return False, f"seq {i}: content does not match its hash"
         prev = ev["hash"]
+    if events[-1]["type"] != "run_end":
+        # the chain cannot see a cut tail, so a complete run must end with run_end
+        return False, f"{len(events)} events, chain intact but no run_end (run aborted, still running, or tail cut)"
     return True, f"{len(events)} events, chain intact, head {prev[:16]}"

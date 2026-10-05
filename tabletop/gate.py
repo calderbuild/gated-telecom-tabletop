@@ -13,7 +13,7 @@ Checks (reason codes):
   MANDATE       action verb is not in this institution's mandate
   INJECT        claim cites an inject or message this agent has not received
   DEADLINE      deadline_hours does not match the rule table for the cited source
-  ROUTE         share target is unknown or is the agent itself
+  ROUTE         share or notify target is unknown, malformed, or the agent itself
 """
 
 from tabletop.kb import norm
@@ -29,9 +29,14 @@ def quote_ok(quote: str, text: str) -> bool:
 
 
 def _evidence(items, ctx, need_verified, need_global=False):
+    if not isinstance(items, list):
+        return ["SCHEMA:evidence is not a list"]
     reasons = []
     for ev in items:
-        cid, quote = ev.get("chunk_id"), ev.get("quote", "")
+        if not (isinstance(ev, dict) and isinstance(ev.get("chunk_id"), str) and isinstance(ev.get("quote", ""), str)):
+            reasons.append("SCHEMA:evidence item needs string chunk_id and quote")
+            continue
+        cid, quote = ev["chunk_id"], ev.get("quote", "")
         chunk = ctx["chunks"].get(cid)
         if chunk is None or cid not in ctx["retrieved"]:
             reasons.append(f"NOT_RETRIEVED:{cid}")
@@ -56,10 +61,12 @@ def check(claim: dict, ctx: dict) -> list[str]:
     received), chunks, manifest, rules.
     """
     t = claim.get("type")
-    if t not in CLAIM_TYPES:
+    if not isinstance(t, str) or t not in CLAIM_TYPES:
         return [f"SCHEMA:type={t}"]
-    reasons = []
     refs = claim.get("inject_refs") or []
+    if not (isinstance(refs, list) and all(isinstance(r, str) for r in refs)):
+        return ["SCHEMA:inject_refs must be a list of ids"]
+    reasons = []
     unseen = [r for r in refs if r not in ctx["visible"]]
     reasons += [f"INJECT:{r}" for r in unseen]
 
@@ -68,7 +75,9 @@ def check(claim: dict, ctx: dict) -> list[str]:
 
     if t == "share":
         to = claim.get("to") or []
-        bad = [x for x in to if x not in ctx["institutions"] or x == ctx["agent"]]
+        if not isinstance(to, list):
+            return reasons + [f"ROUTE:{to} (to must be a list)"]
+        bad = [x for x in to if not isinstance(x, str) or x not in ctx["institutions"] or x == ctx["agent"]]
         if not to or bad:
             reasons.append(f"ROUTE:{bad or 'empty'}")
         return reasons
@@ -84,10 +93,17 @@ def check(claim: dict, ctx: dict) -> list[str]:
 
     if t == "action":
         verb = claim.get("verb")
-        if verb not in ctx["mandate"]["verbs"]:
+        if not isinstance(verb, str) or verb not in ctx["mandate"]["verbs"]:
             reasons.append(f"MANDATE:{verb}")
-        if not isinstance(claim.get("params", {}), dict):
+        params = claim.get("params", {})
+        if not isinstance(params, dict):
             reasons.append("SCHEMA:params")
+        elif "to" in params and (
+            not isinstance(params["to"], str)
+            or params["to"] not in ctx["institutions"]
+            or params["to"] == ctx["agent"]
+        ):
+            reasons.append(f"ROUTE:{params['to']}")
         reasons += _evidence(evidence, ctx, need_verified=False)
 
     elif t == "obligation":
@@ -97,7 +113,7 @@ def check(claim: dict, ctx: dict) -> list[str]:
             docs = {
                 ctx["chunks"][e["chunk_id"]]["doc_id"]
                 for e in evidence
-                if e.get("chunk_id") in ctx["chunks"]
+                if isinstance(e, dict) and e.get("chunk_id") in ctx["chunks"]
             }
             if not any(
                 r["doc_id"] in docs and r["hours"] == hours for r in ctx["rules"]
@@ -107,7 +123,7 @@ def check(claim: dict, ctx: dict) -> list[str]:
                 )
 
     elif t == "gap":
-        if claim.get("gap_type") not in GAP_TYPES:
+        if not isinstance(claim.get("gap_type"), str) or claim.get("gap_type") not in GAP_TYPES:
             reasons.append(f"SCHEMA:gap_type={claim.get('gap_type')}")
         reasons += _evidence(evidence, ctx, need_verified=False)
         examples = claim.get("global_examples") or []

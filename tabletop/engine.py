@@ -254,6 +254,7 @@ class Run:
             )
         if verb in Twin.VERBS:
             change = self.twin.act(verb, params)
+            rec["failed"] = bool(change["error"])
             conflict = coordinator.objective_conflict(change, self.s["invariants"])
             self.log.append(
                 "state_change",
@@ -286,7 +287,7 @@ class Run:
                 "feedback",
                 f"{verb} {json.dumps(params)} {result}",
             )
-        elif verb == "notify" and params.get("to") in self.mandates:
+        elif verb == "notify" and isinstance(params.get("to"), str) and params["to"] in self.mandates:
             mid = self.new_message_id("MSG")
             self.deliver(
                 params["to"],
@@ -329,7 +330,11 @@ class Run:
         for a in self.mandates:
             self.deliver(a, f"{self.s['id']}-END", "exercise control", "debrief", end)
         self.stage_loop("debrief")
-        actions = [r for r in self.accepted if r["claim"]["type"] == "action"]
+        actions = [
+            r
+            for r in self.accepted
+            if r["claim"]["type"] == "action" and not r.get("failed")
+        ]
         obligations = [r for r in self.accepted if r["claim"]["type"] == "obligation"]
         for g in coordinator.duty_gaps(self.s, actions, obligations, self.chunks):
             self.log.append("gap_detected", **g)
@@ -373,8 +378,8 @@ BASELINE_SYSTEM = """You are a single incident-response adviser with full visibi
 The operator is a fictional mobile operator called OpCo. Institutions: {institutions}.
 For each institution, say what it should do, which duties apply, and which policy gaps the incident exposes.
 
-Return exactly one JSON object: {{"claims": [<claim>, ...]}}. Every claim has a field "agent" (the institution id it belongs to)
-and otherwise follows this shape:
+Return exactly one JSON object: {{"claims": [<claim>, ...]}}. Every claim is a flat object with a field "agent" (the institution id
+it belongs to) and a field "type" set to one of "action", "obligation", "gap", "insufficient_evidence", plus the fields for that type:
 - action: verb (from that institution's verbs), params, inject_refs, rationale, evidence
 - obligation: statement, inject_refs, rationale, evidence, deadline_hours (number or null)
 - gap: gap_type (no_rule | no_deadline | no_owner | overlap | conflict), statement, inject_refs, rationale, evidence, global_examples

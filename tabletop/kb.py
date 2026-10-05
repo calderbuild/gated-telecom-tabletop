@@ -181,20 +181,22 @@ def fetch(only_missing: bool = True) -> list[str]:
         if only_missing and dest.exists():
             continue
         url = s.get("fetch_url") or s["url"]
+        part = dest.with_name(dest.name + ".part")
         try:
             req = urllib.request.Request(
                 url, headers={"User-Agent": "Mozilla/5.0 (tabletop kb fetch)"}
             )
-            dest.write_bytes(urllib.request.urlopen(req, timeout=60).read())
-        except (
-            Exception
-        ) as e:  # report and continue: one blocked host must not stop the rest
-            report.append(f"{s['id']}: fetch failed: {e}")
+            part.write_bytes(urllib.request.urlopen(req, timeout=60).read())
+        except Exception as e:  # report and continue: one blocked host must not stop the rest
+            report.append(f"{s['id']}: FAILED fetch: {e}")
             continue
-        ok = sha256_file(dest) == s["sha256"]
-        report.append(
-            f"{s['id']}: {'ok' if ok else 'DOWNLOADED BUT HASH DIFFERS (upstream changed; reader-proxy output is not byte-stable)'}"
-        )
+        if sha256_file(part) == s["sha256"]:
+            part.replace(dest)
+            report.append(f"{s['id']}: ok")
+        else:  # never let a block page or a changed upstream replace the pinned file
+            report.append(
+                f"{s['id']}: FAILED hash differs, kept as {part.name} (upstream changed or a block page; reader-proxy output is not byte-stable)"
+            )
     return report
 
 
