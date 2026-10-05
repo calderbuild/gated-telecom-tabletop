@@ -1,6 +1,6 @@
 # Context
 
-Updated 2026-10-05. Decisions were made by Calder through grilling on 2026-10-05; the evidence is in ../research/.
+Updated 2026-10-05 (D3 changed the same day). Decisions were made by Calder through grilling on 2026-10-05; the evidence is in ../research/.
 
 ## What the judges score (official UAE page, ../research/web/uae.md:673-690)
 1. Knowledge base quality: completeness, accuracy, structure, policy retrieval.
@@ -19,7 +19,7 @@ FAQ facts:
 |---|---|---|
 | D1 | Domain: telecommunications | ITU's home domain; the UAE kick-off is co-run with TDRA; it fits Calder's Communication Engineering major |
 | D2 | New project | No existing project fits |
-| D3 | Models: hosted Claude | Winners used hosted frontier models |
+| D3 | Models: DeepSeek-V4-Pro (`deepseek-v4-pro`) for every agent and for the ungated baseline, through the OpenAI-compatible API. Changed from hosted Claude by Calder on 2026-10-05 because only a DeepSeek key is available | The gate decides and the model only proposes, so model choice matters less; Riyadh winners used GLM, Llama and Qwen without penalty. The provider switch in `tabletop/llm.py` keeps other providers possible |
 | D4 | Architecture C+: gated multi-institution tabletop plus an emulated network for closed loop | Covers all four agent roles in the brief; keeps the winners' gate pattern; past telecom build-a-thon podiums acted on emulated networks |
 | D5 | Generic institution roles, with mandates sourced from UAE documents; gaps mapped to global examples | The page asks for domain-level gaps and global examples, not country-specific recommendations |
 | D6 | KB base: the organizer's UAE dataset (CrashingGuru/Sandbox_Training Dataset/UAE/PolicyData) plus about 29 verified core sources, each verified at clause level and SHA-256 pinned | Visible KB-quality edge, since some organizer files are stubs |
@@ -48,3 +48,12 @@ FAQ facts:
 
 ## Key dates
 10-10..11-07: Saturday mentoring. 10-21: kick-off and registration close. 11-10: submission. 11-18: shortlist (demo video if shortlisted). 12-08: Dubai final.
+
+## Build status (plan vs done)
+Plan: /Users/calder/.claude/plans/quirky-hatching-quokka.md (approved 2026-10-05).
+
+2026-10-05 done: KB (61 sources, 4,079 clause chunks, SHA-256 pinned), twin, gate, coordinator, hash-chained audit log, engine, mock selftest, 20 tests, CLI, replay page, answer keys frozen in commit bfbebaf before the first live run.
+Open: recorded live runs (3 per scenario plus baselines), eval table, code review, report (md then docx on the official template).
+External: D10 KB format (mentoring from 10-10), 10-21 kick-off rules re-check, Calder's review, public repo and push (Calder's OK).
+
+Checkpoints (write plan vs done here): 10-19, 10-26, 11-02.
