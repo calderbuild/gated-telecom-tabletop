@@ -1,0 +1,525 @@
+Memorandum of Understanding on Telecommunications Reliability
+Skip to main content
+Skip to "About this site"
+Language selection
+WxT Language switcher
+Françaisfr
+/
+Gouvernement du Canada
+WxT Search form
+Search
+Search
+Menu
+Main Menu
+Home
+You are here
+Canada.ca
+Memorandum of Understanding on Telecommunications Reliability
+This Memorandum of Understanding, effective as of the Effective Date, is made by and among the parties listed in Schedule D (each a "Party", and collectively the "Parties").
+Now therefore the parties agree as follows:
+I. Introduction
+Whereas the Parties recognize a need to ensure the reliability and resiliency of communications networks that are a significant lifeline for those in need during natural disasters, network failures and other impactful emergencies;
+Whereas the Government of Canada, and specifically the Minister of Innovation, Science and Industry, has recognized the importance of telecommunications quality and resiliency, and has directed the Parties to reach agreements for coordination, roaming, mutual assistance and communications during a telecommunications emergency, including wireless- and/or wireline-based emergencies;
+Whereas the Federal Communications Commission of the United States of America issued a Notice of Proposed Rulemaking, released July 6, 2022 (FCC-22-50A1), in response to a recognition that mobile services are a significant lifeline for those in need during disasters and other emergencies, requiring facilities-based wireless service providers to establish procedures for (amongst other things) (a) providing reasonable roaming under disaster arrangements when technically feasible, (b) establishing mutual aid arrangements during emergencies, and (c) taking reasonable measures to improve public awareness and stakeholder communications on service and restoration status; and
+Whereas the Parties, through their participation within CSTAC, have agreed to put in place similar procedures to FCC-22-50A1 regarding (i) emergency roaming, (ii) mutual assistance, and (iii) communications to the public and governmental authorities, during a telecommunications emergency or other similarly impactful disaster.
+II. Definitions
+1. In this MOU, the following terms, in singular or plural form according to the context, are defined as follows, and capitalized terms used but not otherwise defined have the meanings given in the Schedules:
+"Accident" means an event that happens by chance or that is without apparent or deliberate cause and can happen during planned maintenance or normal operations.
+"Affiliate" means any entity controlling, controlled by or under common control of a Party, as the context requires. For this definition, "control" means the: (i) direct or beneficial ownership of fifty percent (50%) or more of the entity's voting securities; or (ii) ability to elect a majority of the entity's directors.
+"Applicable Law" means all applicable laws and regulations of any governmental authority having the force of law in Canada.
+"Bilateral Emergency Roaming Agreement" has the meaning ascribed thereto in Section 4 of Schedule A – Emergency Roaming Protocol.
+"Confidential Information" of a Party means any and all material and information of a Party (the "Discloser") or its Affiliates which has or will come into the possession or knowledge of another Party (the "Recipient") in connection with or as a result of entering into this MOU (including the terms of this MOU), and information concerning the Discloser's or its Affiliates' past, present and future customers, vendors, and business. For the purposes of this definition, "information" and "material" includes know-how, data, patents, copyrights, trade secrets, processes, techniques, programmes, designs, formulae, marketing, advertising, financial, commercial, sales or programming materials, written materials, compositions, drawings, diagrams, computer programs, studies, work in progress, visual demonstrations, ideas, concepts, and other data, in oral, written, graphic, electronic, or any other form or medium whatsoever. Notwithstanding the foregoing, "Confidential Information" does not include the following information:
+information which is in the public domain when it is received by or becomes known to the Recipient or which subsequently enters the public domain through no fault of the Recipient (but only after it enters the public domain);
+information which is already known to the Recipient at the time of its disclosure to the Recipient by the Discloser and is not the subject of an obligation of confidence of any kind;
+information which is received by the Recipient in good faith without an obligation of confidence of any kind from a third party who the Recipient had no reason to believe was not lawfully in possession of such information free of any obligation of confidence of any kind, but only until the Recipient subsequently comes to have reason to believe that such information was subject to an obligation of confidence of any kind when originally received;
+information which is independently developed by the Recipient without any use of or reference to the Confidential Information of the Discloser and which such independent development can be established by evidence that would be acceptable to a court of competent jurisdiction; and
+information which is not subject to an obligation of confidence of any kind when released, disclosed, made available or communicated by the Discloser to a third party.
+"Contact Information" means the first and last names of the primary and secondary contacts, corresponding email addresses, mobile telephone numbers, professional titles and job functions for each Party, Governmental Authority, and ISED, as the case may be, as amended over time, including:
+home carrier mobile phone number and alternative carrier mobile phone number (i.e. an individual's mobile phone number on an alternative carrier network in the event that the home carrier mobile phone number is unreachable);
+home carrier email address and non-carrier email address (i.e. an individual's alternate non-carrier email address in the event the home carrier network or home carrier email address is unreachable); and
+any other contacts and/or contact information which the Party considers relevant, e.g., additional contact names, contact information for a Party's network operations centre.
+"Contact Roster" means the totality of the Contact Information maintained in accordance with Section 7.c. of this MOU.
+"Contributed Materials" means all materials, information, methods, software, hardware, work, devices, documents, concepts, approaches, tools, and/or items provided or contributed by a Party under this MOU.
+"Critical Network Failure" means an unintentional and unplanned Network outage caused by, or occurring in the context of an Impactful Emergency.
+"CRTC" means the Canadian Radio-television and Telecommunications Commission or its successor.
+"CSTAC" means the Canadian Security Telecommunications Advisory Committee, or its successor.
+"Discloser" has the meaning ascribed thereto in the definition of "Confidential Information" in this Section 1.
+"Effective Date" means September 9, 2022.
+"Existing Roaming Agreement" has the meaning ascribed thereto in Section 4 of Schedule A – Emergency Roaming Protocol.
+"Governmental Authorities" means the CRTC, the offices of the Minister of Emergency Preparedness or its successor, the Minister of Public Safety or its successor, the Minister of Innovation, Science and Industry or its successor, or their respective duly appointed delegates, and the appropriate Provincial or Territorial Minister within the jurisdiction(s) experiencing a Triggering Event (each a "Governmental Authority").
+"Impactful Emergency" means an urgent and critical situation that seriously endangers the lives, health or safety of Canadians, including but not limited to those arising from Accidents, cyber attacks or other deliberate malicious acts, fires, floods, storms, earthquakes, emergencies arising from domestic or international security threats, or armed conflicts involving Canada or its allies.
+"Intellectual Property Rights" means: (1) any and all proprietary rights provided under, (a) patent law, (b) copyright law, (c) trade-mark law, (d) design patent or industrial design law, (e) semi-conductor chip or mask work law, or (f) any other statutory provision or common law principle, including trade secret law, which may provide a right in either ideas, formulae, algorithms, concepts, inventions or know-how generally, or the expression or use of such ideas, formulae, algorithms, concepts, inventions or know-how; and (2) any and all applications, registrations, licences, sub-licences, franchises, agreements or any other evidence of a right in any of the foregoing.
+"ISED" means Innovation, Science and Economic Development Canada or its successor.
+"MOU" means this document entitled "Memorandum of Understanding" and all schedules attached as of, or added following, the Effective Date ("Schedules").
+"Network" has the meaning ascribed thereto in each Schedule as applicable.
+"Personal Information" means information concerning an identifiable individual.
+"Programme" has the meaning ascribed thereto in Section 2 hereof.
+"Protocols" means one or the combination of policies, procedures, guidelines, protocols, playbooks, and/or agreements.
+"Recipient" has the meaning ascribed thereto in the definition of "Confidential Information" in this Section 1.
+"Triggering Event" means a Critical Network Failure subject to a Triggering Event Declaration.
+"Triggering Event Declaration" means a notification, pursuant to Section 7.d. hereof, by a Party who is experiencing or is likely to experience a Critical Network Failure to another Party that it is activating the Emergency Roaming Protocol and/or the Mutual Assistance Protocol in respect thereof.
+"Triggering Event Duration" means the period of time between the Triggering Event Start Point and the Triggering Event End Point.
+"Triggering Event End Point" means the earlier of (A) notification, pursuant to Section 7.e. hereof, by the Party who issued the Triggering Event Declaration to the Party who is providing Emergency Roaming and/or the Mutual Assistance that it is revoking the Triggering Event Declaration, and (B) the resolution of the Critical Network Failure.
+"Triggering Event Start Point" means the issuance of a Triggering Event Declaration.
+III. Purpose
+2. The purpose of this MOU is to establish Protocols for (i) emergency roaming between the Parties, as applicable, (ii) mutual assistance of the Parties, as required, and (iii) communication to the public and Governmental Authorities, during a Critical Network Failure resulting from an Impactful Emergency (the "Programme").
+IV. Agreement of the parties
+3. Term: This MOU, including any amendments made to it going forward pursuant to the amendment process set out in Section 4 hereof, comes into force as of the Effective Date (or, in the case of any amendments, as of the date that such amendments are agreed to by all the Parties) and ends 5 years after the Effective Date (the "MOU Initial Term") subject to Section 4 hereof. Upon the expiry of the MOU Initial Term, the MOU will be automatically extended for successive one year renewal terms until terminated by all Parties with at least 30 days' written notice prior to the end of any renewal term. The MOU Initial Term and any renewal terms are collectively referred to as the "MOU Term".
+4. Amendments:
+This MOU may be amended or supplemented, including to add new parties to this MOU, by mutual written agreement executed by each Party.
+Any Party may, at any time during the Term, propose an amendment or amendments to the MOU and its Protocols by notice to the other Parties in writing, whereupon the Parties agree to meet within 90 days to consider any such proposals. Notice of proposed amendments should clearly specify the section or sections of the MOU or any Protocol that a Party seeks to amend (if any), the specific amendment, amendments or addition proposed, and the rationale for each proposed amendment or addition, in order that the Parties may fully consider and respond to the proposal.
+5. Termination: Subject at all times to Section 16 and notwithstanding Section 3, a Party may terminate its participation in this MOU during the MOU Term, with no cost, liability or future obligation on the part of such Party, forthwith upon 6 months' prior written notice to each other Party, provided, however, that no termination may occur during a Triggering Event Duration. For certainty, a Party's termination of its participation under this MOU will not automatically result in termination of any Bilateral Emergency Roaming Agreements or other agreements that such Party has entered into in accordance with the terms and conditions of this MOU. Any such agreements may only be terminated by such Party in accordance with their respective terms.
+6. Programme Implementation: During the MOU Term, the Parties will operationalize the following Protocols based upon the terms and conditions of this MOU:
+Emergency Roaming Protocol as specified in Schedule A of this MOU;
+Mutual Assistance Protocol as specified in Schedule B of this MOU; and
+Emergency Network Outage Communications Protocol as specified in Schedule C of this MOU.
+7. Communications:
+The Parties will use the Traffic Light Protocol ("TLP") definitions below to facilitate the sharing of information under the Programme.
+Definition
+Rules of Disclosure
+Description
+TLP:RED
+not for further disclosure, restricted to recipients only
+recipients may not share information with any persons outside of the specific exchange, meeting, or conversation in which it was originally disclosed
+TLP:AMBER
+limited disclosure allowed, restricted to within Party
+recipients may only share information with members of their own Party who need to know the information
+TLP:GREEN
+limited disclosure, restricted to within all Parties
+recipients may share information with members of their own Party or other Parties but not via publicly accessible channels
+TLP:WHITE
+disclosure not limited
+Recipient may share information without restriction
+Each Party will designate one or more individuals as "Senders" and "Addressees" of the information to be transmitted under this Programme, and supply the list of its Senders and Addressees to the other Parties. A Party's Sender will obtain confirmation that the transmission by that Sender of information to the other Party was successful.
+Contact Roster:
+Each Party shall be required to maintain (a) an up-to-date list of its Contact Information, and (b) a list of the most recently provided Contact Information from the other Parties, Governmental Authorities and ISED (to the extent provided).
+Each Party shall share its Contact Information with CSTAC every 6 months during the MOU Term, or upon making a change to its Contact List, for the purpose of CSTAC being able to maintain an up to date Contact Roster.
+Each Party shall, every 6 months during the MOU Term or as otherwise offered by CSTAC, participate in CSTAC testing to confirm the accuracy of the Contact Roster.
+Triggering Event Declaration: A Triggering Event Declaration is not initiated by a Party until such Party reaches, by phone, one or more of the contacts on the Contact Roster of the Party from whom Emergency Roaming and/or Mutual Assistance is requested. As soon as practicable following receipt of such phone call, the Party from whom Emergency Roaming and/or Mutual Assistance was requested shall send an email to the Party who initiated the phone call confirming: (A) receipt of the phone call initiating a Triggering Event Declaration, (B) the date and time of the phone call, (C) whether Emergency Roaming or Mutual Assistance or both was requested.
+Notice of Triggering Event Revocation. A Party who initiated a Triggering Event Declaration may revoke the Triggering Event Declaration by sending an email to the contacts on the Contact Roster of the Party from whom Emergency Roaming and/or Mutual Assistance was requested.
+8. Intellectual Property Rights: In the event that a Party ("Licensor") provides any Contributed Materials to another Party ("Licensee") for use in connection with the Programme, then, subject to the terms and conditions of this MOU and, where applicable, the terms and conditions of Licensor's suppliers or licensors, Licensor hereby grants to Licensee a non-exclusive, non-sublicensable, non-transferable, royalty-free license to use the Contributed Materials solely for the purpose of the performance of Licensee's obligations or exercise of Licensee's rights under this MOU in connection with the Programme. Title to, ownership of, and all Intellectual Property Rights in, any Contributed Materials provided hereunder shall be and remain with the Licensor or its suppliers or licensors, and no other Party will acquire any Intellectual Property Rights therein other than the licence explicitly granted herein. Licensee acknowledges and agrees that all Contributed Materials are provided on an as-is basis and without any representations or warranties from Licensor of any kind, whether express or implied.
+9. No Monetization of Information Received under this MOU: Without limiting any other provision of this MOU, under no circumstance may a Party receiving information pursuant to this MOU (i) directly or indirectly monetize, or (ii) consent to the monetization of that information in any way including by selling or licensing said information, without the express written consent of the other Parties.
+10. Exclusivity: Notwithstanding any other provision of this MOU, the Parties acknowledge and agree that this MOU in no way limits or prohibits a Party from entering into any discussion, agreement memorandum or other arrangement with any other entity, concerning the subject matter hereof.
+11. Costs: Except as specifically stated in this MOU or an applicable Bilateral Emergency Roaming Agreement, each Party shall pay its own costs and expenses related to the negotiation, participation and implementation of this MOU.
+12. Warranties: The Parties acknowledge and agree that no Party is providing a warranty of integrity or accuracy of any information provided pursuant to this MOU, nor is any Party providing any representation, warranties, conditions or guarantees regarding the actions or activities contemplated by or under this MOU (implied or statutory).
+13. Liability:
+Each Party's participation in this MOU and its use of the information transferred under this MOU is at its own risk.
+Except (i) as specifically stated in an applicable Bilateral Emergency Roaming Agreement, (ii) for a Party's indemnity obligations set forth in Schedule A and Schedule B, (iii) for a Party's breach of Section 14 (Confidentiality), (iv) for a Party's infringement or misappropriation of another Party's Intellectual Property Rights, (v) for damage to a Party's tangible property caused by another Party's negligence or wilful misconduct, (vi) for bodily injury or death to any person caused by a Party's negligence or wilful misconduct, (vii) for damages caused by a Party's gross negligence or wilful misconduct, and (viii) for a Party's obligation to pay any fees or costs or expenses hereunder, no Party shall be liable to any other Party for any direct damages, costs, losses or expenses, nor commence or otherwise maintain against the other Party any claim, action, suit or other proceeding, whether in contract, tort or otherwise, resulting from or arising in connection with any claim arising under or in connection with this MOU.
+Except (i) as specifically stated in an applicable Bilateral Emergency Roaming Agreement, (ii) for a Party's indemnity obligations set forth in Schedule A and Schedule B, (iii) for a Party's breach of Section 14 (Confidentiality), and (iv) for damages caused by a Party's gross negligence or wilful misconduct, no Party shall be liable to any other Party for any indirect, incidental, special or consequential damages whatsoever arising under or in connection with this MOU, or the following damages whether characterized as direct, indirect, incidental, special or consequential damages: lost profits, anticipated or lost revenue, loss of data, loss of business opportunities, loss of use of any information system, failure to realize expected savings or any other commercial or economic loss, whether arising in negligence, tort, statute, equity, contract, common law, or any other cause of action or legal theory, and whether pursuant to common law, equity, or statute, even if a Party has been advised of the possibility of such damages.
+No Party shall be obligated to comply with this MOU, perform any act or omission, or otherwise conduct itself, in a manner that is contrary to Applicable Laws.
+The Parties agree that, to the extent a Responding Party acting in good faith and in accordance with this MOU and any Bilateral Emergency Roaming Agreement engages in activities described in Schedules A, B or C hereto, then, the Parties agree not to commence a Part 1 Application or similar complaint under the CRTC Rules of Procedure against such Responding Party in respect of its conduct in the context of a Triggering Event, including without limitation, a complaint pursuant to section 27(2) of the Telecommunications Act.
+14. Confidentiality:
+From time to time, the Confidential Information of a Discloser or its Affiliates may come into the possession or knowledge of a Recipient. The Recipient shall:
+protect and safeguard the confidentiality of the Discloser's Confidential Information with at least the same degree of care as the Recipient would protect its own Confidential Information of a similar nature, and in no event with less than a reasonable degree of care;
+not use the Discloser's Confidential Information, or permit it to be accessed or used, for any purpose other than to exercise its rights or perform its obligations under this MOU;
+not disclose the Discloser's Confidential Information to any third party, except to: (1) the Recipient's representatives who need to know the Confidential Information for the Recipient to exercise its rights or perform its obligations pursuant to this MOU and who are bound to protect the received Confidential Information from unauthorized use or disclosure under written confidentiality obligations no less protective of Discloser than those contained in this MOU and (2) other persons for whom the Discloser has provided its written consent. For clarity, the Recipient shall be responsible for any breach of this MOU caused by any of its representatives; and
+notwithstanding the foregoing, the Parties shall notify and consult with each other as soon as possible in the event that it is required by law to disclose Confidential Information as defined in this MOU.
+In addition to the obligations set forth above in this Section 14, the Parties shall hold any Personal Information secure in accordance with industry practices and shall comply with all Applicable Laws relating to the protection and privacy of the Personal Information, including the Personal Information Protection and Electronic Documents Act (Canada) ("PIPEDA"). A Party shall not disclose any Personal Information which it accesses or receives through its interactions with another Party to any third party whatsoever, except as specifically authorized under PIPEDA or this MOU. The Parties shall not use any Personal Information for any marketing, preference tracking or other purposes not directly related to its performance of its obligations pursuant to this MOU.
+Each Party agrees and covenants that neither it nor any of its respective officers, directors or agents, will at any time make, publish or communicate to any third party or in any public forum any defamatory, libelous or slanderous remarks, comments or statements concerning any other Party's performance under this MOU, or that of any of its officers, employees, directors, and other associated third parties.
+The Parties will not use the existence of this MOU or any of the provisions herein for marketing or promotional purposes.
+15. Data Retention and Destruction:
+The Parties understand they are expected to not retain Confidential Information for longer than is reasonably needed to fulfil the purpose for which the Confidential Information was shared, or as otherwise required by Applicable Laws, whichever is longer.
+Upon the termination or expiration of this MOU or when the Confidential Information is no longer needed for the purpose for which it was disclosed, whichever occurs first, a Party will promptly return to the applicable other Party or securely destroy all Confidential Information of the other Party and any Personal Information which is then in its possession or control (except copies made for archival or back-up purposes, which the Party will destroy no later than one year following the date of termination or expiration or when the Confidential Information is no longer needed, as applicable). Any such destruction shall render the applicable Confidential Information or Personal Information permanently unreadable and unrecoverable and the Recipient Party shall provide the Disclosing Party with prompt written certification of such destruction.
+16. Survival: In the event of expiration or termination of this MOU, Sections 1, 8, 13, 14, 15, 16, 18, 20, and 21, and all such other provisions to give effect thereto, shall survive such expiration or termination indefinitely.
+17. Authority: Each Party confirms that its representative signing this MOU has the authority to do so.
+18. Governing Law and Jurisdiction: This MOU shall be governed by, and construed in accordance with the laws of the Province of Ontario and the federal laws of Canada applicable therein. Except as provided in Section 20 below, each Party irrevocably attorns to the exclusive jurisdiction of the courts of Ontario for any dispute, controversy, or claim (including any questions of this MOU's existence, validity or termination) arising in connection with this MOU.
+19. Notices: Any legal notice that must be given or made under this MOU or which a Party wishes to give to another Party, or the other Parties, must be given in writing and is properly transmitted if it is delivered by courier or email to the corresponding address(es) listed in Schedule E. Any notice sent in accordance with the foregoing shall be deemed to have been received by its addressee upon delivery.
+20. Dispute Resolution:
+If any dispute, issue disagreement, or question (in this Section called a "Dispute") arises during the MOU Term between two or more Parties concerning this MOU or any part hereof, the Parties shall in good faith attempt to resolve such Dispute promptly and in an amicable manner under the following informal Dispute resolution procedure.
+If a Dispute arises which is not resolved, each Party involved in the Dispute shall designate a Vice President or higher (the "Executive Managers") to attempt to resolve the Dispute.
+The Executive Managers shall meet as promptly as possible.
+If the Executive Managers cannot resolve the Dispute within 20 business days after being notified of a Dispute, the Dispute shall be referred to each Party's CEO, and the applicable CEOs shall meet within 20 business days after being notified of a Dispute to attempt to resolve the Dispute.
+Notwithstanding the above, should a Party in a Dispute consider (acting in good faith) the Dispute to be of such an urgent nature as to require expedient resolution, the Parties shall each designate an Executive Manager to meet to resolve the Dispute within two (2) hours after being notified, or otherwise as promptly as possible, and if the Executive Managers cannot resolve the Dispute within 4 hours after being notified of a Dispute, the Dispute shall be referred to each Party's CEO, and the applicable CEOs or their designates shall meet within 6 hours after being notified of a Dispute, or otherwise as promptly as possible, to attempt to resolve the Dispute.
+If the Parties are unable to settle a Dispute after complying with Section 20(a) hereof, a Party may, on written notice to the other Parties involved in the Dispute (a "Notice of Arbitration"), require that such unresolved Dispute be resolved by arbitration in accordance with the Ontario Arbitration Act, 1991 (Ontario) (the "Arbitration Act") and subject to Section 20(c) below.
+The following provisions shall govern each Dispute referred to arbitration under Section 20(b) hereof.
+Such arbitration shall be held in Toronto, Ontario, (with accommodations for Parties to attend via videoconference).
+The procedures for the resolution of Disputes set out in this Section 20 do not preclude recourse to the courts for urgent interim, injunctive or interlocutory relief.
+The arbitration shall be conducted in English or in English and French when one or more of the Parties involved in the arbitration request it.
+The arbitration will take place before a panel of one arbitrator, selected by the Parties involved in the Dispute. If the Parties are unable to agree on a single arbitrator, then a Party may apply to the Ontario Superior Court of Justice for the appointment of an arbitrator in accordance with the Arbitration Act. The arbitrator appointed will be a retired judge or a lawyer with extensive arbitration qualifications and experience.
+Any award or decision made by the arbitrator appointed is final and binding upon the parties to this MOU with a right of appeal on questions of law alone. Any award or decision of the arbitrator may be enforced in the manner provided for by the Arbitration Act.
+Each Party will be responsible for its own legal costs in connection with the arbitration. The arbitrator's fees and disbursements will be shared equally by the Parties involved in the arbitration, unless the arbitrator determines that a specific Party(ies) prevailed, in which case the arbitrator's fees and disbursements will be shared equally by the non-prevailing Party(ies).
+Subject to Applicable Law, the Parties agree to keep the arbitration procedures, hearings, documents and award strictly confidential and will not, unless required by law, voluntarily disclose any information concerning the fact or outcome of any arbitration, with the sole exception of legal counsel, accountants and financial advisors providing that they first agree to keep such information strictly confidential.
+21. General:
+This MOU shall enure to the benefit of and be binding upon the Parties and their respective heirs, executors, administrators, legal personal representatives, successors and assigns.
+In this MOU words importing the singular number only shall include the plural and vice versa and words importing any gender shall include all other genders and words importing persons shall include individuals, partnerships, associations, trusts, unincorporated organisations and corporations and vice versa. The term "including" means "including, without limitation".
+Unless otherwise specified, any reference herein to a "day" shall mean a calendar day.
+This MOU may be executed in several counterparts or using separate signature pages, and each such executed counterpart and each counterpart to which such executed signature pages are attached shall be deemed to be an original, and such counterparts together shall constitute one and the same instrument. This MOU shall not become a valid and binding agreement between the Parties unless and until each Party has duly executed and delivered to the other Parties one copy of this MOU.
+The rights and remedies of the Parties hereunder are cumulative and are in addition to, and not in substitution for, any other rights and remedies available at law or in equity or otherwise. No single or partial exercise by a Party of any right or remedy precludes or otherwise affects the exercise of any other right or remedy to which that Party may be entitled.
+If any provision of this MOU is held to be invalid or unenforceable in whole or in part, such invalidity or unenforceability shall attach only to such provision or part thereof and the remaining part of such provision and all other provisions hereof shall continue in full force and effect.
+No amendment of any provision of this MOU shall be effective unless such amendment is in writing signed by all Parties and stating specifically that it is intended to modify this MOU. No waiver of any breach of or non-compliance with any provision of this MOU shall be effective or binding unless made in writing and signed by the Party purporting to give the same and, unless otherwise specified in the written waiver, shall be limited to the specific breach waived. No waiver shall be inferred from or implied by any failure to act or delay in acting by a Party in respect of any default, breach, non-observance or by anything done or omitted to be done by another Party.
+This MOU, together with any Schedules attached to this MOU and any agreements and documents to be delivered pursuant to the terms of this MOU, constitutes the entire agreement between the Parties pertaining to the subject matter of this MOU and supersedes all prior agreements, understandings, negotiations and discussions, whether oral or written, of any of the Parties in respect of the subject matter hereof. There are no conditions, representations, warranties or other agreements between the Parties in connection with the subject matter of this MOU, whether oral or written, express or implied, statutory or otherwise, except as specifically set out in this MOU. Notwithstanding anything to the contrary in the MOU, the Parties acknowledge and agree that in no event will the MOU be deemed to amend, modify or supersede the terms and condition of any Existing Roaming Agreement.
+A Party may freely assign all or any part of this MOU to an Affiliate upon the provision of prior written notice to the other Parties provided that such Party remains responsible and liable for the acts and omissions of such Affiliate. Except as set forth in the immediately preceding sentence, no right or interest in this MOU shall be assigned or subcontracted by a Party without the prior written consent of the other Parties and no delegation of the performance of any obligations owed by a Party to any other Party shall be made without the consent of the other Parties, in each case such consent not to be unreasonably delayed or denied.
+The original English version of this MOU has been translated into French. In the event of inconsistency or discrepancy between the English version and the French version of this MOU, the English language version shall prevail.
+[Signature pages follow.]
+IN WITNESS WHEREOF, the Parties hereto have executed this MOU as of the Effective Date.
+BELL CANADA
+Name: Mirko Bibic
+Title: President and Chief Executive Officer
+Date: September 6, 2022
+[Signature pages continue.]
+BRAGG COMMUNICATIONS INC.
+Name: Signatory: Lee Brag
+Title: Executive Vice Chair
+Date: September 1, 2022
+[Signature pages continue.]
+COGECO COMMUNICATIONS INC.
+Name: Philippe Jetté
+Title: President and Chief Executive Officer
+Date: September 6, 2022
+[Signature pages continue.]
+ROGERS COMMUNICATIONS CANADA INC.
+Name: Anthony Staffieri
+Title: President and Chief Executive Officer
+Date: September 1, 2022
+[Signature pages continue.]
+SASKATCHEWAN TELECOMMUNICATIONS
+Name: Doug Burnett
+Title: President and Chief Executive Officer
+Date: September 2, 2022
+[Signature pages continue.]
+SHAW COMMUNICATIONS INC.
+Name: Brad Shaw
+Title: Executive Chair and Chief Executive Officer
+Date: September 6, 2022
+FREEDOM MOBILE INC.
+Name: Brad Shaw
+Title: Executive Chair and Chief Executive Officer
+Date: September 6, 2022
+[Signature pages continue.]
+TBAYTEL
+Name: Daniel Topatigh
+Title: President and Chief Executive Officer
+Date: September 6, 2022
+[Signature pages continue.]
+TELESAT CANADA
+Name: Christopher DiFrancesco,
+Title: VP, General Counsel and Secretary
+Date: September 1, 2022
+[Signature pages continue.]
+TELUS COMMUNICATIONS INC.
+Name: Darren Entwistle
+Title: President and Chief Executive Officer
+Date: September 2, 2022
+[Signature pages continue.]
+VIDEOTRON LTD.
+Names: Pierre Karl Péladeau and Sophie Riendeau
+Titles: President and Corporate Secretary
+Date: September 6, 2022
+[Signature pages continue.]
+XPLORNET COMMUNICATIONS INC.
+Name: Allison Lenehan
+Title: President and Chief Executive Officer
+Date: September 2, 2022
+[Signature pages continue.]
+ZAYO CANADA INC.
+Name: Michael Strople
+Title: Managing Director Zayo Canada
+Date: September 6, 2022
+[Signature pages end.]
+Schedule A
+Emergency Roaming Protocol
+Purpose:
+1. This Emergency Roaming Protocol applies when one or more Parties provides Emergency Roaming to another Party when the latter Party is experiencing a Triggering Event.
+Definitions:
+2. Unless specifically defined hereunder, capitalized terms shall have the meanings set out in the body of the MOU or Schedule B or Schedule C, as the case may be. In this Emergency Roaming Protocol, the following terms, in singular or plural form according to the context, are defined as follows:
+"9-1-1 Wireless Access" means voice access to available 9-1-1 networks via a wireless handset.
+"Emergency Roaming" means as stated in Section 3 of this Emergency Roaming Protocol.
+"Emergency Roaming Protocol" means this Schedule A – Emergency Roaming Protocol to the MOU, as it may be amended over time.
+"Network" means a Party's wireless network including, as the case may be, the access network, network core, backhaul, transport connectivity and the infrastructure, in whole or in part.
+"Receiving Party" means a Party that receives Emergency Roaming, under this Emergency Roaming Protocol.
+"Responding Party" means a Party that provides Emergency Roaming, under this Emergency Roaming Protocol.
+Forms of Emergency Roaming
+3. Consistent with the principles herein, Emergency Roaming consists of the provision of domestic voice, text and data roaming services on an emergency basis when technically feasible during a Triggering Event, in whole or in part, by a Responding Party to a Receiving Party during the entirety, or part of, a Triggering Event. For clarity, Emergency Roaming includes the provision of 9-1-1 Wireless Access and excludes the provision of Mutual Assistance (as described in Schedule B to this MOU), Emergency Network Outage Communications Protocol (as described in Schedule C to this MOU) and other forms of assistance not expressly provided for under this Emergency Roaming Protocol.
+Bilateral Emergency Roaming Agreements
+4. Within 9 months of the Effective Date, the Parties will enter into confidential reciprocal bilateral Emergency Roaming agreements, or one or more confidential reciprocal multilateral Emergency Roaming agreements, with those Parties with whom they have overlapping Networks to address Emergency Roaming, (collectively the "Bilateral Emergency Roaming Agreements") in order to effect the provision of available Emergency Roaming pursuant to this Emergency Roaming Protocol. Nothing in this MOU shall prevent two Parties that have an existing bilateral commercial wholesale roaming agreement ("Existing Roaming Agreement") and overlapping Networks, from agreeing in writing (email being sufficient) to amend such Existing Roaming Agreement to address Emergency Roaming. If two Parties agree to use an Existing Roaming Agreement to address Emergency Roaming, the applicable Parties will enter into a written amendment to the Existing Roaming Agreement to address Emergency Roaming within 9 months of the Effective Date. For clarity, if the applicable Parties so agree in writing, and for the purposes of this MOU and the terms and conditions set forth herein, then their amended Existing Roaming Agreement, insofar as it applies to the provision of available Emergency Roaming, will be considered a Bilateral Emergency Roaming Agreement hereunder and the terms and conditions set forth herein that apply to Bilateral Emergency Roaming Agreements, including the Principles, the Additional Terms and the Responding Party Indemnity set forth below, will apply to such amended Existing Roaming Agreement.
+Principles
+All Bilateral Emergency Roaming Agreements will incorporate the following principles:
+5. Emergency Roaming may only be invoked by a Party in case of a Triggering Event Declaration and only after having tried, on a best efforts basis, to take all possible steps to restore services on its own Network(s). For greater certainty, a Party shall be prohibited from initiating a Triggering Event Declaration as part of that Party's response to operational Network outages that do not fall within the definition of a Critical Network Failure.
+6. The provision of Emergency Roaming by a Responding Party is conditional on the Receiving Party taking all possible steps, throughout the Triggering Event Duration, to restore services on its own Network(s) on a best efforts basis.
+7. The conduct of a Receiving Party and any Responding Party pursuant to this Emergency Roaming Protocol shall at all times be governed by the duty of good faith.
+8. A Responding Party shall use reasonable efforts to provide Emergency Roaming to the Receiving Party in a Triggering Event for the Triggering Event Duration. However, nothing in this Emergency Roaming Protocol prevents a Party from assisting another Party outside the scope of this Emergency Roaming Protocol.
+9. Where a Triggering Event Declaration is made, coincident with the Triggering Event Start Point, or as soon thereafter as reasonably practicable, the Responding Party may request and the Receiving Party shall use reasonable efforts to provide information about the Triggering Event, including: a description of the Critical Network Failure, location(s), estimated duration, impacted Network nodes, identification of any other Parties providing Emergency Roaming and an estimate of the type and quantity of Emergency Roaming required in both number of subscribers/sessions and the amount of traffic.
+10. A Receiving Party shall receive the scope, extent and quality of Emergency Roaming provided by a Responding Party, on an "as is and where is" basis. For greater certainty there is no duty hereunder upon a Responding Party to augment or supplement its existing Network capacity.
+11. A Responding Party is required to provide only such reasonable scope and extent of Emergency Roaming, and only to a level that can be accommodated by its existing Network capacity and that will not, in the sole opinion of that Responding Party, materially adversely impact the services it ordinarily provides to its own end-user customers, and to do so where feasible, provided that the Responding Party has reasonably first managed its own Network needs. Without limiting the generality of the foregoing, a Responding Party may, in its sole discretion, decline to provide Emergency Roaming, implement traffic management practices, or withdraw some or all of the Emergency Roaming it had been providing, to the extent the Responding Party is (a) unable to provide, or continue providing, such Emergency Roaming, (b) experiencing a Triggering Event itself, or (c) experiencing or reasonably anticipates experiencing material service degradation due to traffic volumes, network capacity considerations, security events or other factors.
+12. A Party that is experiencing a material adverse impact to its Network due to an increase in roaming traffic as a result of a Critical Network Failure of another Party/Parties, may take steps to manage its Network in advance of the other Party/Parties issuing a Triggering Event Declaration. The Party that takes steps to manage its Network will provide details of such Network management to the affected Party/Parties within 24 hours of implementing such Network management.
+13. In the case where a Triggering Event is followed by one or more Triggering Events, the Parties agree and acknowledge that each Responding Party, as the case may be, shall be required to triage and re-prioritize the scope and extent of their Emergency Roaming and may reasonably redeploy resources in accordance with the scope and severity of the various Triggering Events.
+14. Unless specifically stated otherwise in this Emergency Roaming Protocol, Emergency Roaming shall be wound down and terminated as soon as possible based upon the best efforts of the affected Parties to restore service(s) to their end-user customers and upon the restoration of such services.
+15. To the extent two or more Parties may experience the same Triggering Event, for example due to the same natural disaster, they shall attempt to coordinate their resources to the extent practicable and reasonable.
+16. Where a Responding Party implements traffic management practices or declines to provide or withdraws, Emergency Roaming, in whole or in part, to a Receiving Party:
+the Responding Party will provide details of the implemented traffic management practices within 24 hours of implementing such practices;
+the Responding Party will provide advance notice of withdrawal where possible; and
+the Receiving Party shall be entitled to request the reason(s) for the Responding Party's declining or withdrawal of Emergency Roaming, and the Responding Party shall provide such reasons in writing within 24 hours of receiving such request.
+17. During a Triggering Event, a Receiving Party will take all reasonable steps to provide as much network availability as practicable to its own customers in the impacted geographical scope of the Triggering Event ("Emergency Roaming Area").
+18. Network considerations may require the Parties to tailor Emergency Roaming to allow or curtail different traffic types as necessary. Parties acknowledge and agree that Emergency Roaming will not provide the same type of service or quality of service as is provided as part of wholesale commercial roaming, whether under commercial agreement or under the applicable CRTC wholesale roaming tariff.
+19. By requesting Emergency Roaming, the Requesting Party accepts that the type of service or quality of service provided by the Responding Party pursuant to a commercial roaming agreement or under an applicable CRTC wholesale roaming tariff, as the case may be, may be negatively impacted by the provision of Emergency Roaming.
+20. When providing Emergency Roaming during a Triggering Event, the Responding Party will, to the extent feasible, prioritize the transmission of 9-1-1 Wireless Access voice traffic above all other wireless traffic on its Network.
+Additional Terms
+21. In addition to incorporating the above principles, the Bilateral Emergency Roaming Agreements will also contain:
+clear definitions for determining the Emergency Roaming Area so that all signatories thereto will be able to understand the Triggering Event's scope and boundaries using universal standard(s) of geography scope recognition (e.g., exchange GIS layers for CENSUS divisions);
+a description of any potential impacts which the provision of Emergency Roaming may have upon existing commercial wholesale roaming services between the Responding Party and the Receiving Party;
+reasonable provisions to ensure the Responding Party's networks are not or will not be materially adversely affected by the provision of Emergency Roaming;
+clear network management rights and procedures in order to ensure the orderly access and egress of roaming traffic on the Responding Party's network as well as the overall integrity and resiliency of Networks;
+provisions for:
+the Parties to complete any preparations (e.g., establishing or modifying Network interfaces) necessary to enable the efficient provision of Emergency Roaming;
+frequent communication in order to provide situational awareness during a Triggering Event;
+relevant network data exchange as soon as practicable following a Triggering Event;
+coordination of the cessation of Emergency Roaming in order to provide an uninterrupted transition (to the extent possible) back to the Receiving Party's Network for impacted subscribers; and
+emergency roaming to be provided to the Receiving Party's wholesale customers if applicable;
+commercially negotiated fees and payment obligations;
+as long as the following does not jeopardize a Party's Network, a robust testing regime consisting of (i) technical testing of capabilities, (ii) stress testing, and (iii) introduction of learnings from testing into the development phase of the Emergency Roaming; and
+Applicable Joint Operating Procedures ("JOPs"), if any, developed pursuant to a Bilateral Emergency Roaming Agreement shall be reviewed on a yearly basis and updated as necessary. All Parties shall ensure that applicable JOPs are shared and understood amongst supporting groups within each Party's organization.
+Responding Party Indemnity
+22. A Receiving Party shall fully and completely indemnify, defend and save harmless a Responding Party and its Affiliates and their respective directors, officers, employees, agents and representatives (the "Responding Party Indemnities") for any direct losses, costs, claims, suits, damages, and awards of any kind incurred by any Responding Party Indemnities as a result of any third party claim ("Claim") resulting from the Responding Party's provision of Emergency Roaming hereunder, excluding any Claims caused by the gross negligence or wilful misconduct of the Responding Party. The indemnity obligations hereunder are conditional on:
+Receiving Party being provided with written notice of any such Claim;
+Receiving Party having the right to control and direct the defence of such Claim;
+Responding Party cooperation with Receiving Party in such defence, at Receiving Party's expense; and
+Responding Party having the right to be represented in such defence at its expense with advisory counsel of its choice.
+Reporting
+23. Within thirty (30) days after each Triggering Event's End Point, each Receiving Party and Responding Party shall file a report (an "Emergency Roaming Report") in confidence with ISED the CRTC, and CCCS, serving each Party hereto.
+24. An Emergency Roaming Report shall report on the following matters:
+the scope and extent of the events that culminated in the Triggering Event;
+the nature of Emergency Roaming sought by the Receiving Party;
+the nature and extent of the Emergency Roaming provided by the Responding Party;
+any learnings from the Emergency Roaming event that may be useful or that should or should not be repeated, as the case may be, in future Triggering Events;
+any thresholds that may be relevant in helping to define the circumstances giving rise to a future Triggering Event; and
+any other relevant facts associated with that Triggering Event.
+25. Joint Post-Event Reports: A Receiving Party and a Responding Party may file a joint Emergency Roaming Report to the extent they agree as to its contents.
+26. A Party filing an Emergency Roaming Report may claim confidentiality over certain of its contents on the basis that the designated information: (i) is a trade secret, (ii) contains financial, commercial, scientific or technical information that is confidential and that is treated consistently in a confidential manner by such Party, or (iii) is information the disclosure of which could reasonably be expected to cause material financial loss or gain to any person, prejudice the competitive position of any person or affect contractual or other negotiations of any person. Information in an Emergency Roaming Report that is designated as confidential may be withheld from any other Party. However, for greater certainty, a Party's confidentiality claim is determinative and there shall be no right to appeal or otherwise challenge a Party's confidentiality claim.
+Annual Reviews
+27. The Parties shall collectively review the effectiveness of this Emergency Roaming Protocol at least once annually, with a view to amending and improving it based upon learnings from the prior year's Triggering Events and information set out in the prior year's Emergency Roaming Report, if any.
+Schedule B
+Mutual assistance protocol
+Purpose:
+This Mutual Assistance Protocol applies when one or more Parties provides Mutual Assistance to another Party when the latter Party is experiencing a Triggering Event.
+Definitions:
+2. Unless specifically defined hereunder, capitalized terms shall have the meanings set out in the body of the MOU or Schedule A or Schedule C, as the case may be. In this Mutual Assistance Protocol, the following terms, in singular or plural form according to the context, are defined as follows:
+"9-1-1 Network" means the 9-1-1 core networks operated by Bell, TELUS and SaskTel that transmit 9-1-1 telecommunications to public safety answering points in their respective incumbent local exchange carrier regions.
+"Mutual Assistance" means as stated in Section 3 of this Mutual Assistance Protocol.
+"Mutual Assistance Protocol" means this Schedule B – Mutual Assistance Protocol to the MOU, as it may be amended over time.
+"Network" means a Party's wireline or wireless telecommunications network including, as the case may be, the access network, network core, backhaul, transport connectivity and the infrastructure, in whole or in part.
+"Receiving Party" means a Party that receives Mutual Assistance under this Mutual Assistance Protocol.
+"Responding Party" means a Party that responds to a request for Mutual Assistance under this Mutual Assistance Protocol.
+Forms of Mutual Assistance
+3. Mutual Assistance may consist of one or more of the following types of temporary assistance, in whole or in part, provided by a Responding Party to a Receiving Party during the entirety, or part of, a Triggering Event, subject to technical feasibility and such reasonable safeguards or terms of use as the Responding Party considers necessary in the circumstances:
+The sharing of physical assets, such as buildings, and vehicles;
+The sharing of equipment or logistical support, subject to applicable licensing terms;
+The sharing of staff or human resources;
+The provision of one or more services as requested and agreed by both Parties;
+Access to its 9-1-1 Networks, if applicable;
+The sharing of licensed spectrum, subject to any necessary authorizations granted by the Minister of Innovation, Science and Industry as may be required by law; and
+Such other sharing as may be agreed to under the Mutual Assistance Protocol;
+For clarity, Mutual Assistance excludes the provision of Emergency Roaming Services (as described in Schedule A to this MOU), Emergency Network Outage Communications Protocol (as described in Schedule C to this MOU) and other forms of assistance not expressly provided for under this Mutual Assistance Protocol.
+Principles
+4. This Mutual Assistance Protocol shall be invoked by a Party only in case of a Triggering Event and only after having tried, on best efforts basis, to take all possible steps to restore services on its own Network(s). For greater certainty, a Party shall be prohibited from instigating a Triggering Event as part of that Party's response to operational outages that do not rise to the level of a Critical Network Failure.
+5. The provision of Mutual Assistance by a Responding Party is conditional on the Receiving Party taking all possible steps, throughout the Triggering Event Duration, to restore services on its own Network(s) on a best efforts basis.
+6. The conduct of a Receiving Party and any Responding Party pursuant to this Mutual Assistance Protocol shall at all times be governed by the duty of good faith.
+7. A Responding Party shall attempt to provide Mutual Assistance to the Receiving Party in a Triggering Event for the Triggering Event Duration. However, nothing in this Mutual Assistance Protocol prevents a Party from assisting another Party outside the scope of this Mutual Assistance Protocol.
+8. Where a Triggering Event is initiated by a Receiving Party, coincident with the Triggering Event Start Point, or as soon thereafter as reasonably practicable, the Responding Party may request and the Receiving Party shall use reasonable efforts to provide information about the Triggering Event, including: a description of the Critical Network Failure, location(s), estimated duration, identification of any other Parties providing Mutual Assistance and an estimate of the type and quantity of Mutual Assistance required.
+9. The Receiving Party and Responding Party shall engage in frequent communication in order to provide situational awareness during a Triggering Event.
+10. A Receiving Party shall be required to receive the scope, extent and quality of Mutual Assistance provided by a Responding Party, including the latter's physical assets, staff and services, on an "as is and where is" basis. For greater certainty there is no duty hereunder upon a Responding Party to augment or supplement the nature and/or quality of its operations and existing Network capabilities to provide Mutual Assistance.
+11. A Responding Party is required to provide only such reasonable scope and extent of Mutual Assistance, and only to a level that can be accommodated within its existing capabilities and that will not, in the sole opinion of that Responding Party, materially adversely impact the services it ordinarily provides to its own end-user customers, and to do so where feasible, provided that the Responding Party has reasonably first managed its own Network needs. Without limiting the generality of the foregoing, a Responding Party may, in its sole discretion, decline to provide Mutual Assistance, or withdraw some or all of the Mutual Assistance it had been providing, to the extent the Responding Party is (a) unable to provide, or continue providing, such Mutual Assistance, (b) experiencing a Triggering Event itself, or (c) experiencing or reasonably anticipates experiencing material service degradation due to traffic volumes, network capacity considerations, security events or other factors.
+12. In the case where a Triggering Event is followed by one or more Triggering Events, the Parties agree and acknowledge that each Responding Party, as the case may be, shall be required to triage and prioritize the scope and extent of their Mutual Assistance and may reasonably redeploy resources in accordance with the scope and severity of the various Triggering Events.
+13. Mutual Assistance shall be wound down and terminated as soon as possible based upon the best efforts of the affected Parties to restore service(s) to their end-user customers and upon the restoration of such services.
+14. Where a Responding Party declines to provide, or withdraws, Mutual Assistance, in whole or in part, to a Receiving Party, the Receiving Party shall be entitled to request the reason(s) therefore, and the Responding Party shall provide such reasons in writing.
+15. The Parties acknowledge that the provision of Mutual Assistance constitutes the provision of a service to the Receiving Party and the Responding Party is entitled to be compensated by the Receiving Party for its documented reasonable costs and expenses incurred, including at any applicable CRTC tariff rates for the services provided.
+Payment
+16. The Responding Party may invoice the Receiving Party for its documented reasonable costs and expenses incurred in providing Mutual Assistance under this Mutual Assistance Protocol by way of a standard invoice.
+17. Payment from the Receiving Party shall be due in full within 90 days of receipt of the Responding Party's invoice.
+18. Billing disputes over any payments hereunder shall be resolved pursuant to Section 20 of the MOU.
+Responding Party Indemnity
+19. A Receiving Party shall fully and completely indemnify, defend and save harmless a Responding Party and its Affiliates and their respective directors, officers, employees, agents and representatives (the "Responding Party Indemnities") for any direct losses, costs, claims, suits, damages, and awards of any kind incurred by any Responding Party Indemnities as a result of any third party claim ("Claim") resulting from the Responding Party's provision of Mutual Assistance hereunder, excluding any Claims caused by the gross negligence or wilful misconduct of the Responding Party. The indemnity obligations hereunder are conditional on:
+Receiving Party being provided with written notice of any such Claim;
+Receiving Party having the right to control and direct the defence of such Claim;
+Responding Party cooperation with Receiving Party in such defence, at Receiving Party's expense; and
+Responding Party having the right to be represented in such defence at its expense with advisory counsel of its choice.
+Reporting
+20. Within thirty (30) days after each Triggering Event's End Point, each Receiving Party and Responding Party shall file a report (a "Mutual Assistance Report") in confidence with ISED the CRTC, and CCCS, serving each Party hereto.
+21. A Mutual Assistance Report shall report on the following matters:
+the scope and extent of the events that culminated in the Triggering Event;
+the nature and extent of the Mutual Assistance provided by the Responding Party and received by the Receiving Party;
+any learnings from the Mutual Assistance event that may be useful or that should or should not be repeated, as the case may be, in future Triggering events;
+any thresholds that may be relevant in helping to define the circumstances giving rise to a future Triggering Event; and
+any other relevant facts associated with that Triggering Event.
+22. Joint Post-Event Reports: A Receiving Party and a Responding Party may file a joint Mutual Assistance Report to the extent they agree as to its contents.
+23. A Party filing a Mutual Assistance Report may claim confidentiality over certain of its contents on the basis that the designated information: (i) is a trade secret, (ii) contains financial, commercial, scientific or technical information that is confidential and that is treated consistently in a confidential manner by such Party, or (iii) is information the disclosure of which could reasonably be expected to cause material financial loss or gain to any person, prejudice the competitive position of any person or affect contractual or other negotiations of any person. Information in a Mutual Assistance Report that is designated as confidential may be withheld from any other Party. However, for greater certainty, a Party's confidentiality claim is determinative and there shall be no right to appeal or otherwise challenge a Party's confidentiality claim.
+Annual Reviews
+24. The Parties shall collectively review the effectiveness of this Mutual Assistance Protocol at least once annually, with a view to amending and improving it based upon learnings from the prior year's Triggering Events and information set out in the prior year's Mutual Assistance Report.
+Schedule C
+Emergency Network Outage Communications Protocol
+Purpose
+1. This Emergency Network Outage Communications Protocol applies during a Triggering Event to ensure that a Party provides the public and Governmental Authorities with the Key Network Outage Information. Communications under this Emergency Network Outage Communications Protocol are based on the principles of providing timely, relevant and understandable information in a clear and accessible manner.
+2. This Emergency Network Outage Communications Protocol applies only in the case of a Triggering Event. For greater certainty, if a Party experiences a Network outage that is not a Triggering Event, then its communications to the public and to Governmental Authorities about such outage is at its sole discretion and not subject to this Emergency Network Outage Communications Protocol.
+Definitions
+3. Unless specifically defined hereunder, capitalized terms shall have the meanings set out in the MOU or Schedule A or Schedule B, as the case may be. In this Emergency Network Outage Communications Protocol, the following terms, in singular or plural form according to the context, are defined as follows:
+"9-1-1 Services" means voice 9-1-1 services accessed from a wireless or wireline device, where feasible;
+"Action Plan" means a Party's internally approved plans and protocols applicable in the case of a Triggering Event, specifying its communications of Key Network Outage Information to the public and to Governmental Authorities, in accordance with this Emergency Network Outage Communications Protocol;
+"Emergency Network Outage Communications Protocol" means this Schedule C – Emergency Network Outage Communications Protocol to the MOU, as it may be amended over time;
+"Key Network Outage Information" means key available information about the services affected by the Critical Network Failure (other than highly sensitive information that could compromise network security), the approximate geographic location of the Network outage and the estimated time until Network restoration, as such information may change and become known over the course of the Critical Network Failure;
+"Network" means a Party's wireline or wireless telecommunications network including, as the case may be, the access network, network core, backhaul, transport connectivity and the infrastructure, in whole or in part;
+Principles
+4. Parties agree to inform the public and Governmental Authorities about the Key Network Outage Information in accordance with their respective Action Plans.
+5. Parties should ensure that they have sufficient back-up systems and processes in place to enable their communications to the public and to Governmental Authorities in the event of a Triggering Event.
+6. The conduct of each Party pursuant to this Emergency Network Outage Communications Protocol shall at all times be governed by the duty of good faith.
+Protocols
+7. Preparation for a Triggering Event: In preparation for a Triggering Event, each Party agrees to do the following:
+prepare an Action Plan that sets out its communications policies and procedures applicable during a Critical Network Failure, which Action Plan must have the Party's leadership approval within 90 days of the Effective Date;
+set out tailored policies and procedures that the Party will follow during a Critical Network Failure;
+ensure access is available by a Party's representatives responsible for communications under this Emergency Network Outage Communications Protocol to telecommunications via alternative networks to ensure that they can conduct two-way communications and access electronic communications in the event of a Critical Network Failure that prevents that Party from connecting to its own Networks or from authenticating its identification via its own Networks; and
+review its Action Plan on at least an annual basis, to ensure it remains effective and consistent with this Emergency Network Outage Communications Protocol.
+Communication of a Critical Network Failure to the Public: Throughout the Triggering Event Duration a Party will use commercially reasonable efforts to:
+inform the public of the Key Network Outage Information, and any such communications must include information about whether access to 9-1-1 Services is affected;
+provide information to the public about the Key Network Outage Information within two (2) hours of the Party issuing a Triggering Event Declaration or as expeditiously as possible;
+make the Key Network Outage Information available electronically via its website and other electronic means, if available, in accordance with its Action Plan and applicable accessibility laws;
+endeavor to provide updates using the tools identified in 8(c) about the outage as the status of any information about the Key Network Outage Information changes;
+upon the Triggering Event End Point, notify the public electronically using the tools identified in 8(c) that the Triggering Event has concluded.
+Communications to Governmental Authorities During a Network Outage: Throughout the Triggering Event Duration, a Party will use commercially reasonable efforts to:
+inform Governmental Authorities of the Key Network Outage Information, and any such communications must include information about whether access to 9-1-1 Services is affected;
+provide information to the Governmental Authorities about the Key Network Outage Information within two (2) hours of the Party becoming aware of the Triggering Event or as expeditiously as possible;
+provide communications to the Governmental Authorities in such manner that the Party determines to be the most reasonable and effective means for each of the Governmental Authorities;
+endeavor to provide timely updates about the outage as the status of any of the Key Network Outage Information changes;
+upon the Triggering Event End Point, notify the Governmental Authorities of this information in such manner that it determines to be the most reasonable and effective means, as soon as reasonably possible.
+Schedule D
+Parties to the MOU
+BELL CANADA ("Bell"), a corporation organized under the laws of Canada and having its principal place of business at 1 Carrefour Alexander-Graham-Bell, Building A-7, Verdun, Quebec, H3E 3B3;
+Signed: September 6, 2022
+Signatory: Mirko Bibic, President and Chief Executive Officer
+BRAGG COMMUNICATIONS INC. ("Eastlink"), a corporation organized under the laws of the Province of Nova Scotia and having its principal place of business at 6080 Young Street, 8th Floor, Halifax, Nova Scotia, B3K 5L2;
+Signed: September 1, 2022
+Signatory: Lee Brag, Executive Vice Chair
+COGECO COMMUNICATIONS INC. ("Cogeco"), a corporation organized under the laws of Canada and having its principal place of business at 1, Place Ville-Marie, bureau 3301, Montréal, Québec H3B 3N2;
+Signed: September 6, 2022
+Signatory: Philippe Jetté, President and Chief Executive Officer
+ROGERS COMMUNICATIONS CANADA INC. ("Rogers"), a corporation organized under the laws of Canada and having its principal place of business at 333 Bloor Street East, Toronto, Ontario M4W 1G9;
+Signed: September 1, 2022
+Signatory: Anthony Staffieri, President and Chief Executive Officer
+SASKATCHEWAN TELECOMMUNICATIONS ("SaskTel"), a corporation existing pursuant to its own statute and having its principal place of business at 2121 Saskatchewan Drive, Regina, Saskatchewan;
+Signed: September 2, 2022
+Signatory: Doug Burnett, President and Chief Executive Officer
+SHAW COMMUNICATIONS INC., a corporation existing under the laws of the Province of Alberta and having its principal place of business at 900, 630 – 3rd Avenue S.W., Calgary, Alberta, T2P 4L4, and its Affiliate FREEDOM MOBILE INC., a corporation existing under the laws of the Province of Alberta and having its principal place of business at 16 York Street, Toronto, Ontario, M5J 0E6 (together, "Shaw");
+Signed: September 6, 2022
+Signatory: Brad Shaw, Executive Chair and Chief Executive Officer
+TBAYTEL ("Tbaytel"), a company organized under the laws of Canada and having its principal place of business at 1046 Lithium Drive, Thunder Bay, Ontario, P7B 6G3;
+Signed: September 6, 2022
+Signatory: Daniel Topatigh, President and Chief Executive Officer
+TELESAT CANADA ("Telesat"), a corporation organized under the laws of Canada and having its principal place of business at 160 Elgin Street, Suite 2100, Ottawa, Ontario, H2K 4P7;
+Signed: September 1, 2022
+Signatory: Christopher DiFrancesco, VP, General Counsel & Secretary
+TELUS COMMUNICATIONS INC. ("TELUS"), a corporation organized under the laws of the Province of British Columbia and having its principal place of business at 7th Floor, 510 West Georgia Street, Vancouver, British Columbia, V6B 0M3;
+Signed: September 2, 2022
+Signatory: Darren Entwistle, President and Chief Executive Officer
+VIDEOTRON LTD. ("Videotron"), a corporation organized under the laws of the Province of Quebec and having its principal place of business at 612, St-Jacques Street, Montreal, Quebec, H3C 4M8;
+Signed: September 6, 2022
+Signatories: Pierre Karl Péladeau, President
+XPLORNET COMMUNICATIONS INC. ("Xplornet"), a corporation organized under the laws of the Province of New Brunswick and having its principal place of business at 300 Lockhart Mill Road, Woodstock, New Brunswick, E7M 6B5; and
+Signed: September 2, 2022
+Signatory: Allison Lenehan, President and Chief Executive Officer
+ZAYO CANADA INC. ("Zayo"), a corporation organized under the laws of Ontario and having its principal place of business at 5160 Orbitor Dr, Mississauga, Ontario L4W 5H2.
+Signed: September 6, 2022
+Signatory: Michael Strople, Managing Director Zayo Canada
+Schedule E
+Notice addresses
+Party:
+Notice address:
+Bell
+Bell Canada
+Corporate Secretary
+1 Carrefour Alexander-Graham-Bell, Building A-7
+Verdun, Quebec, H3E 3B3
+Attention: Corporate Secretary
+Email: corporate.secretariat@bell.ca
+Email: bell.regulatory@bell.ca
+Eastlink
+Bragg Communications Inc.
+Legal Department
+6080 Young Street, 9th Floor
+Halifax, Nova Scotia, B3K 5L2
+Email: Legal.Matters@corp.eastlink.ca
+Email: Regulatory.Matters@corp.eastlink.ca
+Cogeco
+Cogeco Communications Inc.
+Legal Department
+1, Place Ville-Marie, bureau 3301
+Montréal, Québec H3B 3N2
+Rogers
+Rogers Communications Canada Inc.
+Regulatory Department
+333 Bloor Street East
+Toronto, Ontario M4W 1G9
+Attention: VP, Regulatory
+Email: Regulatory@rci.rogers.com
+With a copy to:
+Rogers Communications Canada Inc.
+Legal Department
+333 Bloor Street East
+Toronto, Ontario M4W 1G9
+Attention: VP, Legal
+Email: legal.contracts@rci.rogers.com
+SaskTel
+Saskatchewan Telecommunications
+13th Floor, 2121 Saskatchewan Drive
+Regina, SK
+SP3Y2
+Attention: Chief Technology Officer
+With a copy to:
+Saskatchewan Telecommunications
+13th Floor, 2121 Saskatchewan Drive
+Regina, SK
+SP3Y2
+Attention: VP – Legal and Regulatory Affairs
+Shaw
+Shaw Communications Inc.
+Legal Department
+900, 630 3rd Avenue SW
+Calgary, Alberta T2P 4L4
+Attention: Chief Legal Officer
+Email: sclegal@sjrb.ca
+Tbaytel
+Tbaytel
+Regulatory Department
+1046 Lithium Drive
+Thunder Bay, Ontario, P7B 6G3
+Email: TBTRegulatory@tbaytel.com
+Télésat
+Telesat Canada
+c/o: Corporate Secretary
+160 Elgin Street, Suite 2100
+Ottawa, ON, H2K 4P7
+Email: contract-notice@telesat.com
+TELUS
+TELUS Communications Inc.
+29th Floor, 25 York Street
+Toronto, Ontario, M5J 2V5
+Attention: Contracts Department
+Email: gt&ps.contracts@telus.com
+With a copy to:
+TELUS Communications Inc.
+29th Floor, 25 York Street
+Toronto, Ontario M5J 2V5
+Attention: Director – Products & Services
+Email: david.morrow@telus.com
+Vidéotron
+Videotron Ltd.
+612 St-Jacques
+Montreal, Québec H3C 4M8
+Attention: VP, Legal Affairs
+Email: legalnotice@quebecor.com
+With a copy to:
+Videotron Ltd.
+Roaming Department
+612 St-Jacques
+Montréal, Québec H3C 4M8
+Attention: Senior Director
+Email: roaming.coordinator@videotron.com
+Xplornet
+Xplornet Communications Inc.
+625 Cochrane Drive, Suite 1000
+Markham, Ontario L3R 9R9
+Attention: Chief Legal and Regulatory Officer
+Email: Xplornet.Legal@corp.xplornet.com
+Zayo
+Zayo Group
+Attn: Underlying Rights/Legal
+1401 Wynkoop Street, Suite 500
+Denver, CO 80202
+legal@zayo.com
+Report a problem

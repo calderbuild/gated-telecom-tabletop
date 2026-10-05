@@ -1,0 +1,33 @@
+Here's why UAE bank customers will no longer receive OTPs via texts and emails
+Rise of fraud has raised questions about consumer protection and banks' security measures, experts say
+Deepthi Nair
+July 24, 2025
+UAE banks will stop sending OTPs via SMS and email for online transactions by July 25, 2025.
+Customers must authenticate transactions using their mobile banking apps for improved security.
+The Central Bank of the UAE has not officially announced the cancellation of SMS or email OTPs.
+The move to in-app authentication is aimed at reducing fraud linked to SMS and email OTPs.
+“The regulator said OTPs should not be shared through weak modes of communication," says a banker who spoke to The National.
+Customers of UAE banks will no longer receive one-time passwords for online financial transactions through SMS and email starting on Friday, according to messages seen by The National.
+Instead of the passwords, or OTPs, customers will have to authenticate transactions within their mobile banking apps, which experts say is a step in the right direction in efforts to boost security of digital banking and customer protection.
+“SMS and email OTPs for online transactions will be phased out from July 25. Switch to ADIB mobile app for in-app authentication,” says an SMS received from Abu Dhabi Islamic Bank, Abu Dhabi’s biggest Sharia-compliant lender.
+Citi Bank customers have also received an email notifying them of the change. “We are enhancing the way you approve your online card transactions to provide you with greater security. As part of this upgrade, SMS OTP is no longer supported,” the email says.
+The lender says the change will be rolled out in phases and asks customers to download the bank app and complete their registration. After registration, customers will receive in-app authorisation requests to approve online purchases.
+However, the Central Bank of the UAE told The National on Thursday that it has not issued an official notice particularly addressing the cancellation of OTP through SMS or email.
+Mashreq, Dubai Islamic Bank and First Abu Dhabi Bank offered no comment, while Abu Dhabi Commercial Bank, Emirates NBD and Commercial Bank of Dubai did not respond to requests for comment.
+Experts say the move is aimed at improving security and reducing fraud attempts through SMS or email-based OTPs. These methods are increasingly used by cyber criminals to steal from customers.
+The rise of fraud involving contactless payments has raised questions about consumer protection and banks' security measures.
+The UAE’s status as a regional business centre, with a high concentration of wealth, makes it a target for cyber criminals, personal finance experts say.
+Fraudsters are drawn to the Emirates due to its affluent population, high internet use and the perception that consumers may be less cautious when conducting online transactions, says Carol Glynn, founder of Conscious Finance Coaching.
+Internet penetration – the percentage of a population that uses the internet – in the UAE stands at more than 96 per cent, making it one of the world's highest, Ms Glynn says.
+Customers travelling outside the UAE have complained of not receiving the SMS containing the OTP or receiving it after the valid time period.
+A banker who spoke to The National on condition of anonymity said they received a circular from the Central Bank outlining this change in May.
+“This is part of comprehensive guidelines for banks and financial institutions with the subject line of prevention of fraud. The regulator said OTPs should not be shared through weak modes of communication, such as SMS and emails, as they are vulnerable and can be compromised,” they said.
+“Instead, the Central Bank want to have more secure modes of communication, or two-way authentication in a way. So, they consider in-app as one of the better modes of communication.”
+The circular was issued with immediate effect, so banks and financial institutions were required to fast-track this transition, the banker said.
+Better modes of communication and transmission of financial information will reduce the potential for fraud incidents, which is an “industry-wide concern”. This change will benefit not just banks, but the entire payment ecosystem in the UAE, he added.
+The move by UAE lenders is a critical step in strengthening digital banking security and reducing exposure tied to telecom system vulnerabilities, Benjamin Ward, regional financial institutions leader for the Middle East and North Africa at professional services firm Marsh, said.
+"This shift also places full responsibility for authentication integrity squarely on the banks themselves," he said.
+"However, threat actors won’t stop - they’ll shift tactics."
+Phishing activity and attempts at social engineering by scammers of tricking users into approving app-based transactions will continue.
+"Instead of SIM swaps or message interception, attackers will increasingly target internet banking, mobile apps, and core authentication systems directly," he added.
+Updated: July 25, 2025, 4:48 AM

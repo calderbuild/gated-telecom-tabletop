@@ -1,0 +1,32 @@
+{
+  "scenario": "S2",
+  "frozen": "2026-10-05, before the first live run",
+  "actions": [
+    {"id": "K2-A1", "agent": "NOC", "verbs": ["disable_tool", "restore_scope"]},
+    {"id": "K2-A2", "agent": "NOC", "verbs": ["notify"], "params": {"to": ["DPA"]}},
+    {"id": "K2-A3", "agent": "NOC", "verbs": ["notify"], "params": {"to": ["data_subjects", "customers"]}},
+    {"id": "K2-A4", "agent": "CSC", "verbs": ["issue_advisory"]},
+    {"id": "K2-A5", "agent": "DPA", "verbs": ["request_breach_report", "open_investigation"]},
+    {"id": "K2-A6", "agent": "NOC", "verbs": ["preserve_logs"]}
+  ],
+  "obligations": [
+    {"id": "K2-O1", "agents": ["NOC"], "phrases": ["notify the bureau of such breach"]},
+    {"id": "K2-O2", "agents": ["NOC"], "phrases": ["notify the data subject"]},
+    {"id": "K2-O3", "agents": ["NOC"], "phrases": ["prior consent", "highest standard of information security"]}
+  ],
+  "gaps": [
+    {"id": "K2-G1", "description": "No breach-notification deadline until the Executive Regulations are issued", "types": ["no_deadline"],
+     "uae_phrases": ["set by the executive regulations"], "global_docs": ["EU-GDPR", "EU-NIS2"], "duty": "CC-NOTIFY-DPA"},
+    {"id": "K2-G2", "description": "No general rule to disclose that a customer is talking to an AI system", "types": ["no_rule"],
+     "uae_phrases": ["non-human agents", "artificial intelligence assistance"], "global_docs": ["EU-AIA", "CA-MOFFATT-2024"]},
+    {"id": "K2-G3", "description": "Operator liability for an AI vendor or processor is not spelled out for AI customer care", "types": ["no_rule", "overlap"],
+     "uae_phrases": ["processor", "third parties"], "global_docs": ["US-FCC-DA-24-892", "CA-MOFFATT-2024"]},
+    {"id": "K2-G4", "description": "No GenAI security-testing duty for customer-facing bots", "types": ["no_rule"],
+     "uae_phrases": ["ai/ml", "security"], "global_docs": ["NIST-AI-600-1", "ETSI-TS-104223"]},
+    {"id": "K2-G5", "description": "Offshore hosting of chat logs without a stated legal basis", "types": ["no_rule", "conflict"],
+     "uae_phrases": ["transferred to outside of the state", "transferred to outside the state"], "global_docs": ["EU-GDPR", "US-FCC-DA-24-892"]},
+    {"id": "K2-G6", "description": "Unclear notification order among operator, data authority, cyber council and regulator during the authority transition", "types": ["no_owner", "overlap"],
+     "uae_phrases": ["federal authority for artificial intelligence", "data office"], "global_docs": ["EU-NIS2", "EU-GDPR"]}
+  ],
+  "abstention": {"inject": "S2-I5", "agent": "DPA"}
+}

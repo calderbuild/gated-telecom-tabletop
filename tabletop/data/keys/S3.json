@@ -1,0 +1,28 @@
+{
+  "scenario": "S3",
+  "frozen": "2026-10-05, before the first live run",
+  "actions": [
+    {"id": "K3-A1", "agent": "NOC", "verbs": ["rollback_model", "enable_review_queue"]},
+    {"id": "K3-A2", "agent": "NOC", "verbs": ["alt_auth_route"]},
+    {"id": "K3-A3", "agent": "FIN", "verbs": ["notify", "request_info"]},
+    {"id": "K3-A4", "agent": "DPA", "verbs": ["request_human_review_record", "open_investigation"]},
+    {"id": "K3-A5", "agent": "REG", "verbs": ["request_report", "open_incident", "issue_direction"]}
+  ],
+  "obligations": [
+    {"id": "K3-O1", "agents": ["NOC", "DPA"], "phrases": ["human element"]},
+    {"id": "K3-O2", "agents": ["NOC", "DPA", "REG"], "phrases": ["object to any decisions resulting from automated processing"]}
+  ],
+  "gaps": [
+    {"id": "K3-G1", "description": "Right to object to automated decisions exists but its procedure is deferred to unissued Executive Regulations", "types": ["no_rule", "no_deadline"],
+     "uae_phrases": ["automated processing"], "global_docs": ["EU-GDPR"]},
+    {"id": "K3-G2", "description": "No UAE rule on SIM-swap authentication or notification", "types": ["no_rule"],
+     "uae_phrases": ["security questions", "identity"], "global_docs": ["US-FCC-23-95", "US-CFR-47-64-2010", "AU-ACMA-OPTUS-IDV-2025", "AU-ACMA-TELSTRA-SIMSWAP-2026"]},
+    {"id": "K3-G3", "description": "Fraud control conflicts with access to service", "types": ["conflict"],
+     "uae_phrases": ["automated processing"], "global_docs": ["US-FCC-23-95", "UK-FCA-ACCOUNTS-2023"]},
+    {"id": "K3-G4", "description": "Split data regime: banking data excluded from the PDPL; no telco-bank coordination protocol", "types": ["no_owner", "overlap", "no_rule"],
+     "uae_phrases": ["banking and credit"], "global_docs": ["US-FCC-23-95", "AU-ACMA-TELSTRA-SIMSWAP-2026"]},
+    {"id": "K3-G5", "description": "No rule on fairness or disparate impact of telco models on population groups", "types": ["no_rule"],
+     "uae_phrases": ["bias", "fairness"], "global_docs": ["NIST-AI-RMF", "GSMA-RAI-ROADMAP", "EU-AIA"]}
+  ],
+  "abstention": {"inject": "S3-I5", "agent": "REG"}
+}

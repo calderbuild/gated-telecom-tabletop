@@ -55,7 +55,7 @@ class AuditLog:
 
 def load(path: Path) -> list[dict]:
     return [
-        json.loads(line) for line in Path(path).read_text().splitlines() if line.strip()
+        json.loads(line) for line in Path(path).read_text().split("\n") if line.strip()
     ]
 
 

@@ -1,0 +1,1072 @@
+I n t e r n a t i o n a l T e l e c o m m u n i c a t i o n U n i o n
+ITU-T Y.3172
+TELECOMMUNICATION (06/2019)
+STANDARDIZATION SECTOR
+OF ITU
+SERIES Y: GLOBAL INFORMATION
+INFRASTRUCTURE, INTERNET PROTOCOL ASPECTS,
+NEXT-GENERATION NETWORKS, INTERNET OF
+THINGS AND SMART CITIES
+Future networks
+Architectural framework for machine learning in
+future networks including IMT-2020
+Recommendation ITU-T Y.3172
+ITU-T Y-SERIES RECOMMENDATIONS
+GLOBAL INFORMATION INFRASTRUCTURE, INTERNET PROTOCOL ASPECTS, NEXT-GENERATION
+NETWORKS, INTERNET OF THINGS AND SMART CITIES
+GLOBAL INFORMATION INFRASTRUCTURE
+General Y.100–Y.199
+Services, applications and middleware Y.200–Y.299
+Network aspects Y.300–Y.399
+Interfaces and protocols Y.400–Y.499
+Numbering, addressing and naming Y.500–Y.599
+Operation, administration and maintenance Y.600–Y.699
+Security Y.700–Y.799
+Performances Y.800–Y.899
+INTERNET PROTOCOL ASPECTS
+General Y.1000–Y.1099
+Services and applications Y.1100–Y.1199
+Architecture, access, network capabilities and resource management Y.1200–Y.1299
+Transport Y.1300–Y.1399
+Interworking Y.1400–Y.1499
+Quality of service and network performance Y.1500–Y.1599
+Signalling Y.1600–Y.1699
+Operation, administration and maintenance Y.1700–Y.1799
+Charging Y.1800–Y.1899
+IPTV over NGN Y.1900–Y.1999
+NEXT GENERATION NETWORKS
+Frameworks and functional architecture models Y.2000–Y.2099
+Quality of Service and performance Y.2100–Y.2199
+Service aspects: Service capabilities and service architecture Y.2200–Y.2249
+Service aspects: Interoperability of services and networks in NGN Y.2250–Y.2299
+Enhancements to NGN Y.2300–Y.2399
+Network management Y.2400–Y.2499
+Network control architectures and protocols Y.2500–Y.2599
+Packet-based Networks Y.2600–Y.2699
+Security Y.2700–Y.2799
+Generalized mobility Y.2800–Y.2899
+Carrier grade open environment Y.2900–Y.2999
+FUTURE NETWORKS Y.3000–Y.3499
+CLOUD COMPUTING Y.3500–Y.3999
+INTERNET OF THINGS AND SMART CITIES AND COMMUNITIES
+General Y.4000–Y.4049
+Definitions and terminologies Y.4050–Y.4099
+Requirements and use cases Y.4100–Y.4249
+Infrastructure, connectivity and networks Y.4250–Y.4399
+Frameworks, architectures and protocols Y.4400–Y.4549
+Services, applications, computation and data processing Y.4550–Y.4699
+Management, control and performance Y.4700–Y.4799
+Identification and security Y.4800–Y.4899
+Evaluation and assessment Y.4900–Y.4999
+For further details, please refer to the list of ITU-T Recommendations.
+Recommendation ITU-T Y.3172
+Architectural framework for machine learning in future networks
+including IMT-2020
+Summary
+Recommendation ITU-T Y.3172 specifies an architectural framework for machine learning (ML) in
+future networks including IMT-2020. A set of architectural requirements and specific architectural
+components needed to satisfy these requirements are presented. These components include, but are not
+limited to, an ML pipeline as well as ML management and orchestration functionalities. The
+integration of such components into future networks including IMT-2020 and guidelines for applying
+this architectural framework in a variety of technology-specific underlying networks are also
+described.
+History
+Edition Recommendation Approval Study Group Unique ID*
+1.0 ITU-T Y.3172 2019-06-22 13 11.1002/1000/13894
+Keywords
+Architectural framework, high-level architecture, IMT-2020, intent, machine learning, ML,
+orchestrator, overlay, pipeline, requirements, sandbox, training, underlay.
+* To access the Recommendation, type the URL http://handle.itu.int/ in the address field of your web
+browser, followed by the Recommendation's unique ID. For example, http://handle.itu.int/11.1002/1000/
+11830-en.
+Rec. ITU-T Y.3172 (06/2019) i
+FOREWORD
+The International Telecommunication Union (ITU) is the United Nations specialized agency in the field of
+telecommunications, information and communication technologies (ICTs). The ITU Telecommunication
+Standardization Sector (ITU-T) is a permanent organ of ITU. ITU-T is responsible for studying technical,
+operating and tariff questions and issuing Recommendations on them with a view to standardizing
+telecommunications on a worldwide basis.
+The World Telecommunication Standardization Assembly (WTSA), which meets every four years,
+establishes the topics for study by the ITU-T study groups which, in turn, produce Recommendations on
+these topics.
+The approval of ITU-T Recommendations is covered by the procedure laid down in WTSA Resolution 1.
+In some areas of information technology which fall within ITU-T's purview, the necessary standards are
+prepared on a collaborative basis with ISO and IEC.
+NOTE
+In this Recommendation, the expression "Administration" is used for conciseness to indicate both a
+telecommunication administration and a recognized operating agency.
+Compliance with this Recommendation is voluntary. However, the Recommendation may contain certain
+mandatory provisions (to ensure, e.g., interoperability or applicability) and compliance with the
+Recommendation is achieved when all of these mandatory provisions are met. The words "shall" or some
+other obligatory language such as "must" and the negative equivalents are used to express requirements. The
+use of such words does not suggest that compliance with the Recommendation is required of any party.
+INTELLECTUAL PROPERTY RIGHTS
+ITU draws attention to the possibility that the practice or implementation of this Recommendation may
+involve the use of a claimed Intellectual Property Right. ITU takes no position concerning the evidence,
+validity or applicability of claimed Intellectual Property Rights, whether asserted by ITU members or others
+outside of the Recommendation development process.
+As of the date of approval of this Recommendation, ITU had not received notice of intellectual
+property, protected by patents, which may be required to implement this Recommendation. However,
+implementers are cautioned that this may not represent the latest information and are therefore strongly urged
+to consult the TSB patent database at http://www.itu.int/ITU-T/ipr/.
+ ITU 2019
+All rights reserved. No part of this publication may be reproduced, by any means whatsoever, without the
+prior written permission of ITU.
+ii Rec. ITU-T Y.3172 (06/2019)
+Table of Contents
+Page
+Appendix I – Realization of the high-level architecture on technology-specific underlay
+Appendix II – Mapping of the architectural components and supporting aspects to the
+Rec. ITU-T Y.3172 (06/2019) iii
+Recommendation ITU-T Y.3172
+Architectural framework for machine learning in future networks
+including IMT-2020
+1 Scope
+This Recommendation specifies an architectural framework for machine learning in future networks
+including IMT-2020.
+A set of architectural requirements is presented, which in turn leads to specific architectural
+components needed to satisfy these requirements. This Recommendation also describes an
+architectural framework for the integration of such components into future networks including
+IMT-2020 and guidelines for applying this architectural framework in a variety of technology-
+specific underlying networks.
+2 References
+The following ITU-T Recommendations and other references contain provisions which, through
+reference in this text, constitute provisions of this Recommendation. At the time of publication, the
+editions indicated were valid. All Recommendations and other references are subject to revision;
+users of this Recommendation are therefore encouraged to investigate the possibility of applying the
+most recent edition of the Recommendations and other references listed below. A list of the currently
+valid ITU-T Recommendations is regularly published. The reference to a document within this
+Recommendation does not give it, as a stand-alone document, the status of a Recommendation.
+[ITU-T Y.3111] Recommendation ITU-T Y.3111 (2017), IMT-2020 network management and
+orchestration framework.
+3 Definitions
+3.1 Terms defined elsewhere
+This Recommendation uses the following term defined elsewhere:
+3.1.1 network function [b-ITU-T Y.3100]: In the context of IMT-2020, a processing function in
+a network.
+NOTE 1 – Network functions include but are not limited to network node functionalities, e.g., session
+management, mobility management and transport functions, whose functional behaviour and interfaces are
+defined.
+NOTE 2 – Network functions can be implemented on a dedicated hardware or as virtualized software functions.
+NOTE 3 – Network functions are not regarded as resources, but rather any network functions can be
+instantiated using the resources.
+3.2 Terms defined in this Recommendation
+This Recommendation defines the following terms:
+3.2.1 machine learning (ML): Processes that enable computational systems to understand data
+and gain knowledge from it without necessarily being explicitly programmed.
+NOTE 1 – This definition is adapted from [b-ETSI GR ENI 004].
+NOTE 2 – Supervised machine learning and unsupervised machine learning are two examples of machine
+learning types.
+3.2.2 machine learning function orchestrator (MLFO): A logical node with functionalities that
+manage and orchestrate the nodes in a machine learning pipeline.
+3.2.3 machine learning model: Model created by applying machine learning techniques to data to
+learn from.
+NOTE 1 – A machine learning model is used to generate predictions (e.g., regression, classification, clustering)
+on new (untrained) data.
+NOTE 2 – A machine learning model may be encapsulated in a deployable fashion in the form of a software
+(e.g., virtual machine, container) or hardware component (e.g., IoT device).
+NOTE 3 – Machine learning techniques include learning algorithms (e.g., learning the function that maps input
+data attributes to output data).
+3.2.4 machine learning overlay: A loosely coupled deployment model of machine learning
+functionalities whose integration and management with network functions are standardised.
+NOTE – A machine learning overlay aims to minimise interdependencies between machine learning
+functionalities and network functions using standard interfaces, allowing for the parallel evolution of
+functionalities of the two.
+3.2.5 machine learning pipeline: A set of logical nodes, each with specific functionalities, that
+can be combined to form a machine learning application in a telecommunication network.
+NOTE – The nodes of a machine learning pipeline are entities that are managed in a standard manner and can
+be hosted in a variety of network functions [b-ITU-T Y.3100].
+3.2.6 machine learning sandbox: An environment in which machine learning models can be
+trained, tested and their effects on the network evaluated.
+NOTE – A machine learning sandbox is designed to prevent a machine learning application from affecting the
+network, or to restrict the usage of certain machine learning functionalities.
+3.2.7 machine learning underlay network: A telecommunication network and its related network
+functions which interfaces with corresponding machine learning overlays.
+NOTE – An IMT-2020 network is an example of a machine learning underlay network.
+4 Abbreviations and acronyms
+This Recommendation uses the following abbreviations and acronyms:
+AF Application Function
+AN Access Network
+API Application Programming Interface
+AR/VR Augmented Reality/Virtual Reality
+C Collector (in ML pipeline)
+CN Core Network
+D Distributor (in ML pipeline)
+EMS Element Management System
+FMC Fixed Mobile Convergence
+GPU Graphic Processor Unit
+IoT Internet of Things
+KPI Key Performance Indicator
+M Model (in ML pipeline)
+mIoT massive Internet of Things
+MEC Multi-access Edge Computing
+ML Machine Learning
+MLFO Machine Learning Function Orchestrator
+MnS Management Service
+MPP Mobility Pattern Prediction
+NF Network Function
+NOP Network Operator
+OAM Operations, Administration and Maintenance
+P Policy (in ML pipeline)
+PP Preprocessor (in ML pipeline)
+QoS Quality of Service
+RCA Root Cause Analysis
+RRC Radio Resource Control
+SBA Service-Based Architecture
+SMF Session Management Function
+SON Self-Optimizing Network
+SRC Source
+UE User Equipment
+UPF User Plane Function
+V2X Vehicle-to-everything
+VoLTE Voice over Long-Term Evolution
+5 Conventions
+In this Recommendation, requirements are classified as follows:
+The keywords "is required to" indicate a requirement which must be strictly followed and from which
+no deviation is permitted if conformance to this Recommendation is to be claimed.
+The keywords "is recommended" indicate a requirement which is recommended but which is not
+absolutely required. Thus, this requirement need not be present to claim conformance.
+The keywords "can optionally" indicate an optional requirement which is permissible, without
+implying any sense of being recommended. This term is not intended to imply that the vendor's
+implementation must provide the option and the feature can be optionally enabled by the network
+operator/service provider. Rather, it means the vendor may optionally provide the feature and still
+claim conformance with the specification.
+In the body of this Recommendation and its annexes, the words shall, shall not, should, and may
+sometimes appear, in which case they are to be interpreted, respectively, as is required to, is prohibited
+from, is recommended, and can optionally. The appearance of such phrases or keywords in an
+appendix or in material explicitly marked as informative is to be interpreted as having no normative
+intent.
+ML pipeline – In this Recommendation, when the symbol shown in Figure 1 is used, this denotes a
+subset (including proper subset) of nodes in an ML pipeline. When this symbol is used in a figure,
+the symbol stands for the subset of an ML pipeline's nodes not explicitly shown in that figure.
+Figure 1 – Symbol used to denote a subset of nodes in an ML pipeline
+Service egress and ingress points – In this Recommendation, a node and its service egress and
+ingress points are denoted by the symbol in Figure 2. The service egress point is shown with a green
+rectangle on top of the node, while the service ingress point corresponds to the red rectangle on top
+of the node.
+Figure 2 – Symbol used to denote a node with its service egress and ingress points
+6 Introduction
+Machine learning (ML) provides a way to teach computational systems to gain knowledge from data
+without necessarily being explicitly programmed, in order to realize complicated tasks such as detection
+of characteristics or prediction of behaviours. As ML becomes an important technical trend in the
+industry, network operators and other stakeholders are searching for cost-effective ways to
+incorporate ML into future networks including IMT-2020.
+While the benefits from such an integration have been discussed under many use cases
+(e.g., troubleshooting of network problems, network traffic prediction, traffic optimization adjustment,
+network security auditing [b-ITU-T Y.3650] [b-ITU-T Y.3170]), there are many challenges to such an
+integration. Some of the important challenges are:
+A. The heterogeneous nature of ML functionalities and unique characteristics of future
+communication technologies impose a varied set of requirements for integration.
+B. Roadmaps for evolution of these ML functionalities and communication networks are not
+aligned.
+C. The cost of integration, in terms of architecture impact, is an important consideration.
+D. Disparate management mechanisms for ML functionalities and network functions
+[b-ITU-T Y.3100] will disrupt the operations management of communication networks.
+An architectural framework for the integration of ML with future networks including IMT-2020 is
+provided to address these challenges.
+Building on high-level architectural requirements, such a framework at first provides a common
+vocabulary and nomenclature for ML functionalities and their relationships with the communication
+networks. The framework addresses the reference points for future networks including IMT-2020
+which enable loosely coupled integration with ML functionalities. Management mechanisms for ML
+are also described in the framework considering the existing management principles which have been
+identified in IMT-2020 networks.
+The framework enables a standard method of integrating ML functionalities in future networks
+including IMT-2020.
+7 High-level architectural requirements
+This clause provides high-level requirements for the design of the high-level architecture framework
+in clause 8.
+These high-level architectural requirements are classified as shown below.
+• Enablers for correlation of data across levels and heterogeneous technologies: This set of
+requirements addresses challenge A mentioned in clause 6 and the requirements which fall
+into this set are provided in clause 7.1.
+NOTE – Levels may correspond to different parts of the network where the reference points between
+these parts are defined in the relevant network architecture specifications. For example,
+[b-ITU-T Y.3104] defines the reference point RP-an between the access network (AN) and the core
+network (CN), thus, AN and CN may correspond to different levels of an IMT-2020 network.
+• Enablers for deployment: This set of requirements addresses challenge B mentioned in
+clause 6 and the requirements which fall into this set are provided in clause 7.2.
+• Requirements related to interfaces between the architectural components: This set of
+requirements addresses challenges B and C mentioned in clause 6 and the requirements which
+fall into this set are provided in clause 7.3.
+• Requirements related to declarative specifications used for specifying the ML applications:
+This set of requirements addresses challenges C and D mentioned in clause 6 and the
+requirements which fall into this set are provided in clause 7.4.
+• Requirements related to the management of the architectural components: This set of
+requirements addresses challenge D mentioned in clause 6 and the requirements which fall
+into this set are provided in clause 7.5.
+7.1 Enablers for correlation
+Table 7-1 provides requirements regarding enablers for the correlation of data across levels and
+heterogeneous technologies.
+Table 7-1 – High-level requirements – Enablers for correlation
+The ML architecture is recommended to support the correlation of data coming
+REQ-ML-COR-001
+from multiple sources.
+In future networks, sources of data may be heterogeneous, integrated with
+different network functions (NFs), and may report different formats of data.
+Description These varied "perspectives" can provide rich insights upon correlated analysis.
+Architectural components to enable the ML functionalities to collect and
+correlate data from these varied sources in the network are needed.
+NOTE 1 – As an example, the analysis of data from user equipment (UE), AN,
+CN and application function (AF) is needed to predict potential issues related to
+quality of service (QoS) in end-to-end user flows.
+Notes NOTE 2 – Other examples of such sources of data are self-optimizing network
+(SON) functionalities that monitor and correlate network alarms and key
+performance indicators (KPIs) [b-3GPP TS 28.554], and then take relevant
+action to clear alarms or enhance network KPIs, or give network design
+recommendations without human intervention.
+Table 7-1 – High-level requirements – Enablers for correlation
+a) The ML architecture is required to support multiple technologies of future
+networks including IMT-2020 to achieve end-to-end user experience.
+REQ-ML-COR-002
+b) The ML architecture is recommended to be interfaced with non-IMT-2020
+external functional entities to achieve end-to-end user experience.
+Future networks will have multiple technologies coexisting side by side, e.g.,
+licensed and unlicensed wireless technologies, fixed mobile convergence (FMC)
+technologies, legacy and future technologies. The emergence of network slicing
+[ITU-T Y.3111] is one example in which vertical technologies (networks
+customized to provide flexible solutions for different market scenarios) and their
+Description integration into future networks are important. The interfacing of ML
+architecture with such functional entities will help in achieving KPIs as for
+example specified in [b-3GPP TS 28.554].
+Thus, it is important for the ML architecture to be capable of integration with
+multiple underlying technologies and even the support of application functions.
+NOTE 1 – Vehicle-to-everything (V2X) is an example of a vertical application
+which may benefit from the support of network slicing.
+NOTE 2 – Various communication network (e.g., 3G, 4G, 5G) technologies
+could be considered as examples of underlying technologies.
+Applications for hosting in-car entertainment, processing data from drones,
+entertainment applications using augmented reality/virtual reality (AR/VR) are
+Notes examples of application functions.
+NOTE 3 – Examples of network functions which are not directly managed by the
+network operator (NOP) are sensors, power circuits and different Internet of
+things (IoT) modules. In some use cases, the data from such network functions
+are utilized to control and monitor both the network functions deployed in the
+network as well as such external network functional entities themselves. This
+data could also be then used in various types of network parameter optimizations
+to achieve gains in coverage, capacity and quality by the NOP.
+The ML architecture is required to support distributed instantiation of machine
+REQ-ML-COR-003
+learning functionalities in multiple levels.
+Distributed instantiation helps in using data from different levels, to enrich
+locally available data in a level, as needed. Thus, the ML functionalities may be
+Description multilevel.
+Independent instances of ML functionalities may be created in multiple levels.
+NOTE 1 – In some use cases, the source of data may be placed in an AN and
+preprocessed data is handled by the CN [b-ITU-T Y.3102] where the ML model
+is hosted.
+Notes
+NOTE 2 – ML functionalities may be used for performing mobile pattern
+predictions (MPPs) or network slice [b-ITU-T Y.3100] configurations using
+input from the network at multiple levels (from sources in AN or CN).
+7.2 Enablers for deployment
+Table 7-2 provides requirements regarding enablers for the deployment of ML functionalities.
+Table 7-2 – High-level requirements – Enablers for deployment
+The ML architecture is recommended to define the points of interaction between
+REQ-ML-DEP-001 ML functions and technology-specific underlay network functions,
+independently from functionalities of the machine learning application.
+The specification of ML applications in future networks will be related to the
+existing (or new) network services or network functions. Based on the
+specification of the ML applications, placement and characteristics of the ML
+functionalities are decided. The source of data and the target of ML output are
+Description
+points of tight integration with the technology-specific underlay NFs. Apart from
+this, ML functionalities may be generic and do not have tight integration with
+technology-specific NFs. Well-defined reference points between the ML
+functionalities and the technology-specific underlay NFs are required.
+NOTE 1 – ML output may be policies or configurations to be applied in the
+network and the target of ML output may be functions in the network for
+applying ML output. Such application of ML output may be controlled by
+network operator policies.
+Notes NOTE 2 – In some use cases, source of data and traffic classification (based on
+ML output) may be placed in the user plane of the network, e.g., user plane
+function (UPF) [b-ITU-T Y.3104]. These may be considered as points of tight
+integration between the ML functionalities and the underlying network
+(e.g., AN or CN). Other ML functionalities (e.g., the ML model) do not have
+such interface dependencies on the underlying networks.
+The ML architecture is required to support split or combined deployments of ML
+REQ-ML-DEP-002
+functionalities across different underlay network functions.
+In future networks, management and orchestration functions [ITU-T Y.3111]
+will optimize the location and the performance of NFs accordingly.
+Description To carry forward such benefits to ML applications, similar optimizations should
+also be applied to ML functionalities. Moreover, the constraints applicable to an
+ML functionality may be unique.
+NOTE 1 – ML training may need a graphic processor unit (GPU) and may need
+to be done in an isolated environment so that it does not affect other
+functionalities of the network.
+Notes
+NOTE 2 – As an example, depending on the latency budget, data availability and
+other considerations for ML applications, the ML functionalities could have the
+source of data and the ML training hosted in the CN or AN.
+Table 7-2 – High-level requirements – Enablers for deployment
+The ML architecture is required to support the flexible placement of ML
+REQ-ML-DEP-003 functionalities (in coordination with the management and orchestration functions
+[b-ITU-T Y.3100] [b-ITU-T Y.3110]) in the underlying network functions.
+The flexible placement of ML functionalities could be based, among other
+factors, on the specifications of ML applications.
+The management and orchestration functions utilize both the specifications of
+the ML applications and the conditions in the network to implement this
+requirement.
+Resource allocation for ML functionalities is required to consider various
+constraints (e.g., resource constraints of the NFs, latency constraints specific to
+the ML application, availability of data that is specific to the ML application,
+data transformation capabilities, performance constraints, training capabilities
+Description
+and model characteristics).
+The ML architecture should provide the ability to place the ML functionalities in
+a flexible manner in the network that is most optimal for the performance of the
+ML applications and based on the constraints defined in the declarative
+specifications of the ML applications.
+The constraints for online training and prediction for real-time ML applications
+which are captured in the specification form inputs to placing the ML
+functionalities in the network that can provide optimal performance for the use
+case. NOTE 1 – If the ML model includes a neural network, then a placement decision
+in a GPU-based system is desirable.
+NOTE 2 – Based on the requirements of the ML applications, the ML
+functionalities which provide latency sensitive short-term predictions may be
+hosted closer to the edge. The placement may also be influenced by
+Notes considerations of data availability. This may be done in coordination with the
+split of ML functionalities mentioned in REQ-ML-DEP-002.
+NOTE 3 – In certain use cases, user plane data classification may be done using
+ML models. Since user plane data classification is a latency-sensitive
+application, the model may be hosted at the transport network, whereas the
+training could be done at the CN.
+The ML architecture is required to support plugging in and out new data sources
+REQ-ML-DEP-004
+or configuration targets to a running ML environment.
+Certain advanced applications in future networks, e.g., massive Internet of
+Things (mIoT), require handling of unstructured data from a huge number of
+Description
+data sources that may be plug and play. One such use case is the analysis of
+logged data for anomaly detection in networks.
+NOTE 1 – The scaling of ML functionalities based on type and volume of
+incoming data is an example of handling new data sources.
+Notes NOTE 2 – The configuration of ML functionalities in the network needs to
+handle the plugging in and out of new data sources or configuration targets based
+on metadata of data sources.
+7.3 Interface-related
+Table 7-3 provides interface-related requirements.
+Table 7-3 – High-level requirements – Interface-related
+The ML architecture is recommended to support an interface to transfer trained
+REQ-ML-INT-001
+models among ML functionalities of multiple levels.
+The training of models has certain specific needs, e.g., availability of certain
+kinds of processors, availability of certain kinds of training data. Once the
+training is done, the ML model has to be sent to the technology-specific underlay
+Description
+network that is hosting the ML model. Model training can be done separately
+from the live network. Thus, sending trained models across multiple levels is an
+important requirement.
+NOTE 1 – UE, access network functions (AN), core network (CN) functions
+could be treated as examples of technology-specific underlying network
+functions which could host the trained model.
+Notes
+NOTE 2 – The CN and AN could be treated as examples of multiple levels.
+NOTE 3 – Depending on the availability of data, learning may be done at the CN
+or AN and the trained model (e.g., classifier) hosted by the transport networks.
+The ML architecture is required to support an interface to transfer data for
+REQ-ML-INT-002
+training or testing models among ML functionalities of multiple levels.
+Certain levels in which the data is available may not have the training
+Description capabilities. In such cases, there may be a need to send data for training or
+testing to levels where the capacity for such operations is available.
+NOTE 1 – ANs may be considered as examples of resource-constrained
+networks, whereas CNs may be considered as a level where capacity may be
+Notes available to scale.
+NOTE 2 – Data preprocessing may be done at the transport network and the
+preprocessed data is then sent to the model at the CN for training.
+a) While defining the interface with underlying networks, the ML architecture is
+recommended to utilize existing standard protocols wherever possible, with
+required extensions wherever needed.
+b) The ML architecture is recommended to support specific interfaces or
+application programming interfaces (APIs) for interfacing with technology-
+REQ-ML-INT-003
+specific network functions, for sourcing data from such NFs or for
+configuring such NFs.
+c) The ML architecture is recommended to support logical interfaces between
+ML functionalities which can be hosted in multiple levels, and the realization
+of such logical interfaces be implemented according to deployment scenarios.
+Sources of data and target for ML output may need specific interfaces or APIs
+with the underlay networks to extract data or apply configurations. Some use
+cases may need a tight coupling at integration stage between the source and
+target of ML functionalities and the NFs. In certain cases, an extension of such
+Description interfaces may be needed to achieve the ML functionalities in the use case.
+The ML functionalities may use interfaces provided by an underlying network as
+a source of data or target of configurations. In this sense, these network-specific
+APIs may act as realizations of an interface to the source and target of ML
+functionalities.
+Table 7-3 – High-level requirements – Interface-related
+NOTE 1 – With respect to item a) above, certain interfaces may be realized by
+reusing existing protocols (e.g., radio resource control (RRC) [b-ITU-T Y.3104],
+MEC [b-ETSI MEC 003], management service (MnS) [b-3GPP TS 23.501]).
+NOTE 2 – With respect to item b) above, for example, a source running in the
+Notes UE may use specific APIs to extract data from a voice over long-term evolution
+(VoLTE) client [b-GSMA IR.92].
+NOTE 3 – With respect to item c) above, for example, in the use case where the
+source runs in the AN but needs measurements from the UE, the AN needs to
+configure the UE for this measurement using RRC.
+The ML architecture is recommended to support data sharing between ML
+REQ-ML-INT-004
+functionalities using distributed data sharing mechanisms.
+Cross-level sharing of data is needed to enable correlated ML decisions in future
+Description
+networks.
+NOTE – Concepts like data lakes are emerging in future clouds and can also be
+Notes
+exploited in network operators' clouds.
+7.4 Declarative specifications
+Table 7-4 provides the requirements regarding declarative specifications.
+Table 7-4 – High-level requirements – Declarative specification
+The ML architecture is required to support a standard method to represent ML
+REQ-ML-SPEC-001 applications, which can be translated into ML functionalities in technology-
+specific underlay network functions.
+Automation using declarative specification and corresponding translation into
+configurations is a characteristic of future networks. Extending this technique to
+Description
+ML, declarative specification of ML applications and corresponding translation
+into configurations of ML functionalities need to be supported.
+Interpretation of the declarative specification allows configuration of ML
+Notes functionalities in the network by translating the specification into the
+configuration that can be hosted by network functions.
+The ML architecture is required to support ML applications to specify the
+sources of data, repositories of ML models, targets for output from ML models,
+REQ-ML-SPEC-002 and constraints on network resources.
+The ML architecture is required to support the time constraints requirements of
+ML applications.
+The separation between the technology-agnostic part of the ML application and
+technology-specific deployment is captured in the design time of future network
+services. Declarative specifications for the ML applications achieve this
+Description separation.
+Different ML applications have varied time constraints. These constraints form
+an important input to the management and orchestration functions while
+determining the placement, chaining and monitoring of the ML functionalities.
+Table 7-4 – High-level requirements – Declarative specification
+NOTE 1 – With respect to item a) above, as an example, a description written in
+a metalanguage may capture the requirements of a network operator for an ML
+application. The management and orchestration functions may translate it into
+the configuration that can be implemented in the network.
+NOTE 2 – With respect to item b) above, at the tightest scale, the application of
+Notes ML in beamforming, scheduling, link adaptation network functionalities would
+have latency criteria of the order of microseconds, whereas transport and core
+network functionalities have a few milliseconds of latency criteria. The least
+demanding in terms of latency are management level functionalities, e.g.,
+anomaly detection and coverage hole detection, that can afford minutes, hours or
+days of latency.
+The ML architecture is required to support a flexible split of ML functionalities
+REQ-ML-SPEC-003
+based on the specifications of ML applications.
+Specification of an ML application is an important input for deployment of ML
+in future networks including IMT-2020. But network capabilities can change
+(hardware can be added or removed), NFs may be scheduled or (re)configured
+dynamically by the management and orchestration functions. These dynamic
+changes may necessitate a change in the split and placement of the ML
+functionalities (e.g., a decision may be taken to collocate certain functions of
+Description
+ML, based on changes in the link capacity, or a decision may be taken to add a
+new source of data based on decisions of the management and orchestration
+functions). Thus, a combination of (a) inputs from specification, (b) the
+requirement of ML functions to be capable of split and combined deployment
+and (c) coordination with the underlying management and orchestration function,
+is needed.
+NOTE – A new source of data may be instantiated based on scale out decisions
+Notes
+in the network.
+The ML architecture is required to support the specifications of ML applications
+REQ-ML-SPEC-004 by third parties to specify the sources of data, repositories of ML models, targets
+for output from ML models and constraints on network resources.
+Third party [b-ITU-T Y.3100] service providers may offer innovative services
+on top of future networks. This may include new ML algorithms. Collaboration
+between third party providers and network operators may bring new sources of
+Description data or aggregation capabilities. The declarative process in the architecture
+should extend the capabilities to include third parties, and they should be able to
+include these functionalities in the specification so that end users can benefit
+from such innovative services offered by third party providers.
+NOTE 1 – In some use cases ML models may be provided as third-party
+applications.
+NOTE 2 – A smartphone application which interfaces with the sensors on the
+UE is an example of a third-party source of data.
+Notes
+NOTE 3 – A third-party voice over IP service provider wants to optimize call
+quality over the network by running an ML application that configures network
+parameters. Specification of such an ML application is an example of a third-
+party specification.
+7.5 Management of ML functionalities
+Table 7-5 provides the requirements regarding the management of ML functionalities.
+Table 7-5 – High-level requirements – Management of ML functionalities
+The ML architecture is required to support ML model selection at the set-up time
+REQ-ML-MNG-001
+of the ML functionalities.
+Advances in machine learning suggest that in future networks there would be
+ML models with varied characteristics (e.g., using a variety of optimization
+techniques and weights) that are appropriate for different problem spaces and
+Description data characteristics.
+In future networks, new sources of data may get added dynamically. To extend
+the ML applications to such new and heterogeneous sources of data, ML model
+selection has to be done dynamically, based on the data provided by the sources.
+NOTE – Plug and play of new network functions (e.g., new UPF) into a live
+Notes
+network may be an example for dynamic on-boarding of new sources of data.
+The ML architecture is required to support ML model training and model
+REQ-ML-MNG-002
+updates while preventing impact on the network.
+ML model training has several considerations: use of specific hardware for
+speed, availability of data, parameter optimizations, avoiding bias, distribution of
+Description training, etc.
+Moreover, in future networks, service disruptions should be avoided while
+model training and updates are performed.
+Notes
+The ML architecture is required to support capabilities to monitor the network
+REQ-ML-MNG-003 operations based on the effect of ML and to update the ML models and/or
+policies without impacting the network.
+The effect of ML on the network needs to be monitored. Various KPIs are
+measured constantly and the impact of machine learning on them as well as on
+Description the ML functionalities themselves needs to be monitored and corrected if
+needed, continuously. ML functionalities need to be trained for future
+recognition and handling such corrected scenarios.
+NOTE – Continuous improvement of the automated fault recovery process
+workflows is an example of a process where such monitoring and update is done
+in the network. The root cause analysis (RCA) from the fault recovery process is
+Notes
+provided for configuring the management and orchestration functions, and also
+the effect produced by ML in the network is evaluated and used to optimize the
+ML functionalities themselves.
+Table 7-5 – High-level requirements – Management of ML functionalities
+The ML architecture is required to support an orchestration functionality to
+REQ-ML-MNG-004
+manage all the ML functionalities in the network.
+The performance of the ML functionalities in the network is monitored and
+when the performance falls below a predefined threshold, the ML functionalities
+are reconfigured to improve it.
+The varied sources of data (e.g., CN, AN) imply that there could be various
+Description training techniques including distributed training. Complex models may be
+trained using varied data. The performance of such models can be determined
+and compared in an isolated environment.
+Based on such comparisons, network operators can then select the appropriate
+ML functionalities (based on internal policies) for specific ML applications.
+NOTE 1 – Evaluation involves evaluation of network performance along with
+performance of ML algorithms.
+Notes
+NOTE 2 – Reselection of an ML model is an example of reconfiguration done to
+improve the performance of the ML functionalities.
+The ML architecture is required to support flexible chaining of ML
+REQ-ML-MNG-005
+functionalities including multilevel chaining.
+Flexible chaining of ML functionalities is required to be done based on the
+hosting and positioning on different NFs and levels. This is to enable the hybrid
+or distributed ML functionalities.
+Chaining of ML functionalities may be used to build a complex ML
+functionality.
+Management and orchestration functions provide NOPs with capabilities to
+Description rapidly design, develop and deploy network services in the technology-specific
+underlay networks. Similarly, ML functionalities in the network need
+mechanisms including flexible chaining to keep up with innovation in the
+technology-specific underlay networks. As underlying network services evolve
+and deploy rapidly, so do the ML functionalities on top of them, using flexible
+chaining techniques. This requirement aims to give the ML functionalities, the
+ability to adapt to dynamic service creation and orchestration in the underlying
+networks.
+Notes
+8 Framework of the high-level architecture
+The framework of the high-level architecture described in this clause supports the requirements
+defined in clause 7.
+This clause provides a description of the high-level architectural components and the high-level
+architecture itself, and provides guidelines for realization of the high-level architecture on different
+technology-specific underlay networks.
+This approach to design the architecture provides an ability to analyse both ML solutions which are
+agnostic to technology-specific underlying networks and issues specific to integration of ML to such
+underlay networks. An example of the realization of this architectural framework on technology-
+specific underlay networks is provided in Appendix I.
+8.1 High-level architectural components
+This clause specifies the high-level architectural components which are essential parts of the
+architectural framework. Integration of such components to a network architecture by interfacing with
+the NFs, along with the placement of the ML functionalities in such a network, forms the architecture
+framework.
+Figure 3 – High-level architectural components
+The high-level architectural components include the following:
+1) Machine learning pipeline
+As defined in clause 3, a machine learning pipeline is a set of logical nodes, each with specific
+functionalities, that can be combined to form a machine learning application in a telecommunication
+network.
+NOTE 1 – A machine learning pipeline may be deployed on simulated or live ML underlay networks.
+The following describes the nodes of an ML pipeline.
+• SRC (source): This node is the source of data that can be used as input to the ML pipeline.
+NOTE 2 – Potential SRC nodes include user equipment (UE), session management function (SMF)
+[b-ITU-T Y.3104] and application function (AF) [b-ITU-T Y.3104].
+• C (collector): This node is responsible for collecting data from one or more SRC nodes.
+NOTE 3 – A collector node may have the capability to configure SRC nodes. For example, the radio
+resource control (RRC) protocol [b-3GPP TS 23.501] can be used to configure user equipment (UE)
+acting as an SRC node. The collector node may use vendor specific operations, administration and
+maintenance (OAM) protocols to configure an SMF acting as an SRC node. Such configurations may
+be used to control the nature of data, its granularity and periodicity while it is generated from the
+SRC.
+• PP (preprocessor): This node is responsible for cleaning data, aggregating data or performing
+any other preprocessing needed for the data to be in a suitable form so that the ML model
+can consume it.
+• M (model): This is a machine learning model, in a form which is usable in a machine learning
+pipeline.
+NOTE 4 – Example is an ML algorithm implemented in software as an NF [b-ITU-T Y.3104].
+• P (policy): This node enables the application of policies to the output of the model node.
+NOTE 5 – This node can be used, for example, to minimize impact when the output of machine
+learning is applied to a live ML underlay network. Specific rules can be put in place by a network
+operator to safeguard the sanity of the network, e.g., major upgrades may be done only at night time
+or when data traffic in the network is low.
+• D (distributor): This node is responsible for identifying the SINK(s) and distributing the
+output of the M node to the corresponding SINK nodes.
+NOTE 6 – It may have the capability to configure SINK nodes. For example, the RRC protocol may
+be used to configure a UE acting as a SINK node.
+• SINK: This node is the target of the ML output on which it takes action.
+NOTE 7 – For example, a UE acting as a SINK node may adjust the periodicity of channel
+measurement based on ML output.
+NOTE 8 – A "service egress point" of a node is a point where services exposed by the node (producer
+role) can be accessed. A "service ingress point" of a node is a point from where services from other
+nodes can be consumed (consumer role).
+2) Machine learning function orchestrator (MLFO)
+As defined in clause 3, an MLFO is a logical node with functionalities that manage and orchestrate
+the nodes of ML pipelines based on ML Intent and/or dynamic network conditions.
+NOTE 9 – The MLFO selects and reselects the ML model based on, e.g., its performance.
+NOTE 10 – The placement of the ML pipeline nodes, based on the corresponding network capabilities and
+constraints of the ML application, is the responsibility of the MLFO.
+NOTE 11 – The MLFO also provides chaining functionality, i.e., connecting ML nodes together to form an
+ML pipeline. For example, chaining can be used to connect an SRC node instantiated in the access network
+with C and PP nodes instantiated in the core network. The chain itself is declared in the ML application
+specification and its technology-specific implementation in the network is done by the MLFO. The MLFO
+determines the chaining considering the constraints (e.g., timing constraints for prediction).
+NOTE 12 – Figure 4 includes ML Intent to emphasise its important role as input to the MLFO. ML Intent is a
+declarative description which is used to specify an ML application. ML Intent does not specify any
+technology-specific network functions to be used in the ML application and provides a basis for mapping ML
+applications to diverse technology-specific network functions. ML Intent may use a metalanguage specific for
+machine learning to define ML applications.
+3) ML sandbox
+An ML sandbox is an isolated domain which allows the hosting of separate ML pipelines to train, test
+and evaluate them before deploying them in a live network. For training or testing, the ML sandbox
+can use data generated from simulated ML underlay networks and/or live networks.
+NOTE 13 – An ML sandbox may benefit from ML techniques such as supervised machine learning to train,
+test and evaluate ML models.
+In addition to the above high-level architectural components, the following supporting architectural
+aspects are to be noted:
+• Service-based architecture (SBA) [b-ETSI TS 129 500] may be used to interface ML
+functionalities with ML underlay networks. Similarly, for the ML pipeline in the sandbox,
+SBA may be used to interface the ML functionalities with the simulated ML underlay
+networks.
+This provides a uniform reference point towards the ML overlay for NFs and the simulated
+ML underlay networks alike.
+The SBA may also be used between ML pipeline nodes themselves and to manage the ML
+functionalities by the MLFO.
+• Data handling reference points are defined between the ML pipeline and the simulated or live
+ML underlay networks. Using these reference points, any impact to the ML underlay
+networks is localised to the source of data and target of configurations (as a result of ML
+pipeline execution).
+NOTE 14 – Extensions of existing protocols may be used at the data handling reference points to
+minimise the architectural impact to the ML underlay networks.
+NOTE 15 – Non-SBA protocols need to be used at the data handling reference points in case the
+network functions in the ML underlay networks are not SBA-capable.
+With reference to Figure 3, arrows 2 and 3 show the paths to the ML pipeline for the data
+generated from the simulated ML underlay networks and the ML underlay networks,
+respectively. Arrows 1 and 4 show the paths from the ML pipeline for configuration of the
+target based on ML output in the simulated ML underlay networks and the ML underlay
+networks, respectively.
+Appendix II provides the mapping of the architectural components and supporting architectural
+aspects to the high-level requirements provided in clause 7.
+8.2 High-level architecture
+The high-level architecture shown in Figure 4 is derived from the high-level requirements specified
+in clause 7 and builds upon the architectural components described in clause 8.1.
+Figure 4 – High-level architecture
+The reference points shown in Figure 4 are the following:
+1, 2: These are the data handling reference points between simulated ML underlay networks and
+an ML pipeline in an ML sandbox subsystem.
+3: This is the reference point between an ML sandbox subsystem and an ML pipeline
+subsystem.
+4: This is the reference point between an ML pipeline subsystem and ML underlay networks.
+NOTE 1 – This reference point represents the data handling reference points shown as arrows 3 and
+4 in Figure 3.
+5, 6: These are the reference points between the management subsystem and, the ML pipeline
+subsystem and ML sandbox subsystem, respectively.
+7: This is the reference point between the MLFO and other management and orchestration
+functions of the management subsystem.
+8, 9: These are the reference points between ML pipeline nodes located in different levels.
+The three subsystems of the high-level architecture as shown in Figure 4 are given below.
+• Management subsystem
+This subsystem includes the MLFO and other management and orchestration functions, e.g., those
+defined in [ITU-T Y.3111].
+The management subsystem enables the extension of the management and orchestration mechanisms
+used for future networks including IMT-2020 to ML pipeline nodes. This brings uniformity to the
+management of ML functionalities and NFs.
+The MLFO works in coordination with the other functions of the management subsystem to manage
+the ML pipeline nodes.
+NOTE 2 – The reference point(s) between the functions of the management subsystem and NFs in the ML
+underlay networks complies(y) with the reference points defined in the related specifications, e.g.,
+[ITU-T Y.3111]. These reference points are out of scope of this Recommendation and thus are not shown in
+Figure 4.
+NOTE 3 – The interaction between the MLFO and the other functions of the management subsystem may be
+achieved using service-based architecture (SBA).
+• ML pipeline subsystem
+The ML pipeline is a logical pipeline that can be overlaid on existing network infrastructures. The
+services of the MLFO are used for instantiation and set-up. Integration aspects of such ML pipeline
+overlay on technology-specific ML underlay networks may require the extension or definition of
+specific protocols and APIs.
+In addition, the following points are to be noted:
+– SBA may be used for interfacing between NFs and ML pipeline nodes as well as between
+ML pipeline nodes themselves. As a first example, an SRC node exposes interfaces for
+consuming data from the NFs and producing data towards the collector (C) node. As a second
+example, a SINK node exposes interfaces for consuming the ML output from the distributor
+(D) node and produces such configurations to the NFs which it interfaces with.
+NOTE 4 – Due to the heterogeneity of NFs and ML underlay networks, SBA may not be supported
+by NFs in the ML underlay networks. In such cases, protocols and APIs specific to those ML underlay
+networks are used between the ML pipeline nodes and the NFs.
+– The placement and chaining of the ML pipeline nodes are controlled by the MLFO and this
+control may be influenced by factors such as:
+• inputs from the ML Intent to the MLFO which may impose constraints on the placement
+of ML pipeline nodes.
+NOTE 5 – The requirement to place an ML model (M) node on a network computing resource which
+provides a specific type of acceleration capability is an example of constraints on the placement of an
+M node.
+• Feedback received by the MLFO from the management and orchestration functions of
+the ML underlay networks or from the ML pipeline nodes may provide inputs on the
+placement and chaining of ML pipeline nodes.
+NOTE 6 – Decoupling of the location of the ML pipeline nodes from their functionalities, except in
+the case of performance constraints, is achieved using the placement and chaining mechanisms.
+– The deployment of an ML pipeline in future networks including IMT-2020 may span
+different levels. In this case, reference points between nodes located in different levels of an
+ML pipeline are used to allow ML pipeline multilevel distribution.
+NOTE 7 – As shown in Figure 4, an ML pipeline may be distributed over multiple levels, e.g., a
+specific deployment may distribute the pipeline across a UE, AN and CN. Based on the specific ML
+application, different ways of distributing the ML pipeline nodes are possible.
+• ML sandbox subsystem
+An ML sandbox subsystem allows ML pipelines to adapt to dynamic network environments such as
+those of future networks including IMT-2020 where a variety of conditions may change (e.g., air
+interface conditions, UE position, network capabilities and resources). The ML sandbox subsystem
+includes ML pipeline(s) and simulated ML underlay networks, and it is managed by the MLFO
+according to the specifications in the ML Intent. The ML sandbox subsystem allows network
+operators to study the effect of ML outputs before deploying them on live ML underlay networks.
+Feedback from the functions of the management subsystem is provided to the ML sandbox subsystem
+so that the ML pipelines of the ML sandbox subsystem can adapt to the dynamically changing
+network environments.
+The following points are to be noted:
+– The reference point between the ML pipeline subsystem and ML sandbox subsystem allows
+the ML pipelines to interface with the ML sandbox subsystem for the training and updating
+of ML models.
+– Data from the ML underlay networks and/or the simulated ML underlay networks may be
+used to train the ML models in the ML sandbox subsystem.
+– The management of the ML pipeline nodes in the ML sandbox subsystem is also controlled
+by the MLFO. This allows the MLFO to train and select the ML model(s) for a given ML
+application.
+8.3 General guidelines for realization of the high-level architecture
+General guidelines for realization of the high-level architecture on different technology-specific
+underlay networks are as follows:
+• Instantiation of the ML pipeline nodes: An ML application is described using ML Intent. The
+flow of information in an ML application can be represented by the chaining in an ML
+pipeline. The data from various source nodes, e.g., coming from various underlying
+networks, need to be gathered (by a collector node) and preprocessed (by a preprocessor
+node) before feeding this data to the ML model (model node). The output of the ML model
+is then used to apply policies (by a policy node) that will be implemented (by a SINK node).
+An ML application can be realized by instantiating nodes of the ML pipeline with specific
+roles (e.g., SRC, C, SINK), and associating these nodes to the technology-specific underlying
+network functions, based on the corresponding requirements of the ML application and the
+capabilities of the underlying network functions.
+The instantiation is performed by the MLFO in coordination with the other management and
+orchestration functions.
+• Interfacing of ML application with underlying network functions: There are two points of
+specific interfacing with the underlying network functions for an ML application, the SRC
+and the SINK nodes. The SRC nodes may have either an SBA based interface to the
+associated NFs which produce data or a technology-specific interface for non-SBA capable
+NFs. Similarly, the SINK nodes may have an SBA based interface to the associated NFs
+which enforce the ML output policies or a technology-specific interface for non-SBA capable
+NFs.
+• Management of the ML pipeline: This is done by the MLFO in coordination with the other
+management and orchestration functions.
+• ML model training and evaluation in the ML sandbox: This is controlled by the MLFO
+independently of the ML underlay networks. The reference point between the ML sandbox
+subsystem and ML pipeline subsystem is used to transfer trained ML models, data for training
+and ML model updates between the ML sandbox subsystem and the ML underlay networks
+which interact with the live ML pipeline.
+Appendix I gives examples of applying the above guidelines to the realization of the high-level
+architecture on technology-specific underlay networks.
+9 Security considerations
+This Recommendation describes the architectural framework of machine learning which is expected
+to be applied in future networks including IMT-2020: therefore, general network security
+requirements and mechanisms in IP-based networks should be applied [ITU-T Y.2701]
+[ITU-T Y.3101].
+It is required to prevent from unauthorized access to, and data leaking from, an ML pipeline, whether
+or not they have a malicious intention, with implementation of mechanisms regarding authentication
+and authorization, external attack protection, etc.
+Appendix I
+Realization of the high-level architecture on technology-specific
+underlay networks
+(This appendix does not form an integral part of this Recommendation.)
+Figure I.1 gives an example of realization of the high-level architecture on an IMT-2020 network
+[b-ITU-T Y.3104] [ITU-T Y.3111].
+Figure I.1 – Example of realization of the high-level architecture in an IMT-2020 network
+This example of realization is represented in the following manner: the ML pipeline shows the ML
+pipeline node positions wherever the nodes are hosted, e.g., CN, AN, UE or management functions.
+For example, the ML pipeline represented by arrows 1→2→4→ML pipeline 2 uses inputs from the
+UE to make predictions at the CN (e.g., MPP-based ML applications).
+NOTE – The sandbox subsystem is not shown for simplicity in Figure I.1, but its functionality is applicable
+also to Figure I.1.
+The following describes different realization instances with respect to requirements identified in
+clause 7:
+• Realization instance in support of the requirements in clauses 7.1 and 7.2:
+– Consider arrows 5→4→ML pipeline 2→6: This ML pipeline uses inputs from the CN
+and possibly a combination of UE inputs to make predictions at the CN and applies them
+to the management functions. This application of ML output can in turn affect
+configurations in different levels (e.g., SON decisions made at the CN or closed loop
+decisions on resource allocations done in the network).
+– Consider arrows 1→3→ML pipeline 1→7: This ML pipeline uses inputs from the UE
+and hosts an ML model in AN for latency sensitive decisions to be applied in the AN
+itself.
+• Realization instance in support of the requirements in clause 7.3:
+– Consider arrow 1: This can be realized using RRC.
+– Consider arrows 2, 3, 4, 5, 7: This can be realized as an extension of reference points in
+the CN [b-ITU-T Y.3104].
+– Consider arrow 6: This can be realized via reuse of reference points defined in
+[ITU-T Y.3111].
+• Realization instance in support of the requirements in clause 7.4:
+– The UE is a resource-constrained device, hence only the SRC is instantiated in the UE.
+This constraint is specified in the ML Intent.
+• Realization instance in support of the requirements in clause 7.5:
+– The collectors in the AN and CN are placed by the MLFO based on the specifications of
+the ML applications in the ML Intent. For latency sensitive applications in the AN, ML
+pipeline 1 is used. ML pipeline 2 is used for latency tolerant applications. The chaining
+is done according to the requirements specified in the ML Intent.
+Appendix II
+Mapping of the architectural components and supporting aspects
+to the requirements in clause 8
+(This appendix does not form an integral part of this Recommendation.)
+Table II.1 provides the mapping of the architectural components and supporting aspects to the
+requirements in clause 7.
+Table II.1 – Mapping of the architectural components and
+supporting aspects to the requirements
+Architectural Requirements Mapping explanation
+components and
+supporting aspects
+ML pipeline See clauses 7.1 and 7.2. The ML pipeline provides a common vocabulary
+for ML in future networks including IMT-2020.
+By defining the ML pipeline nodes, it becomes
+possible to consider the evolution of ML
+separately from the underlay networks.
+Instantiation of these nodes form an important
+part of deployment of ML overlay on different
+underlay networks. The functions of these nodes
+are defined independently of their location in the
+network, and hence this allows flexible
+placement of such nodes in the network. Split,
+merge and chaining of ML pipeline nodes allows
+deploying complex functions from these basic
+nodes.
+MLFO See clauses 7.2, 7.4 and 7.5 The MLFO orchestrates and manages the ML
+pipeline nodes. It is also responsible for optimal
+placement and chaining of ML pipeline nodes in
+the network. It implements these functions in
+coordination with the management and
+orchestration functions. The declarative
+specifications of the ML applications are
+supported by the MLFO by converting them into
+underlay-specific deployments. It also selects the
+models and reselects them based on the needs of
+the ML applications and other constraints
+defined in the ML Intent.
+ML sandbox See clause 7.5 This subsystem provides the ability to train,
+evaluate and monitor the performance of ML
+models before deploying them in a real network.
+It interfaces with the underlay networks for the
+transfer of data or trained models. In addition, it
+uses the simulated ML underlay networks which
+may generate data required for training the ML
+models.
+Table II.1 – Mapping of the architectural components and
+supporting aspects to the requirements
+Architectural Requirements Mapping explanation
+components and
+supporting aspects
+ML Intent See clause 7.4 Written in a metalanguage, this architectural
+supporting aspect defines the ML application, its
+needs in terms of data input, configuration
+output, any other constraints or characteristics. It
+is used as input towards the functionalities of the
+MLFO. This is the input for the MLFO to create
+a deployable ML pipeline (one which conforms
+to the requirements) on specific underlay
+networks. By standardizing this architectural
+aspect, it is possible for third party solution
+providers to integrate with the ML pipeline.
+SBA See clause 7.3 This architectural supporting aspect is used to
+interface between the underlay network functions
+and the ML pipeline. It provides the necessary
+loose coupling between the ML overlay and the
+ML underlay networks. SBA is also used to
+interface between the simulated ML underlay
+networks and the ML pipeline. It is used to train
+the ML pipeline and to configure the simulated
+ML underlay networks using the ML pipeline.
+Bibliography
+[b-ITU-T Q.5001] Recommendation ITU-T Q.5001 (2018), Signalling requirements and
+architecture of intelligent edge computing.
+[b-ITU-T Y.2322] Recommendation ITU-T Y.2322 (2018), The functional architecture of
+virtualized control network entities management and orchestrator in next
+generation network evolution.
+[b-ITU-T Y.2701] Recommendation ITU-T Y.2701 (2007), Security requirements for NGN
+release 1.
+[b-ITU-T Y.3100] Recommendation ITU-T Y.3100 (2017), Terms and definitions for
+IMT-2020 network.
+[b-ITU-T Y.3101] Recommendation ITU-T Y.3101 (2018), Requirements of the IMT-2020
+network.
+[b-ITU-T Y.3102] Recommendation ITU-T Y.3102 (2018), Framework of the IMT-2020
+network.
+[b-ITU-T Y.3104] Recommendation ITU-T Y.3104 (2018), Architecture of the IMT-2020
+network.
+[b-ITU-T Y.3105] Recommendation ITU-T Y.3105 (2018), Requirements of capability
+exposure in the IMT-2020 network.
+[b-ITU-T Y.3110] Recommendation ITU-T Y.3110 (2017), IMT-2020 network management
+and orchestration requirements.
+[b-ITU-T Y.3170] Recommendation ITU-T Y.3170 (2018), Requirements for machine
+learning-based quality of service assurance for the IMT-2020 network.
+[b-ITU-T Y.3650] Recommendation ITU-T Y.3650 (2018), Framework of big-data-driven
+networking.
+[b-ITU GLOSSARY] Broadband: Acronyms, Abbreviations & Industry Terms.
+https://www.itu.int/osg/spu/ni/broadband/glossary.html
+[b-ETSI GR ENI 004] ETSI GR ENI 004 V1.1.1 (2018), Experiential Networked Intelligence
+(ENI); Terminology for Main Concepts in ENI.
+[b-ETSI MEC 003] ETSI GS MEC 003 V1.1.1 (2016), Mobile Edge Computing (MEC);
+Framework and Reference Architecture.
+[b-ETSI NFV-IFA 014] ETSI GS NFV-IFA 014 V2.3.1 (2017), Network Functions Virtualisation
+(NFV) Release 2; Management and Orchestration; Network Service
+Templates Specification.
+[b-ETSI TS 129 500] ETSI TS 129 500 V15.0.0 (2018-07) 5G; 5G System; Technical
+Realization of Service Based Architecture; Stage 3 (3GPP TS 29.500
+version 15.0.0 Release 15).
+[b-GSMA IR.92] GSMA IR.92 (VoLTE) (2018) – IMS Profile for Voice and SMS.
+[b-IEC] IEC White Paper on Edge Intelligence.
+http://www.iec.ch/whitepaper/ pdf/IEC_WP_Edge_Intelligence.pdf
+[b-3GPP TS 23.501] 3GPP TS 23501 (2018), System Architecture for the 5G System
+(Release 15).
+[b-3GPP TS 28.554] 3GPP TS 28.554 (2018), Management and orchestration of 5G networks;
+5G end to end Key Performance Indicators (KPI) (Release 15).
+SERIES OF ITU-T RECOMMENDATIONS
+Series A Organization of the work of ITU-T
+Series D Tariff and accounting principles and international telecommunication/ICT economic and
+policy issues
+Series E Overall network operation, telephone service, service operation and human factors
+Series F Non-telephone telecommunication services
+Series G Transmission systems and media, digital systems and networks
+Series H Audiovisual and multimedia systems
+Series I Integrated services digital network
+Series J Cable networks and transmission of television, sound programme and other multimedia
+signals
+Series K Protection against interference
+Series L Environment and ICTs, climate change, e-waste, energy efficiency; construction, installation
+and protection of cables and other elements of outside plant
+Series M Telecommunication management, including TMN and network maintenance
+Series N Maintenance: international sound programme and television transmission circuits
+Series O Specifications of measuring equipment
+Series P Telephone transmission quality, telephone installations, local line networks
+Series Q Switching and signalling, and associated measurements and tests
+Series R Telegraph transmission
+Series S Telegraph services terminal equipment
+Series T Terminals for telematic services
+Series U Telegraph switching
+Series V Data communication over the telephone network
+Series X Data networks, open system communications and security
+Series Y Global information infrastructure, Internet protocol aspects, next-generation networks,
+Internet of Things and smart cities
+Series Z Languages and general software aspects for telecommunication systems
+Printed in Switzerland
+Geneva, 2019

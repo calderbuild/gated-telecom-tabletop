@@ -1,0 +1,19 @@
+Caution: use of AI chatbot may lead to data breaches
+06 August 2024
+Themes:
+Data breaches
+Algorithms, AI and the GDPR
+Recently, the Dutch Data Protection Authority (Dutch DPA) has received a number of notifications of data breaches caused by employees sharing personal data of, for example, patients or customers with a chatbot that uses artificial intelligence (AI). By entering personal data into AI chatbots, the companies that offer the chatbot may gain unauthorised access to those personal data.
+The Dutch DPA notices that many people in the workplace use digital assistants, such as ChatGPT and Copilot, for answering questions from customers or summarising large files, for example. This may save time and take less pleasant work off the hands of employees, but it also entails high risks.
+In the case of a data breach, personal data are accessed without this being permitted or intended. Often, employees use the chatbots on their own initiative and contrary to the agreements made with the employer. If personal data have been entered in the process, this means there is a data breach. Sometimes, the use of AI chatbots is part of the policy of organisations. In this case, it is not a data breach, but often not permitted by law. Organisations need to prevent both situations.
+Most companies behind the chatbots store all data entered. As a result, these data end up on the servers of those tech companies, often without the person who entered the data realising and without that person knowing exactly what that company will do with those data. Moreover, the person whose data it concerns will not know either.
+Medical data and addresses of customers
+In the case of one of the data breaches notified to the Dutch DPA, an employee of a GP practice had entered medical data of patients into an AI chatbot, contrary to the agreements. Medical data are highly sensitive data and are given extra protection by the law for a reason. Sharing those data with a tech company without a good reason is a major violation of the privacy of the people concerned.
+The Dutch DPA also received a notification from a telecom company, where an employee had entered a file with addresses of customers, among other things, into an AI chatbot.
+Make agreements
+It is important that organisations make clear agreements with their employees about the use of AI chatbots. Are employees allowed to use chatbots, or preferably not? If organisations allow this, they have to make clear to employees which data they are and are not allowed to enter. Organisations could also arrange with the provider of a chatbot that this provider will not store the data entered.
+Notify data breaches
+Have things gone wrong nonetheless, and has an employee leaked personal data by using a chatbot contrary to the agreements made? Then notifying the Dutch DPA and the victims is mandatory in many cases.
+This page was last edited on
+06 August 2024
+.

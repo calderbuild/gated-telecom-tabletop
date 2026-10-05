@@ -1,0 +1,39 @@
+{
+  "id": "S3",
+  "title": "A SIM-swap fraud model update locks out legitimate customers",
+  "summary": "OpCo deploys version 2 of its fraud model for SIM-replacement requests. It blocks known fraud but also refuses many legitimate prepaid and roaming customers, who then cannot receive banking one-time passcodes.",
+  "precedent_note": "Grounded in FCC 23-95 (which warns against delaying legitimate SIM changes), ACMA identity-verification penalties 2025-2026 and India's automated SIM re-verification. No regulator has yet found a telco fraud model locking out users at scale; the false-positive harm rests on rule text and adjacent cases.",
+  "institutions": ["NOC", "REG", "DPA", "FIN"],
+  "readiness_dimensions": [11, 10, 9],
+  "injects": [
+    {"id": "S3-I1", "t": 0, "label": "08:00", "to": ["NOC"],
+     "text": "Fraud model v2 went live for SIM-replacement requests at 08:00. The fraud dashboard shows refused SIM replacements up about tenfold and labels it a 'fraud wave'.",
+     "twin_event": {"verb": "deploy_model", "params": {"version": "v2"}}},
+    {"id": "S3-I2", "t": 60, "label": "09:00", "to": ["FIN"],
+     "text": "Several banks report that customers who are abroad cannot receive one-time passcodes and are locked out of online banking. The customers say OpCo refused their SIM replacement requests."},
+    {"id": "S3-I3", "t": 180, "label": "11:00", "to": ["NOC"],
+     "text": "Analysis of v2: refusals concentrate on prepaid and roaming customer profiles. About 2,750 legitimate requests have been refused since 08:00 (synthetic data). Known fraud is still blocked. There is no human review path for a refused request."},
+    {"id": "S3-I4", "t": 1440, "label": "Day 2", "to": ["DPA", "REG"],
+     "text": "A customer group complains that 'automated decisions' refused their SIM replacement with no explanation and no way to appeal."},
+    {"id": "S3-I5", "t": 1450, "label": "Day 2", "to": ["REG"], "unanswerable": true,
+     "text": "Internal question to the regulator's duty officer: which UAE instrument sets the authentication requirements an operator must apply to SIM-swap requests?"}
+  ],
+  "debrief": "The exercise is ending. Using only the KNOWLEDGE excerpts, record the obligations that applied to you, the coordination problems you saw, and the policy gaps this incident exposed, each with a global example where one exists. Take any final actions.",
+  "invariants": [
+    {"metric": "legit_pass_rate", "op": ">=", "value": 0.99},
+    {"metric": "fraud_block_rate", "op": "==", "value": 1.0}
+  ],
+  "duties": [
+    {"id": "D-RESTORE", "description": "Restore service for legitimate customers without letting fraud through", "expected_owner": "NOC", "action": {"verbs": ["rollback_model", "enable_review_queue"]}},
+    {"id": "D-ALT-AUTH", "description": "Give bank-flagged customers a non-SMS confirmation route", "expected_owner": "NOC", "action": {"verbs": ["alt_auth_route"]}},
+    {"id": "D-TELL-FIN", "description": "Coordinate the operator and banking sides", "expected_owner": "NOC", "action": {"verbs": ["notify"], "params": {"to": ["FIN"]}}},
+    {"id": "D-HUMAN-REVIEW", "description": "Provide human review of automated decisions on request", "expected_owner": "NOC", "obligation": {"phrases": ["human element"]}},
+    {"id": "D-DPA-REVIEW", "description": "Data authority asks for the human-review record", "expected_owner": "DPA", "action": {"verbs": ["request_human_review_record", "open_investigation"]}}
+  ],
+  "clock_checks": [],
+  "mock_actions": [
+    {"agent": "NOC", "after": "S3-I3", "verb": "rollback_model", "params": {"version": "v1"}},
+    {"agent": "NOC", "after": "S3-I3", "verb": "alt_auth_route", "params": {"cohort": "bank_flagged"}},
+    {"agent": "FIN", "after": "S3-I2", "verb": "notify", "params": {"to": "NOC", "content": "Banks report OTP lockouts"}}
+  ]
+}

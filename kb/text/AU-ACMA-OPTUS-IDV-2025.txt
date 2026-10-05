@@ -1,0 +1,14 @@
+Optus Mobile Pty Limited has paid a penalty of $826,320 for failing to comply with telco anti-scam rules, leading to some consumers experiencing financial losses and identity theft.
+An Australian Communications and Media Authority (ACMA) investigation found Optus, operating as Coles Mobile, breached anti-scam rules on 44 occasions in September and October 2024.
+The investigation found that scammers exploited a vulnerability in a third-party identity verification system used by Optus. This weakness enabled scammers to bypass parts of the required verification process, gain control of at least four consumers’ mobile services, and access their bank accounts, resulting in reported losses of $39,000.
+Authority Member Samantha Yorke said there can be severe impacts on Australians from this type of scammer attack, including devastating financial losses and lasting distress from having to recover digital identities.
+“While this was a one-off issue which was quickly remediated, it is inexcusable for any telco not to have robust customer ID verification systems in place, let alone Australia’s second largest provider,” Ms Yorke said.
+“Scammers are always looking for any weaknesses in systems, and on this occasion Optus left a vulnerability which directly exposed people to harm.
+“This is the maximum financial penalty the ACMA was able to give in this matter. It reflects the serious nature of the breaches,” she said.
+Disrupting mobile number fraud is a current ACMA compliance priority.The Telecommunications (Mobile Number Pre-Porting Additional Identity Verification) Industry Standard 2020 sets out rules requiring telcos to verify the identity of people wanting to transfer their numbers to a new provider before a transfer is completed.
+Businesses have paid more than $1.9 million for breaches of this standard in the last 12 months.
+Consumers should contact their telco and financial institution immediately if they think they have been a victim of a phone scam.
+Help other Australians by reporting scams to Scamwatch. Reporting scams and talking about them not only helps to understand what happened but also informs authorities about scammer activities so that they can make it harder for scams to occur.
+IDCARE can help people whose identity has been compromised or stolen on 1800 595 160 or at https://www.idcare.org/.
+Support is also available from Lifeline (13 11 14) or Beyond Blue (1300 224 636).
+MR 36/2025

@@ -1,0 +1,247 @@
+LICENSE NO. 2/2026
+Pursuant to the provisions of the Federal Law by Decree No. (3) of 2003 Regarding the Organisation of the Telecommunication Sector and its amendments, this Public Telecommunication License is granted to
+Emirates Telecommunications Group Company PJSC
+for the period of twenty (20) years with effect from 09 August 2026 to 08 August 2046 to install, operate and manage the Public Telecommunications Network and to provide the Telecommunications Services specified in this License within the United Arab Emirates, subject to the conditions of this License, the provisions of the Federal Law by Decree No. (3) of 2003, its Executive Order, and their amendments, the Regulatory Framework, and all other applicable laws and regulations in the United Arab Emirates.
+_________________________
+Eng. Majed Sultan Al Mesmar Director General Telecommunications and Digital Government Regulatory Authority
+Date: 06 August 2026
+Article (1) Definitions
+1.1 Definitions
+In implementing the conditions of this License, the following terms shall have the meanings given to them here unless the context requires otherwise. Any undefined term here shall have the meaning ascribed to it in the Telecommunications Law. Words denoting reference to persons shall include natural and/or legal persons.
+1.1.1 Affiliate means, in relation to any Person, any other Person directly or indirectly controlling, controlled by, or under direct or indirect common Control with such specified Person;
+1.1.2 Ancillary Services means services provided that are associated with or incidental to the provision of Telecommunication Services, including but not limited to directory assistance, directory inquiry, directory database and operator services;
+1.1.3 Change in Control means any transaction, sale, contract, re-capitalization or other reorganization or merger that results in a change in Control of the Licensee, including any transaction or series of transactions taking place after the date of issuance of this License as a result of which the holders of the voting securities or equity interest of the company hold less than a majority of the voting power or equity interest in the Licensee after the relevant transaction or series of transactions, as the case may be;
+1.1.4 Control means the ownership of more than fifty percent (50%) of the voting interests in the subject Person and/or the ability to control in fact the business and affairs of the subject Person, whether by ownership, contract or otherwise;
+1.1.5 Customer means any Person who has made arrangements with the Licensee to receive Services from the Licensee under the Licensee’s general terms and conditions;
+1.1.6 Effective Date means the date specified in the License;
+1.1.7 Emergency Calls means calls made to designated emergency numbers such as public police, fire, ambulance or other emergency services designated by the TDRA;
+1.1.8 Executive Order means the Executive Order issued pursuant to the Federal Law by Decree No.3 of 2003 as may be amended or replaced from time to time;
+1.1.9 License means this document as may be modified or replaced from time to time which is issued pursuant to the provisions of the Telecommunications Law and its Executive Order which allows the Licensee to carry out any of the regulated activities;
+1.1.10 Licensee means the entity listed on the front cover of this License;
+1.1.11 Other Licensed Operators means entities other than the Licensee which are licensed by the TDRA pursuant to the provisions of the Telecommunications Law and its Executive Order;
+1.1.12 Person means any personal or juridical entity as the case may be;
+1.1.13 Public Telecommunications Network means a Telecommunications Network operated for the provision of Public Telecommunications Services to subscribers by the Licensee pursuant to the provisions the Telecommunications Law;
+1.1.14 Regulatory Framework means the policies, regulations, orders, resolutions; procedures, guidelines, determinations, directives, instructions and other such instruments as may be made or amended by the TDRA;
+1.1.15 Services means those services as authorized in the License;
+1.1.16 TDRA means the General Authority for regulating the Telecommunications and Digital Sector as established pursuant to the Telecommunications Law;
+1.1.17 Telecommunications Apparatus means apparatus made or adapted for use in transmitting, receiving or conveying any of the Telecommunication Services through a Telecommunication Network;
+1.1.18 Telecommunications Law means the Federal Law by Decree No.3 of 2003 as may be amended or replaced from time to time;
+1.1.19 Telecommunication Network means a system comprising one or more items of apparatus or means of communication medium for transmitting, broadcasting, switching or receiving of Telecommunications Services, by means of electric, magnetic, electro-magnetic, electro-chemical or electro- mechanical energy and any other means of communication;
+1.1.20 Telecommunications Service means the service of transmitting, broadcasting, switching or receiving by means of a Telecommunications Network any of the following:
+1. wired and wireless telecommunications;
+2. voice, music and other sounds;
+3. visual images;
+4. signals used in radio and TV broadcasting;
+5. signals used to operate or control any machinery or apparatus;
+6. the installation, maintenance, adjustment, repair, replacement, moving, or removal of apparatus which is or will be connected to a Public Telecommunications Network;
+7. the construction, maintenance and operation of networks for telegraph, telephone, telex, leased circuits, domestic and international data networks, internet and wireless transmission;
+8. any other Telecommunication Services approved by the Board;
+1.2 Interpretation
+1.2.1 References in the License to the singular include the plural and vice versa;
+1.2.2 The terms “hereof,” “herein” and similar expressions refer to the License in its entirety, unless expressly provided for to the contrary.
+Article (2) License
+2.1 Coming into Force and Compliance
+2.1.1 The TDRA hereby issues the License to Licensee to install, operate and manage a Public Telecommunications Network and to provide Telecommunications Services as specified in this License.
+2.1.2 This License shall come into force on the date of its issuance by the TDRA. and shall continue until its expiry date as set out in the License.
+[CONFIDENTIAL] 2.1.3 1[Confidential]
+2.2 Roll-Out and Coverage
+Roll-Out and Coverage The Licensee shall deploy and roll out its Telecommunication Network and related Services and provide and maintain service coverage in accordance with the TDRA’s Regulatory Framework.
+Article (3) Conditions of License
+3.1 General
+The Licensee shall ensure that it complies with each of the terms and conditions set out in the License at all times during its term. The Licensee acknowledges that failure to comply with any such terms or conditions, unless expressly waived by the TDRA in accordance with the Telecommunications Law and its Executive Order, may constitute grounds for suspension and/or revocation of the License and/or the imposition of fines and/or penalties in accordance with the Telecommunications Law, its Executive Order and the Regulatory Framework in effect at the time.
+3.2 Compliance with Law and Regulatory Framework
+The Licensee shall comply with all laws of the UAE applicable to its operations, including but not limited to the Telecommunications Law. In addition, the Licensee shall comply with the Regulatory Framework and all directives of the Government of the UAE, including but not limited to international treaties that have been recognized by the Government of the UAE and given the force of law in the UAE.
+3.3 Eligibility
+The Licensee shall be a UAE incorporated juridical entity established and in good standing under the laws of the UAE as may be amended or replaced from time to time.
+3.4 Ownership and Control
+3.4.1 The Licensee may subcontract the provision of any or all of the Services and the installation, operation and management of the licensed network to an Affiliate or another Person, or otherwise arrange for those activities to be conducted by an Affiliate or another Person on its behalf, with the prior written approval of the TDRA, provided that the Licensee shall continue to be fully liable for any obligations set out in this License or imposed on the Licensee pursuant to the Regulatory Framework in effect at the time, whether in relation to the provision of such Services, licensed network or otherwise. If the Affiliate is and remains wholly owned by the Licensee or under the majority Control of the Licensee, the prior written approval of the TDRA shall not be required, provided that the TDRA shall always be notified of such arrangements.
+3.4.2 Any Change in Control of the Licensee shall require the prior written approval of the TDRA.
+3.4.3 The License may not be sold, assigned or pledged as security, in whole or in part, without the prior written consent of the TDRA.
+3.4.4 The Licensee shall provide the TDRA, where applicable, a copy of its shareholders agreement, articles of association, its bylaws, registration certificate and any other documents relevant to its formation and status. The Licensee shall notify the TDRA of any material changes in these documents.
+3.5 Quality of Service Quality of service for all Services offered by the Licensee shall meet or exceed the quality of service obligations contained in the Regulatory Framework in effect at the time.
+3.6 Standard of Conduct
+The Licensee shall not use or knowingly permit the use of its Services for any purpose that violates the Telecommunications Law or any other applicable laws or the Regulatory Framework in effect at the time. The Licensee shall endeavor to take all reasonable action to ensure that its Services are not used for any such purposes.
+3.7 Regulation of Prices, Terms and Conditions
+The prices that the Licensee may charge its Customers in connection with its Services, as well as the terms and conditions, are subject to regulation by the TDRA as specified in the Regulatory Framework in effect at the time.
+3.8 Universal Service Obligations
+The Licensee shall fulfill universal service obligations as specified in the Regulatory Framework in effect at the time.
+Article (4) Royalties and Fees
+4.1 Royalties Applicable royalty fees shall be determined by the competent authority.
+4.2 Annual License Fee
+The Licensee shall pay an annual License fee as determined by the TDRA, which may be amended from time to time. The license fee shall be payable in accordance with payment procedures as determined by the TDRA and shall be paid in full on each anniversary date of the License.
+4.3 Frequency Spectrum Fees
+The Licensee shall pay the frequency spectrum fees as applicable and as specified in the Regulatory Framework in effect at the time.
+4.4 Universal Service Financial Obligations
+The Licensee shall fulfill any financial obligations related to universal service as specified in the Regulatory Framework in effect at the time.
+4.5 Telecommunications and Information Technology Development Fund Fee
+The Licensee shall pay an annual fee related to operation of a telecommunications and information technology development fund. This fee shall be calculated as 1% of the Licensee’s total revenues as may be amended by the TDRA from time to time. The telecommunications and information technology development fund fee shall be payable in accordance with payment procedures as determined by the TDRA.
+4.6 Number Allocation Fees
+The Licensee shall pay a fee for prefixes, ranges, blocks of numbers or individual numbers as specified in the Regulatory Framework in effect at the time.
+Article (5) Financial Reporting to the TDRA
+5.1 Books of Account
+5.1.1 In addition to obligations pertaining to books of account pursuant to any laws, the Licensee shall keep, at its principal place of business within the UAE, accurate and up-to-date books of account in accordance with the Regulatory Framework in effect at the time. All financial information submitted by the Licensee to the TDRA shall be prepared and presented as directed by the TDRA.
+5.1.2 The Licensee shall maintain distinct and separate book of accounts as directed by the TDRA.
+5.1.3 For the purpose of maintaining the books of accounts referred to in Article 5.1.1, the financial year shall coincide with the calendar year commencing from the month of January and ending in December.
+5.1.4 The books of account of the Licensee shall be audited by a reputable, independent firm of auditors duly registered as such in the UAE and approved by the TDRA.
+5.1.5 The Licensee shall preserve those financial records referred to in Article 5.1.1 for a minimum period of ten (10) years after the end of the financial period.
+5.2 Access to Information
+On request, the TDRA shall have access to the books and records of the Licensee.
+5.3 Annual Reporting
+The following shall comprise the minimum reporting obligations of the Licensee:
+5.3.1 Submission of an annual budget (capital and operating) and business plan, to be submitted within one month of commencement of the new financial year.
+5.3.2 Submission of an annual report within four (4) months following the end of each fiscal year of the Licensee.
+5.4 Other Financial Information and Reports
+The Licensee shall also provide any other financial information and reports deemed relevant by the TDRA.
+Article (6) Operational Reporting
+6.1 Periodic Reporting
+In addition to the foregoing, the Licensee shall submit to the TDRA, in a format and within a timeframe determined by the TDRA, operating information and performance statistics, including but not limited to the following:
+6.1.1 Quality of Service: a) the quality of service results achieved during the applicable period as per the Regulatory Framework; and b) an explanation of the reason for any missed quality of service requirement along with the planned remedy and estimated time frame to meet the requirement.
+6.1.2 Operating information and performance statistics as determined by the TDRA.
+6.1.3 Other Information: a) all material instances in which, as far as the Licensee is aware, the Licensee's obligations under any provisions of the License have not been met, together with an explanation for such missed obligations; and b) any other operational information deemed relevant by the Licensee or requested by the TDRA.
+6.2 Other Information and Reports
+From time to time the TDRA may require information, studies or special reports to aid the TDRA in its oversight of License and Regulatory Framework compliance, telecommunication sector developments or any other such matters deemed relevant by the TDRA. The Licensee shall provide such information within a time interval and in a format determined by the TDRA.
+6.3 Submission of Information and Reports
+Any information or reports provided to the TDRA shall be provided by an employee of the Licensee who is so authorized. The authorized employee shall provide the information or reports in a timely manner and shall confirm, so far as the Licensee is aware, that the information being provided is accurate and complete.
+6.4 Access to Licensee Premises The TDRA shall have access to all premises of the Licensee and the information therein to enable the TDRA to perform its duty in accordance with the Telecommunications Law, its Executive Order and the Regulatory Framework in effect at the time.
+Article (7) Anti-Competitive Practices
+7.1 Prohibitions
+The Licensee shall not alone or together with others, engage in or continue, or knowingly acquiesce in any anti-competitive practices and, in particular, the Licensee shall not: a) engage in any activity deemed anti- competitive by UAE laws or by the Regulatory Framework in effect at the time; b) engage in any anti-competitive cross subsidization of any Telecommunication Services offered by it, except as approved by the TDRA;
+c) engage in the abuse of its market position; d) show undue discrimination against a Person regarding the terms and conditions upon which the Licensee provides a Telecommunication Service to that Person; e) enter into any exclusive arrangements with third parties, and which by doing so does or may restrict, prevent, or distort competition; f) enter into any agreements, arrangements or undertakings with any Person which have as their objective or effect the fixing of prices or any other restraint on competition; or g) use information obtained from competitors or Customers if the object or effect of such use is anti-competitive.
+7.2 Obligations
+The Licensee shall: a. make information available to Other Licensed Operators on a timely basis with respect to essential facilities and other relevant information that is necessary for them to provide Telecommunication Service, and b. cooperate with Other Licensed Operators in order to facilitate the provision of Telecommunication Services.
+Article (8) Public Emergencies, Interest, Safety and National Security
+8.1 Public Emergencies
+If a competent authority declares that a public emergency has arisen, the Licensee shall comply with any direction whatsoever that may be given by the TDRA or other competent authority with respect to the property of the Licensee or its use or operation thereof.
+8.2 Public Interest, Safety and National Security
+The Licensee shall comply with any directions as the TDRA or other competent authority may issue from time to time on matters relating to public interest, safety and/or national security. The Licensee shall maintain calling party/called party details and subscriber information in accordance with any measures issued by any competent authority responsible for public interest, safety and national security. The Licensee also undertakes to install at its own expense any equipment required to allow access to its Telecommunication Network and/or the retrieval and storage of data for reasons of public interest, safety and national security. This obligation shall extend to the provisioning of the facilities terminating at the premises of a competent authority and shall be provided without charges of any kind. Furthermore, the Licensee shall not undertake to provide any services which do not meet the requirements of any competent authority responsible for public interest, safety and national security.
+8.3 Assumption of Control
+In the event that the TDRA or other competent authority’s direction includes the provision for a Person authorized by the TDRA or the other competent authority to assume control, either in whole or in part, of the Licensee’s Services and/or Telecommunications Network, then the Licensee shall comply with such direction and shall cooperate with such Person provided that such direction is received in writing by the Licensee.
+Article (9) Relationship with Customers
+9.1 Customer Relations
+The Licensee shall maintain adequate trained personnel to receive and respond promptly to complaints and disputes from Customers. The Licensee shall take all reasonable action to promptly remedy and avoid the recurrence of the cause of all Customer complaints and disputes that relate to the quality, availability, delivery or billing of its Services. The Licensee shall also take all necessary measures to ensure that amounts due to Customers are paid promptly and in full.
+9.2 Code of Practice for Customer Affairs
+9.2.1 The Licensee shall prepare and publish a Code of Practice for the Licensee’s Customers in respect of any issues relating to the provision of service by the Licensee. The Code of Practice shall be in accordance with the Regulatory Framework in effect at the time and shall contain at a minimum, information concerning the following: a) prices, terms and conditions of Service; b) privacy of Customer information; c) billing method and cycle; d) denial of service; e) cancellation and restoration of Service; f) subscriber contract; g) handling of complaints; h) options for directory listing information; and i) reserve for subscriber refunds and deposits.
+9.2.2 The Code of Practice shall be submitted to the TDRA for review and approval in a timescale determined by the TDRA.
+9.2.3 The Code of Practice shall be amended or replaced from time to time in accordance with any additions, deletions or modifications to the Regulatory Framework in effect at the time. Any such revised Code of Practice shall be submitted to the TDRA for review and approval.
+9.2.4 The Licensee shall keep a record of all Customer complaints for a period no less than three (3) years or as otherwise specified in the Regulatory Framework and shall furnish this information to the TDRA in a format and timeframe determined by the TDRA.
+9.2.5 The Licensee shall make every reasonable effort to resolve disputes with its Customers in a timely manner.
+9.3 TDRA Customer Dispute Resolution
+In the event of a dispute relating to the Code of Practice remaining unresolved between the parties in dispute or in certain cases when a complaint is referred directly to the TDRA, the TDRA may resolve the issues between the parties in accordance with the Telecommunications Law, its Executive Order and the Regulatory Framework in effect at the time. In all cases, the Licensee shall cooperate fully with the TDRA for the resolution of Customer complaints.
+9.4 Customer Invoices
+9.4.1 All Customer invoices rendered by the Licensee in respect of the Services shall be prepared in accordance with the Regulatory Framework in effect at the time.
+9.4.2 The Licensee shall ensure that bills are accurate and transparent.
+9.4.3 The Licensee shall establish a procedure to ensure and validate the accuracy of its billing system. The Licensee shall retain all billing information for no less than two (2) years or such other period as may be specified in the Regulatory Framework in effect at the time. This information may be reviewed by or furnished to the TDRA or any competent authority upon request.
+9.5 Services Made Available to Customers Free of Charge
+9.5.1 The Licensee shall ensure that Customers shall have free access to the emergency call service numbers designated by the TDRA for Emergency Calls.
+9.5.2 The TDRA may direct the Licensee to provide other services to Customers free of charge, when deemed necessary for reasons of public interest.
+Article (10) Interconnection and Access
+10.1 Interconnection and Access
+10.1.1 Access to, or interconnection of the Licensee’s Telecommunication Network to, the Telecommunication Networks operated by Other Licensed Operators and the resolution of any disputes regarding interconnection and/or access shall be governed by the principles set out in this License and the Telecommunication Law, its Executive Order and the Regulatory Framework in effect at the time. In any case of conflict between an interconnect or access agreement in effect and the Regulatory Framework in effect at the time, the Regulatory Framework shall take precedence.
+10.1.2 The TDRA shall endeavor to cause Other Licensed Operators to act fairly and on a non- discriminatory basis in accordance with applicable law, the Regulatory Framework in effect at the time and the terms of their Licenses in all business dealings with the Licensee.
+10.1.3 The Licensee shall act fairly and without discrimination in all business dealings with Other Licensed Operators and shall cooperate with Other Licensed Operators to ensure interconnection and interoperability and access, and to facilitate the provision of Telecommunication Services to all users throughout the UAE.
+10.1.4 If the Licensee is designated by the TDRA as having market power in a relevant market, the Licensee shall satisfy in a timely, efficient and cost based manner all requests from Other Licensed Operators for interconnection, co- location or sharing of sites, access to infrastructure and facilities.
+10.1.5 If the Licensee is designated by the TDRA as not having market power in a relevant market, the Licensee shall satisfy in a timely and efficient manner all requests from Other Licensed Operators for interconnection and mobile site sharing.
+10.1.6 At the discretion of the TDRA, the procedures applicable for interconnection and access to the Licensee’s Telecommunication Network shall be made publicly available.
+10.1.7 The Licensee shall send a copy of its interconnection/access offers and agreements to the TDRA for review/approval and shall make publicly available its interconnection/access offers at the discretion of the TDRA.
+10.1.8 The Licensee shall work cooperatively with Other Licensed Operators for the resolution of Customer issues when a Customer is shared by multiple Licensees.
+10.2 Guiding Principle Subject to interconnection being in place either by agreement or by order of the TDRA, the Licensee undertakes to adhere to the guiding principle that its Customers must be able to place calls to or receive calls from any valid telephone number.
+10.3 Interconnection and Access Dispute Resolution
+10.3.1 The Licensee shall follow the dispute resolution procedures specified in the Regulatory Framework in effect at the time.
+10.3.2 If so directed by the TDRA, the Licensee shall interconnect its Telecommunication Network with and provide access to any Other Licensed Operator with which it has a dispute. During the period of any dispute, the Licensee shall keep its Telecommunication Network connected to the Telecommunication Network of the Other Licensed Operator with which it is in dispute. The Licensee shall not disconnect the Other Licensed Operator’s Telecommunication Network without the prior written approval of the TDRA.
+10.3.3 At the discretion of the TDRA, costs associated with the review and resolution by the TDRA of a dispute between the Licensee and the Other Licensed Operator may be borne by the Licensee and the Other Licensed Operator in a manner directed by the TDRA.
+10.4 Oversight of Interconnection, Access and Related Agreements
+All interconnection, access or related agreements requiring the oversight of the TDRA between the Licensee and any Other Licensed Operator shall be submitted for review and/or approval by the TDRA. The Licensee shall not give effect to any such agreement until it has been reviewed and/or approved by the TDRA. The TDRA reserves the right to require modifications to the interconnection, access or related agreements in accordance with the Telecommunications Law, its Executive Order and the Regulatory Framework in effect at the time.
+10.5 National Roaming Services
+In accordance with the Regulatory Framework in effect at the time, the Licensee shall make available national roaming services to any Other Licensed Operator authorized by the TDRA to make use of national roaming services and under the terms, conditions and prices as determined by the TDRA.
+Article (11) Commercial Agreements The Licensee shall make available to the TDRA a copy of the Licensee’s commercial agreements with Other Licensed Operators, telecommunications service providers and other telecommunication related entities as may be required by and at the discretion of the TDRA.
+Article (12) Operation & Maintenance – Network Resilience, Redundancy and International Connectivity
+12.1 General Obligation
+The Licensee shall design, deploy, operate and maintain its Telecommunications Network in a manner that ensures a high level of efficiency, resilience, reliability, and continuity of Telecommunications Services, particularly those deemed critical to national infrastructure and public interest.
+12.2 Diversified International Connectivity
+Without prejudice to the generality of Article 12.1, the Licensee shall establish and maintain diversified and geographically distinct international connectivity arrangements, including through multiple terrestrial, submarine cable systems and such other technologies as may be appropriate, so as to minimize the risk of failure of any single international transmission medium.
+12.3 Elimination of Single Points of Failure
+The Licensee shall ensure that its Telecommunications Network architecture is designed to minimize, to the maximum extent reasonably practicable, any single points of failure that may materially impact the availability or performance of Telecommunications Services.
+12.4 Redundancy, Backup, Disaster Recovery and Failover Mechanisms
+The Licensee shall implement and maintain appropriate redundancy, diversity, backup, disaster recovery and failover arrangements across its Telecommunications Network, including international gateways, transmission infrastructure, core network elements, supporting systems and other critical network assets, to support the continuity and timely restoration of Telecommunications Services in the event of equipment failure, network disruption, natural disaster, cyber incident or any other event that may adversely affect the operation of the Licensed Network. Such arrangements shall be maintained in an operational state at all times and shall be periodically tested to verify their effectiveness.
+12.5 Testing and Assurance
+The Licensee shall periodically test and validate the effectiveness of its resilience, redundancy and contingency arrangements, including through the simulation of failures affecting international connectivity. The Licensee shall maintain adequate records of such testing and shall provide the same to the TDRA upon request.
+12.6 Technical Capability
+The Licensee shall develop, maintain, and regularly enhance the necessary technical capabilities, including with suitably qualified national personnel within the State where possible, to ensure effective operation, management, and restoration of its Telecommunications Network under emergency and contingency conditions
+12.7 Compliance and Directions of the TDRA
+The Licensee shall comply with any directives, guidelines, or technical requirements issued by the TDRA from time to time in relation to network resilience, international connectivity, and continuity of critical Telecommunications Services.
+12.8 Interoperability The Licensee shall comply with the Regulatory Framework, including technical specifications, in order to ensure interoperability of its Services and Telecommunications Network with the Telecommunication Services and Telecommunication Networks provided by Other Licensed Operators.
+12.9 Interruption of Service
+12.9.1 In the case of a planned interruption of a Telecommunication Service other than a minor interruption, the Licensee shall inform the TDRA, any interconnecting Other Licensed Operators and relevant Customers in advance of such interruption. The Licensee shall specify the reason(s) for the interruption as well as the manner and time frames in which the interruption will be resolved.
+12.9.2 In the case of any unplanned interruption of a Telecommunication Service, other than minor interruptions, the Licensee shall inform the TDRA, any interconnecting Other Licensed Operators and relevant Customers as soon as possible as to the reason(s) for the interruption as well as the manner and time frames in which the interruption will be resolved.
+12.10 Environmental Protection
+The Licensee shall comply with the directives of the TDRA or any other competent authority with respect to the installation, operation and maintenance of its Telecommunication Network and all Telecommunication Network specific equipment for the purposes of environmental protection within the UAE.
+12.11 Construction
+The Licensee shall construct and maintain all junction boxes, cable huts, base stations, towers, masts, outside plant, submarine cables, offices and any other equipment or facilities necessary for the provision of its Services pursuant to this License in accordance with the Regulatory Framework and any other laws administered by any other competent authority.
+12.12 Access to and Use of Land
+The Licensee shall have access to and use of public and private land in accordance with the Telecommunications Law, its Executive Order and the Regulatory Framework in effect at the time.
+Article (13) Technical Obligations
+13.1 Numbering and Related Functions
+13.1.1 With respect to numbering, the Licensee shall abide by the Telecommunications Law, its Executive Order and the Regulatory Framework in effect at the time.
+13.1.2 The TDRA shall allocate prefixes, ranges, blocks of numbers or individual numbers as appropriate to the Licensee in accordance with the National Numbering Plan and the Regulatory Framework in effect at the time. The Licensee shall, in turn, allocate individual numbers to Customers and maintain suitable records of utilization of numbering capacity. The Licensee shall be required to program its Telecommunication Network to convey calls to numbers in newly allocated blocks of the Licensee or any Other Licensed Operator.
+13.1.3 The numbers allocated by the TDRA are a national resource and ownership is not transferred when an allocation is made.
+13.2 Calling Line Identification
+Where technically feasible, the Licensee shall be obligated to transmit the calling line identification (CLI) transparently and without any alterations. The Licensee shall cooperate with Other Licensed Operators to allow the CLI to be conveyed through to the call destination as directed by the TDRA.
+13.3 Number Portability
+13.3.1 Licensee shall implement and maintain number portability according to the Regulatory Framework in effect at the time.
+13.3.2 The Licensee shall cooperate with Other Licensed Operators in the technical specification, development and implementation of number portability in accordance with the Regulatory Framework in effect at the time.
+13.4 Carrier Selection and Carrier Pre-selection
+The Licensee shall implement and maintain carrier selection and carrier pre-selection according to the Regulatory Framework in effect at the time.
+13.5 Technology
+The Licensee is permitted to use any technology for the installation and operation, management and maintenance of its Telecommunication Network and for the provision of its Services in accordance with the Regulatory Framework in effect at the time.
+13.6 Telecommunication Apparatus
+13.6.1 Telecommunication Apparatus used by the Licensee or provided by the Licensee to its Customers shall be of a type approved by the TDRA. The Licensee shall direct its Customers to obtain TDRA type approved Telecommunication Apparatus from the Licensee or any third party.
+13.6.2 The Licensee shall submit to the TDRA on an annual basis a list of all types of radio communications equipment, including handsets, if any, as well as fixed line communications devices used by the Licensee in providing the Service, together with TDRA type approval references as directed by the TDRA.
+Article (14) Spectrum
+14.1 Frequency Spectrum Authorization
+For the relevant Telecommunication Services, which the Licensee is authorized by the License to provide, the Licensee shall apply to the TDRA for frequency spectrum authorizations. The TDRA will evaluate the requests and issue frequency spectrum authorizations based on the Regulatory Framework in effect at the time. All frequency spectrum authorizations shall be at the sole discretion of the TDRA. This License does not grant any privileges or rights to frequency spectrum access. The Licensee shall provide technical justification for spectrum utilization and efficiency optimization when making all requests for frequency authorizations. All frequency authorizations allocated to the Licensee shall be subject to charges payable by the Licensee and frequencies assigned to the Licensee may be changed by the TDRA in accordance with the Regulatory Framework in effect at the time and with no obligation of the TDRA.
+14.2 Site Approval
+The Licensee shall obtain site approvals in accordance with the Regulatory Framework in effect at the time.
+14.3 Frequency Spectrum Coordination
+The Licensee shall comply with all frequency spectrum coordination requirements as may be specified in the Regulatory Framework in effect at the time. In particular, the Licensee shall be responsible for the following: a) using all possible technical means to avoid overspill of radio spectrum frequencies across the border of the UAE; b) coordination through the TDRA with operators and administrations of neighboring state; c) coordination with Other Licensed Operators as required by the TDRA to avoid harmful interference; and d) assurance that radio spectrum frequencies used in radio services which establish connectivity across the borders are in compliance with the Regulatory Framework in effect at the time and International Telecommunications Union (ITU) procedures.
+14.4 Interference
+14.4.1 The Licensee shall inform the TDRA of any harmful interference caused by any Other Licensed Operator, operators from other countries or any other interferences of which the Licensee is aware. To facilitate the identification of the source of interference and its subsequent resolution, the Licensee shall inform the TDRA of all technical details in accordance with the Regulatory Framework in effect at the time.
+14.4.2 The Licensee shall ensure that the radio communications equipment comprised in any of its radio communications stations is designed and constructed, used and maintained, so as not to cause any harmful interference to Other Licensed Operators or operators in other countries, even when in compliance with the rules established by the TDRA. If the TDRA receives any interference reports, the Licensee shall provide all technical information required to resolve such cases.
+14.5 Telecommunication Apparatus Use The Licensee shall obtain type approvals for its radio communications equipment before its procurement. The Licensee shall not permit any Person to use its radio communications equipment comprised in any of its radio communications stations unless the Person is under the control of, and authorized by, the Licensee. The Licensee shall ensure that all Persons using its radio communications equipment comprised in any of its radio communications stations are made aware of the relevant terms of this License and/or any other applicable frequency spectrum authorization and shall comply with such terms.
+14.6 Access to Facilities and Telecommunication Apparatus
+The Licensee shall permit any Person authorized by the TDRA to have access to any of its radio communications stations and to inspect or test its radio communications equipment at any time for the purpose of verifying compliance with the terms of the License, the provisions of the Telecommunications Law, its Executive Order and the Regulatory Framework in effect at the time.
+14.7 Environmental Issues The radiation limits of the radio emission of the Licensee’s radio communication and other Telecommunication Network equipment shall comply with one or more applicable radiation safety standards, as approved by an internationally recognized health and safety standards body. The TDRA shall determine the applicable health and safety standards to be applied. The Licensee shall install, manage and operate the radio communications and other equipment in its Telecommunication Network according to the standards determined by the TDRA.
+Article (15) Term, Renewal, Modification, Suspension, Revocation, and Termination
+15.1 Term
+The term of this License is (20) years from the date of issuance as set out in this License.
+15.2 Renewal
+If the Licensee wishes to renew the term of this License, it shall apply for renewal to the TDRA not less than one-hundred-eighty
+(180) days before the expiry of the term of the License. The TDRA shall consider the Licensee’s application for renewal according to the Regulatory Framework and, if the Licensee has complied in all material respects with the terms of this License, shall grant a renewal of the term of the License for a further determined period from the date of expiry of the term.
+15.3 Modification
+The License may be modified in accordance with the provisions of the Telecommunications Law, its Executive Order, the Regulatory Framework in effect at the time or any relevant UAE government decisions, including international treaties.
+15.4 Suspension for Breach
+If the TDRA determines that the Licensee is or has been in breach of any material article of the License, the License may be suspended in whole or in part in accordance with the provisions of the Telecommunications Law, its Executive Order, the License and the Regulatory Framework in effect at the time.
+15.5 Revocation
+The License may be revoked in whole or in part in accordance with the provisions of the Telecommunications Law, its Executive Order, the License and the Regulatory Framework in effect at the time.
+15.6 Termination The Licensee shall not be entitled to terminate the License prior to the end of its term without the prior written approval of the TDRA, nor shall the Licensee invoke or allow any actions or practice to take place with the purpose of leading to an intentional suspension or revocation of the License.
+Article (16) Other Provisions
+16.1 Notice
+Any notice from or on behalf of the Licensee in connection with the License shall be given in writing by delivery to the premises of the TDRA at the following address: Telecommunications and Digital Government Regulatory Authority C/o Director General PO Box 26662 Abu Dhabi, United Arab Emirates Tel +971 2 621 2222 With a copy to e-mail address: or as may be notified by the TDRA to the Licensees from time to time in writing.
+and
+Emirates Telecommunications Group Company PJSC (e&) C/o The Chief Executive Officer With a copy to e-mail address:
+or as may be notified by the Licensee to the TDRA from time to time in writing.
+16.2 Order of Precedence
+In the case of any conflict, contradiction or ambiguity between the License and any other document, the order of precedence shall be in the following sequence: a) the Federal Law by Decree No. 3 of 2003 or any subsequent revisions or new Telecommunications Laws or related laws as may be issued; b) its Executive Order to the Federal Law by Decree No. 3 of 2003 or any subsequent revisions or new Executive Orders as may be issued; c) the Regulatory Framework in effect at the time; and d) the provisions of this License.
+16.3 Breach and Penalties
+16.3.1 The TDRA shall monitor the Licensee’s adherence to the License and shall take appropriate measures to oblige the Licensee to comply with the License and the Telecommunications Law, its Executive Order and the Regulatory Framework in effect at the time.
+16.3.2 If the Licensee fails to comply with any of the following: a) any obligations under the Telecommunications Law or its Executive Order; b) any obligations within the License; or c) any obligations contained in the Regulatory Framework in effect at the time, the Licensee may be subject to a penalty. The penalty shall be not less than Dirhams 50,000 and not more than Dirhams 200,000, payable in accordance with procedures as determined by the TDRA.
+16.3.3 The applicable penalty may be doubled: a) for cases of repeated non-compliance; b) for cases of non-compliance by an ordered date; or c) if the TDRA determines that the Licensee’s failure to comply with the aforementioned Article 16.3.2 is of a material nature.
+16.3.4 Without limiting any other right or remedy available to the TDRA, if the Licensee fails to make payment of any amount of penalty within thirty (30) days of receiving notice of said penalty, an additional penalty may be assessed on a monthly basis.
+16.4 Confidentiality
+16.4.1 The TDRA shall endeavor to ensure that documents for which confidential treatment is requested and are so marked are treated as confidential to the extent the TDRA agrees that such material is confidential.
+16.4.2 Such information may be made public by the TDRA to the extent it becomes publicly available through no fault of the TDRA or to the extent its release is required by any applicable law or order by a competent authority
+16.5 Force Majeure
+The Licensee shall not be held liable or be deemed in breach of any condition of this License if its failure to perform results directly from force majeure. Force majeure shall not include the insolvency of the Licensee, or the inability of the Licensee to meet its debts or other financial obligations. Force majeure shall include, but not be limited to: insurrection, riots, national emergencies, war, acts of terror, fire, floods, other natural disasters, strikes or other industrial action, acts of God or other causes beyond the control of the Licensee. The Licensee shall notify the TDRA immediately on the occurrence of any event of force majeure giving the anticipated effects of the force majeure and the expected duration, and steps to be taken by the Licensee to mitigate the effects, if possible.
+16.6 Replacement
+The License shall replace and supersede the previous License issued to the Licensee under License No. 1/2006.
+16.7 Language
+The Arabic language version of this License is the binding version. However, an official English language version has been prepared for guidance, and assistance in interpretation of the Arabic language version.

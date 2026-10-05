@@ -149,7 +149,9 @@ def build() -> tuple[int, int]:
 @lru_cache(maxsize=1)
 def chunks() -> dict[str, dict]:
     path = KB / "chunks.jsonl"
-    return {c["chunk_id"]: c for c in map(json.loads, path.read_text().splitlines())}
+    # split on "\n" only: str.splitlines would also break on U+2028 inside JSON strings
+    rows = [json.loads(line) for line in path.read_text().split("\n") if line]
+    return {c["chunk_id"]: c for c in rows}
 
 
 # ---------- hashes ----------

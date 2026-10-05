@@ -1,0 +1,283 @@
+Before the
+Federal Communications Commission
+Washington, D.C. 20554
+In the Matter of )
+)
+Protecting Consumers from SIM Swap and Port- ) WC Docket No. 21-341
+Out Fraud )
+ORDER
+Adopted: July 5, 2024 Released: July 5, 2024
+By the Chief, Wireline Competition Bureau:
+I. INTRODUCTION
+1. In this Order, the Federal Communications Commission’s (Commission) Wireline
+Competition Bureau (Bureau) grants in part and denies in part the petition for limited waiver or other
+relief submitted by CTIA, Competitive Carriers Association, and NCTA – The Internet & Television
+Association (jointly, Petitioners).1 Petitioners request that the Commission temporarily waive or suspend
+enforcement of all of the new rules adopted in the SIM Swap and Port-Out Fraud Order2 until the later of
+(1) March 10, 2025 or (2) after the Office of Management and Budget (OMB) completes review of any
+information collection requirements associated with the Order under the Paperwork Reduction Act
+(PRA).3
+2. For the reasons discussed below, we find that waiver of the Commission’s rules until
+March 10, 2025 would not serve the public interest, and accordingly deny the request. We find, however,
+that good cause exists to waive compliance with the rules adopted in the SIM Swap and Port-Out Fraud
+Order that are not subject to OMB review until the effective date of the rules that are subject to OMB
+approval. This will effectively result in a single synchronized timeframe: compliance with the rules in
+their entirety, including those not subject to the PRA, will not be required until OMB completes review of
+the information collection requirements associated with the Order, and the Commission publishes a notice
+in the Federal Register announcing the compliance date.
+II. BACKGROUND
+3. On November 15, 2023, the Commission adopted the SIM Swap and Port-Out Fraud
+Order to provide greater protections to customers from SIM swap and port-out fraud.4 Specifically, the
+1 See CTIA, Competitive Carriers Association, and NCTA – The Internet & Television Association, Joint Petition
+for Limited Waiver or Other Relief, WC Docket No. 21-341 (filed Jun. 26, 2024) (Petition).
+2 Protecting Consumers from SIM Swap and Port-Out Fraud, WC Docket No. 21-341, Report and Order and
+Further Notice of Proposed Rulemaking, FCC 23-95 (Nov. 15, 2023) (SIM Swap and Port-Out Fraud Order).
+3 See Petition at 1-2.
+4 See SIM Swap and Port-Out Fraud Order at 2, para. 2. A subscriber identity module (SIM) facilitates the proper
+routing of texts and calls to a customer’s cell phone, so long as the SIM associated with the customer’s phone
+number is assigned to the customer’s phone. SIM swap fraud is a scam in which a bad actor convinces a victim’s
+wireless provider to transfer the victim’s mobile service and number from the victim’s cell phone to a cell phone in
+the bad actor’s possession. Port-out fraud involves a bad actor, posing as the victim, opening an account with a
+wireless provider other than the victim’s current provider, and then arranging for the victim’s phone number to be
+transferred (or “ported out”) to the account with the new wireless provider controlled by the bad actor. See id. at 2,
+para. 1.
+Commission revised its Customer Proprietary Network Information (CPNI) and Local Number Portability
+(LNP) rules to require wireless providers to adopt secure methods of authenticating a customer before
+redirecting a customer’s phone number to a new device or provider.5 The Commission also adopted
+additional rules to reinforce that requirement, including that wireless providers adopt processes for
+responding to failed authentication attempts,6 institute employee training for handling SIM swap and port-
+out fraud,7 and establish safeguards to prevent employees who interact with customers from accessing
+CPNI until after customers have been authenticated.8 In addition, the Commission adopted rules that will
+enable customers to act to prevent and address fraudulent SIM changes and number ports, including
+requiring that wireless providers notify customers regarding SIM change and port-out requests,9 offer
+customers the option to lock their accounts to block processing of SIM changes and number ports,10 and
+give advanced notice of available account protection mechanisms.11 The Commission further established
+requirements to minimize the harms of SIM swap and port-out fraud when it occurs, including requiring
+wireless providers to maintain a clear process for customers to report fraud, promptly investigate and
+remediate fraud, and promptly provide customers with documentation of fraud involving their accounts.12
+Finally, to ensure wireless providers track the effectiveness of authentication measures used for SIM
+change requests, the Commission required that they keep records of SIM change requests and the
+authentication measures they use.13
+4. The SIM Swap and Port-Out Fraud Order required wireless providers to comply with the
+requirements six months after the effective date of the Report and Order or, for those requirements
+subject to review by OMB, upon completion of that review, whichever is later.14 The Order was
+published in the Federal Register on December 8, 2023, with an effective date of January 8, 2024, which
+then results in a compliance date of July 8, 2024 for rules not subject to the PRA.15 The final rules
+adopted by the Commission, codified at sections 52.37 and 64.2010(h) of the Commission’s rules, each
+contain provisions expressly delaying the respective compliance deadlines until OMB approves the new
+5 See SIM Swap and Port-Out Fraud Order at 16-21 & 35-37, paras. 26-30 & 54-57.
+6 Id. at 21-23, paras. 31-34.
+7 Id. at 43-44, paras. 69-71.
+8 Id. at 31-33, paras. 50-51.
+9 Id. at 23-27 & 37-39, paras. 35-40 & 58-60.
+10 Id. at 27-40 & 39-41, paras. 41-45 & 61-64.
+11 Id. at 42-43, paras. 67-68.
+12 Id. at 44-47, paras. 72-77.
+13 Id. at 30-31, paras. 46-49.
+14 Id. at 48-49, para. 83.
+15 88 Fed. Reg. 85794 (Dec. 8, 2023). The Commission stated that “this Report and Order SHALL BE
+EFFECTIVE 30 days after publication in the Federal Register, and that compliance with the rules adopted herein
+shall be required six months after the effective date of the Report and Order, except that the amendments to sections
+52.37(c), 52.37(d), 52.37(e), 52.37(g), 64.2010(h)(2), 64.2010(h)(3), 64.2010(h)(4), 64.2010(h)(5), 64.2010(h)(6),
+and 64.2010(h)(8) of the Commission’s rules, 47 CFR §§ 52.37(c), 52.37(d), 52.37(e), 52.37(g), 64.2010(h)(2),
+64.2010(h)(3), 64.2010(h)(4), 64.2010(h)(5), 64.2010(h)(6), and 64.2010(h)(8), which may contain new or modified
+information collection requirements, will not become effective until the later of i) six months after the effective date
+of this Report and Order; or ii) after the Office of Management and Budget completes review of any information
+collection requirements associated with this Report and Order that the Wireline Competition Bureau determines is
+required under the Paperwork Reduction Act. The Commission directs the Wireline Competition Bureau to
+announce the compliance date for sections 52.37(c), 52.37(d), 52.37(e), 52.37(g), 64.2010(h)(2), 64.2010(h)(3),
+64.2010(h)(4), 64.2010(h)(5), 64.2010(h)(6), and 64.2010(h)(8) by subsequent Public Notice and to cause 47 CFR §
+52.37 and § 64.2010 to be revised accordingly.” SIM Swap and Port-Out Fraud Order at 62, para. 121.
+rules. Specifically, the rules state that compliance with “this section [52.37]” will not be required until
+this paragraph is removed or contains a compliance date, which will not occur until the later of:” i) July 8,
+2024; or “ii) after the Office of Management and Budget completes review of any information collection
+requirements in this section that the Wireline Competition Bureau determines is required under the
+Paperwork Reduction Act or the Wireline Competition Bureau determines that such review is not
+required.”16
+5. In setting the timeframe, the Commission concluded that providing six months to achieve
+compliance with rules that are not subject to OMB review “accounts for the urgency of safeguarding
+customers from these fraudulent schemes, and will allow wireless providers to coordinate any updates
+needed to their systems and processes to comply with the Safe Connections Act and the rules” adopted to
+implement that statute.17 The Commission went on to explain that “SIM swap and port-out fraud can
+result in substantial harm to the customer, including loss of service on their devices. Fraudulent SIM
+swaps and port-outs allow bad actors to perpetrate greater fraud by giving them the means to complete
+text and voice authentications to access the victim’s other accounts, and as such, we find that an
+aggressive implementation timeframe is appropriate to provide these important consumer protections
+without substantial delay.”18 The Commission also found the implementation timeframe to be consistent
+with other proceedings and regulatory frameworks adopted by the Commission where consumer
+protection and numbering requirements were at issue.19
+6. Petitioners assert that “certain operational realities have made it clear that significantly
+more time is necessary for providers to develop fully tested, comprehensive compliance solutions,” and
+that “uncertainty surrounding when compliance will be required has created additional challenges.”20 As
+such, Petitioners request that the Commission either temporarily waive or suspend enforcement of all of
+the new SIM swap and numbering porting rules until the later of (1) March 10, 2025, or (2) after OMB
+completes review of any information collection requirements associated with the Order under the PRA.21
+16 See SIM Swap and Port-Out Fraud Order, Appx A, § 52.37(h). Similarly, regarding the revisions to the CPNI
+rules pertaining to protections to SIM swap fraud in 64.2010(h), the Commission rules state that “Compliance with
+paragraph (h) will not be required until this subparagraph is removed or contains a compliance date, which will not
+occur until the later of:” i) July 8, 2024; or ii) after the Office of Management and Budget completes review of any
+information collection requirements in paragraph (h) that the Wireline Competition Bureau determines is required
+under the Paperwork Reduction Act or the Wireline Competition Bureau determines that such review is not required.
+See id., Appx. A, § 64.2010(h)(9).
+17 SIM Swap and Port-Out Fraud Order at 49, para. 83. Compliance with the line separation requirements adopted
+by the Commission in the Safe Connections Act Report and Order is required by July 15, 2024. Wireline
+Competition Bureau Announces Compliance Date of July 15, 2024 for Safe Connections Act Rules, WC Docket Nos.
+22-238, 11-42, 21-450, Public Notice, DA 24-503 (WCB May 29, 2024) (citing Supporting Survivors of Domestic
+and Sexual Violence et al., WC Docket No. 22-238 et al., Report and Order, FCC 23-96 (2023) (Safe Connections
+Act Report and Order)).
+18 Id.
+19 Id. at 50, para. 83 (citing Implementation of the Telecommunications Act of 1996: Telecommunications Carriers’
+Use of Customer Proprietary Network Information, et al., CC Docket Nos. 96-115 et al., 22 FCC Rcd 6927, 6958,
+para. 61 (2007) (2007 CPNI Order) (concluding that six months was sufficient for carriers to implement the revised
+CPNI rules to address pretext (except for certain small carriers) “in light of the importance of this issue to the public
+interest”); Telephone Number Requirements for IP-Enabled Services Providers et al., WC Docket No. 07-243 et al.,
+Report and Order, Declaratory Ruling, Order on Remand, and Notice of Proposed Rulemaking 22 FCC Rcd 19531,
+19552, 19557, paras. 40, 48 (2007) (concluding that 90 days was sufficient time for carriers to comply with LNP
+validation requirements and requiring interconnected VoIP providers and their numbering partners to comply with
+LNP obligations 30 days after Federal Register publication, subject to OMB review and approval)).
+20 Petition at 3-4.
+21 Id. at 4. Petitioners also request this relief “on an expedited basis and at a minimum before July 8, 2024.” Id.
+III. DISCUSSION
+7. A provision of the Commission’s rules “may be waived by the Commission on its own
+motion or on petition if good cause therefor is shown.”22 The Commission may find good cause to extend
+a waiver, “if special circumstances warrant a deviation from the general rule and such deviation will serve
+the public interest.”23 In addition, the Commission may take into account considerations of hardship,
+equity, or more effective implementation of overall policy on an individual basis.24 We conclude that the
+petitioners failed to demonstrate that a temporary waiver of the rules until March 10, 2025 is in the public
+interest.25 Accordingly, we deny that component of the Petitioners’ request. However, we find that there
+is good cause, and that it would be in the public interest, to waive the July 8, 2024 compliance date for the
+rules that are not subject to OMB review until the effective date of the rules that are subject to OMB
+review. This will allow wireless providers to comply with all of the rules in their entirety, including those
+specifically subject to PRA and those that would otherwise go into effect on July 8, 2024, under a single
+synchronized timeframe, and we grant Petitioners’ request to such an extent.
+8. Petitioners assert that granting the requested relief would serve the public interest by
+affording covered wireless providers “sufficient time to make the complex technical and process changes
+necessary to implement the new rules, ensuring that the systems they adopt can be designed and tested to
+maximize consumer benefit and avoid the risks of rushed implementation.”26 Petitioners also assert that
+granting their petition “will provide certainty to covered providers by establishing a clear date for
+providers to target for comprehensive compliance.”27 Petitioners argue that a temporary waiver will not
+adversely impact consumers, “who can rely on the robust, effective anti-fraud program that covered
+providers will operate while they are working to implement the new rules.”28 Finally, Petitioners assert
+that a uniform extended timeframe applicable to all rules is “consistent with the Commission’s obligation
+to abide by the plain text of its codified regulations” and “preferable as a matter of policy given the close
+relationship between authentication and training requirements and the other new rules.”29
+9. We disagree with Petitioners that a temporary waiver of compliance with the rules until
+March 10, 2025 would be in the public interest. The Commission is not unaware of the complexities of
+implementing the requirements adopted in the SIM Swap and Port-Out Order and has previously
+considered Petitioners’ concerns about the complexity of updating their systems; it concluded that
+“providing six months after the effective date of the Report and Order to implement these revisions to our
+CPNI and number porting rules strikes the right balance between time for wireless providers to implement
+these changes and accounting for the urgency of safeguarding customers from these fraudulent
+22 47 CFR § 1.3.
+23 See Northeast Cellular Telephone Co. v. FCC, 897 F.2d 1164, 1166 (D.C. Cir. 1990) (citing WAIT Radio v. FCC,
+418 F.2d 1153, 1159 (D.C. Cir. 1969), aff’d, 459 F.2d 1203 (1973), cert. denied, 409 U.S. 1027 (1972)).
+24 WAIT Radio v. FCC, 418 F.2d 1153, 1159 (D.C. Cir. 1969); Northeast Cellular, 897 F.2d at 1166.
+25 See 47 CFR § 1.3; Northeast Cellular Tel. Co. v. FCC, 897 F.2d 1164, 1166 (D.C. Cir. 1990).
+26 Petition at 7-10 (asserting that “many of the new rules require completely new systems and processes,” that
+existing systems and processes cannot be easily replicated to all customers and contexts without significant
+planning, development, integration with other systems, and testing, and that implementation of the new rules will
+impact 30 to nearly 100 applications, systems, or platforms, including those operated by outside vendors); see also
+id. at 11-13 (arguing that additional time will result in “better, more effective anti-fraud programs;” will allow
+providers to better balance anti-fraud measures will timely accommodating valid SIM change and number port
+requests; and will mitigate risks associated with rushed implementation, including detecting security issues and
+operationalizing the overlap with the new rules implementing the Safe Connections Act).
+27 Id. at 7, 15-16.
+28 Id. at 7, 14-15.
+29 Id. at 17-18.
+schemes.”30 We do not find the complexities outlined by Petitioners persuasive to overcome the
+Commission’s stated concerns regarding the urgency of addressing these types of pernicious fraudulent
+schemes. The Commission also acknowledged industry’s concerns that implementing these new rules
+will be a multistep process for many providers,31 but noted that providers themselves acknowledged the
+necessity of implementing revisions to the CPNI and LNP rules concurrently with the rules implementing
+the Safe Connections Act, given how both frameworks address many of the same actions (e.g., account
+locks, customer notifications, customer authentication).32 The SIM Swap and Port-Out Fraud Order
+recognized that some providers already employ authentication and notification measures but that
+additional work would be needed.33 Contrary to the Petitioners’ claim that the Commission
+underestimated the work associated with implementing the new rules,34 it in fact cited to the same steps
+that Petitioners state they are currently undertaking, including design, development, and testing of
+expanded IT systems and platforms.35 It found that accomplishing this work and achieving compliance
+under an “aggressive implementation timeframe is appropriate to provide substantial consumer
+protections without delay.”36 Even with this urgency, we also observe that Petitioners will have
+significantly more time than what may have been initially anticipated to work through implementation
+complications pertaining to the rules subject to the PRA—Petitioners have had over seven months since
+the release of the SIM Swap and Port-Out Order to work on implementing the requirements adopted
+therein, even before the information collection review process has begun.
+10. While we are sympathetic to Petitioners’ assertions for a need for the Commission to set
+a date certain for compliance, the timeframes for the OMB’s review under the Paperwork Reduction Act
+are publicly-available and presumably well-known to Petitioners.37 Since the initial 60-day PRA public
+comment period commenced on June 25, 2024,38 and is the first of two PRA public comment periods,
+wireless providers can reasonably assume that the new rules would be under OMB review for six-to-nine
+months, and that OMB approval would come, at the earliest, in late November 2024.39 Wireless providers
+could conservatively use this date as a date certain from which to base their implementation and testing of
+systems to implement the requirements of the SIM Swap and Port-Out Fraud Order. This timeframe will
+ultimately provide wireless providers with at least a full 12 months from adoption of the rules to
+implement them, a sufficient timeframe in line with, or exceeding, other items requiring implementation
+30 SIM Swap and Port-Out Order at 50, para. 83.
+31 See, e.g., Letter from CTIA to Marlene Dortch, Secretary, FCC, WC Docket No. 21-341, at 2-3 (filed Nov. 8,
+2023).
+32 SIM Swap and Port-Out Fraud Order at 50, para. 83.
+The line separation requirements under the Safe
+Connections Act Report and Order, which involve CPNI and LNP obligations, become effective on July 15, 2024.
+See supra note 17.
+33 Id. at 49-50, para. 83.
+34 Petition at 8.
+35 Petition at 8-9.
+36 SIM Swap and Port-Out Fraud Order at 49, para. 83 and n.304.
+37 See https://pra.digital.gov (explaining that the Office of Management and Budget’s review of rules subject to the
+Paperwork Reduction Act typically takes 6-9 months, which includes, at a minimum, 60 days for public comment
+published in the Federal Register, a second 30-day public comment period published in the Federal Register, and an
+additional 60 days for OMB review and approval).
+38 Fed. Commc’ns Comm’n, Information Collections Being Reviewed by the Federal Communications Commission,
+89 Fed. Reg. 53079, 53080 (June 25, 2024) (requiring written PRA comments to be submitted on or before August
+26, 2024).
+39 Since the initial public comment period began June 25, 2024, calculating, at a minimum, 60 days for public
+comment, 30 days for a second public comment period, and 60 days for OMB review and approval would result in
+OMB completing its review at the earliest, 150 days from June 25, 2024, or in late November.
+of revised or new CPNI requirements.40 Further, Petitioners’ own request would result in an unknown
+compliance date, as they request March 10, 2025 or upon OMB approval, whichever is later.41 Were
+OMB to complete its review of these rules after March 10, the compliance date would be no more certain
+than the Commission’s established timeframe. Given the strong public interest considerations in
+protecting consumers from these types of fraud, we believe it warrants a more cautious approach to
+extending the timeframe.
+11. Petitioners arguments that a waiver would not adversely impact consumers because
+consumers can rely on existing fraud-prevention programs also fall short. Had the Commission
+determined that providers’ existing anti-fraud programs were sufficient, it arguably would not have found
+that new, comprehensive rules were necessary in the SIM Swap and Port-Out Fraud Order.
+12. We do find, however, that good cause exists, and that it would be in the public interest, to
+waive compliance with the rules adopted in the SIM Swap and Port-Out Fraud Order that are not subject
+to OMB review (e.g., authentication requirements and training requirements on how to use new systems),
+which are substantively tied to requirements subject to the PRA, until the effective date of the rules that
+are subject to OMB approval. This will effectively result in a single synchronized timeframe for all the
+rules in their entirety, including those that do not implicate the PRA. Petitioners have demonstrated that
+allowing providers to come into compliance with all of the rules on the same schedule “will ensure
+harmonious implementation and avoid unnecessary burdens.”42 We therefore grant Petitioners’ limited
+request to waive compliance with the rules adopted in the SIM Swap and Port-Out Fraud Order that are
+not subject to OMB review until after OMB completes its review of the information collection
+requirements under the PRA, and the Commission publishes notice of OMB’s approval in the Federal
+Register. We encourage Petitioners to keep the Commission apprised as to their progress in
+implementing the rules adopted in the SIM Swap and Port-Out Order.
+IV. ORDERING CLAUSES
+13. Accordingly, IT IS ORDERED that, pursuant to Sections 0.91, 0.291, and 1.3 of the
+Commission’s rules, 47 CFR §§ 0.91, 0.291, 1.3, the Joint Petition for Limited Waiver or Other Relief
+filed by CTIA, Competitive Carriers Association, and NCTA – The Internet & Television Association
+filed on June 26, 2024 is DENIED IN PART and GRANTED IN PART to the extent described herein.
+40 See 2007 CPNI Order (released April 2, 2007, received OMB approval December 2007); Implementation of the
+Telecommunications Act of 1996: Telecommunications Carriers’ Use of Customer Proprietary Network Information
+and Other Customer Information et al., CC Docket No. 96-115 et al., Third Report and Order and Third Further
+Notice of Proposed Rulemaking, 17 FCC Rcd 14860 (2002) (Third CPNI Order) (released July 25, 2002, received
+OMB approval Feb. 24, 2003).
+41 Petition at 2, 21.
+42 See Petition at 20 (explaining that the “authentication requirements in Sections 52.37 and 64.2010(h) are not
+easily disentangled from the remainder of the rules, several of which govern actions that must be taken when
+authentication succeeds or fails,” and that “as providers work to operationalize the other requirements[,] . . . the
+authentication procedures may need to be adjusted accordingly”); see also id. (asserting that “[a]dopting new
+training programs for employees in the short term on new procedures that have not been implemented and will
+change in the medium-term risks creating employee and customer confusion on the availability and status of new
+security tools and processes”).
+14. IT IS FURTHER ORDERED that, pursuant to section 1.102(b)(1) of the Commission's
+rules, 47 CFR § 1.102(b)(1), this Order SHALL BE EFFECTIVE upon release.
+FEDERAL COMMUNICATIONS COMMISSION
+Trent B. Harkrader
+Chief
+Wireline Competition Bureau
+Federal Communications Commission

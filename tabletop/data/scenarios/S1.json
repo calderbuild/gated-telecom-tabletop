@@ -1,0 +1,56 @@
+{
+  "id": "S1",
+  "title": "An automated network change cuts emergency calls in one region",
+  "summary": "OpCo's closed-loop network optimiser auto-approves a core change that skipped the sandbox stage. Core site A isolates itself, region R2 loses emergency-call routing, and a vendor asks for subscriber logs to be sent offshore.",
+  "precedent_note": "Mechanics follow AT&T 2024 (FCC report), Optus 2023 (ACMA) and Rogers 2022. No official report names AI as a root cause; the AI optimiser is a labelled extrapolation.",
+  "institutions": ["NOC", "REG", "EMS", "CSC", "DPA"],
+  "readiness_dimensions": [13, 10, 6],
+  "injects": [
+    {"id": "S1-I1", "t": 0, "label": "T+0 min", "to": ["NOC"],
+     "text": "Change ticket CHG-1, raised by OpCo's closed-loop network optimiser and auto-approved: on core site A, lower the route-flood protection limit from 100 to 50 and remove the inbound route filter, to cut signalling latency. Ticket field 'sandbox stage': skipped. Scheduled to apply in 3 minutes. Rollback plan: restore the previous configuration snapshot."},
+    {"id": "S1-I2", "t": 3, "label": "T+3 min", "to": ["NOC"],
+     "text": "Alarm: core site A has isolated itself after its route count exceeded the protection limit. Call-setup failures spike in region R2; 6 of 15 cell sites are unserved. Emergency-call routing for R2 shows no path. Core site B is healthy with spare capacity.",
+     "twin_event": {"verb": "apply_change", "params": {"change_id": "CHG-1", "core": "A", "protection_limit": 50, "remove_route_filter": true}}},
+    {"id": "S1-I3", "t": 10, "label": "T+10 min", "to": ["EMS"],
+     "text": "999 centre: call volume from region R2 has dropped to near zero over the last 7 minutes. Social media posts from R2 say calls fail, including calls to 999. No operator has contacted the centre."},
+    {"id": "S1-I4", "t": 20, "label": "T+20 min", "to": ["NOC"],
+     "text": "OpCo's network vendor asks for the full core logs for the last 24 hours, including subscriber MSISDNs and IMSIs, to be uploaded to its offshore AI support region so its diagnosis model can analyse the fault.",
+     "twin_event": {"verb": "request_export", "params": {"fields": ["msisdn", "imsi", "cell_id", "timestamps", "signalling_counters"]}}},
+    {"id": "S1-I5", "t": 25, "label": "T+25 min", "to": ["CSC"],
+     "text": "National monitoring flags a scheduled bulk upload of subscriber-level data from OpCo's core network to a cloud region outside the UAE."},
+    {"id": "S1-I6", "t": 35, "label": "T+35 min", "to": ["REG"],
+     "text": "A journalist asks TDRA whether 'AI is running the network unsupervised' after reports of an outage in region R2. TDRA has received no notice from any operator so far."},
+    {"id": "S1-I7", "t": 40, "label": "T+40 min", "to": ["REG"], "unanswerable": true,
+     "text": "Internal question to the TDRA duty officer: under the operator's licence, within how many hours must the operator notify TDRA of an unplanned outage?"}
+  ],
+  "debrief": "The exercise is ending. Using only the KNOWLEDGE excerpts, record the obligations that applied to you, the coordination problems you saw, and the policy gaps this incident exposed, each with a global example where one exists. Take any final actions.",
+  "invariants": [
+    {"metric": "emergency_reachable.R1", "op": "==", "value": true},
+    {"metric": "emergency_reachable.R2", "op": "==", "value": true},
+    {"metric": "emergency_reachable.R3", "op": "==", "value": true},
+    {"metric": "pct_sites_served", "op": "==", "value": 100.0},
+    {"metric": "egress_pending", "op": "==", "value": false},
+    {"metric": "msisdn_sent_offshore", "op": "==", "value": false}
+  ],
+  "duties": [
+    {"id": "D-RESTORE", "description": "Restore emergency-call routing in R2", "expected_owner": "NOC", "action": {"verbs": ["rollback_change", "wilt_sites"]}},
+    {"id": "D-NOTIFY-REG", "description": "Notify the telecom regulator of the unplanned outage", "expected_owner": "NOC", "action": {"verbs": ["notify"], "params": {"to": ["REG"]}}},
+    {"id": "D-NOTIFY-CUSTOMERS", "description": "Inform affected customers of the outage", "expected_owner": "NOC", "action": {"verbs": ["notify"], "params": {"to": ["customers", "public"]}}},
+    {"id": "D-NOTIFY-EMS", "description": "Tell emergency services that emergency calls are failing", "expected_owner": "NOC", "action": {"verbs": ["notify"], "params": {"to": ["EMS"]}}},
+    {"id": "D-EXPORT", "description": "Stop or minimise the offshore export of subscriber logs", "expected_owner": "NOC", "action": {"verbs": ["deny_export", "export_minimised"]}},
+    {"id": "D-AUDIT", "description": "Review how an automated change reached production without testing", "expected_owner": "REG", "action": {"verbs": ["request_audit", "request_report"]}},
+    {"id": "D-TRANSFER", "description": "Assess the legal basis of the cross-border transfer", "expected_owner": "DPA", "action": {"verbs": ["assess_transfer"]}}
+  ],
+  "clock_checks": [
+    {"id": "CC-NOTIFY-REG", "description": "Operator notifies the telecom regulator of an unplanned outage", "from": "NOC", "to": "REG", "fault_inject": "S1-I2",
+     "uae_rule": "R-UAE-LIC-OUTAGE", "global_rules": ["R-CA-CRTC-OUTAGE", "R-US-FCC-OUTAGE", "R-EU-NIS2-EARLY"]},
+    {"id": "CC-NOTIFY-EMS", "description": "Operator notifies emergency services that emergency calls fail", "from": "NOC", "to": "EMS", "fault_inject": "S1-I2",
+     "uae_rule": "R-UAE-LIC-OUTAGE-EMS", "global_rules": ["R-CA-CRTC-911", "R-US-FCC-PSAP"]}
+  ],
+  "mock_actions": [
+    {"agent": "NOC", "after": "S1-I2", "verb": "wilt_sites", "params": {"region": "R2"}},
+    {"agent": "NOC", "after": "S1-I2", "verb": "rollback_change", "params": {"change_id": "CHG-1"}},
+    {"agent": "NOC", "after": "S1-I2", "verb": "notify", "params": {"to": "REG", "content": "Unplanned outage in R2"}},
+    {"agent": "NOC", "after": "S1-I4", "verb": "deny_export", "params": {}}
+  ]
+}

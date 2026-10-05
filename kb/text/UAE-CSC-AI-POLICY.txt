@@ -1,0 +1,17 @@
+The National Cyber Security Policy for Artificial Intelligence
+The National Artificial Intelligence Security Policy defines minimum security requirements for adoption of AI in the UAE. It establishes governance, infrastructure, algorithm protection, operational safety, threat monitoring, and performance evaluation to manage emerging AI risks.
+In the evolving landscape of artificial intelligence (AI) technology, the proliferation and integration of AI systems have ushered in a new era of innovation and transformation across industries. As AI-driven applications become embedded in critical functions and decision-making processes, the need to ensure the security of AI systems has gained unprecedented prominence. With the intricate interplay of data, algorithms, and autonomous decision-making that AI entails, the need to fortify these systems against potential vulnerabilities and unauthorised access has become paramount. In the face of escalating cybersecurity threats and the potential consequences of AI-related breaches, safeguarding the confidentiality, ethicality, and integrity of AI systems is not only a necessity but a fundamental responsibility.
+The Cyber Security Council has established this policy to enhance cyber security in artificial intelligence, aligned with the UAE’s national priority to be a global leader in cyber security; and enhance the security posture of organisations and individuals within the UAE using artificial intelligence.
+Governance
+Requirements to establish a robust governance framework for AI/ML systems, ensuring their secure design, development, and operation through comprehensive, enforceable policies and procedures. It focuses on identifying, assessing, and mitigating unique risks, managing supply chain risks, controlling system changes, and ensuring compliance with privacy regulations.
+Infrastructure & Application Security
+Requirements for maintaining an accurate inventory of AI/ML assets, securing system configurations, applying timely security patches, remediating vulnerabilities, and ensuring the secure development, testing, and maintenance of AI/ML applications. It also emphasizes the importance of robust network security controls to protect system confidentiality, integrity, and availability.
+Algorithm Security
+Requirements to integrate security into the design and development of AI/ML models from the earliest stages, maintaining model security, protecting inference processes, enforcing access controls for training data, and ensuring data protection at rest and in motion.
+Operational Safety
+Requirements to tailor security measures based on the distinct applications of AI/ML systems, ensuring human oversight in critical decision-making, establishing protocols for system resilience, and ensuring continuity and reliability through comprehensive testing and validation.
+Adversarial AI Attacks
+Requirements to understand and anticipate potential AI/ML attacks, fostering a proactive security approach that includes education, awareness, and comprehensive defense techniques, continuous monitoring, testing, and robust incident response.
+AI Monitoring & Response
+Requirements to establish an effective AI/ML security analytics framework for real-time threat detection and predictive insights. It also focuses on implementing an automated response framework for AI/ML security incidents, ensuring efficient incident reporting and management, and developing a comprehensive digital forensics framework tailored to AI/ML security breaches.
+Read the full policy here (PDF, 2.14 MB).

@@ -140,6 +140,11 @@ def cmd_eval(args):
     )
     md = markdown(res)
     (ROOT / "eval" / "results.md").write_text(md)
+    readme = ROOT / "README.md"
+    head, _, rest = readme.read_text().partition("<!-- eval:start -->\n")
+    _, _, tail = rest.partition("<!-- eval:end -->")
+    table = md.split("\n", 2)[2]  # drop the results.md title
+    readme.write_text(f"{head}<!-- eval:start -->\n{table}<!-- eval:end -->{tail}")
     print(md)
     return 0
 
@@ -152,11 +157,7 @@ def cmd_selftest(args):
         out = ROOT / "runs" / "scratch" / f"selftest-{sid}.jsonl"
         Run(
             scenario,
-            Mock(
-                mock_responder(
-                    scenario, load_mandates()
-                )
-            ),
+            Mock(mock_responder(scenario, load_mandates())),
             out,
         ).run()
         events = audit.load(out)

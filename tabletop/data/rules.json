@@ -1,0 +1,23 @@
+{
+  "note": "Notification clocks. The gate accepts deadline_hours only when it matches a rule here for a cited source; the coordinator compares exercise timing against each rule. hours=null means the text sets no fixed period.",
+  "rules": [
+    {"id": "R-UAE-LIC-OUTAGE", "jurisdiction": "UAE", "doc_id": "UAE-LIC-2-2026", "ref": "Art. 12.9.2", "duty": "inform TDRA, interconnecting operators and customers of an unplanned interruption", "hours": null,
+     "quote": "the Licensee shall inform the TDRA, any interconnecting Other Licensed Operators and relevant Customers as soon as possible"},
+    {"id": "R-UAE-LIC-OUTAGE-EMS", "jurisdiction": "UAE", "doc_id": "UAE-LIC-2-2026", "ref": "Art. 12.9.2", "duty": "notify emergency services of an outage affecting emergency calls (the clause names TDRA, operators and customers only)", "hours": null,
+     "quote": "the Licensee shall inform the TDRA, any interconnecting Other Licensed Operators and relevant Customers as soon as possible"},
+    {"id": "R-UAE-PDPL-BREACH", "jurisdiction": "UAE", "doc_id": "UAE-PDPL", "ref": "Art. 9(1)", "duty": "notify the Bureau of a personal data breach", "hours": null,
+     "quote": "within the period and in accordance with the measures and requirements set by the Executive Regulations of this Decree by Law"},
+    {"id": "R-CA-CRTC-OUTAGE", "jurisdiction": "Canada", "doc_id": "CA-CRTC-2025-225", "ref": "Telecom Decision CRTC 2025-225", "duty": "notify the Commission, ISED and emergency management organisations of a major outage", "hours": 2,
+     "quote": "TSPs must notify the Commission, ISED, and FPT EMOs within two hours"},
+    {"id": "R-CA-CRTC-911", "jurisdiction": "Canada", "doc_id": "CA-CRTC-2025-225", "ref": "Telecom Decision CRTC 2025-225", "duty": "notify PSAPs of a major 9-1-1 outage", "hours": 0.5,
+     "quote": "9-1-1 network providers and originating network providers must notify (i) PSAPs within 30 minutes"},
+    {"id": "R-US-FCC-OUTAGE", "jurisdiction": "United States", "doc_id": "US-CFR-47-4-9", "ref": "47 CFR 4.9(e)", "duty": "wireless provider notifies the FCC of a qualifying outage", "hours": 2,
+     "quote": "All wireless service providers shall submit electronically a Notification to the Commission within 120 minutes of discovering"},
+    {"id": "R-US-FCC-PSAP", "jurisdiction": "United States", "doc_id": "US-CFR-47-4-9", "ref": "47 CFR 4.9(h)", "duty": "notify a potentially affected 911 special facility", "hours": 0.5,
+     "quote": "shall provide a 911 outage notification to a potentially affected 911 special facility as soon as possible, but no later than within 30 minutes of discovering"},
+    {"id": "R-EU-NIS2-EARLY", "jurisdiction": "European Union", "doc_id": "EU-NIS2", "ref": "Art. 23(4)(a)", "duty": "early warning of a significant incident to the CSIRT or competent authority", "hours": 24,
+     "quote": "without undue delay and in any event within 24 hours of becoming aware of the significant incident, an early warning"},
+    {"id": "R-EU-GDPR-BREACH", "jurisdiction": "European Union", "doc_id": "EU-GDPR", "ref": "Art. 33(1)", "duty": "notify the supervisory authority of a personal data breach", "hours": 72,
+     "quote": "not later than 72 hours after having become aware of it, notify the personal data breach to the supervisory authority"}
+  ]
+}

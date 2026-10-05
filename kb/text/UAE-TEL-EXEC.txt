@@ -1,0 +1,321 @@
+*Decision of the Supreme Committee for the Supervision of the Telecommunications Sector No. (3) of 2004 Issuing the Executive Order of Federal Law by Decree No. 3 of 2003 Regarding the Organisation of the Telecommunications Sector
+THE ARABIC VERSION OF THE EXECUTIVE ORDER SHALL PREVAIL IN CASE OF ANY DISCREPANCY
+COPYRIGHT © 200٥• TELECOMMUNICATIONS REGULATORY AUTHORITY • ALL RIGHTS RESERVED
+Telecommunications Regulatory Authority P O Box 26662 Abu Dhabi, United Arab Emirates Tel: +971 2 6212222 Fax +971 2 6212227 www.tra.ae
+* Published in the Official Gazette – Edition 421 – Year 34 – Ramadan 1425 – October 2004.
+Decision of the Supreme Committee for the Supervision of the Telecommunications Sector No. (3) of 2004 Issuing the Executive Order of Federal Law by Decree No. 3 of 2003 Regarding the Organisation of the Telecommunications Sector
+The Supreme Committee for the Supervision of the Telecommunications Sector,
+Having reviewed Federal Law by Decree No. (3) of 2003 Regarding the Organisation of the Telecommunications Sector; and
+Federal Decree No. (22) of 2004 Forming the Supreme Committee for the Supervision of the Telecommunications Sector; and
+According to the proposal by the member of the Supreme Committee for the Supervision of the Telecommunications Sector and the approval of the Supreme Committee for the Supervision of the Telecommunications Sector,
+Have decided as follows:
+INTERPRETATION
+Article (1)
+Unless the context requires otherwise, the expressions and wordings appearing in Federal Law by Decree No. (3) of 2003 Regarding the Organisation of the Telecommunications Sector shall have the same meanings ascribed thereto in the above-mentioned Federal Law by Decree, and the following expressions and wordings shall have the following meanings assigned thereto:
+“Authority” the General Authority for Regulating the Telecommunication Sector.
+“Board of Directors” or “Board” the Board of Directors Of the Authority.
+“Earthworks” any works of excavation by whatever means and any works in connection with building , refurbishment or demolition or related to extension or connection of pipes or cables or installation or machines connection or other equipment.
+“Federal Law by Decree” the Federal Law by Decree No. (3) of 2003 Regarding the Organisation of the Telecommunications Sector.
+“Interconnection” the linking by whatever means of Telecommunication Networks in order to allow users of one entity to communicate with users of the same or another entity or to access and make use of Telecommunication Services provided by another entity.
+“Interconnection Agreement” an agreement under which Interconnection will be achieved pursuant to the rules and conditions issued by the Authority.
+“Licence Conditions” such conditions as may be imposed by the Supreme Committee as implied in the Licences granted to the Licensees and any modification thereto.
+“National Spectrum Database” database that contains all the administrative and technical information, services and authorization for spectrum.
+“Private Land” any land owned by, granted to or leased to any person other than any public institution.
+“Private Telecommunication Network” Telecommunication Networks operated exclusively to serve the requirements and to benefit one person or a group of persons who have a common ownership.
+“Public Telecommunication Network” Telecommunication Network operated for the provision of Public Telecommunication Services by the Licensed Operators pursuant to the provisions of the Federal Law by Decree and this Executive Order.
+“Public Telecommunication Service” any Telecommunication Service provided to users or a part thereof in consideration of a fee.
+“Supreme Committee” the committee established for the supervision of the telecommunication sector.
+“Telecommunication Services” Any service of transmitting, broadcasting, switching or receiving by means of a Telecommunication Network of any of the following:
+1.wired and wireless cable and radio telecommunications;
+2.voice, music and other sounds;
+3. visual images;
+4.signals used in transmission otherwise than the transmission and broadcasting of programmes;
+5.signals used to operate or control any machinery or apparatus;
+6.the installation, maintenance, adjustment, repair, alteration, moving, removal or replacement of apparatus which is or is to be connected to a Public Telecommunication Network;
+7.the installation, maintenance and operation of local and international telegraph, telephone and leased circuits and domestic and international data networks, internet and wireless transmission; or
+8.any other Telecommunication Services approved by the Supreme Committee.
+but does not include any services used in the production and broadcasting of programmes.
+"Wireless Transmission" the transmitting or receiving of electro-magnetic energy which may be used for the conveyance of data, or messages or voice or visual images, or for the operation or control of machinery or apparatus.
+Chapter 1
+The Organisation of the Authority
+Part 1 –Board of Directors of Directors, Director General and Employees
+Article (2)
+1. The Authority shall be managed by Board of Directors comprised of five members, including the Chairman of the Board and the Director General. The Director General will take act as the Chairman during either his absence or position's vacancy. The Board Members shall be appointed by the Supreme Committee's resolution for four years renewable for successive periods pursuant to the same instrument of appointment. The Board shall select from the Authority’s employees a secretary who has no voting power during decision-making.
+2. Any experts and consultants, if required by the Board, may be invited to its sessions, in which they shall have no voting powers to the Board decisions.
+Article (3)
+1. The remuneration of the Chairman, the Director General and other Board Members shall be specified by resolution from the Supreme Committee.
+2. The Board of Directors shall issue the Authority employees manual by which the salaries, benefits and other terms of employment shall be determined without getting confined to any other regulations or to any Governmental salary's scales.
+3. The Board of Directors shall issue the organization chart of the Authority which indicates the functions of each division of this chart.
+4. The senior positions employees shall be appointed by the Board of Directors pursuant to the rules of the applicable Authority employees manual.
+Article (4)
+1. The Board of Directors shall meet whenever required upon the Chairman’s invitation or in accordance with the directives of the Supreme Committee. In all cases, the Board of Directors shall meet at least once every two months. For valid meetings of the Board, the attendance should be by majority and entertained with the attendance of the Chairman or the Director General in his absence
+2. The Board meetings shall be chaired by the Chairman and in his absence by the Director General.
+3. Board resolutions shall issue by the overwhelming majority of the attendees, where in case of equal voting the Chairman's side shall prevail.
+Article (5)
+1. The Director General is the legal representative of the Authority who shall be, in front of the Board of Directors, responsible for the day to day management affairs which shall be overseen pursuant to the terms of the law by Decree, this Executive Order, the decisions and directives emanating from the Supreme Committee and the applicable regulations in the Authority including its manual and the Board of Directors resolutions.
+2. With consideration to section 4 of Article (3) in this Executive Order, the Director General shall have the power to appoint employees pursuant to the applicable employees that should assure carrying out the Authority‘s activities in effectiveness and efficiency.
+Article (6)
+1. The Board of Directors secretary shall prepare meetings record which registers the minutes of meetings on the date they are held that should be signed by the attendant Board Members. The Board of Director’s resolutions shall be issued by the signature of the Chairman, or the Director General in his absence.
+2. The Authority shall provide the Supreme Committee within a week with a copy of the minutes of each Board meeting.
+Article (7)
+The Board membership shall terminate for one of the following reasons:
+1. Dismissal, pursuant to the Supreme Committee's decision pursuant to article (11) of the Federal Law by Decree.
+2. Membership Expiry; unless renewed.
+3. Resignation.
+4. Death.
+Article (8)
+1. Any Board Member may resign from his membership in the Board by presenting a written resignation to the Supreme Committee. Board Membership shall only terminate when the Supreme Committee issues a decision of acceptance. If no decision is taken regarding the resignation within sixty days of the resignation submission, the resignation will be considered accepted.
+2. The absence of any Board member for three successive meetings for no reason or for unaccepted justification by the Board, shall be considered as resignation submittal as stipulated in paragraph (1) of this Article
+Article (9) The Supreme Committee shall, within thirty days of the Board Membership's expiry, appoint a new Board Member as a replacement. Till such appointment is achieved, and as long as the Board's quorum is met, the other Board Members shall carry out the functions entrusted to the Board and in compliance with this Executive Order's rules.
+Article (10)
+Neither any of the Board Members nor the Authority personnel may bear, in their personal capacity, any civil liability against carrying out or abstaining from carrying out any activity if being conducted upon the Supreme Committee's directions and within the frame of these directions, provided that they performed that in good faith and to enable the Authority to exercise its functions pursuant to the Federal Law by Decree and this Executive Order.
+Article (11)
+The Authority may issue regulations, instructions, resolutions and rules to achieve the following:
+1. ensure that the Telecommunication Services provided throughout the State are sufficient to the needs of those who wish to make use of these services;
+2. enhance the level of the provided service in the telecommunication sector to accomplish the benefit of the users and the security and public safety whether to the users or others;
+3. ensure that the Licensees abide by the performance quality standards and adhere to the terms and conditions of the Licences granted to them;
+4. encourage, promote, and develop the telecommunications and information technology industries in the State;
+5. work on the development and upgrading of the telecommunication system in the State through training, qualifying, establishing relevant educational institutions and attaining the latest releases of the apparatus, equipment and facilities in the telecommunications technology;
+6. resolve any disputes that may arise between the Licensees;
+7. the Licensees provisioning with free of charge Telecommunication Services in emergency cases;
+8. obligate the Licensees to ratify binding agreements that achieves the aims specified in the Licence; and
+9. Obligates the licensees to keep separate accounts for the licensed activities and to organise the financial subsidy exchange between these activities.
+Part 2 - Reports
+Article (12)
+The Director General shall prepare the Authority's draft annual report and present it to the Board of Directors for approval prior to its submission to the Supreme Committee at the end of each financial year. This report shall include the following:
+1. the Authority’s activities during that year;
+2. developments in respect of matters which fall within the scope of the Authority’s functions and responsibilities;
+3. plans for it’s activities for the next year; and
+4. any other matter which the Authority deems appropriate to present to the Supreme Committee.
+The Authority may provide any concerned bodies, upon its request with a copy of this report
+Article (13)
+The Authority shall provide the Supreme Committee with any other reports related to its functions as the Supreme Committee may request.
+Part 3 - Publication and Certification of Information
+Article (14)
+The Authority, in the way it deems appropriate, shall place the needed necessary controls to publish information related to licensing standards and conditions issued by the Supreme Committee and any amendments thereto according to the Federal Law by Decree, this Executive Order and regulations and codes of practice issued by the Authority.
+Article (15)
+In consideration with the previous Article, the Authority shall publish the standards and conditions related to the Licences, permits, authorisations, regulations, information and guidelines as it may consider expedient to provide to consumers and others.
+Article (16)
+The Authority shall prepare a general record to document all the information relating to:
+1. Licences and exemptions issued by the Supreme Committee and any modifications or revocations thereto;
+2. authorisations and permits of the Telecommunication Apparatus, and any modifications or revocations thereto; and
+3. any exemption from the obligations of the Licence Conditions and any revocation or modification to such exemption.
+Article (17)
+The Authority may, if required and upon acquiring the Board approval, not document in the general record any of the information mentioned above in the previous article and may document it in a special record prepared for this purpose.
+Article (18)
+The Authority, after acquiring the Board of Directors approval, may permit to the concerned bodies, upon its request, to viewing the recorded information pursuant to the terms of this Executive Order and the conditions specified by the Authority. The Authority may provide these bodies with excerpts containing the required information issued by the Authority.
+Part 4 - Financial Affairs
+Article (19)
+1. The Authority shall hold regular financial accounts and records for its transactions and affairs, which contains its income, expenditures, its assets and its dues. Within three months after the end of each financial year, the Authority shall prepare its closing accounts for the ended financial year indicating the real financial status of that year and the assets and entitlements of the Authority at the end of such financial year and in accordance with the renowned international accounting principles.
+2. The accounting auditor shall disclose if the accounts, assets and its dues of the Authority in that particular year as shown are true and reflect the fact and if the Authority retained in that particular year clean accounts and financial records. The auditor may disclose any other matter he considers to be necessary.
+Article (20)
+1. The draft of the estimated annual budget of the Authority shall be prepared by the Director General to be approved by the Board of Directors and submitted to the Supreme Committee for issuance.
+2. The Chairman is the cashing commander for the letter of Credit listed in the Authority’s Budget and he shall exercise all the entrusted powers by virtue of the Federal Law by Decree and this Executive Order and the regulations and applicable rules in the Authority. The Chairman may delegate any of his entrusted powers to the Director General or to any of the senior employees.
+Article (21)
+In consideration with all the provisions of this Part 4, the Chairman after obtaining the Board of Directors approval shall issue the Authority's financial internal Regulations which shall imply organizing its accounts and financial records in accordance with the accounting principles.
+Part 5 – Contracts and Purchases
+Article (22)
+The purchase of items and supplies and the practice of contracts of work and the supply of needed items that are required by the Authority shall be through general tender invitations in order to obtain the best bids and offers. In certain cases contracting by: limited tender, quotations or direct order is licit.
+Article (23)
+The sale of materials, used equipments and items shall be through auction. Sales to equipments that values not exceeding 100,000 DHS can be by quotations or direct order.
+Article (24)
+The Director General shall issue the necessary decisions for the formation of committee/s for tenders, quotations and public auctions in which a financial member is in each of these committees.
+Article (25)
+With the consideration to the provisions of this Part 5, the Chairman upon the Board ‘s approval may issue the Authority’s regulations for contracting and purchasing
+Chapter 2
+Licences and Apparatus Approval
+Part 1 – Licences
+Article (26) * The Supreme Committee may issue specific and objective standards which accordingly Licences shall be issued thereupon or exempted thereof.
+Article (27)
+The license issued by the Supreme Committee shall determine the type of activity a juridical person allowed to practice and the term thereto. The Authority should be notified to acquire its written approval in the event of the license waiving.
+Article (28)
+The decisions issued by the Supreme Committee in relation to Licences awarding to juridical persons shall be published in the official gazette.
+Article (29)
+The Supreme Committee may issue instructions or directives to any Licensed Operator as it may imply conditions in the Licences it issues relating to the following matters:
+1. specifying the fees payable by the Licensee upon issuance of the Licence and during its term ;
+2. the circumstances in which the Licence, either in whole or in part, may be revoked or suspended;
+3. undertaking the Licensee to do specific matter or abstain from doing specific matters that have specific description within the framework of the exercised licensed activities standards.
+4. the method of settling certain matters specified by or arose from the license and issues with special specification that need to be settled by qualified person.
+5. setting ceiling limit for the shares of any licensee that could be owned by any other Licensee or by any of its subsidiaries or affiliate companies or bodies.
+6. oblige the licensee to provide the Supreme Committee or the Authority with the documents, information and data that might be requested.
+* This article was amended by the Supreme Committee Resolution no (2) of 2006.
+Article (30)
+Where it appears to the Authority that any Licensee or any person contravenes or already contravened the Federal Law by Decree or this Executive Order or any regulations issued thereupon or the general policy for the telecommunications sector in the State or any term of the Licence, the Authority may, for the purposes of the exercising its functions pursuant to the Federal Law by Decree and this Executive Order, issue a notification, where required, to the contravening party to submit to the Authority any documents or information which are specified or described in the notification. Upon recognition of that contravention, the Authority may issue directives to the Licensee to oblige him or abstain him from any activity as may be specified in the directives.
+Article (31)
+A Licence may not be transferred or assigned to any third party unless the following two conditions are available:
+1. the Licence issued by the Supreme Committee implies a provision permitting transfer or assignment to any third party; and
+2. the prior consent of the Board of Directors is obtained. The consent might be conditional as the Board deems proper.
+Any transfer or assignment to others that doesn’t satisfy the abovementioned shall be considered void.
+Article (32)
+Upon the Authority's request and within the specified time period indicated therein, the Licensee shall provide a report in the format set by the Authority showing the number of complaints against them and the taken procedures in this regard for the period covered in the report.
+Part 2 – Apparatus Approval
+Article (33)
+1. The Board of Directors shall issue the technical specifications of the Telecommunication Apparatus. The Board of Directors may delegate this authority to the Director General or to a committee formed for such purpose.
+2. When issuing regulatory orders in accordance with this Article, the Authority shall take into consideration any applicable international conventions and agreements or any applicable laws.
+3. The Authority may coordinate with the competent customs departments to organise the importation of the Telecommunication Apparatus in accordance with the specified technical standards.
+Article (34)
+1. Authorizations for Telecommunication Apparatus shall be granted upon an application lodged pursuant to the standards and procedures issued by the Authority from time to time in relevance to these authorisations.
+2. During the processing of the applications for Telecommunication Apparatus approvals, the Authority may refer the application to any other body or entity as deemed required.
+3. The Authority may make variations, or amend or abolish the granted approvals at any time and for any reasons as it deems necessary, provided that the Authority announces that.
+Article (35)
+The Authority shall incorporate the following information to any telecommunication apparatus authorization the:
+(A) the name and description of the intended Telecommunication Apparatus for which the approval was issued;
+(B) the Telecommunication Network through which the Telecommunication Apparatus may be used;
+(C) the specifications and description of the Telecommunication Network through which the Telecommunication Apparatus may be used; and
+(D) any other information which the Authority deems necessary to imply in the authorization.
+Article (36)
+The Authority shall when processing the application of the telecommunication apparatus authorization take the following into consideration:
+(a) the speculated risks as a result of using the Telecommunication Apparatus;
+(b) the potential risks that the employees and workmen may be exposed to during the performance of their duties as a result of dealing with the Telecommunication Apparatus
+(c) protection for the Public Telecommunication Network from any contingent damage
+(d) the efficiency extent upon usage and the compatibility with the existing Telecommunication Apparatus;
+(e) the effective use of the frequency spectrum and orbital resources;
+(f) the interference avoidance with terrestrial systems and/or space-based communications systems and any other technical systems;
+(g) the possibility for such Telecommunication Apparatus to be used for anti-competitive purposes.
+Article (37)
+The Authority shall document and file all the Telecommunication Apparatus authorizations and permissions granted by the provisions of this Part (2) in the formality and in the way it may determine. The documentation and filing shall contain the following information:
+(a) information about every applicant who was granted the Telecommunication Apparatus Authorization, and
+(b) information about all the approved Telecommunication Apparatus including technical specifications or standards;
+(c) details of any conditions, terms and restrictions stipulated in the telecommunication apparatus authorization including those related to the effectiveness duration
+(d) details of all variations and modifications to the telecommunication apparatus authorizations and the reasons thereto;
+(e) details of the abolishment to all the telecommunication apparatus authorizations and the reasons thereto; and
+(f) any other information the Authority deems necessary to file and document
+Article (38)
+The Authority may issue regulations and guidelines to require the provisioning with information and the manual guidance for the approved Telecommunications Apparatus in the means it deems appropriate; either to be marked on fixed to or joint with the Telecommunication Apparatus.
+Article (39)
+1. The approved Telecommunication Apparatus shall be subject to testing and assessment as may be required by the Authority, provided that the Authority shall conduct the tests and the assessments
+2. Upon a written request and when it is deemed necessary, the Authority may designate a technical third party to conduct tests or assessments to the Telecommunication Apparatus concerned, provided that the applicant shall bear all the incurred charges requested by the third party for that as specified by the Authority.
+Article (40)
+The approved Telecommunication Apparatus by the Authority may only be installed, set-up, connected, adjusted and maintained by the licensee that operates Public Telecommunication Network or by any other body Licensed to conduct this work as specified by the Authority.
+Article (41)
+For the purposes of this Part (2), the Authorizations granted to the companies, bodies and commissions shall be considered as an empowerment to the natural persons appointed by them to install, set up, connect, adjust, maintain the concerned Telecommunication Apparatus.
+Article (42)
+The Authority may perform any of the following in case any of the Authorised or concerned persons in the Telecommunication Apparatus breaches the terms and restrictions that the Authorisations were granted upon,:
+(a) impose a financial fine against the violator ;
+(b) abolish the issued Authorization.
+Article (43)
+Without prejudice to any applicable criminal penalties, the Authority may take any of the following actions in case the Authorised or concerned persons violate the technical specifications and standards issued by the Authority relevant to the Telecommunications Apparatus:
+1. serve a warning to the violator to modify or change the concerned Telecommunications Apparatus to be compatible with the applicable specifications.
+2. serve a warning to the violator to handover or destroy all the concerned Telecommunications Apparatus.
+3. request from the relevant police authority to seize and detain all such Telecommunication Apparatus;
+4. request from the customs authorities to keep in custody all such Telecommunication Apparatus which falls under its control;
+5. issue an order to the violator to promptly and immediately dismantle the concerned Telecommunication Apparatus from the Telecommunication Network, provided that the Authority may seek the assistance of the relevant police authorities in this regard if necessary; and
+6. any other procedure that commensurate with the nature of the violation after obtaining approval from the Supreme Committee.
+Article (44)
+The provisions of the previous Article shall be applicable against any person who manufactures, uses or offers for sale, supplies or uses Telecommunication Apparatus which has not been approved by the Authority.
+Article (45)
+A decision from the Board of Directors shall specify the Authority's authorised employees to have access to the manufacturing sites and premises of the Telecommunication Apparatus or to the places its stored or placed on the market, displayed or operated, in order to give effect to their duties relating to inspecting such Telecommunication Apparatus and submitting the same to testing and assessment.
+Article (46)
+Without prejudice to any applicable criminal penalties, where a person fails to submit Telecommunication Apparatus for testing and assessment, or prevents any employee or personnel or any other authorised person by the Authority from entering his premises, the Authority may - after serving a warning take any of the following procedures:
+1. revoke the Authorisation for the concerned Telecommunication Apparatus;
+2. notify him to handover or to damage the concerned Telecommunication Apparatus.
+Article (47)
+Upon request from the Authority, the authorised persons shall present a report detailing the extent of their adherence to the quality of service stipulated in the instructions and regulations issued by the Supreme Committee or the Authority or pursuant to the Authorizations issued to such persons.
+Article (48)
+If a particular entity makes an announcement about any apparatus useable in the telecommunications sector, the Authority may oblige this entity to present a description including all information related to the efficiency of this apparatus and the way it is used. The Authority may enforce requirements to be included in these announcements to reach the information and guidance which are necessary for the proper use of these apparatus.
+Chapter 3
+Network Interconnection, Co-Location and Sharing of Sites, Earthworks and Numbering
+Part 1 – Network Interconnection, Co-Location and Sharing of Sites
+Article (49)
+In performing its obligations under the Federal Law by Decree and this Executive Order in relation to network Interconnection, co-location and sharing of sites, the Authority may take any of the following procedures:
+1. issue the instructions and guidelines it deems appropriate.
+2. issue directives obliging the relevant Licensees to reach an agreement between themselves to accomplish network Interconnection or co-location and sharing of sites during fixed timeframe specified in the directives;
+3. intervene where necessary in the negotiation of co-location and sites sharing agreements and when specifying the conditions that should be adhered to reach the agreement between the intended Licensees, or issuing directives to any other Licensee regarding Interconnection and co-location and sites sharing;
+4. track all parties compliance with the co-location and sites sharing agreements.
+5. issue the regulations, directives, decisions and governing rules for national roaming services.
+Part 2 - Earthworks
+Article (50)
+Without prejudice to the terms of the Federal Law by Decree and in this Executive Order, the Authority shall be competent to oblige any of the licensees, when carrying out Earthworks, to any of the following:
+1. follow certain arrangements before performing the Earthworks;
+2. take the necessary procedures to ensure the safety of all persons during the carrying out of Earthworks;
+3. take all what is needed for the reinstatement of all the intended ways, lands and buildings as used to be before the commencement of Earthworks;
+4. ensure that accurate documentation is maintained for all of the carried out Earthworks;
+5. Take all the required procedures, when Earthworks are carried out, to secure that no interference occurs with other Licensee's Telecommunication Networks or with the owners or suppliers or operators of water, electricity and gas equipment, pipelines, facilities and any other services.
+The Authority shall specify the relevant standards for Emergency cases that require Earthworks in different rules than those specified in the applicable rules.
+Part 3 – Numbering
+Article (51)
+1. After the approval of the Supreme Committee, the Board of Directors shall be issue Instructions that implies conditions related to the allocation of prefixes, private telephone numbers (including the services telephone numbers) and numbering ranges to Licensees.
+2. The prefixes, private telephone numbers and numbering ranges in effect shall remain applicable unless modified pursuant to the rules of the previous paragraph.
+Article (52)
+The Licensees shall provide all the information which the Authority requests according to Authority special numbering plan or pursuant to, or for the purpose of establishing or developing the Authority’s numbering plan.
+Article (53)
+1. The Authority may set the organizing procedures for the determination of the prefixes, individual telephone numbers and numbering ranges applications.
+2. Upon the determination on the applied applications pursuant to the terms of the previous paragraph of this Article, the Authority shall obtain the fees specified by the Supreme Committee for this purpose.
+Article (54)
+Subject to no contradiction with the technical requirements, the Authority shall oblige Licensees and other persons conducting regulated activities or any other persons, who performs prefixes, private telephone numbers and numbering ranges, to the following:
+1. permit subscribers to retain the numbers that were assigned to them when they change their subscription, but without changing the geographical location of the subscribers, to other operator.
+2. permit to subscribers to retain a particular number or numbers when changing their subscription to other operator or other geographical location if this is possible.
+Chapter 4
+Frequency Spectrum
+Part 1 – Frequency Spectrum Management
+Article (55)
+1. The frequency spectrum is a national resource that the Authority shall regulate pursuant to the terms of the Federal Law by Decree, provided that such terms as stipulated in the Federal Law by Decree shall apply to any telecommunications system or to any radio Telecommunication Apparatus which uses spectrum frequency.
+2. The Authority shall prepare the National Frequencies Database that includes all the information related to the use of the frequency spectrum by the authorised users inside the State and the authorisations granted to them.
+Article (56)
+The use of any radio station on State’s land or on a ship or plane registered in the State without obtaining an authorisation pursuant to the provisions of the Federal Law by Decree and this Executive Order is forbidden as well as entering radio station to the State without obtaining the Authority’s prior approval.
+Part 2 – Authorisation of Frequencies and Usage Monitoring
+Article (57)
+The Authority shall issue the authorisations for using frequencies to those authorised in accordance with the national frequency plan and with the available frequency spectrum, allocation of radio stations and their coverage without any violation to any previous rights determined to the authorised person.
+Article (58)
+The authorised person shall use the radio frequencies pursuant to the conditions and standards that the authorisation was granted on, including:
+1. the assigned radio spectrum frequencies;
+2. the conditions and standards of the radio communication equipments, the location and sphere of its use and the purpose and manner in which the equipment operates;
+3. the limits of the authorised geographical area related to the station for movable equipment;
+4. the term duration of the authorisation;
+5. any other technical conditions that utilize the efficiency of using frequencies.
+Article (59)
+The Authority may revoke any granted authorisation if the frequencies have not been used within four months from the issuance day of the authorisation.
+Article (60)
+When the spectrum frequency authorisation is renewed, the authorised person shall settle the specified renewing fees
+Part 3 – Co-ordination Committee
+Article (61)
+1. The coordination committee shall be established pursuant to the rules in article (46) of the Federal Law by Decree and chaired by the Director General with the membership of the representatives of the following:
+- The Ministry of Communication;
+- The armed forces;
+- The Ministry of Interior;
+- The security services in the State;
+- The Ministry of Information and Culture;
+- The Civil Aviation Authority; and
+- The Authority.
+2. The co-ordination committee's chairman shall nominate one of the Authority’s employees to carry out the responsibilities of the committee’s secretary, who shall prepare the working timetable for its meetings, record the minutes and keep in safe the documentation, dealings and management matters mandated to him by the co-ordination committee's chairman.
+Article (62)
+The Authority shall study the needs, the current and future usages of the spectrum frequency and its allocation taking into account any use for military, governmental, security and commercial purposes and present this study to the co-ordination committee to operate the functions in accordance with Article (46) of the Federal Law by Decree.
+Article (63)
+The co-ordination committee shall be responsible for setting the national spectrum plan and setting up the National Spectrum Database for the allocation of frequencies relating to Telecommunication Services in conformity with the international and regional agreements and specifications and with the accredited standards and regulations to be submitted to the Supreme Committee for approval in accordance with Article (46) of the Federal Law by Decree.
+Article (64)
+The Ministry of Communications or the Authority may request from the co-ordination committee to review and amend the National Spectrum plan when it deems necessary, provided that the policies and goals relating to the future usages of the radio frequencies in the State are considered.
+Part 4 – Contravention of the Usage of Frequencies
+Article (65)
+1. The Authority may suspend or revoke (frequency spectrum authorization) when witnessing that the holder of the authorisation has breached its conditions or when required due to the public interest.
+2. The Authority’ before suspending or revoking the relevant authorisation shall consider the following:
+a. notify the authorised person in writing that his authorisation is about to be suspended or revoked;
+b. grant the authorised person a suitable period to rectify the breach, provided that the authorised person shall reply in writing to the Authority clarifying his point of view in this regard.
+Chapter 5
+Internet Networks
+Part 1 – Licensing and Managing Internet Networks
+Article (66)
+The Authority shall prepare a national plan for the management of internet networks to be submitted to the Supreme Committee for approval provided that the internet services to subscribers shall not be provided unless the License is acquired from the Supreme Committee.
+Article (67)
+The Licensee shall be obliged to offer internet services pursuant to the conditions and standards specified in the issued Licence, provided that the Authority shall monitor the services offered by those licensees.
+Article (68)
+The Supreme Committee may revoke any granted Licence to the licensee if the service is not provided within four months from the Licence issuance day.
+Chapter 6
+Final General Provisions
+Article (69)
+The Board of Directors shall issue the regulations and conditions related to setting up and operating the Private Telecommunication Networks after obtaining the approval of the Supreme Committee,
+Article (70) * The Authority shall prepare draft resolution to impose additional fees over the licensees to be approved by the Supreme Committee. The additional fees shall be determined in accordance with the international standards. The returns shall be dedicated to promote research and development in the Telecommunication and Information Technology sector.
+Article (71)
+The Supreme Committee shall issue the regulations related to admitting the Licensees to enter to the Private Lands and any buildings or premises thereupon that enables them to exercise their activities as specified in the issued Licences and the conditions and terms thereto.
+The entry to such Private Lands shall be only to the extent necessary to enable the Licensees to carry out necessary activities for a limited period of time and subject to notifying the people living on the Private Lands with a prior notice that specifies as well the names of the persons authorised to enter the Private lands and by taking all the legal procedures pursuant to the law.
+Article (72)
+The Authority shall, in co-operation with the related Governmental bodies, represent the State in the international conferences and meetings relating to the telecommunications sector.
+Article (73)
+The Authority’s employees who are selected by the Board of Directors shall have the power of the official investigation officer in the occasion of exercising their specific functions pursuant to the rules of the Federal Law by Decree and this Executive Order and the regulations and decisions issued by the Board of Directors, provided that the Authority shall take the necessary legal steps pursuant to the law.
+Article (74)
+The Supreme Committee shall issue the regulations and resolutions, instructions and directives that are supplementary to this Executive Order.
+* This article was amended by the Supreme Committee Resolution no (4) of 2005.
+Article (75)
+This Executive Order shall be published in the official gazette and shall become effective on the date of such publication.
+Chairman of the Supreme Committee for the Supervision of the Telecommunications Sector
+Dated: 14th Sha'ban 1425H
+Corresponding to: 28th September 2004

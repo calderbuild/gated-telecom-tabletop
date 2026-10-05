@@ -1,0 +1,372 @@
+Australian Government Response to
+the Bean Review Final Report
+Review into the Optus outage of 8 November 2023
+April 2024
+Australian Government Response to the Bean Review Final Report Page 1 of 15
+© Commonwealth of Australia 2024
+April 2024 / INFRASTRUCTURE 2024
+Ownership of intellectual property rights in this publication
+Unless otherwise noted, copyright (and any other intellectual property rights, if any) in this publication is
+owned by the Commonwealth of Australia (referred to below as the Commonwealth).
+Disclaimer
+The material contained in this publication is made available on the understanding that the Commonwealth is
+not providing professional advice, and that users exercise their own skill and care with respect to its use, and
+seek independent advice if necessary.
+The Commonwealth makes no representations or warranties as to the contents or accuracy of the
+information contained in this publication . To the extent permitted by law, the Commonwealth disclaims
+liability to any person or organisation in respect of anything done, or omitted to be done, in reliance upon
+information contained in this publication.
+Use of the Coat of Arms
+The Department of the Prime Minister and Cabinet sets the terms under which the Coat of Arms is used .
+Please refer to the Commonwealth Coat of Arms - Information and Guidelines publication available at
+http://www.pmc.gov.au .
+Use of the Coat of Arms
+The Department of the Prime Minister and Cabinet sets the terms under which the Coat of Arms is used .
+Please refer to the Commonwealth Coat of Arms - Information and Guidelines publication available at
+http://www.pmc.gov.au .
+Contact us
+All other rights are reserved, including in relation to any departmental logos or trademarks which may exist.
+For enquiries regarding the licence and any use of this publication, please contact:
+publishing@infrastructure .gov.au
+Au strali an Government Response to th e Bean Review Final Report
+Minister's Foreword
+The 8 November 2023 Optus outage affected millions of Australians. It impacted public safety, personal
+finances and the broader economy. It resulted in considerable distress for many and damaged the
+community's confidence that they will always have access to critical services.
+Australia's telecommunications infrastructure enables health and safety, economic activity, education, and
+social connectivity. It is critical we respond to the lessons of this incident to reduce the risk of further outages
+and the impacts they have on our community and the day-to-day services we rely on . This is why
+I commissioned Mr Richard Bean to lead a review of what industry, government and the community can learn
+from this outage, with a specific focus on emergency calls, customer communications, and complaints
+handling.
+I thank Mr Bean and the Review team for their work on this review and acknowledge the considerable work
+collectively undertaken by industry, government agencies, state governments, consumer and business
+representative groups, and individual members of the public in providing submissions to the review.
+The Government has agreed to all of the recommendations. The review has identified a number of areas for
+improvement in existing legislative and regulatory requirements and opportunities for greater collaboration
+and information sharing between the many actors involved in the telecommunications ecosystem. This is
+particularly relevant to the Emergency Call Service and its resilience in times of major network outages.
+I will be tasking my Department with a range of activities to implement these recommendations.
+The recommendations also require action from other government organisations, particularly the ACMA.
+I expect my Department and the ACMA to work together closely in fully implementing the recommendations
+of the review. It is critical that the legislative and regulatory framework protecting telecommunications
+consumers and enabling the Emergency Call Service meet reasonable community expectations. There are also
+a number of recommendations for Government which will require cross government collaboration and
+consultation between a number of agencies and departments.
+The recommendations have considerable implications for mobile network operators, particularly with regard
+to information sharing. The Government acknowledges that it is not possible to guarantee there will never be
+another major outage, however there must be safeguards in place to prevent and/or minimise the significant
+disruption the community experienced on 8 November 2023 . I expect industry to have regard for the
+seriousness of this disruption, specifically in relation to public safety, and as such, to cooperate with the
+implementation of these recommendations.
+The Albanese Government is committed to ensuring the Emergency Call Service is readily available for all
+people in Australia, and that consumers and businesses have certainty of access to telecommunications
+services. I have asked my Department to provide me with regular updates on the progress of implementing
+these recommendations and will announce any significant updates as they occur.
+The Hon Michelle Rowland MP
+Minister for Communications
+Australian Government Re spon se to the Bean Review Final Report
+Functioning of Triple Zero
+Recommendation 1
+Mandatory requirements should be put in place, by augmenting existing requirements or otherwise, to:
+• More clearly and explicitly articulate precisely what is expected of network operators in regard to ensuring calls
+are delivered to Triple Zero
+• Include specific obligation s that network operators wilt towers in the event of loss of connectivity to a core
+network, ensuring calls to Triple Zero can be carried by other networks.
+Agreed.
+It is important to ensure that all appropriate measures are taken to ensure that networks are capable of
+delivering calls to Triple Zero, and that all parties responsible for the delivery of calls, have a clear
+understanding of their obligations.
+The Government acknowledges that the particular set of circumstances that led to the 8 November outage
+may not occur again, particularly given the shutdown of 3G networks. Regardless, the Government will Direct
+the ACMA, to work with providers and other parties to review existing obligations on carriers to ensure that
+these requirements are clearly and explicitly articulated. For example, requiring network operators to wilt
+towers in the event loss of connectivity to a core network. This will be implemented in conjunction with
+recommendation 18.
+These specific obligations should be set out in the most appropriate instrument, either through enhancing the
+existing Emergency Call Service Determination 2019 (ECS Determination) or through the development of an
+industry standard. The Government's expectation is that this work proceeds in tandem with work to acquit
+other recommendations with a view to enhanced obligations being in place by 30 June 2025.
+Recommendation 2
+Establish a Triple Zero custodian, with oversight of and overarching responsibility for the efficient
+functioning of the Triple Zero ecosystem, including monitoring the end-to-end performance of the
+ecosystem .
+There are a number of ways this could be achieved, including by establishing a new body or enhancing
+the role of an existing body. It would not be a regulatory function: where matters were identified for
+change, existing bodies would be responsible for implementation.
+Agreed - subject to further investigation and consultation.
+The Government recognises the need for a single organisation with oversight of the Emergency Call Service,
+with a key role in coordination and decision-making authority during crisis events impacting the entire
+ecosystem .
+Australia is not the first jurisdiction to identify the need for such an oversight body, both the United Kingdom
+and New Zealand have indicated that they will work towards establishing an overarching body or committee
+to ensure visibility and coordination of the emergency call ecosystem.
+While the Government considers this a priority recommendation, further investigation and stakeholder
+consultation will be required to determine the appropriate structure of oversight. In the first instance the
+Government recommends that a steering committee be established to scope the role, functions and structure
+of the Custodian concept and to also consider whether it should be established as a new agency, or as a new
+function within an existing organisation or even across organisations.
+The Government is cognisant of the role played by the ACMA as the industry regulator and the Department of
+Infrastructure, Transport, Regional Development, Communications and the Arts role as contract manager of
+the Telstra Universal Service Obligation Performance Agreement, and as such considers that a separate body
+should convene the steering committee. The Government is of the view that the Telecommunications
+Industry Ombudsman is appropriately placed to lead this work given its unique role as an independent body
+advocating for industry improvement and its familiarity with the needs of the community. The work of the TIO
+will be supported by the Department. It is expected that the steering committee would comprise
+representatives of the various parties in the ecosystem, including service providers, the ECP and ESOs.
+Recommendation 3
+To ensure (to the extent possible) continuous access to Triple Zero, carriers must conduct 6-monthly
+end-to-end testing of all aspects of the Triple Zero ecosystem within and across networks. The end to
+end detection testing should include:
+• Network functionality and capability during outages of various types
+• Behaviour of all known devices in different circumstances
+• Interoperability of all parts of the ecosystem (from originating carrier, to ECP, to ESO answering point) during
+outages.
+Any identified deficiencies must be reported to the ACMA and be accompanied by a remediation plan
+with timetable.
+This requirement should be mandated in a standard or determination.
+Agreed.
+While acknowledging the carriers currently undertake testing of devices and networks, the Review has
+identified there are significant gaps in the scope of this testing. Addressing these gaps must be treated as a
+high priority to ensure public safety during times of crisis, and to reduce the risk of device and network
+related outages. The current issues being presented by the closure of the 3G Networks and the impact of this
+on certain types of handsets demonstrates that the current testing regime is not well adapted.
+The Government supports the development of an industry code, providing industry with an opportunity to
+identify how a sustainable comprehensive testing regime could be implemented to address these gaps.
+The Government's expectation is that this code should be in place within twelve months of the release of this
+response, and will consider regulatory interventions if a robust industry code is not in place at that time.
+Recommendation 4
+If this testing does not include devices supplied by the customer (i.e. 'Bring your own device') then
+information should be provided to those customers warning that those devices may not have been
+tested in emergency scenarios.
+Agreed.
+The Government understands that carriers are unable to test every possible device and device configuration
+due to the prevalence of customer supplied devices. In these circumstances it is appropriate for carriers and
+carriage service providers to advise customers of the potential limitations of these devices.
+This Government supports this recommendation being implemented in conjunction with recommendation 3.
+Recommendation 5
+Require carriers, through a standard or determination, to share real time network information detailing
+outages with relevant emergency services organisations and other appropriate entities, including the
+body referred to in Recommendation 2.
+Agreed.
+The Government understands the importance of real time network information to Emergency Service
+Organisations in crisis situations. These organisations play a vital role in ensuring public safety and immediate
+information sharing that enables a shared understanding of events as they occur is critical to their operations.
+Advice received from these organisations, demonstrated the need for more and better information to be
+shared by telecommunications providers and the ECP. This recommendation must be implemented as a
+priority.
+The Government will Direct the ACMA to either develop an industry standard, or amend the ECS
+Determination, to include these new rules. The Government's expectation is that the instrument should be in
+place within twelve months of commencement of drafting.
+Communications Alliance has developed an Industry Guideline G665:2022 - Telecommunications - Facilities
+Information sharing, to facilitate efficient information sharing between the telecommunications industry,
+energy suppliers and relevant Government agencies in relation to the sharing of information regarding
+telecommunications facilities. This guideline could form a base for the new set of rules about data sharing
+between the telecommunications industry and Emergency Service Organisations.
+Recommendation 6
+Require providers, through a standard or determination, to report to the ACMA and the Department,
+within a mandated timeframe after a major outage, detailing its causes, steps taken to resolve it, the
+impact on Triple Zero, and a clear and detailed plan, with timeline, to address issues identified and
+avoid similar outages in the future.
+Agreed .
+The Government acknowledges that in some instances providers notify the ACMA of outages, however this is
+not a requirement, nor is there any requirement about what level of information these notifications include .
+Given the significance of any outage that impacts the emergency call service, it is reasonable to expect
+carriers should be required both to report the outage within a mandated timeframe, and to develop a plan to
+prevent such an outage from occurring again and report this to the regulator and the Department. Such a plan
+may need to be submitted at a later time than the initial mandated report of an outage occurring.
+The Government will Direct the ACMA to either develop an industry standard detailing a mandatory
+notification framework, or amend the ECS Determination to include these requirements. The Government's
+expectation is that new rules should be in place within twelve months of commencement of drafting.
+Recommendation 7
+Combine and expand existing disruption protocol instruments to cover all matters relevant to outages
+in any element of the Triple Zero ecosystem .
+There are currently multiple obligations related to actions taken during and after network disruptions.
+Combining these obligations in one document and ensuring they cover the system from end to end
+would greatly improve understanding and clarity of responsibility.
+Agreed .
+The Government agrees that there are a number of different disruption notification protocols in operation
+developed variously by Government, Communications Alliance and the ECP . Each of these documents has
+different triggers for action and requires different actions from participants in the telecommunications
+industry. The Government acknowledges that to ensure shared understanding of expectations and
+obligations, there is benefit in combining these into a single document.
+The Government will Direct the ACMA to establish a single comprehensive disruption protocol, through either
+an industry standard or through the inclusion of new rules in the ECS Determination. The Government's
+expectation is that new rules should be in place within twelve months of commencement of drafting.
+Au stralian Government Response to the Bean Review Final Report
+Recommendation 8
+The Department should review the contract under which Triple Zero is delivered, with a specific focus
+on the central role of the ECP within the ecosystem .
+The review should consider, in light of the recommendations of this Review relating to the Triple Zero
+ecosystem, including Recommendation 2, governance structures, and separating financial matters from
+other ECP obligations.
+Agreed .
+The Triple Zero ecosystem involves a complex mixture of legislation, regulation, and contractual
+requirements. The ECP is a critical component in this ecosystem and the contractual arrangements between
+the Commonwealth and Telstra, as the ECP, contains key provisions about the functions of the emergency call
+service. While the Government acknowledges the contract is a commercial arrangement, the commercial
+arrangements should not drive or impede the performance or efficiency of the service.
+As such, the Government will initiate a review of this contract in line with this recommendation. Subject to
+negotiation and agreement with Telstra, the Government anticipates any changes to the contract to be
+implemented within 12 months.
+Role of government in managing and responding to a
+national service outage
+Recommendation 9
+The Protocol for Notification of Major Service Disruptions (the Protocol), should be improved and
+augmented with clear and detailed requirements for Government communication and collaboration
+during telecommunications outages through a central coordination point in Government.
+This should cover communication and collaboration with carriers, relevant Ministers, Commonwealth,
+state and territory government agencies, TIO, the Australian Consumer and Competition Commission
+(ACCC), ACMA, Emergency Service Organisations (ESOs) and other relevant parties.
+The Protocol should also be closely aligned with the Australian Government Crisis Management
+Framework (AGCMF) and the National Coordination Mechanism (NCM).
+Agreed.
+The 8 November outage demonstrated the need for clear and prompt communication between government
+agencies, across governments, and with the telecommunications industry. During outages that have a
+significant impact on the functioning of the telecommunications network and flow on effects to critical
+government services, there must be a shared understanding of the extent of the outage, what services are
+impacted and regular updates as events progress.
+The Government has Directed the Department of Infrastructure, Transport, Regional Development,
+Communications and the Arts to implement this recommendation in consultation with the Department of
+Home Affairs and other affected entities and with regard to recommendation 7, and will seek to finalise the
+recommendation within 12 months. The Government notes that the AGCMF is in the process of being
+reviewed by the Department of the Prime Minister and Cabinet and it will be important to coordinate these
+work streams.
+The adequacy of requirements for customer
+communication in national service outages
+Recommendation 10
+The ACMA should develop a standard or determination requiring carriers to communicate specific
+information to customers during and about outages. The Communications Alliance Emergency
+Communications Protocol- Industry Guideline G663:2022 or one or more of the carriers' existing
+internal communications protocols could be used as a base but there needs to be an explicit focus on
+communications between the affected network provider and its customers as well as other
+stakeholders.
+Agreed.
+The Government acknowledges the public's considerable dissatisfaction with Optus' communications on the
+day of the outage. The strong reliance on communications services for health and safety, work, business
+activities, and education. The disruption an outage brings to people's lives is understandably frustrating and
+there is a strong, and reasonable demand for service providers to communicate with customers in a timely
+manner about outages. This enables consumers to make what alternative arrangements they can and helps
+alleviate the uncertainty that develops without this information.
+The Government will Direct the ACMA to develop an industry standard requiring telecommunications
+providers (carriers and carriage service providers) to communicate specific information to customers, during
+and about outages. The Government's expectation is that this standard should be in place within twelve
+months of commencement of drafting.
+Recommendation 11
+The Department should develop further and promote the educational initiatives developed in 2020-
+2022 to assist the public, businesses and other organisations to prepare for and recover from outages
+as a result of natural disasters. These materials should be reviewed and enhanced to apply to a broader
+range of scenarios including major network outages. The Department should promote these materials
+to the community.
+Agreed.
+The Government is pursuing the recommendations in this report with an aim to reduce the likelihood of a
+future mass communications outage, however it acknowledges that it is not possible to guarantee such an
+outage will never happen again. As such, it is appropriate for the Government to undertake public awareness
+initiatives to ensure the community has the right resources to prepare for, and respond to, any future
+disruptions that may occur.
+The Department has previously developed materials which can be updated, enhanced and disseminated more
+broadly in response to this recommendation.
+The Government commits to implementing thi.s recommendation within the next 6 months.
+Complaints and compensation
+Recommendation 12
+The Complaints Handling Standard and related Record Keeping Rules should be amended to ensure
+they account for the impacts of network outages and that the definition of complaint in the Standard
+meets community expectations in relation to crisis events.
+Agreed .
+The Government acknowledges the recommendations made by the TIO in relation to the Complaints Handling
+Standard. In considering the 8 November outage, it is appropriate to consider if the standard, and its related
+Record Keeping Rules, meet community expectations, specifically in regard to their recourse when impacted
+by outages. It is important that the standard provides clear guidance to service providers, and enables
+efficient processes to escalate complaints for review when necessary.
+The Government will Direct the ACMA to review the standard and make appropriate changes within 12
+months. The ACMA will consult with industry and the TIO to update the standard and its related rules.
+Recommendation 13
+An industry wide standardised approach to the form of resolutions available to consumers affected by a
+crisis or large-scale outage should be implemented.
+This standardised approach should address the possible forms of compensation and penalties
+applicable to loss of service during outages, enabling the TIO to address mass events without requiring
+large numbers of individual complaints, investigations and resolutions . While it is not intended that this
+measure replace the Customer Service Guarantee {CSG), it could provide a similar framework through
+which outages affecting more than fixed line voice services are considered .
+Agreed .
+The Government acknowledges the recommendations made by the TIO in its submission to the Review in
+relation to a mandated industry wide approach to this issue. As noted by the Review, in the event of any other
+significant telecommunications outages, this recommendation would enable a fairer mechanism for
+consumers to seek compensation to known disruptions and reduce wasteful and inefficient use of resources
+for industry and the TIO . In keeping with the principles of industry-based consumer dispute resolution
+schemes, any such framework would be considered by the TIO as part of its assessment of what is fair and
+reasonable in the circumstances.
+The Government will implement this recommendation within 12 months, subject to an assessment of
+whether new legislation is required to support the recommendation . The Department will work with the TIO,
+the ACCC and the ACMA and consult with industry on an approach to consumer recourse following a major
+outage .
+The Government notes the reference in the Report to the designated complaints function soon to commence
+with the ACCC. It is important to note that this was referenced as an example and that the ACCC wouldn't be
+able to consider and make determinations about compensation for consumers or businesses impacted by the
+Optus Outage, as this would not be a matter that related to potential breaches of, or the ACCC's powers or
+functions under, the Competition and Consumer Act.
+Australian Government Response to th e Bean Review Final Report
+Other: Resilience and interdependencies
+Recommendation 14
+Work currently being undertaken on roaming during natural disasters should be followed by work on
+temporary roaming during outages caused by other events, such as those which occurred on
+8 November 2023. That work should be undertaken with reference to international experience as to
+cost and feasibility.
+Agreed in principle.
+The Government acknowledges the interest in implementing temporary roaming during outages, but also
+notes industry concerns about the feasibility of implementing these arrangements, particularly in relation to
+mobile network capacity. The Government (through the Department of Infrastructure, Transport, Regional
+Development, Communications and the Arts) is currently considering roaming during disasters (Temporary
+Disaster Roaming - TDR). Subject to the outcomes of consideration of TDR, the Government will examine the
+extent to which roaming could be made available for other events.
+Recommendation 15
+The Australian Government should require mutual assistance arrangements to be established between
+telecommunications service providers during outages to assist in managing and resolving those
+outages, learning from international experience (for example, similar to the Canadian MOU).
+Agreed.
+The 8 November outage demonstrated the difficulty of restoring services and responding to localised events
+during a mass outage. Improved cooperation between telecommunications service providers may mitigate
+the consequences of an outage and assist network restoration efforts.
+The Government will work with industry representatives, through the steering group established in response
+to Recommendation 2 to establish appropriate mechanisms for mutual assistance between carriers. This will
+involve consultation with industry to develop and agree a memorandum of understanding between carriers,
+establishing mutual assistance arrangements, which can be drawn upon during outages and any circumstance
+that may arise which could be ameliorated through cooperation amongst industry participants .
+Au stralian Government Respon se to the Bean Review Final Report
+Recommendation 16
+Network operators should be required to establish the ability to remotely access and activate network
+management tools, and have sufficient network redundancy to deploy them, in the event of a core
+network outage.
+Agreed.
+The Government acknowledges that Optus has indicated it is implementing this measure in response to the
+8 November outage. It is appropriate for these arrangements to be made an explicit requirement to prevent
+similar circumstances occurring in any potential future outages.
+The Government supports the development of an industry code, providing industry with an opportunity to
+identify how this recommendation could best be implemented . The Government's expectation is that
+this code should be in place within twelve months of commencement of drafting.
+Recommendation 17
+Australian governments should review arrangements for maintaining their operations during outages
+including telecommunications redundancy for critical government services. Consideration should also
+be given to maintaining this information in central repository.
+Agreed.
+The Government acknowledges existing arrangements have room for improvement and there should be
+greater awareness within government of the potential risks to these services without appropriate redundancy
+provisions.
+The Department will consult across Government on the steps to be taken to meet this recommendation. This
+process should also include consultation with State and Territory Governments, particularly in regard to
+understanding how critical communications services are delivered within those jurisdictions.
+The Government will implement this recommendation within 12 months.
+Recommendation 18
+The Department and the ACMA should institute a review of all legislation and regulation relating to
+Triple Zero, with a clear focus on the recommendations of this Review and the outcomes of the ACMA's
+investigation regarding the Optus outage.
+Agreed.
+The findings of the review and the ACMA's investigation will provide important context for reviewing the
+adequacy of the legislative and regulatory framework enabling Triple Zero. The review has identified areas for
+improvement in the immediate aftermath of the 8 November outage. Further consideration of opportunities
+for reform must be undertaken to reduce the risk of another major outage occurring, and to limit the impact
+such an outage has on the community.
+The Government will implement this review over the next 6 months with the aim of implementing all
+legislative and regulatory changes within 18 months of the publication of this report, subject to parliamentary
+timeframes.
+Australian Government Re sponse to the Bean Review Final Report

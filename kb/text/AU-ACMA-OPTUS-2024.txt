@@ -1,0 +1,13 @@
+Subsidiaries of Singtel Optus Pty Limited (Optus) have paid penalties totalling more than $12 million for breaches of emergency call rules following an investigation by the Australian Communications and Media Authority (ACMA).
+The breaches were a result of its nation-wide network outage on 8 November 2023 which also caused significant disruption across Australia for individuals and businesses.
+The ACMA found Optus failed to provide access to the emergency call service for 2,145 people during the course of the outage. Optus then failed to conduct 369 welfare checks on people who had tried to make an emergency call during the outage.
+ACMA Chair Nerida O’Loughlin said the size of the penalty reflected the critical nature of the breaches.
+“Triple Zero availability is the most fundamental service telcos must provide to the public. When an emergency call fails to connect there can be devastating consequences for public health and safety,” she said.
+“Our findings indicate that Optus failed in the management of its network in a number of areas and that the outage should have been preventable.
+“Optus also failed to follow up on the safety and wellbeing of more than 360 of its customers once the outage was resolved.”
+Other failings by Optus during the outage were identified in a government-commissioned post incident review. Following that review, the government agreed to a comprehensive set of regulatory and other actions to improve the performance of the entire telecommunications sector when dealing with network outages.
+These include requiring better communications by telcos with their customers and other stakeholders during an outage, greater oversight of the Triple Zero ecosystem, regular systems testing, and ensuring emergency calls can be seamlessly and consistently carried by other carriers when needed.
+The ACMA has already made updates to the Telecommunications (Emergency Call Service) Determination 2019, is developing a new industry standard requiring a minimum level of customer communications from telcos during outages, and will make changes to complaint handling requirements.
+“Beyond the penalties announced today by the ACMA, the Optus outage has directly led to changes for industry regulatory obligations in relation to emergency call services,” Ms O’Loughlin said.
+“This will require further actions and investment by telcos, including Optus, to provide better safeguards for consumers and enhance the Triple Zero ecosystem so that Australians can have even greater confidence they will be able to get through to emergency services when they need it.”
+MR 29/2024

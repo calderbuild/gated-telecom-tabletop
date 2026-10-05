@@ -1,0 +1,29 @@
+Australian Information Commissioner takes civil penalty action against Optus
+Published:
+08 August 2025
+The Australian Information Commissioner (AIC) has filed civil penalty proceedings in the Federal Court against Singtel Optus Pty Limited and Optus Systems Pty Limited (together, Optus), following an investigation in relation to the data breach made public by Optus on 22 September 2022.
+The data breach involved unauthorised access to the personal information of millions of current, former and prospective customers of Optus, and the subsequent release of some of this information on the dark web.
+The AIC alleges that from on or around 17 October 2019 to 20 September 2022, Optus seriously interfered with the privacy of approximately 9.5 million Australians by failing to take reasonable steps to protect their personal information from misuse, interference and loss, and from unauthorised access, modification or disclosure, in breach of the Privacy Act 1988.
+The AIC alleges that Optus failed to adequately manage cybersecurity and information security risk in a manner commensurate with the nature and volume of personal information that Optus held, the size of Optus, and the risk profile of Optus.
+“The commencement of these proceedings confirms that the OAIC will take the action necessary to uphold the rights of the Australian community,” said Australian Information Commissioner Elizabeth Tydd.
+“Organisations hold personal information within legal requirements and based upon trust. The Australian community should have confidence that organisations will act accordingly, and if they don’t the OAIC as regulator will act to secure those rights.”
+Australian Privacy Commissioner Carly Kind said, "the Optus data breach highlights some of the risks associated with external-facing websites and domains, particularly when these interact with internal databases holding personal information, as well as the risks around using third-party providers.
+“All organisations holding personal information need to ensure they have strong data governance and security practices. These need to be both thorough and embedded, to guard against vulnerabilities that threat actors will be ready to exploit.”
+“Effective stewardship of individuals’ personal information is critical, and businesses need to be extremely vigilant to the significant threats and risks in today’s cyber landscape.”
+Background
+In September 2022 Optus was the subject of a cyberattack. A threat actor accessed the personal information of millions of current and former Optus customers. The personal information held by Optus included:
+names, dates of birth, home addresses, phone numbers and email addresses
+government related identifiers, including passport numbers, driver’s licence numbers, Medicare card numbers, birth certificate information, marriage certificate information, and armed forces, defence force and police identification information.
+The Office of the Australian Information Commissioner commenced an investigation into Optus’ privacy practices following this data breach. The investigation focused on how Optus managed and secured personal information and whether the steps it took were reasonable in the circumstances to protect personal information from misuse, unauthorised access and/or disclosure.
+The Australian Information Commissioner alleges Optus did not take reasonable steps to protect personal information it held given its size, resources, the nature and volume of the personal information it held, and the risk of harm for an individual in the case of a breach.
+Federal Court civil penalties
+The Australian Information Commissioner may apply to the Federal Court for a civil penalty order where an entity is alleged to have engaged in serious or repeated interferences with privacy in contravention of section 13G of the Privacy Act.
+The Federal Court can impose a civil penalty of up to $2.22 million for each contravention. The Australian Information Commissioner alleges one contravention for each of the 9.5 million individuals whose privacy it alleges Optus seriously interfered with.
+Increased civil penalties of up to $50 million came into effect in December 2022, although they do not apply to this case, as the alleged contraventions occurred from 17 October 2019 to 20 September 2022. Whether a civil penalty order is made, and the amount, are matters before the court.
+The OAIC encourages organisations to:
+implement procedures that ensure clear ownership and responsibility over internet-facing domains
+ensure that requests for customers’ personal information are authorised to access that information
+layer security controls to avoid a single point of failure
+implement robust security monitoring processes and procedures to ensure any vulnerabilities are detected and that any incidents are responded to in a timely manner
+appropriately resource privacy and cyber security, including when outsourced to third party providers
+regularly review practices and systems, including actively assessing critical and sensitive infrastructure, and act on areas for improvement in a timely manner.

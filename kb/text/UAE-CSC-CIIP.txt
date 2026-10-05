@@ -1,0 +1,6 @@
+Critical Information Infrastructure Protection Policy
+The Critical Information Infrastructure Protection (CIIP) Policydefines the governance and protection framework for the UAE’s CII entities. It establishes a unified approach to identifying critical assets, developing national risk profiles, setting baseline security requirements, and implementing assurance and enforcement mechanisms across vital sectors.
+The Cyber Security Council has established this policy to ensure a baseline measure of security and cyber resilience of its Critical Information Infrastructure (CII), aligned with the UAE’s national priority to be a global leader in cyber security, and to implement measures towards a resilient and secure cyberspace for its CII.
+Read the full policy here. (PDF, 2.15 MB)
+Updated on:
+02 Jul 2026

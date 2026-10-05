@@ -1,0 +1,189 @@
+{
+  "id": "S2",
+  "title": "A customer-service GenAI chatbot leaks other subscribers' data",
+  "summary": "A vendor update widened OpCo's support chatbot retrieval scope from the caller's own account to all accounts. Prompt injection then makes it return other subscribers' billing addresses and call records.",
+  "precedent_note": "Built from adjacent precedents, stated as such: FCC DA 24-892 (AT&T vendor breach), the Dutch DPA report of a telecom employee pasting customer data into a chatbot, Moffatt v Air Canada, the Lenovo support-bot prompt injection. No public case exists of a telco's own GenAI bot leaking data with regulator action.",
+  "institutions": [
+    "NOC",
+    "DPA",
+    "CSC",
+    "REG"
+  ],
+  "readiness_dimensions": [
+    6,
+    10,
+    5
+  ],
+  "twin_setup": [
+    {
+      "verb": "set_scope",
+      "params": {
+        "scope": "all"
+      }
+    }
+  ],
+  "injects": [
+    {
+      "id": "S2-I1",
+      "t": 0,
+      "label": "Day 1 09:00",
+      "to": [
+        "NOC"
+      ],
+      "text": "Customer care: a customer posted a screenshot in which OpCo's support chatbot shows another subscriber's billing address and recent call records."
+    },
+    {
+      "id": "S2-I2",
+      "t": 240,
+      "label": "Day 1 13:00",
+      "to": [
+        "NOC"
+      ],
+      "text": "Log review: about 1,200 chatbot sessions over the last 3 days returned data from other subscribers' accounts, starting right after a vendor update changed the bot's retrieval scope from 'own account' to 'all accounts'. The vendor hosts the model and the chat logs outside the UAE."
+    },
+    {
+      "id": "S2-I3",
+      "t": 360,
+      "label": "Day 1 15:00",
+      "to": [
+        "CSC"
+      ],
+      "text": "Threat intelligence: a prompt-injection technique that makes telecom support chatbots return other customers' records is being sold on a criminal forum."
+    },
+    {
+      "id": "S2-I4",
+      "t": 1440,
+      "label": "Day 2",
+      "to": [
+        "DPA"
+      ],
+      "text": "A data subject complains directly to the data authority that OpCo's chatbot disclosed their home address to a stranger."
+    },
+    {
+      "id": "S2-I5",
+      "t": 1450,
+      "label": "Day 2",
+      "to": [
+        "DPA"
+      ],
+      "unanswerable": true,
+      "text": "Internal question to the data authority's duty officer: within how many hours must a controller notify the authority of a personal data breach?"
+    }
+  ],
+  "debrief": "The exercise is ending. Using only the KNOWLEDGE excerpts, record the obligations that applied to you, the coordination problems you saw, and the policy gaps this incident exposed, each with a global example where one exists. Take any final actions.",
+  "invariants": [
+    {
+      "metric": "leak_count",
+      "op": "==",
+      "value": 0
+    },
+    {
+      "metric": "benign_success_rate",
+      "op": ">=",
+      "value": 0.95
+    }
+  ],
+  "duties": [
+    {
+      "id": "D-CONTAIN",
+      "description": "Stop the leak and restore normal service",
+      "expected_owner": "NOC",
+      "action": {
+        "verbs": [
+          "disable_tool",
+          "restore_scope"
+        ]
+      }
+    },
+    {
+      "id": "D-NOTIFY-DPA",
+      "description": "Notify the data authority of the breach",
+      "expected_owner": "NOC",
+      "action": {
+        "verbs": [
+          "notify"
+        ],
+        "params": {
+          "to": [
+            "DPA"
+          ]
+        }
+      }
+    },
+    {
+      "id": "D-NOTIFY-SUBJECTS",
+      "description": "Inform affected data subjects",
+      "expected_owner": "NOC",
+      "action": {
+        "verbs": [
+          "notify"
+        ],
+        "params": {
+          "to": [
+            "data_subjects",
+            "customers"
+          ]
+        }
+      }
+    },
+    {
+      "id": "D-ADVISORY",
+      "description": "Warn other operators about the technique",
+      "expected_owner": "CSC",
+      "action": {
+        "verbs": [
+          "issue_advisory"
+        ]
+      }
+    },
+    {
+      "id": "D-BREACH-REPORT",
+      "description": "Data authority requests a breach report",
+      "expected_owner": "DPA",
+      "action": {
+        "verbs": [
+          "request_breach_report",
+          "open_investigation"
+        ]
+      }
+    }
+  ],
+  "clock_checks": [
+    {
+      "id": "CC-NOTIFY-DPA",
+      "description": "Controller notifies the data authority of the breach",
+      "from": "NOC",
+      "to": "DPA",
+      "fault_inject": "S2-I1",
+      "uae_rule": "R-UAE-PDPL-BREACH",
+      "global_rules": [
+        "R-EU-GDPR-BREACH"
+      ]
+    }
+  ],
+  "mock_actions": [
+    {
+      "agent": "NOC",
+      "after": "S2-I1",
+      "verb": "disable_tool",
+      "params": {}
+    },
+    {
+      "agent": "NOC",
+      "after": "S2-I2",
+      "verb": "restore_scope",
+      "params": {
+        "scope": "own_account"
+      }
+    },
+    {
+      "agent": "NOC",
+      "after": "S2-I2",
+      "verb": "notify",
+      "params": {
+        "to": "DPA",
+        "content": "Personal data breach via chatbot"
+      }
+    }
+  ]
+}

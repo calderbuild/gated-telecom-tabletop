@@ -1,0 +1,13 @@
+Telstra has paid a $277,200 penalty for failing to carry out required identity verification checks and not providing adequate protections to customers at risk of mobile number fraud.
+An Australian Communications and Media Authority (ACMA) investigation found that between January and October 2025 Telstra failed to use required identity authentication processes in 15 unauthorised SIM swaps.
+Authority Member Samantha Yorke said mobile number fraud is often carried out by criminal syndicates and can cause devastating financial losses and other impacts for victims.
+“In this case, Telstra’s frontline staff did not follow the provider’s own processes, leaving customers vulnerable to SIM swap scams and other types of mobile fraud,” Ms Yorke said.
+The investigation also identified 13 instances where Telstra’s agents failed to provide additional fraud protections to customers who had either raised concerns or where Telstra had information to identify them as being at risk of fraud.
+“When a telco becomes aware that a customer is at risk of fraud involving their service, it must offer protections that are additional or tailored to the situation,” Ms Yorke said.
+“These failures exposed Telstra’s customers to real harm, with customers reporting combined financial losses of at least $39,500 after falling victim to fraud.”
+In addition to the penalty, the ACMA has accepted court-enforceable undertakings from Telstra to strengthen its fraud prevention processes and improve training for customer-facing staff.
+The investigation followed ACMA monitoring of Telstra’s compliance after a previous enforcement action involving the same rules. This is the seventh action announced under the ACMA’s compliance crackdown on mobile number fraud, with telcos paying more than $5 million in penalties to date.
+Consumers should contact their telco and financial institution immediately if they think they have been a victim of a phone scam.
+IDCARE helps people whose identity has been compromised or stolen and can be contacted on 1800 595 160 or at www.idcare.org/.
+Support is also available from Lifeline (131 114) or Beyond Blue (1300 224 636).
+MR 27/2026

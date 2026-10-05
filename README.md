@@ -1,0 +1,73 @@
+# Gated multi-institution telecom tabletop
+
+An AI tabletop exercise for telecom incidents. Five to six institution agents (an operator's network operations centre, the telecom regulator, the data authority, the cyber security council, emergency services and the central bank) each get only their own share of a staged incident. Every claim they make passes a deterministic gate before it counts, approved actions change a digital twin of the network, and the coordinator derives policy gaps and maps each one to a global example.
+
+Built for the ITU AI for Good Lab Hackathon, United Arab Emirates 2026 (telecommunications domain). Solo entry.
+
+## What it does
+
+| Scenario | What breaks | Institutions | Closed loop |
+|---|---|---|---|
+| S1 | An automated core-network change that skipped its sandbox stage isolates a core site; region R2 loses emergency-call routing; a vendor asks for subscriber logs offshore | NOC, REG, EMS, CSC, DPA | Rollback or site re-homing restores `emergency_reachable[R2]`; denying the export clears the egress |
+| S3 | A SIM-swap fraud model update refuses about 2,750 legitimate prepaid and roaming customers, who then cannot receive banking passcodes | NOC, REG, DPA, FIN | Model rollback or a human review queue restores the legitimate pass rate while fraud stays blocked; "unblock everyone" fails the invariant |
+| S2 | A vendor update widens a support chatbot's retrieval scope; prompt injection leaks other subscribers' data | NOC, DPA, CSC, REG | Scoping retrieval back to the caller's own account gives zero leaks on the attack replay and keeps benign queries working; switching the bot off contains the leak but fails the service invariant |
+
+The operator is fictional (OpCo). Injects are synthetic. Each scenario is grounded in real incidents and regulator actions listed in the KB (AT&T 2024 and Optus 2023 outages, FCC 23-95, ACMA penalties, FCC DA 24-892 and others). No official report names AI as the root cause of a telecom outage; S1's AI optimiser is an extrapolation and is labelled as one.
+
+## How a claim becomes accepted
+
+```
+inject (staged, per-institution) -> agent inbox -> mandate-scoped retrieval -> model proposes JSON claims
+  -> gate (P node): verbatim quote from a chunk this agent was shown, source status, verb in mandate,
+                    inject actually received, deadline from the rule table
+  -> accepted: coordinator routes shares/notifications, HITL approves high-impact actions, twin applies the verb
+  -> rejected: logged with reasons, fed back to the agent next turn, never repaired
+  -> every step appended to a hash-chained audit log
+```
+
+The model (DeepSeek-V4-Pro through its OpenAI-compatible API) only retrieves context, proposes and explains. It decides nothing. Reasoning traces are the agent's structured rationale (observation, rule, inference) plus the model-reported reasoning text the API returns; neither is claimed to be a verified chain of thought.
+
+## ITU-T Y.3172 mapping
+
+| Y.3172 node | Here |
+|---|---|
+| SRC | Scenario injects and KB source documents |
+| C (collector) | Each institution's inbox: only the injects released to it, plus items other institutions shared |
+| PP (pre-processor) | Clause chunking of the KB; mandate-scoped retrieval |
+| M (ML function) | The model producing a structured assessment |
+| P (policy) | `tabletop/gate.py` |
+| D (distributor) | `tabletop/coordinator.py`: routes accepted claims, HITL, duty matrix, rule-table clocks, objective conflicts |
+| SINK | Audit log, gap matrix, demo page |
+| MLFO | `tabletop/engine.py`: stage schedule, model choice |
+| ML sandbox | The exercise itself, against a digital twin (ITU-T Y.3090 framing) instead of a live network |
+
+## Results
+
+<!-- eval:start -->
+Run `python -m tabletop eval` to fill this table from the committed runs.
+<!-- eval:end -->
+
+## Reproduce
+
+```
+uv venv && uv pip install -e '.[dev]'
+python -m tabletop selftest                  # offline, mock model, no key needed
+python -m pytest
+python -m tabletop verify-log runs/S1/run1.jsonl
+python -m tabletop replay runs/S1/run1.jsonl # re-executes with recorded responses; gate verdicts must be identical
+python -m tabletop eval                      # recomputes every number above from runs/
+python -m tabletop serve                     # demo page at http://127.0.0.1:8000
+```
+
+Live runs need `DEEPSEEK_API_KEY` in `.env` (not committed): `python -m tabletop run S1 --out runs/S1/run4.jsonl`.
+
+## Knowledge base
+
+See `kb/README.md`. Sources are pinned by SHA-256 with their official URL; `python -m tabletop kb verify` re-hashes them after `kb fetch`. Each source carries a status (VERIFIED, SECONDARY, UNVERIFIED, HISTORICAL); the gate accepts only VERIFIED sources as evidence for an obligation or a global example.
+
+## Limits
+
+- The answer keys were written by me, before the first live run (their hashes are in every run's first event). Recall is relative to those keys.
+- The twin models the incident-relevant layer only; it is not a protocol emulator.
+- The HITL step is a scripted facilitator in recorded runs.
+- Some UAE AI-governance PDFs could not be fetched from the official hosts; they are in the KB as UNVERIFIED summaries and cannot back an accepted claim.

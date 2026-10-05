@@ -1,0 +1,34 @@
+FCA sets out initial findings on bank account access and closures
+Press Releases
+First published: 19/09/2023
+Last updated: 19/09/2023
+The FCA has published the findings of its initial data exercise on bank account access and closures.
+The information supplied by banks, building societies and payment companies suggests that no firm closed an account between July 2022 and June 2023 primarily because of a customer’s political views. The Payment Accounts Regulations ban banks or building societies discriminating on this basis.
+The FCA will be doing further work with firms to verify the data and to better understand the reasons behind, for example, the closure of accounts due to reputational risk.
+By far the most common reasons providers gave for closing, suspending or declining an account was because it was inactive/dormant or because there were concerns about financial crime.
+The FCA’s report is the result of information gathered from firms at speed. The regulator has today set out what further work it will undertake to examine the information provided and address gaps in the data.
+In its review, the FCA noted that unlike other jurisdictions there is no right to an account in the UK and some protections, for example the anti-discrimination measures in the Payment Accounts Regulations, do not apply to businesses, charities, political parties and civil society organisations.
+Nikhil Rathi, FCA Chief Executive, commented:
+'While no bank, building society or payment firm reported to us that they had closed accounts primarily due to someone’s political views, further work is needed for us to be sure.
+'As we undertake that work, the time is also right for a debate on how we balance access to bank accounts with the threat of financial crime, as well as firms’ reasonable risk and commercial appetites. An important question for policy makers is whether all individuals, businesses and organisations should have the right to an account, as is the case in some other countries.
+'What’s more, international comparisons suggest robust digital identities could play an important role not only in countering financial crime but also in aiding financial inclusion.'
+The FCA’s further work will include:
+Further follow up to provide assurance of the accuracy of the data reported to us, concentrating particularly on outlier firms.
+Additional supervisory work to be sure of firms’ conclusions on accounts closed for political reasons and closer analysis of accounts closed for reasons of reputational risk.
+Further review of declined applications for and terminations of basic bank accounts.
+Further research into the reasons why 1.1m people in the UK are unbanked and the characteristics of this population.
+Engagement with consumer groups and organisations to understand their experiences and impact of account declines, terminations and suspensions where these are within our regulatory remit.
+A financial inclusion sprint in Q1 2024 focussed on improving consumer access to financial services.
+The FCA has also reiterated to firms their obligations under the Consumer Duty, and the need to ensure they are collecting accurate and sufficient information to fully assess whether they are delivering good outcomes for their customers. The FCA will take prompt action if significant issues at firms are identified.
+The FCA has also indicated close working with Government on these issues and set out a number of areas Government may wish to consider, including:
+greater checks by Companies House to support the fight against fraud
+the development of a strategic approach to digital identity to aid financial inclusion and lessen financial crime risk
+consideration, as part of the passage of the Online Safety Bill, of whether the cost of compensating for consumer losses due to fraud is being appropriately shared.
+The FCA has also published an international perspective on account closures.
+Notes to editors
+Report on UK Payment Accounts: access and closures.
+Read our data request - this included the number of accounts closed and suspended, applications denied, and the reasons why.
+FCA letter to Chancellor: Provision of Banking Services.
+International de-risking research note.
+Across personal and business accounts, there were 4 cases and an additional 4 complaints reported to us by the firms with ‘expression of political or any other opinions’ as the reason for the account closure or complaint. We followed up directly with firms on these cases and further information showed that the primary reason for action was not the ‘expression of political or any other opinions’. For the majority of cases it was, in fact, customer behaviour (e.g. racist language directed at staff).
+Find out more information about the FCA.

@@ -1,0 +1,47 @@
+Before the
+Federal Communications Commission
+Washington, D.C. 20554
+In the Matter of )
+)
+AT&T Enterprises, LLC ) File No.: EB-SED-24-00036024
+) CD Acct. No.: 202432100008
+) FRN: 0034298919
+)
+)
+ORDER
+Adopted: August 26, 2024 Released: August 26, 2024
+By the Chief, Enforcement Bureau:
+1. The Enforcement Bureau (Bureau) of the Federal Communications Commission
+(Commission) has entered into a Consent Decree to resolve its investigation into whether AT&T
+Enterprises, LLC, successor-in-interest to AT&T Enterprises, Inc., and AT&T Corp.,1 (AT&T) failed to
+deliver 911 calls to, and to timely notify, Public Safety Answering Points (PSAPs) during a 911 outage on
+August 22, 2023. Congress has made emergency communication services a national priority, and the
+Commission has repeatedly emphasized that robust and reliable 911 service must be available nationwide.
+It is therefore incumbent upon the Commission to ensure that telecommunications carriers provide
+reliable 911 service at all times and timely notify PSAPs of relevant 911 outages. To settle this matter,
+AT&T will implement a three-year compliance plan and will pay a $950,000 civil penalty.
+2. After reviewing the terms of the Consent Decree and evaluating the facts before us, we
+find that the public interest would be served by adopting the Consent Decree and terminating the
+referenced investigation regarding AT&T’s compliance with the Commission’s 911 rules, including
+sections 4.9(f), 4.9(h), 9.4, 9.10(b), and 9.11(b)(2)(ii) of the Commission’s rules.2
+3. In the absence of material new evidence relating to this matter, we do not set for hearing
+the question of AT&T’s basic qualifications to hold or obtain any Commission license or authorization.3
+4. Accordingly, IT IS ORDERED that, pursuant to sections 4(i) of the Act, 47 U.S.C. §
+154(i), and the authority delegated by sections 0.111 and 0.311 of the Commission’s rules, 47 CFR §§
+0.111, 0.311, the attached Consent Decree IS ADOPTED and its terms incorporated by reference.
+5. IT IS FURTHER ORDERED that the above-captioned matter IS TERMINATED.
+1 On May 1, 2024, AT&T Corp. merged with and into AT&T Enterprises, Inc., with AT&T Enterprises, Inc. as the
+surviving entity. On May 2, 2024, AT&T Enterprises, Inc. was converted into a limited liability company, AT&T
+Enterprises, LLC. AT&T Enterprises, LLC is an indirect, wholly owned subsidiary of AT&T Inc. See Letter from
+AT&T Services, Inc., to Spectrum Enforcement Division, FCC Enforcement Bureau (June 20, 2024) (on file in EB-
+SED-24-00036024).
+2 47 CFR §§ 9.4, 9.10(b), 9.11(b)(2)(ii), 4.9(f), 4.9(h).
+3 See id. § 1.93(b).
+6. IT IS FURTHER ORDERED that a copy of this Order and Consent Decree shall be
+sent by first class mail and certified mail, return receipt requested, to Cindy Manheim, Assistant Vice
+President – Senior Legal Counsel, AT&T Services, Inc., 7277 – 164th Avenue NE, Redmond,
+Washington 98052.
+FEDERAL COMMUNICATIONS COMMISSION
+Loyaan A. Egal
+Chief
+Enforcement Bureau

@@ -27,3 +27,9 @@ def test_deleting_a_line_breaks_the_chain(tmp_path):
     lines = path.read_text().splitlines()
     path.write_text("\n".join([lines[0], lines[2]]) + "\n")
     assert not verify(path)[0]
+
+
+def test_line_separator_inside_a_value_does_not_split_the_event(tmp_path):
+    path = tmp_path / "log.jsonl"
+    AuditLog(path).append("claim", text="before after")
+    assert verify(path)[0]

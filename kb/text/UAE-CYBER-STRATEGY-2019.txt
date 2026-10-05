@@ -1,0 +1,111 @@
+National Cybersecurity Strategy Rationale for a Cybersecurity strategy The number of cybersecurity Incidents Worldwide has doubled in the past year, resulting in a significant cost to the global economy
+2x
+Number of cybersecurity incidents globally (2016-2017)
+42%
+Increase in number of reported data breaches globally (2015-2017)
+608 Annual global cost of cybercrime to the ($USD Billion, 2014-2017)
+3.9 Average total cost of a data breach ($USD Million, 2017-2018) The impact of cybersecurity incidents extends beyond economic losses
+Direct Financial Impact
+Client Impact
+Impact on Services
+Reputational Impact To develop the National Cybersecurity Strategy for the UAE, we leveraged 3 key sources of insights
+Global industry reports
+Cybersecurity experts
+10 benchmark countries
+Analysed +50 global indices and publications
+Global panel of experts with deep knowledge on cybersecurity topics
+Benchmarked 10 leading cybersecurity ecosystem Our aspirations for the National Cybersecurity Strategy Our vision for UAE’s National Cybersecurity strategy To create safe and resilient cyber infrastructure in the UAE that enables citizens to fulfil their aspirations and empowers businesses to thrive Our vision will impact all segments of the society Aspirations Provide confidence to citizens to securely participate in the digital world Celebrate contributions to innovation in cybersecurity
+Foster a culture of entrepreneurship in cybersecurity Enable SMEs to safeguard themselves against most common cyber attacks Protect critical information infrastructure assets of the country Build a world-class cybersecurity workforce in the UAE Strategy pillars To achieve these aspirations, we will mobilize the whole ecosystem to deliver ~60 initiatives across 5 pillars Cybersecurity laws & regulations
+Vibrant cybersecurity ecosystem
+National Cyber Incident Response plan
+CIIP program
+Partnerships
+Address all types of cybercrimes Secure existing and emerging technologies Support protection of SMEs
+Support startups and promote R&D in cybersecurity Develop cybersecurity capabilities Drive citizen cybersecurity awareness Encourage excellence in cybersecurity Single point of contact for victims of cyber incidents Standardized severity assessment and agency mobilization plan Cross-agency information sharing
+Identify critical assets in the UAE Establish world-class risk management standards Create robust processes for reporting, compliance and response
+Public sector Private sector Academia International consortiums Cybersecurity laws & regulations Designing a comprehensive cybersecurity legal and regulatory framework Our aspirations
+Will be achieved through a comprehensive legal and regulatory framework
+Existing and EmergingTechnologies
+Create legal framework to address all types of cybercrimes
+Cloud Services Artificial Intelligence
+IoT
+Digital Signatures
+Blockchain
+Substantive Laws
+Build regulatory framework that will secure existing and emerging technologies
+Procedural Laws
+Laws Data Protection and Privacy Laws Online Child Protection Laws Supporting protection of SMEs in the UAE Our aspirations
+Will be achieved through 3 key initiatives
+Provide guidelines to protect against most common cyber threats
+Develop essential cybersecurity standard for SMEs
+Offer incentives to implement the recommended guidelines
+Mandate Cybersecurity implementation certification for government suppliers
+Establish support systems to enable SMEs to implement guidelines
+Build one-stop portal for SMEs to enable SMEs to implement the standard Vibrant cybersecurity ecosystem Enabling the ecosystem to capture the huge cybersecurity opportunity Our aspirations
+Tap into the AED 1.8bn UAE cybersecurity market
+Capture the AED 18bn MENA cybersecurity market
+Will be achieved through 24 initiatives across 7 pillars Driving demand
+Ease-of-doing business
+Access to financing
+Business support
+Culture and mindset
+Education and skill development
+Innovation and technology adoption Developing capabilities of +40,000 cybersecurity professionals Our aspirations
+Will be achieved through 12 initiatives
+Encourage professionals and students to pursue a career in cybersecurity Develop necessary cybersecurity capabilities to meet aspirations of the country Foster a vibrant ecosystem of cybersecurity training providers
+Individuals
+7 initiatives
+Training providers
+5 initiatives Creating cybersecurity citizen awareness in the UAE Our aspirations Enable citizens to realize the risks related to the cyberspace
+Will be achieved through 12 initiatives targeting citizen segments Children & Teens College students
+Influence citizen mindsets to practice cyber hygiene
+Encourage institutions to actively spread cyber awareness
+Professionals Homemakers & Senior citizens People with determination Rewarding excellence in cybersecurity through a national awards program
+Our aspirations
+Will be achieved through 12 initiatives targeting citizen segments
+Encourage organizations to drive cybersecurity programs Inspire entrepreneurs to innovate in cybersecurity
+Entities
+6 awards
+Support cutting-edge research undertaken by academic institutions
+Individuals
+6 awards
+Motivate students to pursue cybersecurity careers National Cyber Incident Response plan Establishing a robust National Cyber Incident Response plan to enable swift and coordinated response to cyber incidents in the UAE Our aspirations Streamline cybersecurity incident detection and reporting Establish standardized severity assessment matrix to mobilize the required support Build world-class capabilities to respond to all types of cyber incidents
+Will be achieved through 4 key initiatives Single Point of Contact Advisories to protect against threats Active Monitoring for cyber threats Cross-Agency Intelligence Sharing CIIP program Protecting critical assets of the UAE in 9 sectors Will be achieved through a robust CIIP program
+Our aspirations To safeguard assets in 9 critical sectors of the UAE:
+Identify critical sectors, assets and associated risks Energy
+ICT
+Government Establish world-class risk management standards
+Electricity & Water
+Finance & Insurance
+Emergency services
+Health Services
+Transportation
+Food & Agriculture
+Implement robust processes for reporting, compliance and response Partnerships Mobilizing the whole ecosystem through local and global partnerships Partnerships are a core enabler in jointly achieving cybersecurity goals and ambitions
+Public sector
+Private sector
+Types of partnerships
+Academia
+International consortiums Governance For successful implementation of the National Cybersecurity strategy, we will establish multiple governance vehicles 9 sector committees to implement the CIIP program…
+Energy
+ICT
+Government
+Electricity & Water
+Finance & Insurance
+Emergency services
+Health Services
+Transportation
+Food & Agriculture
+And 2 vehicles for the National Incident Response plan
+National Incident Response Committee (NRC)
+Take strategic decisions related to the National Incident Response program
+Cyber Intelligence Unit (CIU)
+Enable intelligence sharing between agencies for better visibility over cybersecurity threats TRA will monitor progress and impact of the National Cybersecurity strategy through ~20 clearly defined key performance metrics
+Collate data from multiple sources
+Will enable TRA to track the progress of the strategy
+Internal TRA data – Data outputs from TRA initiative teams, aeCERT, etc.
+National Cybersecurity strategy Progress update
+Ecosystem data- CIIP sector committees, NRC, CIU, law enforcement agencies, etc.
+2 Strategic KPIs
+Global data - Reports, threat intelligence, etc.
+17 Operational KPIs

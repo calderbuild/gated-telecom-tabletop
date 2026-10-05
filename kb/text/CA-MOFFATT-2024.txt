@@ -1,0 +1,90 @@
+Decision Information
+Moffatt v. Air Canada
+Collection
+Small Claims Decisions
+Date
+2024-02-14
+Neutral citation
+2024 BCCRT 149
+File numbers
+SC-2023-005609
+Decision type
+Final Decision
+Decision Content
+Date Issued: February 14, 2024
+File: SC-2023-005609
+Type: Small Claims
+Civil Resolution Tribunal
+Indexed as: Moffatt v. Air Canada, 2024 BCCRT 149
+Between:
+JAKE MOFFATT
+Applicant
+And:
+AIR CANADA
+Respondent
+REASONS FOR DECISION
+Tribunal Member:
+Christopher C. Rivers
+INTRODUCTION
+1. This dispute is about a refund for a bereavement fare.
+2. In November 2022, following the death of their grandmother, Jake Moffatt booked a flight with Air Canada. While researching flights, Mr. Moffat used a chatbot on Air Canada’s website. The chatbot suggested Mr. Moffatt could apply for bereavement fares retroactively. Mr. Moffatt later learned from Air Canada employees that Air Canada did not permit retroactive applications.
+3. Mr. Moffatt says Air Canada must provide them with a partial refund of the ticket price, as they relied upon the chatbot’s advice. They claim $880 for what they say is the difference in price between the regular and alleged bereavement fares.
+4. Air Canada says Mr. Moffatt did not follow the proper procedure to request bereavement fares and cannot claim them retroactively. Air Canada says it cannot be held liable for the information provided by the chatbot. Finally, it relies on certain contractual terms from its Domestic Tariff. Air Canada asks me to dismiss Mr. Moffatt’s claim.
+5. Mr. Moffat is self-represented. Air Canada is represented by an employee.
+6. For the reasons that follow, I mostly allow Mr. Moffatt’s claim.
+JURISDICTION AND PROCEDURE
+7. These are the Civil Resolution Tribunal’s (CRT) formal written reasons. The CRT has jurisdiction over small claims brought under Civil Resolution Tribunal Act (CRTA) section 118. CRTA section 2 states that the CRT’s mandate is to provide dispute resolution services accessibly, quickly, economically, informally, and flexibly. In resolving disputes, the CRT must apply principles of law and fairness.
+8. CRTA section 39 says the CRT has discretion to decide the format of the hearing, including by writing, telephone, videoconferencing, email, or a combination of these. Here, I find that I am properly able to assess and weigh the documentary evidence and submissions before me. Further, bearing in mind the CRT’s mandate that includes proportionality and a speedy resolution of disputes, I find that an oral hearing is not necessary in the interests of justice.
+9. CRTA section 42 says the CRT may accept as evidence information that it considers relevant, necessary, and appropriate, whether or not the information would be admissible in a court of law.
+10. Where permitted by CRTA section 118, in resolving this dispute the CRT may order a party to do or stop doing something, pay money or make an order that includes any terms or conditions the CRT considers appropriate.
+ISSUE
+11. Did Air Canada negligently misrepresent the procedure for claiming bereavement fares, and if so, what is the remedy?
+EVIDENCE AND ANALYSIS
+12. In a civil proceeding like this one, Mr. Moffatt, as applicant, must prove their claims on a balance of probabilities. This means “more likely than not”. I have read all the parties’ submissions and evidence but refer only to the evidence and argument that I find relevant to provide context for my decision.
+13. On November 11, 2022, Mr. Moffat’s grandmother passed away in Ontario. That same day, Mr. Moffat visited Air Canada’s website to find and book a flight from Vancouver to Toronto using Air Canada’s bereavement rates. It is undisputed that Air Canada provides certain accommodations, such as reduced fares, for passengers traveling due to the death of an immediate family member.
+14. Mr. Moffat says while using Air Canada’s website, they interacted with a support chatbot. While Air Canada did not provide any information about the nature of its chatbot, generally speaking, a chatbot is an automated system that provides information to a person using a website in response to that person’s prompts and input. The parties implicitly agree that Mr. Moffatt was not chatting with an Air Canada employee.
+15. Mr. Moffat says they asked the Air Canada chatbot about bereavement fares. They include a screenshot of the chatbot’s response, which says, in part, as follows:
+Air Canada offers reduced bereavement fares if you need to travel because of an imminent death or a death in your immediate family.
+…
+If you need to travel immediately or have already travelled and would like to submit your ticket for a reduced bereavement rate, kindly do so within 90 days of the date your ticket was issued by completing our Ticket Refund Application form. (emphasis in original)
+16. It is undisputed the words “bereavement fares” were a highlighted and underlined hyperlink to a separate Air Canada webpage titled “Bereavement travel” with additional information about Air Canada’s bereavement policy. Air Canada provided a screenshot of part of what I infer is the hyperlinked Air Canada webpage.
+17. The webpage says, in part, the bereavement policy does not apply to requests for bereavement consideration after travel has been completed. I address the inconsistency between Air Canada’s chatbot and webpage later in this decision.
+18. Relying on the information provided by the chatbot, on November 11, Mr. Moffatt booked a one-way flight from Vancouver to Toronto, departing on November 12, for $794.98. On November 16, relying on the same information, they booked a one-way flight from Toronto to Vancouver, departing on November 18, for $845.38.
+19. Mr. Moffat says on November 11, they spoke to an Air Canada representative by telephone about bereavement rates to determine what the discount may be. Mr. Moffatt says they were told the fare for each flight would be approximately $380. There is no evidence the Air Canada representative told Mr. Moffatt about whether or not they could retroactively apply for bereavement rates.
+20. Mr. Moffatt submitted their first application for the bereavement fare on November 17, 2022, well within the 90 days requested by the chatbot. Emails in evidence show Mr. Moffatt corresponded with Air Canada throughout December 2022 and February 2023 in an attempt to receive a partial refund of their fares.
+21. On February 5, 2023, Mr. Moffatt emailed Air Canada. They included the screenshot from the chatbot that set out the 90-day window to request a reduced rate and confirmed they had filled out the refund form and provided a death certificate.
+22. On February 8, an Air Canada representative responded and admitted the chatbot had provided “misleading words.” The representative pointed out the chatbot’s link to the bereavement travel webpage and said Air Canada had noted the issue so it could update the chatbot.
+23. The parties exchanged further emails after that but were unable to resolve matters.
+Negligent Misrepresentation
+24. While Mr. Moffatt does not use the words specifically, by saying they relied on Air Canada’s chatbot, I find they are alleging negligent misrepresentation. Negligent misrepresentation can arise when a seller does not exercise reasonable care to ensure its representations are accurate and not misleading.
+25. To prove the tort of negligent misrepresentation, Mr. Moffatt must show that Air Canada owed them a duty of care, its representation was untrue, inaccurate, or misleading, Air Canada made the representation negligently, Mr. Moffatt reasonably relied on it, and Mr. Moffatt’s reliance resulted in damages.[1]
+26. Here, given their commercial relationship as a service provider and consumer, I find Air Canada owed Mr. Moffatt a duty of care. Generally, the applicable standard of care requires a company to take reasonable care to ensure their representations are accurate and not misleading.
+27. Air Canada argues it cannot be held liable for information provided by one of its agents, servants, or representatives – including a chatbot. It does not explain why it believes that is the case. In effect, Air Canada suggests the chatbot is a separate legal entity that is responsible for its own actions. This is a remarkable submission. While a chatbot has an interactive component, it is still just a part of Air Canada’s website. It should be obvious to Air Canada that it is responsible for all the information on its website. It makes no difference whether the information comes from a static page or a chatbot.
+28. I find Air Canada did not take reasonable care to ensure its chatbot was accurate. While Air Canada argues Mr. Moffatt could find the correct information on another part of its website, it does not explain why the webpage titled “Bereavement travel” was inherently more trustworthy than its chatbot. It also does not explain why customers should have to double-check information found in one part of its website on another part of its website.
+29. Mr. Moffatt says, and I accept, that they relied upon the chatbot to provide accurate information. I find that was reasonable in the circumstances. There is no reason why Mr. Moffatt should know that one section of Air Canada’s webpage is accurate, and another is not.
+30. Mr. Moffatt says, and I accept, that they would not have flown last-minute if they knew they would have to pay the full fare. I find this is consistent with Mr. Moffatt’s actions, which included investigating the options for bereavement fares and diligently following up for a partial refund in line with the chatbot’s information.
+31. To the extent Air Canada argues it is not liable due to certain terms or conditions of its tariff, I note it did not provide a copy of the relevant portion of the tariff. It only included submissions about what the tariff allegedly says. Air Canada is a sophisticated litigant that should know it is not enough in a legal process to assert that a contract says something without actually providing the contract. The CRT also tells all parties are told to provide all relevant evidence. I find that if Air Canada wanted to a raise a contractual defense, it needed to provide the relevant portions of the contract. It did not, so it has not proven a contractual defence.
+32. So, I find Mr. Moffatt has made out their claim of negligent misrepresentation and is entitled to damages.
+Damages
+33. Mr. Moffatt is entitled to be put in the position they would have been in if the misrepresentation had not been made. The measure of damages is generally considered the difference between the price paid and the actual market value at the time of the sale.[2]
+34. Mr. Moffatt says when they spoke to an Air Canada agent, the agent advised them the bereavement fare was approximately $380 each direction. So, Mr. Moffatt says they should have only paid $760 total for their flights. In reality, they paid $1,630.36 for their flights. In submissions, they calculate the amount owing to be $880.36, which is $0.36 more than they claimed in their application. I note, however, the actual difference is $870.36, which I find is the maximum amount to which they could be entitled.
+35. In its boilerplate Dispute Response, Air Canada denies “each and every” one of Mr. Moffatt’s allegations generally. However, it did not provide any evidence to the contrary. Here, Air Canda was best positioned to provide evidence about what the bereavement fare would have been.
+36. When a party fails to provide relevant evidence without sufficient explanation, an adjudicator is entitled to draw an adverse inference. An adverse inference is where an adjudicator assumes a party has failed to provide relevant evidence because the missing evidence would not support their case. Here, I find that if Air Canada had evidence of a different bereavement fare, it would have provided it. Since I did not, I find that $380 was the bereavement fare’s market value.
+37. In calculating their damages, Mr. Moffatt uses $380 as the all-in cost of each flight. Since Mr. Moffatt says they were told the fare was $380, I find that does not include the additional costs of taxes, security charges, or airport improvement fees that they also had to pay. Their original tickets contained all of these costs, and I find the bereavement fares would have as well.
+38. For the flight from Vancouver to Toronto, Mr. Moffatt paid $695, plus $62.12 in fixed-rate charges and $37.86 in GST. With a bereavement fare of $380, plus $62.12 in additional charges, and $22.11 in GST, Mr. Moffatt’s total cost would have been $474.23.
+39. For the return flight from Toronto to Vancouver, Mr. Moffatt paid $681, plus $67.12 in fixed-rate charges and $97.26 in Harmonized Sales Tax (HST). With a bereavement fare of $380, plus $67.12 in additional charges, and $58.13 in HST, Mr. Moffatt’s total cost would have been $505.25.
+40. In total, then, I find Mr. Moffatt should have paid $979.48 for their two flights. Since they paid $1,630.36, I find they are entitled to damages of $650.88.
+41. Air Canada argues that it provided Mr. Moffatt with a $200 coupon as a gesture of goodwill. I infer Air Canada argues it is therefore entitled to a $200 set-off against any amount it may owe Mr. Moffatt. However, Mr. Moffatt says they did not accept the offered coupon, and Air Canada has provided no evidence to show otherwise. So, I find Air Canada is not entitled to any set-off.
+42. The Court Order Interest Act applies to the CRT. Mr. Moffatt is entitled to pre-judgment interest on the damages from November 17, 2022, the date of their first email requesting the bereavement fare refund, to the date of this decision. This equals $36.14.
+43. Under CRTA section 49 and CRT rules, the CRT will generally order an unsuccessful party to reimburse a successful party for CRT fees and reasonable dispute-related expenses. I see no reason in this case not to follow that general rule. I find the applicant was substantially successful, so is entitled to reimbursement of $125 in CRT fees. Mr. Moffatt did not claim any dispute-related expenses.
+ORDERS
+44. Within 14 days of the date of this order, I order Air Canada to pay Mr. Moffatt a total of $812.02, broken down as follows:
+a. $650.88 in damages,
+b. $36.14 in pre-judgment interest under the Court Order Interest Act, and
+c. $125 in CRT fees.
+45. Mr. Moffatt is entitled to post-judgment interest, as applicable.
+46. I dismiss Mr. Moffatt’s remaining claims.
+47. Under CRTA section 58.1, a validated copy of the CRT’s order can be enforced through the Provincial Court of British Columbia. Once filed, a CRT order has the same force and effect as an order of the Provincial Court of British Columbia.
+Christopher C. Rivers, Tribunal Member
+[1] See: Queen v. Cognos Inc., 1993 CanLII 146 (SCC).
+[2] See: Ban v. Keleher, 2017 BCSC 1132, at paragraph 57.

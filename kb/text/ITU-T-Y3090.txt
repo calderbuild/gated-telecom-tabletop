@@ -1,0 +1,752 @@
+I n t e r n a t i o n a l T e l e c o m m u n i c a t i o n U n i o n
+ITU-T Y.3090
+TELECOMMUNICATION (02/2022)
+STANDARDIZATION SECTOR
+OF ITU
+SERIES Y: GLOBAL INFORMATION
+INFRASTRUCTURE, INTERNET PROTOCOL ASPECTS,
+NEXT-GENERATION NETWORKS, INTERNET OF
+THINGS AND SMART CITIES
+Future networks
+Digital twin network – Requirements and
+architecture
+Recommendation ITU-T Y.3090
+ITU-T Y-SERIES RECOMMENDATIONS
+GLOBAL INFORMATION INFRASTRUCTURE, INTERNET PROTOCOL ASPECTS, NEXT-GENERATION
+NETWORKS, INTERNET OF THINGS AND SMART CITIES
+GLOBAL INFORMATION INFRASTRUCTURE
+General Y.100–Y.199
+Services, applications and middleware Y.200–Y.299
+Network aspects Y.300–Y.399
+Interfaces and protocols Y.400–Y.499
+Numbering, addressing and naming Y.500–Y.599
+Operation, administration and maintenance Y.600–Y.699
+Security Y.700–Y.799
+Performances Y.800–Y.899
+INTERNET PROTOCOL ASPECTS
+General Y.1000–Y.1099
+Services and applications Y.1100–Y.1199
+Architecture, access, network capabilities and resource management Y.1200–Y.1299
+Transport Y.1300–Y.1399
+Interworking Y.1400–Y.1499
+Quality of service and network performance Y.1500–Y.1599
+Signalling Y.1600–Y.1699
+Operation, administration and maintenance Y.1700–Y.1799
+Charging Y.1800–Y.1899
+IPTV over NGN Y.1900–Y.1999
+NEXT GENERATION NETWORKS
+Frameworks and functional architecture models Y.2000–Y.2099
+Quality of Service and performance Y.2100–Y.2199
+Service aspects: Service capabilities and service architecture Y.2200–Y.2249
+Service aspects: Interoperability of services and networks in NGN Y.2250–Y.2299
+Enhancements to NGN Y.2300–Y.2399
+Network management Y.2400–Y.2499
+Computing power networks Y.2500–Y.2599
+Packet-based Networks Y.2600–Y.2699
+Security Y.2700–Y.2799
+Generalized mobility Y.2800–Y.2899
+Carrier grade open environment Y.2900–Y.2999
+FUTURE NETWORKS Y.3000–Y.3499
+CLOUD COMPUTING Y.3500–Y.3599
+BIG DATA Y.3600–Y.3799
+QUANTUM KEY DISTRIBUTION NETWORKS Y.3800–Y.3999
+INTERNET OF THINGS AND SMART CITIES AND COMMUNITIES
+General Y.4000–Y.4049
+Definitions and terminologies Y.4050–Y.4099
+Requirements and use cases Y.4100–Y.4249
+Infrastructure, connectivity and networks Y.4250–Y.4399
+Frameworks, architectures and protocols Y.4400–Y.4549
+Services, applications, computation and data processing Y.4550–Y.4699
+Management, control and performance Y.4700–Y.4799
+Identification and security Y.4800–Y.4899
+Evaluation and assessment Y.4900–Y.4999
+For further details, please refer to the list of ITU-T Recommendations.
+Recommendation ITU-T Y.3090
+Digital twin network – Requirements and architecture
+Summary
+Recommendation ITU-T Y.3090 describes the requirements and architecture of a digital twin
+network (DTN). A digital twin network is a virtual representation of a physical network. It is useful
+for analysing, diagnosing, emulating, and controlling the physical network based on data, model, and
+interface to achieve a real-time interactive mapping between a physical network and a digital twin
+network.
+History
+Edition Recommendation Approval Study Group Unique ID*
+1.0 ITU-T Y.3090 2022-02-13 13 11.1002/1000/14852
+Keywords
+Digital twin, digital twin network, requirements and architecture.
+* To access the Recommendation, type the URL http://handle.itu.int/ in the address field of your web
+browser, followed by the Recommendation's unique ID. For example, http://handle.itu.int/11.1002/1000/11
+830-en.
+Rec. ITU-T Y.3090 (02/2022) i
+FOREWORD
+The International Telecommunication Union (ITU) is the United Nations specialized agency in the field of
+telecommunications, information and communication technologies (ICTs). The ITU Telecommunication
+Standardization Sector (ITU-T) is a permanent organ of ITU. ITU-T is responsible for studying technical,
+operating and tariff questions and issuing Recommendations on them with a view to standardizing
+telecommunications on a worldwide basis.
+The World Telecommunication Standardization Assembly (WTSA), which meets every four years,
+establishes the topics for study by the ITU-T study groups which, in turn, produce Recommendations on
+these topics.
+The approval of ITU-T Recommendations is covered by the procedure laid down in WTSA Resolution 1.
+In some areas of information technology which fall within ITU-T's purview, the necessary standards are
+prepared on a collaborative basis with ISO and IEC.
+NOTE
+In this Recommendation, the expression "Administration" is used for conciseness to indicate both a
+telecommunication administration and a recognized operating agency.
+Compliance with this Recommendation is voluntary. However, the Recommendation may contain certain
+mandatory provisions (to ensure, e.g., interoperability or applicability) and compliance with the
+Recommendation is achieved when all of these mandatory provisions are met. The words "shall" or some
+other obligatory language such as "must" and the negative equivalents are used to express requirements. The
+use of such words does not suggest that compliance with the Recommendation is required of any party.
+INTELLECTUAL PROPERTY RIGHTS
+ITU draws attention to the possibility that the practice or implementation of this Recommendation may
+involve the use of a claimed Intellectual Property Right. ITU takes no position concerning the evidence,
+validity or applicability of claimed Intellectual Property Rights, whether asserted by ITU members or others
+outside of the Recommendation development process.
+As of the date of approval of this Recommendation, ITU had not received notice of intellectual property,
+protected by patents/software copyrights, which may be required to implement this Recommendation.
+However, implementers are cautioned that this may not represent the latest information and are therefore
+strongly urged to consult the appropriate ITU-T databases available via the ITU-T website at
+http://www.itu.int/ITU-T/ipr/.
+© ITU 2022
+All rights reserved. No part of this publication may be reproduced, by any means whatsoever, without the
+prior written permission of ITU.
+ii Rec. ITU-T Y.3090 (02/2022)
+Table of Contents
+Page
+Rec. ITU-T Y.3090 (02/2022) iii
+Recommendation ITU-T Y.3090
+Digital twin network – Requirements and architecture
+1 Scope
+A digital twin network (DTN) is a virtual representation of a physical network. It is useful for
+analysing, diagnosing, emulating, and controlling the physical network based on data, model, and
+interface, to achieve a real-time interactive mapping between physical networks and digital twin
+networks. This Recommendation describes the requirements and architecture of DTN.
+The scope of this Recommendation includes the following items:
+– Functional requirements of DTN;
+– Service requirements of DTN;
+– Architecture of DTN;
+– Security considerations of DTN.
+2 References
+The following ITU-T Recommendations and other references contain provisions which, through
+reference in this text, constitute provisions of this Recommendation. At the time of publication, the
+editions indicated were valid. All Recommendations and other references are subject to revision;
+users of this Recommendation are therefore encouraged to investigate the possibility of applying the
+most recent edition of the Recommendations and other references listed below. A list of the
+currently valid ITU-T Recommendations is regularly published. The reference to a document within
+this Recommendation does not give it, as a stand-alone document, the status of a Recommendation.
+None.
+3 Definitions
+3.1 Terms defined elsewhere
+This Recommendation uses the following terms defined elsewhere:
+3.1.1 IMT-2020 [b-ITU-T Y.3100]: Systems, system components, and related technologies that
+provide far more enhanced capabilities than those described in [b-ITU-R M.1645].
+NOTE – [b-ITU-R M.1645] defines the framework and overall objectives of the future development of
+IMT-2000 and systems beyond IMT-2000 for the radio access network.
+3.1.2 management [b-ITU-T Y.3100]: In the context of IMT-2020, the processes aiming at
+fulfilment, assurance, and billing of services, network functions, and resources in both physical and
+virtual infrastructure including compute, storage, and network resources.
+3.2 Terms defined in this Recommendation
+This Recommendation defines the following terms:
+3.2.1 digital twin network: A virtual representation of a physical network. It is useful for
+analysing, diagnosing, emulating and controlling the physical network based on data, model and
+interface, to achieve the real-time interactive mapping between the physical network and virtual
+twin network.
+3.2.2 domain: A collection of physical or functional entities which are owned and operated by a
+player and can include entities from more than one role. The extent of a domain is defined by a
+useful context and one player can have more than one domain.
+NOTE – Based on the definition given in [b-ITU-T Y.110].
+4 Abbreviations and acronyms
+This Recommendation uses the following abbreviations and acronyms:
+AI Artificial Intelligence
+CPU Central Processing Unit
+DTN Digital Twin Network
+IBN Intent-based Networking
+INT In-band Network Telemetry
+IP Internet Protocol
+MAC Media Access Control
+ML Machine Learning
+NetConf Network Configuration
+NoSQL Not Only SQL
+O&M Operation and Maintenance
+SNMP Simple Network Management Protocol
+SQL Structured Query Language
+5 Conventions
+In this Recommendation:
+The keywords "is required to" indicate a requirement that must be strictly followed and from which
+no deviation is permitted, if conformance to this document is to be claimed.
+The keywords "is recommended" indicate a requirement that is recommended but which is not
+absolutely required. Thus, this requirement need not be present to claim conformance.
+The keywords "is not recommended" indicate a requirement that is not recommended but which is
+not specifically prohibited. Thus, conformance with this specification can still be claimed even if
+this requirement is present.
+6 Overview of a digital twin network
+A digital twin is a real-time representation of physical assets in a digital world. It has been used in
+many industries towards smart manufacturing and 'Industry 4.0', such as aerospace engineering,
+electric grid, car manufacturing, petroleum industry, etc. [b-Tao]. In the future, digital twin
+technology will be used extensively in the fields of smart city, human activity management and
+scientific research, making the whole society move towards the 'digital twin' world. The network
+provides a solid foundation for building the 'digital twin' world. Meanwhile, in the face of
+increasing business types, scale and complexity, the network itself also needs to use digital twin
+technology to seek solutions beyond the physical network.
+A digital twin network (DTN) is a virtual representation of the physical network. DTN is useful for
+analysing, diagnosing, emulating and controlling the physical network based on data, model and
+interface, to achieve a real-time interactive mapping between physical networks and virtual twin
+networks. According to the definition, DTN contains four key characteristics: data, mapping,
+model, and interface as shown in below Figure 6-1.
+1) Data is the cornerstone for constructing a DTN system. Massive network data collected
+from a physical network can be stored in a virtual twin network as a unified data repository,
+which can be the single source of truth and provide timely and accurate data support for
+models.
+2) Real-time interactive mapping between a physical network and a virtual twin network is the
+most typical feature where the DTN is different from a network simulation system.
+3) Model is the ability source of digital twin network. Various data models built in virtual twin
+networks can be designed and flexibly combined to serve network applications.
+4) Standardized interface is the key enabler which can effectively ensure the compatibility and
+scalability of the DTN system. Southbound interfaces connect physical networks and
+virtual twin networks while northbound interfaces exchange information between virtual
+twin networks and network applications.
+Figure 6-1 – Key characteristics of a digital twin network
+Based on the four key characteristics, DTN creates an accurate digital network simulation platform,
+which can digitally show the running status and health state of network infrastructures including
+physical network devices, logical network devices, ports, links, etc. DTN can help users clearly
+perceive the network state, efficiently mine valuable network information, and explore innovative
+network applications with friendly immersive interactive interfaces. Through artificial intelligence
+(AI) / machine learning (ML), big data, and cloud technology, DTN can also help the physical
+network realize low-cost trial, intelligent decision-making, efficient innovation and predictive
+maintenance.
+7 Requirements of digital twin networks
+7.1 Functional requirements
+7.1.1 Efficient data collection
+It is required for digital twin networks to support massive network data collection from network
+infrastructures. The detailed requirements for data collection are listed below.
+7.1.1.1 Complete data
+– It is required for DTN to support the use of efficient data collection tools and methods to
+collect complete network data from physical networks, including but not limited to the
+following types:
+ Provisional and operational status of physical or virtual devices as well as the network
+topology with all the network elements;
+ Running status of physical or logical ports and links;
+ Logs and event records of all the network elements;
+ Statistics (packet loss, traffic throughput, latency, etc.) of flows and ports;
+ Various data regarding users and services;
+ All above data in time series;
+ Life-cycle operation data of all network elements.
+– It is required for DTN to get complete data wherein all the required data for the various
+network applications can be achieved from the unified data repository of DTN, without
+having to temporarily go to the equipment in the network infrastructure layer.
+– It is required for DTN to support collecting only the required data, which depends on the
+specific network topology and application requirements, without spending the high cost of
+resources such as the central processing unit (CPU), memory, bandwidth, etc.) to collect all
+the network data.
+7.1.1.2 Diverse tools
+– It is required for DTN to support the collection of different types of data with different
+characteristics.
+ Some data (e.g., port statistics, key link info, etc.) requires higher collecting frequency;
+ Some data (e.g., flow status, link fault, etc.) needs to be of a higher level of real-time;
+ Some data (e.g., device status, port statistics, etc.) can be collected directly and simply
+via normal tools;
+ Some data (e.g., per-flow latency, traffic matrix, etc.) can only be acquired through
+complex network measurement.
+– It is required for DTN to support the collection of data using multiple tools or methods
+according to different data types.
+– It is required for DTN to support the usage of wide-used tools to collect data, such as the
+simple network management protocol (SNMP), network configuration (NetConf),
+telemetry, in-band network telemetry (INT), etc.
+NOTE – SNMP and NetConf can help collect device status and link fault easily; Telemetry can help
+network devices proactively report packet loss and link status to digital twin entity and INT can be
+used to collect precise per-flow latency and packet forward path.
+– It is recommended for DTN to study the new data collection technology in the following
+aspects in combination with the data requirements of network application for digital twin
+network:
+ High-performance data collection technology based on a programmable chip;
+ Measurement methods for complex network data such as network performance and
+network traffic;
+ Collaborative data collection technology for multiple data sources;
+ Distributed and collaborative data collection technology for complex networks and the
+time synchronization problem of data acquisition;
+– It is recommended for DTN to support a unified data collection tool, which is designed to
+execute all kinds of data collection tasks at low cost on demand.
+7.1.1.3 Lightweight tools
+Data collection tools and methods are required to be as lightweight as possible to reduce the
+occupation of network equipment resources and ensure that data collection does not affect the
+normal operation of the network. The detailed requirements are listed below.
+– It is required for DTN to support data collection tools and methods which can improve the
+efficiency of execution, reduce the cost of computing, storage and communication
+bandwidth.
+– It is required for DTN to support minimizing the collection of redundant data, in the case of
+maintaining massive and complete data.
+– It is required for DTN to support making full use of the data compression technology when
+collecting necessary data sets, to reduce resource cost in the collection phase.
+7.1.2 Efficient and unified data repository
+It is required for digital twin networks to construct a unified data repository, which stores and
+manages the massive network data. The requirements on the unified repository are listed below.
+– It is required for DTN's unified data repository to have the capability to extract, transfer,
+and load the massive network data collected from the physical network; then to store the
+data in the database.
+– It is required for DTN's unified data repository to have the capability to store various types
+of network data, including provisional data, operational data, and data from data-plane and
+user-plane.
+– It is recommended to build DTN's unified data repository using a heterogeneous database
+such as massive parallel processing, Hadoop, not only structured query language (NoSQL),
+etc. to store the multi-structure network data which include structured data, no-structured
+data and half-structured data.
+– It is required for DTN's unified data repository to have the capability to store the network
+data efficiently with low hardware and software costs. From this point of view, necessary
+data compression is required.
+– It is required for DTN's unified data repository to have the capability to support real-time
+data access and data acquisition.
+– It is required for DTN's unified data repository to provide efficient data services for unified
+data models. The data services should include fast search engine, data federation, batch-
+data service, data combination, historical data snapshot and rollback, etc.
+– It is required for DTN's unified data repository to have the capability to handle high-
+concurrency and avoid concurrency conflict.
+– It is required for DTN's unified data repository to provide a unified interface to exchange
+network data with unified data models.
+– It is required for DTN's unified data repository to have the capability to efficiently manage
+the massive network data and guarantee the accuracy, consistency, integrity and security of
+the data.
+– It is required for DTN's unified data repository to support database backup and recovery in
+order to achieve high availability.
+7.1.3 Unified data models for network applications
+It is required for digital twin networks to define and create unified data models for various types of
+network applications. The detailed requirements on unified data models are listed below.
+– It is required for DTN's unified data models to have the capability of modelling various
+network elements, including base stations, switches, routers, firewalls, gateways, etc.
+– It is required for DTN's unified data models to have the capability of modelling various
+network topologies.
+– It is required for DTN's unified data models to have the capability to achieve an accurate
+and real-time description of a physical network.
+– It is required for DTN's unified data models to have the capability to make full use of the
+network data in a unified data repository to set up various data models for network analysis,
+emulation, diagnosis, prediction and guarantee for specific application scenarios.
+– It is required for DTN's unified data models to have the capability to create various
+functional models including network optimization model, traffic scheduling model, load
+balancing model, fault prediction model, etc.
+– It is required for DTN's unified data models to have the capability to build data models
+either based on a single network domain (such as mobile access network, transmission
+network, core network, bearer network, etc.) or based on multiple network domains.
+– It is required for DTN's unified data models to have the interface to interact with the unified
+data repository.
+– It is required for DTN's unified data models to have the interface to get network application
+requirements and to report simulation results to a network application.
+– It is required for DTN's unified data models to have the interface to deliver the change
+requests to the physical network elements.
+– It is required for DTN's unified data models to have the capability to provide services by a
+combination of multiple models.
+– It is required for DTN's unified data models to have the capability to provide services to
+network applications through a single instance or combinations of multiple instances.
+– It is required for DTN's unified data models to have the capability of emulating and
+iteratively optimizing network applications.
+7.1.4 Open and standard southbound and northbound interfaces
+Southbound interfaces of DTN are responsible for information exchange between the physical
+network and a network digital twin. Northbound interfaces of DTN are responsible for information
+exchange between network digital twins and network applications. A digital twin network is
+required to support open and standard southbound and northbound interfaces, to help avoid either
+hardware or software vendor lock and achieve interoperability. The detailed requirements on
+interfaces are listed below.
+7.1.4.1 Requirements of southbound interfaces
+– It is required for DTN's southbound interfaces to have the capability to collect various
+network data, including provisional data, operational data, and data from the control-plane
+and user-plane.
+– It is required for DTN's southbound interfaces to have the capability of various collecting
+methods, including passive collection, active collection, subscription collection, on-demand
+collection, etc.
+– It is required for DTN's southbound interfaces to have the capability to support high speed
+information exchange. It is also recommended that DTN's support several speed options
+(e.g., minute-level, 10-second level, second level (near real-time), and real-time level) to
+accommodate different data requirements from applications.
+– It is required for DTN's southbound interfaces to support the capability to configure
+management, including data collection protocol, frequency or period, etc.
+– It is required for DTN's southbound interfaces to have the capability of delivering control
+signalling and configuration changes to network elements in the physical network.
+7.1.4.2 Requirements of northbound interfaces
+– It is required for DTN's northbound interfaces to have the capability to deliver requirements
+of a network application to data models in a network digital twin. The application
+requirements can be regular network management, innovation network protocol validation,
+network optimization, etc. It is recommended that DTN's northbound interface can use an
+intent-based interface to deliver the requirements as intents from various applications.
+– It is recommended for DTN's northbound interfaces to have the capability to provide a
+digital copy of network digital twin, or common data models to third-party applications.
+– It is required for DTN's northbound interfaces to have the capability to report execution
+results from data models in the network digital twin.
+– It is recommended for DTN's northbound interfaces to use restful interface which is light
+weighted and extensible to reduce the complexity of application services.
+7.1.4.3 Common requirements for both southbound and northbound interfaces
+– It is required for DTN's southbound and northbound interfaces to adhere to open and
+standardized interface protocols so that the DTN system can connect multiple physical
+network elements and serve various network applications.
+– It is required for DTN's southbound and northbound interfaces to have high extensibility so
+that more features can be added with limited parameter changes and with backward
+compatibility.
+– It is required for DTN's southbound and northbound interfaces to be easy to access and use.
+– It is required for DTN's southbound and northbound interfaces to have the capability to
+handle high-concurrency and massive data.
+– It is required for DTN's southbound and northbound interfaces to provide a secure and a
+reliable information exchange mechanism.
+7.1.5 Management of digital twin networks
+The management of digital twin networks includes the whole life cycle management process of
+data, storage, modelling and instantiation of virtual platforms and entities. The detailed
+requirements are listed below.
+– It is required for DTN's management to have the capability of data management, topology
+management, model management and security management.
+– It is required for DTN's management to provide services for the creation, storage, updating
+of various data model instances as well as the management of model composition and
+application associations.
+– It is required for DTN's management to accurately record all transactions related data,
+model instances, topologies, and security.
+– It is required for DTN's management to have the capability of automatically managing data,
+model instances, topologies and security.
+– It is recommended for DTN's management to be designed as an independent sub-module in
+the network digital twin layer.
+7.2 Service requirements
+7.2.1 Compatibility
+It is required for digital twin networks to have enough compatibility to ensure that DTN is
+applicable for network equipment from various vendors, various network types and various network
+applications. The detailed requirements on compatibility are listed below.
+– It is required for DTN to support various types of networks which contain both physical and
+virtual devices and to have the compatibility to support various physical networks,
+including the radio access network, transport network, core network, data centre, campus
+network, etc. This can ensure that the DTN system is applicable for single domain
+networks, cross-domain networks, as well as end-to-end networks.
+– It is required for DTN's data repository to have the compatibility to store various types of
+network data with heterogeneous databases.
+– It is required for DTN's interfaces to have the compatibility to support data collections and
+configuration management for network equipment or network elements from different
+vendors, whether it is a hardware interface or a software interface.
+– It is required for DTN's data models to have the compatibility to map various network
+elements and topologies and to serve various network applications having limited parameter
+changes.
+– It is required for DTN to have backward compatibility so that all updated or new
+functionalities (interfaces, data repository, data models, management, etc.) can work
+smoothly with the functionalities in the old versions.
+– It is recommended that DTN has the capability to co-work with the current network
+management system implemented by a network operator, especially when the DTN is used
+for complicated network operation and maintenance (O&M).
+– It is required for DTN to be compatible with different manufacturers, different types and
+different standards of network element and communication equipment access.
+7.2.2 Scalability
+It is required for digital twin networks to support large scale networks, and support the networks'
+growth or shrink in scale. The detailed requirements on scalability are listed below.
+– It is required for DTN to have the capability to build a virtual twin network corresponding
+to a physical network on a large scale. Note that large scale increases the complexity of
+software design, data modelling and including other functionality. These should be
+specially considered when designing and building a DTN system.
+– It is required for DTN to have the capability to automatically adjust the scale of virtual twin
+networks according to the growth or shrink of physical networks.
+– It is required for DTN to have the capability to maintain stable performance (e.g., the speed
+of data storage, data access, data modelling; the latency of data collection and configuration
+updates, etc.) when the physical network is scaled up.
+– It is required that all DTN's functionalities (including data collection, data repository, data
+modelling, interfaces and management) can smoothly extend their capabilities with no
+effect (or as little as possible) on existing functions.
+– It is required for DTN to support the integration of network resources such as the gradual
+withdrawal of resources when the size of the physical network shrinks.
+– It is required for DTN's network digital twin modelling to have the capability to support the
+scalability among various physical network domains.
+7.2.3 Reliability
+A digital twin network should be highly stable and reliable to achieve trustworthy virtual-real
+interaction. The detailed requirements on reliability are listed below.
+– It is required for DTN to have the capability to check external input data and control
+instructions to prevent abnormal data and operation.
+– It is required for DTN to have strong robustness to deal with various abnormal situations. In
+case of manual operation error, illegal data, hardware equipment failure or other situations,
+the system should be able to correctly handle or avoid any given error.
+– It is required for DTN to have the capability to ensure reliable data collection, data storage
+and information exchange in the whole lifecycle of end-to-end network service. All data
+should be complete, consistent, accurate and secure.
+– It is required for DTN to have the capability to ensure the reliability of interaction between
+a network digital twin and a physical network.
+– It is required for DTN to have the capability to ensure reliable data modelling. The data
+models should be able to accurately describe the status of the physical network, to precisely
+predict the network performance trends and potential network faults, and to precisely make
+optimization decisions based on AI/ML algorithms.
+– It is recommended for DTN to have high availability. The system can operate for 7x24
+hours and the total outage time of the whole year cannot exceed 52 minutes, thus having a
+reliability level of 99.99%.
+– It is required for DTN to have the capability of backup on essential data and functionalities.
+– It is required for DTN to have the capability to restore previous checkpoints or important
+historical points.
+– It is required for DTN to have the capability of disaster recovery. When there is a major
+disaster, the DTN system can save the business according to the recovery plan, restore the
+key business system and ensure that the business is not be interrupted.
+7.2.4 Security
+A digital twin network is required to be secure enough to avoid all possible attacks. All kinds of
+defence plans after the network is attacked maliciously also need to be fully considered. This
+Recommendation describes below the security considerations and requirements according to the
+different types of threats in DTN.
+– It is required for DTN to guarantee data security. The confidentiality, integrity, and
+reliability of the sensitive data in the DTN network are required to be maintained
+throughout its life cycle including creation, storage, usage, sharing, archiving, destruction,
+etc. – It is required for DTN to guarantee network application layer security. The minimum
+access to the network digital twin and reliability of instructions are required in the network
+application layer.
+– It is required for DTN to guarantee network digital twin layer security. Unified data models
+and data repositories should be trusted. Network digital twin layers should have the ability
+to detect and defend against all kinds of attacks.
+– It is required for DTN to guarantee interactive security including the security of interactive
+interface, interactive process and interactive association.
+– It is required for DTN to guarantee network infrastructure security which requires the
+security of the data collector's software and hardware.
+7.2.5 Privacy
+It is required for a digital twin network to protect a customers' private data with the highest priority,
+complying with the laws of the country based on the locations of the network infrastructure or its
+digital twin.
+– It is required for DTN to protect the privacy of customers' data within the whole lifecycle of
+data, including creation, storage, usage, sharing, archiving, destruction, etc.
+– It is required for DTN to protect the privacy of customers' operations and usage.
+– It is required for DTN's network digital twin to support the privacy mechanism in physical
+networks.
+– It is required for DTN to have the capability to ensure the privacy of interaction between
+network digital twins and physical networks.
+– It is required for DTN to have the capability to protect the registration information of
+network elements and customers.
+– It is required for DTN to have the capability to protect the equipment information of
+network elements, including internet protocol (IP) address, media access control (MAC)
+address, resource usage information, etc.
+– It is required for DTN to have the capability to protect the privacy of operation data
+generated by the customers.
+– It is required for DTN to have the capability to protect the privacy of interaction data
+between network digital twins and physical networks.
+– It is required for DTN to have the capability to handle different levels of sensitive data with
+different privacy levels, which mean for different levels of resource consumption.
+7.2.6 Flexibility
+It is required for a digital twin network to be flexible to provide service on-demand according to
+various network applications. The detailed requirements are listed below.
+– It is required for DTN to have the capability to collect and store data on-demand flexibly.
+– It is required for DTN to have the capability to flexibly combine data models and serve
+network applications more flexibly.
+– It is required for DTN to have the capability to select a variety of cross domain resources on
+demand, to serve different network applications and to meet the needs of network
+applications in different network entities and different operation stages.
+– It is required for DTN to have the flexibility of information exchange and service
+cooperation between two or more digital twins.
+7.2.7 Visualization
+It is required for a digital twin network to have a user-friendly access management services for all
+kinds of elements such as data, model, and service by means of visualization. The detailed
+requirements are listed as below.
+– It is required for DTN to support the visualization of network equipment, topology,
+physical and virtual links, traffic, flows, etc.
+– It is required for DTN to support the visualization of the changes of the digital twin
+network.
+– It is required for DTN to have the capability to adjust the display granularity of all network
+elements and its topology.
+– It is required for DTN to have the capability to display the life-cycle of data models,
+including the instance creation, update, combination and destruction.
+– It is required for DTN to have the capability to display the process of network simulation
+and optimization based on various data models. This can help the customers to better
+understand the network and even mine valuable information hidden in the network.
+– It is required for DTN to have the capability to display the interaction between a network
+digital twin and a physical network.
+7.2.8 Synchronization
+It is required for a digital twin network to synchronize with the real network. It represents the
+synchronization between the state of a digital twin virtual entity and the state of a physical entity.
+The detailed requirements are listed below.
+– It is required for DTN to have the capability to represent the real state of the physical entity
+in real-time within the acceptable time delay range.
+– It is required for DTN to support the synchronization of control information execution from
+a virtual entity to a physical entity within an acceptable range.
+8 Architecture of a digital twin network
+Digital twin network is an expansion platform of network simulation, and the unique difference
+between a DTN architecture and a traditional network management system is the interactive virtual-
+real mapping to build closed-loop network automation. Through real-time data interaction between
+the physical network and its twin network, the digital twin network might help the network
+designers to achieve more simplification, automatic, resilient, and full life-cycle operation and
+maintenance. So far, there is no reference or standard architecture for digital twin networks in a
+network domain. In other industrial domains, [b-ISO 23247] is working on a standard of digital
+twin smart manufacturing framework, which includes four domains: physical manufacturing, data
+collection and device control, digital twin representation, and user domains.
+Referring the above digital twin architecture for industrial domains and combining it with the
+characteristics of communication networks, the digital twin network can be designed as a "Three-
+layer, three-domain, and double closed-loop" architecture, as shown in Figure 8-1. The three-layer
+refers to the physical network layer, network digital twin layer and network application layer of the
+digital twin network system; the three-domain refers to the data domain, model domain and
+management domain of the twin network layer, corresponding to the three subsystems of unified
+data repository, unified data models and digital twin entity management respectively; 'double
+closed-loop' refers to 'inner closed loop' emulation and optimization based on the unified data
+models in the twin network layer, and 'outer closed loop' control, feedback and optimization of
+network application are based on the three-layer architecture.
+Figure 8-1 – A reference architecture of a digital twin network
+1) Bottom layer is the physical network layer. All network elements present in the physical
+networks exchange massive network data and control with a network digital twin entity, via
+southbound interfaces. The physical network can either be a telecommunication operator
+network or a data centre network, campus network, industrial internet of things or other
+network types. The physical network can either be with a single network domain (e.g.,
+access network, transportation network, core network, IP carrier network, etc.), or with an
+end-to-end cross-domain network. In addition, the object physical network can either
+contain all infrastructures in the network or just contain specific infrastructure (e.g., radio
+spectrum resources, user plane function elements in the core network, etc.).
+2) Middle layer is the network digital twin layer which is the core of the DTN system. This
+layer includes three key subsystems: unified data repository, unified data models and digital
+twin entity management.
+a) Unified data repository: By collecting and updating the real-time operational data of
+various network entities through the southbound interface, a single source of truth for
+the network twin network is formed, which provides accurate and complete information
+for various network applications. The following are the main responsibilities of a
+unified data repository.
+– Data collection: To complete the extraction, transformation, loading, cleaning, and
+processing of network data, facilitate large-scale data to achieve efficient
+distributed storage.
+– Data storage: To store the data efficiently with multiple database techniques,
+according to the diversified characteristics of network data, which typically include
+three categories: user/service data, operational/status/log data, and network
+environment/configuration data.
+– Data service: To provide a variety of data services for the unified data model sub-
+system, including fast retrieval, concurrent conflict, batch service, unified interface,
+etc. – Data management: It includes data asset management, data safety management,
+data quality management and metadata management.
+As the cornerstone of the DTN for building the twin entity, the more complete and
+accurate data in the unified data repository, higher richness and accuracy of the unified
+data model subsystem can be achieved.
+b) Unified data models: For typical application scenarios, the unified data model's
+subsystem completes data-based modelling, provides model instances for various
+network applications and maximizes the agility and programmability of the network
+services. The model instance needs to complete the full emulation and verification of
+the prediction, scheduling, configuration, optimization and other objectives in the
+virtual twin network to ensure the effectiveness and reliability of the change controls
+before they are distributed to the physical network. The data models include two types:
+basic models and functional models.
+– Basic model refers to the network element model and network topology model of
+the network digital twin entity based on the basic configuration, environment
+information, operational state, link topology and other information of the network
+element, to complete the real-time accurate description of the physical network. In
+addition, basic models can help verify and emulate control changes and
+optimization solutions to ensure the effectiveness and reliability of the change
+control before it is sent to the entity network.
+– Functional model refers to various data models such as network analysis,
+emulation, diagnosis, prediction, assurance, etc., which are established by making
+full use of the network data in a unified data repository for specific application
+scenarios. The functional models can be constructed and expanded by multiple
+dimensions: by network type, there can be models serving for single network
+domain or multiple network domains; by function type, it can be divided into state
+monitoring, traffic analysis, security drill, fault diagnosis, quality assurance and
+other models; by generality, it can be divided into a general model and special-
+purpose model. Specifically, multiple dimensions can be combined to create a data
+model for a more specific application scenario. For example, the traffic balance
+optimization model can be created on the core switch of one campus network, and
+the model instance can be used to serve the corresponding network applications.
+As the ability source of DTN, with more types of data models, more powerful is the
+ability of the DTN to provide network application.
+c) Digital twin entity management completes the management function of the digital twin
+network, records the life-cycle of the entity, visualizes and controls various elements of
+the network digital twin, including topology management, model management and
+security management.
+– Topology management is based on basic data models to generate virtual twin
+topology corresponding to the physical network and to visualize the network in
+multi-dimension and multi-level.
+– Model management serves the creation, storage, and update of various data model
+instances, as well as the management of model combination and model-application
+association. At the same time, it can visually present the data loading, model
+simulation and verification process and the results of the model instances.
+– Security management is responsible for authentication, authorization, encryption
+and integrity protection related to life-cycle data security, model security and
+interactive security of the digital twin network.
+3) Top layer is the network application layer. Network applications input the requirements to
+the network digital twin layer through the northbound interfaces and deploy services
+through modelling instances. After full verification, the twin network layer sends the
+control updates to the physical entity network through the southbound interfaces. Network
+operation and maintenance and optimization, self-driving network, network innovation
+technology and other applications can be deployed rapidly with lower cost and higher
+efficiency and have a lesser impact on the running of a network business.
+9 Security consideration
+The IMT-2020 network is subject to security and privacy measures. Sensitive information should be
+protected as a high priority to avoid leaking and unauthorized access. Specific security
+considerations in this Recommendation for DTN are addressed in clause 7.
+Appendix I
+Use cases of a digital twin network
+(This appendix does not form an integral part of this Recommendation.)
+Digital twin network (DTN) can help enable closed-loop network management across the entire
+lifecycle, from digital deployment and simulation to visualized assessment, physical deployment,
+and continuous verification. In doing so, customers can achieve network-wide insights, precise
+planning, and rapid deployment in multiple areas, including networks, services, users and
+applications. Given below are the typical use cases in which DTN can bring benefits to the network.
+ Use Case 1: Complicated network operation and maintenance
+On an extremely large scale, traditional networks have begun to transform into a virtualized
+network and many new features have emerged, such as clouded resources, business on
+demand designs, resource orchestration, etc., which make network operation and
+maintenance face unprecedented pressure.
+DTN can combine data acquisition, big data processing and artificial intelligence modelling
+to realize the assessment of current status diagnosis of past problems and prediction of
+future trends, and give the results of the analysis, simulate various possibilities, and provide
+a more comprehensive decision support. This will help the network achieve predictive
+maintenance from the current protective maintenance.
+ Use Case 2: Improve the efficiency of network optimization
+Since there is no effective platform for simulation, traditional network optimization has to
+be tried on real networks directly with a long-term cost and high service impact running on
+real networks. This also greatly increases the network operator's OPEX (operating
+expense).
+With the help of DTN, the candidate solution of network optimization can be fully and
+quickly verified with lower costs and lower service impacts.
+ Use Case 3: Speed up network innovation
+Due to higher trial risk, a real network environment is normally unavailable to network
+researchers when they explore innovation techniques. Instead, researchers have to use
+offline simulation platforms. This greatly impacts the real effectiveness of the innovation
+and greatly slows down the speed of the network innovation. Moreover, risk-averse
+network operators are naturally reluctant to try new technologies due to higher failure risk
+as well as the higher failure cost.
+DTN can generate a virtual twin entity of the real network. This helps researchers explore
+network innovation (e.g., new network protocols, network AI/ML applications, etc.)
+efficiently, and helps network operators deploy new technologies quickly with lower risks.
+ Use Case 4: More comprehensive measurement
+As mentioned in the above section (efficient data collection), DTN can get massive data
+from a network infrastructure directly via various tools. However, network parameters (e.g.,
+flow complete time, end-to-end latency, path available bandwidth, etc.) cannot be
+monitored or measured directly from the physical network.
+DTN can help customers or network operators indirectly estimate or measure network
+parameters by analysing massive data from cross domains in a virtual platform, then get
+more comprehensive measurements on the network.
+ Use Case 5: Implementing intent-based networking (IBN)
+Future networks will possibly be intent-based where users can input their abstract 'intent' to
+the network, instead of detailed policies or configurations on the network devices. The key
+character of an intent-based networking (IBN) system is where the user's intent can be
+assured automatically via continuously adjusting the policies and validating the real-time
+situation. To lower the impact on the real network, several rounds of adjustment and
+validation should be better to be simulated on the DTN platform. This way, DTN can be an
+important enabler towards implementing the IBN system quickly and efficiently.
+ Use Case 6: Network security strategy drills
+With the DTN platform, network security strategy drills can be more efficient (such as
+hacker attacks, DDoS attacks, virus attacks, etc.), and helpful for developing defence
+policies in advance to ensure the security and reliability of the physical network.
+Bibliography
+[b-ITU-T Y.110] Recommendation ITU-T Y.101 (1998), Global Information Infrastructure
+principles and framework architecture.
+[b-ITU-T Y.3100] Recommendation ITU-T Y.3100 (2017), Terms and definitions for IMT-2020
+network.
+[b-ITU-R M.1645] Recommendation ITU-R M.1645 (2003), Framework and overall objectives of
+the future development of IMT-2000 and systems beyond IMT-2000.
+[b-ISO 23247] ISO 23247-2:2021, Automation systems and integration – Digital twin
+framework for manufacturing – Part 2: Reference architecture.
+<https://www.iso.org/standard/78743.html>
+[b-Tao] Tao, F., Zhang, H., Liu, A., et al. (2019), Digital Twin in Industry: State-of-
+the-Art. IEEE Transactions on Industrial Informatics, Vol. 15, No. 4, April,
+pp. 2405-2415.
+<https://ieeexplore.ieee.org/document/8477101>
+SERIES OF ITU-T RECOMMENDATIONS
+Series A Organization of the work of ITU-T
+Series D Tariff and accounting principles and international telecommunication/ICT economic and policy
+issues
+Series E Overall network operation, telephone service, service operation and human factors
+Series F Non-telephone telecommunication services
+Series G Transmission systems and media, digital systems and networks
+Series H Audiovisual and multimedia systems
+Series I Integrated services digital network
+Series J Cable networks and transmission of television, sound programme and other multimedia signals
+Series K Protection against interference
+Series L Environment and ICTs, climate change, e-waste, energy efficiency; construction, installation
+and protection of cables and other elements of outside plant
+Series M Telecommunication management, including TMN and network maintenance
+Series N Maintenance: international sound programme and television transmission circuits
+Series O Specifications of measuring equipment
+Series P Telephone transmission quality, telephone installations, local line networks
+Series Q Switching and signalling, and associated measurements and tests
+Series R Telegraph transmission
+Series S Telegraph services terminal equipment
+Series T Terminals for telematic services
+Series U Telegraph switching
+Series V Data communication over the telephone network
+Series X Data networks, open system communications and security
+Series Y Global information infrastructure, Internet protocol aspects, next-generation networks,
+Internet of Things and smart cities
+Series Z Languages and general software aspects for telecommunication systems
+Printed in Switzerland
+Geneva, 2022

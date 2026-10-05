@@ -1,0 +1,24 @@
+UAE: Bank, telecom provider ordered to pay Dh1.5 million to SIM swap fraud victim
+Scammers were able to steal the amount from the customer due to breaches in the security systems of both companies, according to court records
+PUBLISHED: Fri 13 May 2022, 10:33 AM UPDATED: Fri 13 May 2022, 10:26 PM
+Sherouk Zakaria
+The Dubai Court of Cassation ordered a UAE-based bank and telecommunications company to return Dh1.5 million that a client had lost in unauthorised transactions.
+In April 2019, the client, whose nationality and age were not disclosed, was surprised when some cheques bounced back due to insufficient bank credit.
+Flydubai Tel Aviv flight diversion: Why airlines deploy additional pilots on some routes
+The client, who owns three different accounts with the same bank, requested a four-month statement from January to April. He discovered that Dh1.5 million was moved to his inactive bank account before being transferred to different parties in several transactions.
+The court heard that the client was a victim of SIM swap fraud, which was attributed to breaches in the security systems of both the bank and the telecommunications provider.
+According to court records, the telecoms service provider issued a new SIM card to fraudsters in March 2019 under the client's registered mobile number without following identification protocol.
+Using the SIM card, fraudsters called the bank to request for a new ATM card. After receiving the the one-time password (OTP) on the registered number, fraudsters were able to activate the new card.
+“Although the caller did not answer most of the phone banking agent's security questions correctly, he was issued an ATM card,” stated the court records.
+With the ATM card, the money was transferred to the client's inactive bank account.
+Although the client had set a monthly limit for cash withdrawal and bank transfer, fraudsters were able to move Dh500,000 and Dh730,000 using separate transactions.
+“The bank holds responsibility for changing the client's bank card without taking into consideration the conditions of use of the account and the withdrawal limits which were pre-defined by our client during the opening of his account,” said Ghassan El Daye, Partner and Head of Litigation Middle East at Charles Russell Speechlys, who was representing the client.
+El Daye added: “The telecom company also made the error of changing the client's SIM card without identity verification and did not pay attention that the documents submitted by the fraudsters are not genuine.”
+The client also made the mistake of not taking action when his original SIM card was suspended for 14 days while the new one was being issued.
+However, investigations found that the major fault laid on both the bank and the telecoms provider whose failure to take the necessary security measures facilitated the theft.
+ALSO READ:
+The court found both parties collectively and jointly liable and ordered them to pay the client an amount of Dh1.5 million with court expenses.
+The final and irrevocable judgement issued by the Dubai Court of Cassation on March 2022 rejected the two appeals made by the bank and the telecoms provider.
+El Daye said the case is a precedent in the UAE.
+“This judgement will impact banks and telecommunications companies in UAE, as it is a significant example of how breaches in security systems can render such companies as liable,” he added.
+Dubai

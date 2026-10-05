@@ -1,0 +1,104 @@
+{
+  "note": "Generic institution roles with a UAE instance. Each verb lists its basis in the KB as verbatim quotes, checked by `python -m tabletop check-data`. A verb with an empty basis is an operational role the exercise assumes; the KB holds no VERIFIED UAE text that grants it, which the report states.",
+  "institutions": {
+    "NOC": {
+      "name": "the network operations centre of OpCo (a licensed mobile operator)",
+      "uae_instance": "a public telecommunications licensee under a TDRA licence",
+      "layers": ["uae-telecom", "uae-data", "uae-cyber"],
+      "retrieval_hint": "licensee obligations interruption of service restoration resilience customers personal data controller breach automated processing transfer",
+      "verbs": {
+        "notify": {"params": {"to": "REG | EMS | DPA | CSC | FIN | customers | data_subjects | interconnecting_operators", "content": "text"}, "description": "send a notification",
+                   "basis": [{"doc_id": "UAE-LIC-2-2026", "quote": "the Licensee shall inform the TDRA, any interconnecting Other Licensed Operators and relevant Customers as soon as possible"}]},
+        "rollback_change": {"params": {"change_id": "id"}, "description": "restore the configuration snapshot taken before a change",
+                            "basis": [{"doc_id": "UAE-LIC-2-2026", "quote": "to ensure effective operation, management, and restoration of its Telecommunications Network under emergency and contingency conditions"}]},
+        "wilt_sites": {"params": {"region": "R1 | R2 | R3"}, "description": "move a region's cell sites off a failed core onto a working core",
+                       "basis": [{"doc_id": "UAE-LIC-2-2026", "quote": "to ensure effective operation, management, and restoration of its Telecommunications Network under emergency and contingency conditions"}]},
+        "deny_export": {"params": {}, "description": "refuse a pending export of subscriber data",
+                        "basis": [{"doc_id": "UAE-PDPL", "quote": "Personal Data may be transferred to outside of the State in the following cases approved by the Bureau"}]},
+        "export_minimised": {"params": {"drop_fields": ["msisdn", "imsi"]}, "description": "send the pending export with subscriber identifiers removed",
+                             "basis": [{"doc_id": "UAE-PDPL", "quote": "Personal Data may be transferred to outside of the State in the following cases approved by the Bureau"}]},
+        "preserve_logs": {"params": {}, "description": "preserve logs and evidence of an incident",
+                          "basis": [{"doc_id": "UAE-PDPL", "quote": "Documents of the violation and corrective actions taken by it."}]},
+        "rollback_model": {"params": {"version": "v1"}, "description": "return a deployed model to an earlier version", "basis": []},
+        "set_threshold": {"params": {"value": "number"}, "description": "change the fraud model's blocking threshold", "basis": []},
+        "enable_review_queue": {"params": {}, "description": "send borderline automated refusals to human review",
+                                "basis": [{"doc_id": "UAE-PDPL", "quote": "The Controller shall include the human element in reviewing automated processing decisions at the request of the Data Subject."}]},
+        "alt_auth_route": {"params": {"cohort": "bank_flagged"}, "description": "offer a non-SMS confirmation route to a cohort of customers", "basis": []},
+        "disable_tool": {"params": {}, "description": "switch off the chatbot's account-lookup tool",
+                         "basis": [{"doc_id": "UAE-PDPL", "quote": "The Controller and the Processor shall develop and take appropriate technical and regulatory measures to ensure the highest standard of information security"}]},
+        "restore_scope": {"params": {"scope": "own_account"}, "description": "re-enable the chatbot tool with retrieval limited to the caller's own account",
+                          "basis": [{"doc_id": "UAE-PDPL", "quote": "The Controller and the Processor shall develop and take appropriate technical and regulatory measures to ensure the highest standard of information security"}]}
+      }
+    },
+    "REG": {
+      "name": "the telecommunications regulator",
+      "uae_instance": "TDRA (Telecommunications and Digital Government Regulatory Authority)",
+      "layers": ["uae-telecom", "uae-ai", "uae-data"],
+      "retrieval_hint": "Authority TDRA powers licensee regulations directives information interruption of service consumer protection",
+      "verbs": {
+        "notify": {"params": {"to": "NOC | EMS | DPA | CSC | FIN | public", "content": "text"}, "description": "send a notification", "basis": []},
+        "open_incident": {"params": {"topic": "text"}, "description": "open a regulatory incident record",
+                          "basis": [{"doc_id": "UAE-TEL-LAW", "quote": "The Authority is responsible for overseeing the telecommunications sector and Licensees"}]},
+        "request_report": {"params": {"from": "NOC", "topic": "text"}, "description": "require information or a report from a licensee",
+                           "basis": [{"doc_id": "UAE-TEL-LAW", "quote": "Requesting any information that is necessary for TDRA activities."}]},
+        "request_audit": {"params": {"of": "NOC", "topic": "text"}, "description": "require the licensee's testing and change records",
+                          "basis": [{"doc_id": "UAE-LIC-2-2026", "quote": "The Licensee shall maintain adequate records of such testing and shall provide the same to the TDRA upon request."}]},
+        "issue_direction": {"params": {"to": "NOC", "direction": "text"}, "description": "direct a licensee on resilience or continuity",
+                            "basis": [{"doc_id": "UAE-LIC-2-2026", "quote": "The Licensee shall comply with any directives, guidelines, or technical requirements issued by the TDRA from time to time in relation to network resilience"}]},
+        "public_statement": {"params": {"content": "text"}, "description": "make a public statement", "basis": []}
+      }
+    },
+    "DPA": {
+      "name": "the data protection authority",
+      "uae_instance": "the UAE Data Office ('the Bureau' in the PDPL), being merged into the Federal Authority for AI and Data announced 2026-06-14",
+      "layers": ["uae-data", "uae-ai"],
+      "retrieval_hint": "Bureau controller processor personal data breach notification complaints automated processing cross-border transfer",
+      "verbs": {
+        "notify": {"params": {"to": "NOC | REG | CSC | FIN | public", "content": "text"}, "description": "send a notification", "basis": []},
+        "request_breach_report": {"params": {"from": "NOC"}, "description": "require the controller's breach notification and evidence",
+                                  "basis": [{"doc_id": "UAE-PDPL", "quote": "the Bureau shall verify the reasons for the violation to ensure the integrity of the security measures taken"}]},
+        "open_investigation": {"params": {"of": "NOC"}, "description": "examine a complaint",
+                               "basis": [{"doc_id": "UAE-PDPL", "quote": "shall examine such complaints in coordination with the Controller and the Processor"}]},
+        "request_human_review_record": {"params": {"from": "NOC"}, "description": "require records of human review of automated decisions",
+                                        "basis": [{"doc_id": "UAE-PDPL", "quote": "The Controller shall include the human element in reviewing automated processing decisions at the request of the Data Subject."}]},
+        "assess_transfer": {"params": {"from": "NOC"}, "description": "assess the legal basis of a cross-border transfer",
+                            "basis": [{"doc_id": "UAE-PDPL", "quote": "Personal Data may be transferred to outside of the State in the following cases approved by the Bureau"}]}
+      }
+    },
+    "CSC": {
+      "name": "the national cyber security authority",
+      "uae_instance": "the UAE Cyber Security Council",
+      "layers": ["uae-cyber", "uae-ai", "uae-telecom"],
+      "retrieval_hint": "cybersecurity incident response advisories monitoring critical information infrastructure AI security",
+      "verbs": {
+        "notify": {"params": {"to": "NOC | REG | DPA | EMS | FIN", "content": "text"}, "description": "send a notification", "basis": []},
+        "issue_advisory": {"params": {"audience": "operators | public", "content": "text"}, "description": "publish a security advisory",
+                           "basis": [{"doc_id": "UAE-CYBER-STRATEGY-2019", "quote": "Advisories to protect against threats"}]},
+        "request_ioc": {"params": {"from": "NOC"}, "description": "request indicators of compromise and logs",
+                        "basis": [{"doc_id": "UAE-CYBER-STRATEGY-2019", "quote": "Cross-Agency Intelligence Sharing"}]}
+      }
+    },
+    "EMS": {
+      "name": "the emergency services and crisis management authority",
+      "uae_instance": "NCEMA and the 999 emergency call service",
+      "layers": ["uae-continuity", "uae-telecom"],
+      "retrieval_hint": "emergency calls emergency numbers business continuity crisis",
+      "verbs": {
+        "notify": {"params": {"to": "NOC | REG | CSC | public", "content": "text"}, "description": "send a notification", "basis": []},
+        "activate_alt_channels": {"params": {"region": "R1 | R2 | R3"}, "description": "activate alternative channels for emergency help (radio, police patrols, SMS)", "basis": []},
+        "public_alert": {"params": {"region": "R1 | R2 | R3", "content": "text"}, "description": "issue a public alert", "basis": []}
+      }
+    },
+    "FIN": {
+      "name": "the central bank",
+      "uae_instance": "the Central Bank of the UAE (CBUAE)",
+      "layers": ["uae-data", "uae-telecom"],
+      "retrieval_hint": "banking one-time passcode authentication customers personal banking data",
+      "verbs": {
+        "notify": {"params": {"to": "NOC | REG | DPA", "content": "text"}, "description": "send a notification", "basis": []},
+        "instruct_banks": {"params": {"content": "text"}, "description": "instruct licensed banks", "basis": []},
+        "request_info": {"params": {"from": "NOC | REG", "topic": "text"}, "description": "request information", "basis": []}
+      }
+    }
+  }
+}

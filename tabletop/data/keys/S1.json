@@ -1,0 +1,33 @@
+{
+  "scenario": "S1",
+  "frozen": "2026-10-05, before the first live run",
+  "actions": [
+    {"id": "K1-A1", "agent": "NOC", "verbs": ["rollback_change", "wilt_sites"]},
+    {"id": "K1-A2", "agent": "NOC", "verbs": ["notify"], "params": {"to": ["REG"]}},
+    {"id": "K1-A3", "agent": "NOC", "verbs": ["notify"], "params": {"to": ["EMS"]}},
+    {"id": "K1-A4", "agent": "NOC", "verbs": ["deny_export", "export_minimised"]},
+    {"id": "K1-A5", "agent": "REG", "verbs": ["request_report", "request_audit", "open_incident"]},
+    {"id": "K1-A6", "agent": "EMS", "verbs": ["activate_alt_channels", "public_alert"]},
+    {"id": "K1-A7", "agent": "NOC", "verbs": ["notify"], "params": {"to": ["customers"]}}
+  ],
+  "obligations": [
+    {"id": "K1-O1", "agents": ["NOC", "REG"], "phrases": ["unplanned interruption"]},
+    {"id": "K1-O2", "agents": ["NOC"], "phrases": ["restoration of its telecommunications network"]},
+    {"id": "K1-O3", "agents": ["NOC", "DPA", "CSC"], "phrases": ["transferred to outside of the state", "transferred to outside the state"]}
+  ],
+  "gaps": [
+    {"id": "K1-G1", "description": "No fixed outage-notification deadline (licence 12.9.2 'as soon as possible')", "types": ["no_deadline"],
+     "uae_phrases": ["as soon as possible as to the reason"], "global_docs": ["CA-CRTC-2025-225", "CA-CRTC-2025-225-BG", "US-CFR-47-4-9", "EU-NIS2"], "duty": "CC-NOTIFY-REG"},
+    {"id": "K1-G2", "description": "No duty to notify emergency services directly", "types": ["no_rule", "no_owner"],
+     "uae_phrases": ["free access to the emergency call service numbers"], "global_docs": ["CA-CRTC-2025-225", "US-CFR-47-4-9", "AU-BEAN-REVIEW-RESPONSE"], "duty": "D-NOTIFY-EMS"},
+    {"id": "K1-G3", "description": "No control on automated or AI-driven network changes (no sandbox or human approval duty)", "types": ["no_rule"],
+     "uae_phrases": ["resilience, redundancy and contingency arrangements"], "global_docs": ["ITU-T-Y3172", "ITU-T-Y3181", "ITU-T-Y3173", "ITU-T-Y3177", "3GPP-TS-28105", "EU-AIA", "EU-AIA-OMNIBUS", "US-FCC-ATT-2024-REPORT"]},
+    {"id": "K1-G4", "description": "Failure testing exists but not end-to-end emergency-call testing", "types": ["no_rule"],
+     "uae_phrases": ["simulation of failures affecting international connectivity"], "global_docs": ["AU-BEAN-REVIEW-RESPONSE", "AU-ACMA-TELSTRA-2024"]},
+    {"id": "K1-G5", "description": "No incident-response route for cross-border transfer of subscriber logs", "types": ["no_rule", "conflict"],
+     "uae_phrases": ["transferred to outside of the state", "transferred to outside the state"], "global_docs": ["EU-GDPR", "US-FCC-DA-24-892"], "duty": "D-TRANSFER"},
+    {"id": "K1-G6", "description": "No cross-agency protocol between operator, regulator and emergency services", "types": ["no_owner", "no_rule"],
+     "uae_phrases": ["responsible for developing a telecom business continuity plan"], "global_docs": ["CA-ISED-MOU-2022", "AU-BEAN-REVIEW-RESPONSE"]}
+  ],
+  "abstention": {"inject": "S1-I7", "agent": "REG"}
+}

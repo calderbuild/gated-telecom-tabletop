@@ -1,0 +1,1070 @@
+I n t e r n a t i o n a l T e l e c o m m u n i c a t i o n U n i o n
+ITU-T Y.3173
+TELECOMMUNICATION (02/2020)
+STANDARDIZATION SECTOR
+OF ITU
+SERIES Y: GLOBAL INFORMATION
+INFRASTRUCTURE, INTERNET PROTOCOL ASPECTS,
+NEXT-GENERATION NETWORKS, INTERNET OF
+THINGS AND SMART CITIES
+Future networks
+Framework for evaluating intelligence levels of
+future networks including IMT-2020
+Recommendation ITU-T Y.3173
+ITU-T Y-SERIES RECOMMENDATIONS
+GLOBAL INFORMATION INFRASTRUCTURE, INTERNET PROTOCOL ASPECTS, NEXT-GENERATION
+NETWORKS, INTERNET OF THINGS AND SMART CITIES
+GLOBAL INFORMATION INFRASTRUCTURE
+General Y.100–Y.199
+Services, applications and middleware Y.200–Y.299
+Network aspects Y.300–Y.399
+Interfaces and protocols Y.400–Y.499
+Numbering, addressing and naming Y.500–Y.599
+Operation, administration and maintenance Y.600–Y.699
+Security Y.700–Y.799
+Performances Y.800–Y.899
+INTERNET PROTOCOL ASPECTS
+General Y.1000–Y.1099
+Services and applications Y.1100–Y.1199
+Architecture, access, network capabilities and resource management Y.1200–Y.1299
+Transport Y.1300–Y.1399
+Interworking Y.1400–Y.1499
+Quality of service and network performance Y.1500–Y.1599
+Signalling Y.1600–Y.1699
+Operation, administration and maintenance Y.1700–Y.1799
+Charging Y.1800–Y.1899
+IPTV over NGN Y.1900–Y.1999
+NEXT GENERATION NETWORKS
+Frameworks and functional architecture models Y.2000–Y.2099
+Quality of Service and performance Y.2100–Y.2199
+Service aspects: Service capabilities and service architecture Y.2200–Y.2249
+Service aspects: Interoperability of services and networks in NGN Y.2250–Y.2299
+Enhancements to NGN Y.2300–Y.2399
+Network management Y.2400–Y.2499
+Network control architectures and protocols Y.2500–Y.2599
+Packet-based Networks Y.2600–Y.2699
+Security Y.2700–Y.2799
+Generalized mobility Y.2800–Y.2899
+Carrier grade open environment Y.2900–Y.2999
+FUTURE NETWORKS Y.3000–Y.3499
+CLOUD COMPUTING Y.3500–Y.3999
+INTERNET OF THINGS AND SMART CITIES AND COMMUNITIES
+General Y.4000–Y.4049
+Definitions and terminologies Y.4050–Y.4099
+Requirements and use cases Y.4100–Y.4249
+Infrastructure, connectivity and networks Y.4250–Y.4399
+Frameworks, architectures and protocols Y.4400–Y.4549
+Services, applications, computation and data processing Y.4550–Y.4699
+Management, control and performance Y.4700–Y.4799
+Identification and security Y.4800–Y.4899
+Evaluation and assessment Y.4900–Y.4999
+For further details, please refer to the list of ITU-T Recommendations.
+Recommendation ITU-T Y.3173
+Framework for evaluating intelligence levels of future
+networks including IMT-2020
+Summary
+Recommendation ITU-T Y.3173 specifies a framework for evaluating the intelligence of future
+networks including IMT-2020 and a method for evaluating the intelligence levels of future networks
+including IMT-2020 is introduced. An architectural view for evaluating network intelligence levels
+is also described according to the architectural framework specified in Recommendation
+ITU-T Y.3172.
+In addition, the relationship between the framework described in this Recommendation and
+corresponding work in other standards or industry bodies, as well as the application of the method
+for evaluating network intelligence levels on several representative use cases are also provided.
+History
+Edition Recommendation Approval Study Group Unique ID*
+1.0 ITU-T Y.3173 2020-02-06 13 11.1002/1000/14133
+Keywords
+Architecture, evaluation, IMT-2020 networks, intelligence level, network intelligence.
+* To access the Recommendation, type the URL http://handle.itu.int/ in the address field of your web
+browser, followed by the Recommendation's unique ID. For example, http://handle.itu.int/11.1002/1000/11
+830-en.
+Rec. ITU-T Y.3173 (02/2020) i
+FOREWORD
+The International Telecommunication Union (ITU) is the United Nations specialized agency in the field of
+telecommunications, information and communication technologies (ICTs). The ITU Telecommunication
+Standardization Sector (ITU-T) is a permanent organ of ITU. ITU-T is responsible for studying technical,
+operating and tariff questions and issuing Recommendations on them with a view to standardizing
+telecommunications on a worldwide basis.
+The World Telecommunication Standardization Assembly (WTSA), which meets every four years,
+establishes the topics for study by the ITU-T study groups which, in turn, produce Recommendations on
+these topics.
+The approval of ITU-T Recommendations is covered by the procedure laid down in WTSA Resolution 1.
+In some areas of information technology which fall within ITU-T's purview, the necessary standards are
+prepared on a collaborative basis with ISO and IEC.
+NOTE
+In this Recommendation, the expression "Administration" is used for conciseness to indicate both a
+telecommunication administration and a recognized operating agency.
+Compliance with this Recommendation is voluntary. However, the Recommendation may contain certain
+mandatory provisions (to ensure, e.g., interoperability or applicability) and compliance with the
+Recommendation is achieved when all of these mandatory provisions are met. The words "shall" or some
+other obligatory language such as "must" and the negative equivalents are used to express requirements. The
+use of such words does not suggest that compliance with the Recommendation is required of any party.
+INTELLECTUAL PROPERTY RIGHTS
+ITU draws attention to the possibility that the practice or implementation of this Recommendation may
+involve the use of a claimed Intellectual Property Right. ITU takes no position concerning the evidence,
+validity or applicability of claimed Intellectual Property Rights, whether asserted by ITU members or others
+outside of the Recommendation development process.
+As of the date of approval of this Recommendation, ITU had not received notice of intellectual property,
+protected by patents, which may be required to implement this Recommendation. However, implementers
+are cautioned that this may not represent the latest information and are therefore strongly urged to consult the
+TSB patent database at http://www.itu.int/ITU-T/ipr/.
+© ITU 2020
+All rights reserved. No part of this publication may be reproduced, by any means whatsoever, without the
+prior written permission of ITU.
+ii Rec. ITU-T Y.3173 (02/2020)
+Table of Contents
+Page
+6.1 Challenges in operation, administration and maintenance of IMT-2020
+Appendix II – Application of the method for evaluating network intelligence level on
+Rec. ITU-T Y.3173 (02/2020) iii
+Recommendation ITU-T Y.3173
+Framework for evaluating intelligence levels of future
+networks including IMT-2020
+1 Scope
+This Recommendation describes a framework for evaluating the intelligence levels of future
+networks including IMT-2020. This includes:
+– Development trend of network intelligence;
+– Methods for evaluating network intelligence levels;
+– Architectural view for evaluating network intelligence levels.
+The appendices describe the relationship between the framework described in this Recommendation
+and corresponding work in other standards or industry bodies, as well as the application of the
+method for evaluating network intelligence levels on representative use cases.
+2 References
+The following ITU-T Recommendations and other references contain provisions which, through
+reference in this text, constitute provisions of this Recommendation. At the time of publication, the
+editions indicated were valid. All Recommendations and other references are subject to revision;
+users of this Recommendation are therefore encouraged to investigate the possibility of applying the
+most recent edition of the Recommendations and other references listed below. A list of the
+currently valid ITU-T Recommendations is regularly published. The reference to a document within
+this Recommendation does not give it, as a stand-alone document, the status of a Recommendation.
+[ITU-T Y.3172] Recommendation ITU-T Y.3172 (2019), Architectural framework for machine
+learning in future networks including IMT-2020.
+3 Definitions
+3.1 Terms defined elsewhere
+This Recommendation uses the following terms defined elsewhere:
+3.1.1 machine learning pipeline [ITU-T Y.3172]: A set of logical nodes, each with specific
+functionalities, that can be combined to form a machine learning application in a telecommunication
+network.
+NOTE – The nodes of a machine learning pipeline are entities that are managed in a standard manner and
+can be hosted in a variety of network functions [b-ITU-T Y.3100].
+3.1.2 machine learning function orchestrator (MLFO) [ITU-T Y.3172]: A logical node with
+functionalities that manage and orchestrate the nodes in a machine learning pipeline.
+3.2 Terms defined in this Recommendation
+This Recommendation defines the following term:
+3.2.1 network intelligence level: Level of application of automation capabilities including those
+enabled by the integration of artificial intelligence techniques in the network.
+4 Abbreviations and acronyms
+This Recommendation uses the following abbreviations and acronyms:
+AI Artificial Intelligence
+API Application Programming Interface
+CM Configuration Management
+E2E End to End
+eMBB Enhanced Mobile Broadband
+ENI Experiential Networked Intelligence
+ETSI European Telecommunications Standards Institute
+GSM Global System for Mobile Communications
+GSMA GSM Association
+IoT Internet of Things
+INR Interference and Noise
+ISG Industry Specification Group
+KPI Key Performance Indicator
+MDT Minimization of Drive Tests
+MIMO Multiple Input Multiple Output
+ML Machine Learning
+MLFO Machine Learning Function Orchestrator
+mMTC Massive Machine Type Communications
+NF Network Function
+NHTSA National Highway Traffic Safety Administration
+OAM Operation Administration and Maintenance
+PM Performance Management
+RCA Root Cause Analysis
+RSRP Reference Signal Received Power
+SAE Society of Automotive Engineers
+SRC Source
+TMF TM Forum
+UE User Equipment
+URLLC Ultra-Reliable and Low Latency Communications
+5 Conventions
+In this Recommendation:
+The keywords "is required to" indicate a requirement which must be strictly followed and from
+which no deviation is permitted, if conformance to this Recommendation is to be claimed.
+The keywords "is recommended" indicate a requirement which is recommended but which is not
+absolutely required. Thus, this requirement need not be present to claim conformance.
+The keywords "can optionally" indicate an optional requirement which is permissible, without
+implying any sense of being recommended. This term is not intended to imply that the vendor's
+implementation must provide the option, and the feature can be optionally enabled by the network
+operator/service provider. Rather, it means the vendor may optionally provide the feature and still
+claim conformance with this Recommendation.
+6 Introduction
+6.1 Challenges in operation, administration and maintenance of IMT-2020 networks
+Along with the network evolution to IMT-2020, key performance indicators (KPIs) such as the
+transmission rate, transmission delay and connection scale are constantly being improved.
+Application scenarios are becoming increasingly abundant, and the performance and flexibility of
+networks are being improved. In addition, more and more network functions are deployed on cloud
+computing platforms. This evolution enables flexible network orchestration, automated deployment,
+improvement of resource utilization, and provisioning of network slicing services for verticals.
+However, even though IMT-2020 brings a qualitative leap in performance and flexibility, the
+complexity of networks is increasing significantly. This brings unprecedented challenges to the
+operation, administration and maintenance (OAM) of IMT-2020 networks such as:
+– The network architecture is more flexible, the network deployment scenarios are
+diversified, and the user requirements are personalized, thus making networks more
+dynamic and more complex to manage.
+– The introduction of diversified terminals, such as in Internet of things (IoT), has led to
+growth in the number of user equipment (UE) by orders of magnitude, thus the cost of
+network management tends to increase.
+– The use of manual decision-making mechanisms makes it difficult to quickly understand
+any change in network conditions and to quickly adapt the network to such changes.
+– Mechanisms for utilizing and analysing the large amount of network data generated daily
+need to be deployed and operated in the networks, in order to produce value.
+– The extensive use of network connectivity among UEs and things leads to high
+requirements in terms of security and the protection of data being exchanged through
+networks.
+– The decoupling of software from the hardware in networks requires efficient management
+solutions to realize high-frequency updates of software being used in these networks.
+– Insufficient openness of network capabilities limits the efficient utilization of network
+resources and the enhancement of user value.
+– Given that service-based architecture is a key enabler for IMT-2020 networks, the evolution
+of traditional network management towards a service-based intelligent network
+management approach needs to be addressed.
+To address the above-mentioned challenges, the introduction of automation mechanisms relying on
+artificial intelligence (AI) including machine learning (ML) techniques is a key aspect to be
+considered in network management systems. In order to solve the current efficiency and capability
+problems of networks, introducing network intelligence is seen as a promising approach, in
+particular:
+– To achieve network self-maintenance, automatic optimization, intelligent operation and
+high-efficiency OAM, AI including ML and other technologies for automation are
+introduced.
+– To derive value from mining of massive network data and to address security assurance
+issues, AI (including ML) assisted data collection and analysis can further enhance the big
+data analysis capability, enable timely identification of security risks, and strengthen
+security measures.
+– To address the problem of insufficient network openness, combining AI (including ML)
+techniques and virtualization technologies can improve the management capabilities and
+efficient use of network resources, shorten the implementation cycle of new technology
+applications, and accelerate its iteration.
+– To help in the evolution towards intelligent network management, an approach to enable
+the use of AI including ML in networks is needed. [ITU-T Y.3172] describes an
+architectural framework that supports such approach, including for intelligent network
+management.
+– Network intelligence levels may be used for specifying liability aspects in contractual
+agreements (e.g., between network operators and network equipment suppliers). For
+example, costs for network support contracts or insurance costs for network equipment may
+be determined based on network intelligence levels.
+6.2 Significance of evaluating network intelligence levels
+As explained in clause 6.1, AI (including ML) is considered to be a promising technology to cope
+with the increasing complexity and to improve the performance of future networks including
+IMT-2020. As networks become more and more intelligent, it is important to adopt a standard
+method for evaluating network intelligence levels.
+A standard method for evaluating network intelligence levels has the following implications:
+– It provides an evaluation basis for measuring the intelligence levels of a network and of its
+components.
+– It helps the industry to reach a consensual and unified understanding of network
+intelligence concepts.
+– It provides a reference for industry supervisors to formulate relevant strategies and
+development planning of future networks including IMT-2020 in various countries.
+– It provides a decision mechanism to operators, equipment vendors and other network
+industry participants for planning of network technology features and products' roadmaps.
+7 Methods for evaluating network intelligence levels
+7.1 Dimensions for evaluating network intelligence levels
+In order to evaluate network intelligence levels, this Recommendation makes use of the following
+five widely applicable dimensions:
+a) Demand mapping: This dimension corresponds to the process of converting configuration
+or the adjustment of requirements from operation and maintenance teams into specific
+instructions that network components can understand and execute.
+NOTE – Examples of network component are network elements and network functions. Network
+components are typically used in network subsystems.
+b) Data collection: This dimension relates to the process of collecting network data required
+by the various analysis processes.
+c) Analysis: This dimension refers to the process of performing an analysis (including data
+pre-processing) of collected networked data:
+– to obtain context information of the network (perception analysis), e.g., current
+operating environment, services, users and other information,
+– to further predict based on historical data, the future trends in the change of the network
+context information and make inference for decision (prediction analysis).
+d) Decision: This dimension corresponds to the process that takes decisions about network
+and/or service configuration based on the results of the analysis process.
+e) Action implementation: This dimension is related to the process of executing
+corresponding configuration triggered by the decision process.
+Two main areas used for evaluating network intelligence levels are workflows (related to the whole
+lifecycle of networks) and network subsystems (different classes of network components), since
+these are mainly involved in the operation and deployment of networks.
+NOTE 1 – The method used by the Society of Automotive Engineers (SAE) for describing automatic driving
+levels provides a good reference for elaborating a method for evaluating network intelligence levels.
+However, as described in Appendix I, the evaluation method for network intelligence levels is much more
+complicated compared to the one used for automatic driving levels.
+The overall network intelligence level of a whole network is a comprehensive reflection of
+intelligence levels of the individual workflows and subsystems.
+As shown in Figure 7-1, the five dimensions identified in clause 7.1 are applicable for evaluating
+the network intelligence levels from both the workflow and subsystem perspectives. Figure 7-1
+illustrates examples of possible workflows and subsystems to be considered for evaluating network
+intelligence levels.
+Figure 7-1 – Dimensions for evaluating network intelligence levels
+The intelligence levels of individual workflows and subsystems can be determined based on the
+above dimensions. Only when the intelligence levels of each subsystem and workflow reach or
+exceed a certain level, then the intelligence level of the whole network can be regarded as reaching
+the corresponding level.
+The workflows and the subsystems may vary from use case to use case. Hence, network intelligence
+capability levels when measured along a dimension may differ for each use case. Correspondingly,
+the intelligence levels of the network can vary depending on the use cases being considered for
+evaluation.
+NOTE 2 – Appendix II describes various example use cases and their corresponding evaluation of
+network intelligence levels.
+7.2 Basic method for evaluating network intelligence levels
+Based on the dimensions for the evaluation of network intelligence levels described in clause 7.1,
+the basic method for network intelligence evaluation is described in two steps using Tables 7-1 and
+7-2.
+• Step 1: Evaluating the network intelligence capability level of each dimension
+Network intelligence capability levels are identified by the following increasing order of
+intelligence:
+a) Human;
+b) Human and System;
+c) System.
+Table 7-1 gives the conditions under which each dimension can be classified into a given network
+intelligence capability level. In a use case scenario, this table can be used to determine the network
+intelligence capability level for each of the five dimensions, the resulting determination being
+provided as an input to Step 2.
+Table 7-1 – Conditions for classifying dimensions into network intelligence capability levels
+Dimensions Network intelligence capability level
+Human Human and System System
+Action Action implementation Action implementation Action implementation
+implementation process is performed fully process is performed process is performed
+by a human being. automatically by the automatically by the
+system in at least one use system in all the use case
+case scenario for the given scenarios for the given use
+use case. case.
+Data collection Data collection process is Data collection process is Data collection process is
+performed fully by a performed automatically performed automatically
+human being. by the system according by the system according
+to data collecting rules to system defined data
+defined by a human being. collecting rules.
+Analysis Analysis process is Analysis process is Analysis process is
+performed fully by a performed automatically performed automatically
+human being. by the system according by the system according
+to rules defined by a to system defined/learned
+human being. rules.
+Decision Decision process is Decision process is Decision process is
+performed fully by a performed automatically performed automatically
+human being. by the system according by the system according
+to rules defined by a to system defined/learned
+human being. rules.
+Demand mapping Demand mapping process Demand mapping process Demand mapping process
+is performed fully by a is performed is performed
+human being. automatically by the automatically by the
+system according to a system according to the
+template defined by a intention of the use case.
+human being.
+• Step 2: Determining the overall network intelligence level
+Table 7-2 provides a description of the network intelligence levels (L0 to L5).
+Table 7-2 – Network intelligence levels
+Network Dimensions
+intelligence level
+Action Data Analysis Decision Demand
+implementation collection mapping
+L0 Manual Human Human Human Human Human
+network
+operation
+L1 Assisted Human and Human and Human Human Human
+network System System
+operation
+L2 Preliminary System Human and Human and Human Human
+intelligence System System
+L3 Intermediate System System Human and Human and Human
+intelligence System System
+L4 Advanced System System System System Human and
+intelligence System
+L5 Full System System System System System
+intelligence
+NOTE 1 – For each network intelligence level, the decision process has to support intervention by human
+being, i.e., decisions and execution instructions provided by a human being have the highest authority.
+NOTE 2 – It is to be noted that this table may be used to only determine the network intelligence level for
+each dimension (and not the overall network intelligence level).
+For each dimension, each level (L0-L5) is characterized by a required network capability level (e.g.,
+for the L3 level, the analysis dimension should be at the human and system network capability
+level).
+The per-dimension network intelligence capability levels obtained from Table 7-1 are used to
+determine the overall network intelligence level for a given use case.
+The overall network intelligence level is obtained as follows:
+• Determining the per-dimension network intelligence level
+– For a given dimension, the network intelligence level is determined by selecting the
+highest network intelligence level among the multiple network intelligence levels (L0
+to L5) identified in Table 7-2 that match the network intelligence capability level
+evaluated for that dimension according to Step 1.
+• Determining the overall network intelligence level
+– The overall network intelligence level is then determined by selecting the minimum
+per-dimension network intelligence level across all dimensions.
+7.3 Requirements for evaluating network intelligence levels
+ML-Int-level-001: The evaluation of network intelligence levels is required to be performed on the
+following dimensions, as specified in clause 7.1: Action implementation, data collection, analysis,
+decision and demand mapping.
+ML-Int-level-002: For a given dimension, the evaluation of the corresponding network intelligence
+level is required to result in one of the following network intelligence capability levels, as specified
+in Table 7-1:
+• Human;
+• Human and System;
+• System.
+ML-Int-level-003: The network intelligence level evaluated for a given use case is required to
+correspond to one of the following levels, as specified in Table 7-2:
+• L0: Manual network operation;
+• L1: Assisted network operation;
+• L2: Preliminary intelligence;
+• L3: Intermediate intelligence;
+• L4: Advanced intelligence;
+• L5: Full intelligence.
+ML-Int-level-004: For a given dimension, the per-dimension network intelligence level is required
+to be determined by selecting the highest network intelligence level among the multiple network
+intelligence levels (L0 to L5) that match the network intelligence capability level evaluated for that
+dimension as per ML-Int-level-002.ML-Int-level-005: For a given use case, the overall network
+intelligence level is required to be determined by selecting the minimum level across all
+per-dimension network intelligence levels determined as per ML-Int-level-004.
+8 Architectural view on network intelligence level evaluation
+This clause provides an architectural view for evaluating network intelligence levels. This includes:
+– The mapping between the architectural requirements defined in [ITU-T Y.3172] and the
+evaluation method described in clause 7;
+– An architectural framework for network intelligence level evaluation;
+– A key architectural scenario for evaluating network intelligence levels.
+8.1 Mapping of architectural requirements
+The following requirements from [ITU-T Y.3172] already identify a need to monitor and evaluate
+network intelligence levels along with the functionalities provided by the network:
+– REQ-ML-MNG-004 provides requirements for the management of all the ML
+functionalities in the network.
+– REQ-ML-DEP-004 provides requirements for dynamic plug-in of new sub-systems and
+workflows (as source and sink).
+NOTE – Appendix II.3 describes the application of the method for evaluating network intelligence level on
+an alarm root cause analysis (RCA) and fault recovery. The upgrade of an existing RCA implementation may
+include better intelligence functions and hence may increase the intelligence level of that workflow after the
+upgrade (e.g., data collection for RCA may now be fully automated in the upgraded implementation). This is
+an example of a potential change in the network which may necessitate monitoring corresponding changes in
+the network intelligence capability levels and evaluate the network intelligence level accordingly.
+8.2 Architectural framework for network intelligence level evaluation
+In this clause, an architectural framework for evaluating the network intelligence levels of
+components and workflows in a network is described taking into account the high-level
+architectural framework for machine learning in future networks including IMT-2020
+[ITU-T Y.3172].
+Figure 8-1 highlights the introduction of monitoring and evaluation of network intelligence levels in
+the architectural framework provided by [ITU-T Y.3172].
+Figure 8-1 – Architectural framework for evaluating intelligence levels in the network
+Although not shown in Figure 8-1, ML pipeline nodes in the ML pipeline subsystem
+[ITU-T Y.3172] provide support for evaluating network intelligence levels according to the
+dimensions described in clause 7.1. The data collection process is done by source (SRC) nodes, the
+analysis and decision processes are performed by ML models and policy nodes, and the action
+implementation process is supported by SINK nodes. In addition, the demand mapping process is
+done using the ML intent provided as input to the MLFO.
+The reference points in Figure 8-1 are described as follows:
+3: The reference point between ML sandbox subsystem and an ML pipeline subsystem, used
+unmodified as defined in [ITU-T Y.3172].
+4: The reference point between ML pipeline subsystem and ML underlay networks corresponds
+to the data handling reference point, used unmodified from [ITU-T Y.3172].
+5, 6: The reference points between the management subsystem and, respectively, the ML pipeline
+subsystem and the ML sandbox subsystem, are used for monitoring and evaluating network
+intelligence levels in the ML pipeline subsystem and the ML sandbox subsystem.
+7: The reference point between machine learning function orchestrator (MLFO) and other
+management and orchestration functions of the management subsystem, defined in
+[ITU-T Y.3172], allows the MLFO to monitor the capabilities of ML underlay networks with
+respect to network intelligence.
+8.3 Key architecture scenario for network intelligence level evaluation
+This clause aims to describe the way the architecture framework portrayed in clause 8.2 can be
+used. In doing so, the following key architecture scenario, as shown in Figure 8-2, is considered,
+including the introduction of a ML-enabled network service in the network and query of network
+intelligence levels.
+The major steps in the sequence diagram are listed below:
+• Pre-requisite: the management subsystem instantiates the network service.
+• Declarative specification of the ML underlay is made in ML intent as defined in
+[ITU-T Y.3172]. This is provided as an input to the MLFO.
+• The MLFO parses the ML intent and instantiates the ML pipeline nodes (as defined in
+[ITU-T Y.3172]). In addition, it parses the monitoring and network intelligence level
+portion of the ML intent, and accordingly configures the monitoring reports in the ML
+pipeline nodes.
+• The ML pipeline nodes may send periodic or asynchronous reports to the MLFO on the
+network intelligence levels and performance.
+• Based on the reports provided by the ML pipeline nodes, the MLFO will respond to any
+query from the operator about the network intelligence levels.
+Figure 8-2 – Key architecture scenario for network intelligence level evaluation
+The steps in the sequence diagram are as follows:
+1: The MLFO parses the ML intent. It decides the type and position of ML functions.
+NOTE 1 – For example, based on the requirements of the ML application specified in the
+ML intent, the source node (SRC) may be placed in the access network.
+2, 3: The MLFO uses reference point 7 to trigger the orchestrator (entity inside the "other
+management and orchestration functions" – see Figure 8-1) to instantiate the ML functions
+needed for this ML use case.
+NOTE 2 – For example, data handling functions [b-ITU-T Y.3174] are instantiated along
+with SRC and SINK nodes.
+4: The MLFO decides the evaluation method and the plugin mentioned in the ML intent. The
+monitoring requirements are also decided based on this ML intent.
+NOTE 3 – For example, the SINK node is queried to evaluate the network intelligence capability
+level of the action implementation dimension supported by the ML underlay.
+5: The monitoring configuration is applied to the ML pipeline.
+6: Monitoring reports from SRC node (s) in the ML pipeline are sent to the MLFO regarding
+the data collection dimension. This may indicate specific dimensions and corresponding
+network intelligence capabilities.
+NOTE 4 – For example, a given SRC node gets the network intelligence capability level of the data
+collection dimension from the network function (NF) which is associated with the SRC node. The
+monitoring report from the SRC provides the intelligence capability level of the data collection
+dimension supported by the ML underlay for this use case.
+7: Monitoring reports from ML model nodes in the ML pipeline are sent to MLFO regarding
+the analysis dimension.
+NOTE 5 – For example, a given ML model node gets the network intelligence capability level of
+the analysis dimension from the NF which is associated with the ML model. The monitoring report
+from the ML model node provides the network intelligence capability level of the analysis
+dimension supported by the ML underlay for this use case.
+8: Monitoring reports from SINK nodes in the ML pipeline are sent regarding the action
+implementation dimension.
+NOTE 6 – For example, a given SINK node gets the network intelligence capability level of the
+action implementation dimension from the NF which is associated with the SINK node. The
+monitoring report from the SINK node provides the network intelligence capability level of the
+action implementation dimension supported by the ML underlay for this use case.
+9: Based on the received monitoring reports from the ML pipeline nodes, the MLFO
+determines the network intelligence level for the use case, using the method described in this
+Recommendation (see clause 7).
+NOTE 7 – For example, based on the reports from the SINK nodes, the network intelligence
+capability level of the action implementation dimension is determined as being, e.g., Level 2.
+10, 11: A report is produced, or a query response is provided.
+9 Security considerations
+The security considerations in [ITU-T Y.3172] are applicable to this Recommendation.
+Appendix I
+Relation with work done in other standards or industry bodies
+(This appendix does not form an integral part of this Recommendation.)
+In this appendix, the relationship between the framework for evaluating network intelligence level
+described in this Recommendation and the corresponding work in other standards or industry bodies
+is discussed.
+I.1 Automatic driving levels in SAE
+Similar to the intelligent OAM requirements of networks in the telecommunications industry, the
+automotive industry has identified clear requirements for automatic driving of motor vehicles and
+has already carried out related research and industrialization work. Relevant research results from
+the automotive industry can be used as reference for evaluating network intelligence level in future
+networks including IMT-2020.
+In 2014, the Society of Automotive Engineers (SAE) proposed the automatic driving levels in SAE
+[b-SAE J3016], clarifying the 6-level automatic driving rating standard (L0～L5), which have
+become widely accepted and used by the automotive industry. The SAE levels described in the
+standard are shown in Table I.1.
+Table I.1 – SAE J3016 automatic driving levels
+SAE SAE name SAE narrative definition Execution Monitoring Fallback System
+level of of driving performa capabilit
+NHTSA level *
+steering environme nce of y (driving
+and nt dynamic modes)
+accelerati driving
+on/ task
+decelerati
+on
+Human driver monitors the driving environment
+0 No The full-time performance by Human Human Human n/a 0
+automation the human driver of all driver driver driver
+aspects of the dynamic
+driving task, even when
+enhanced by warning or
+intervention systems.
+1 Driver The driving mode-specific Human Human Human Some 1
+assistance execution by a driver driver and driver driver driving
+assistance system of either System modes
+steering or
+acceleration/deceleration
+using information about the
+driving environment and
+with the expectation that the
+human driver performs all
+remaining aspects of the
+dynamic driving task.
+Table I.1 – SAE J3016 automatic driving levels
+SAE SAE name SAE narrative definition Execution Monitoring Fallback System
+level of of driving performa capabilit
+NHTSA level *
+steering environme nce of y (driving
+and nt dynamic modes)
+accelerati driving
+on/ task
+decelerati
+on
+2 Partial The driving mode-specific System Human Human Some 2
+automation execution by one or more driver driver driving
+driver assistance systems of modes
+both steering and
+acceleration/ deceleration
+using information about the
+driving environment and
+with the expectation that the
+human driver performs all
+remaining aspects of the
+dynamic driving task.
+Automated driving system("system") monitors the driving environment
+3 Conditional The driving mode-specific System System Human Some 3
+automation performance by an driver driving
+automated driving system of modes
+all aspects of the dynamic
+driving task with the
+expectation that the human
+driver will respond
+appropriately to a request to
+intervene.
+4 High The driving mode-specific System System System Some ¾
+automation performance by an driving
+automated driving system of modes
+all aspects of the dynamic
+driving task, even if a human
+driver does not respond
+appropriately to a request to
+intervene.
+5 Full The full-time performance by System System System All
+automation an automated driving system driving
+of all aspects of the dynamic modes
+driving task under all
+roadway and environmental
+conditions that can be
+managed by a human driver.
+* Note: National Highway Traffic Safety Administration (NHTSA) early rating standards, now using
+SAE standards
+The SAE J3016 scheme determines the automatic driving level by evaluating the participation
+degree of the driver and the automatic driving system from four evaluation dimensions: motion
+control (acceleration/deceleration/steering), driving environment monitoring, fallback performance
+of dynamic driving task, and system capability (driving modes).
+The SAE J3016 standard is widely accepted by the automotive industry and applied to industry
+analysis, product planning and publicity, guiding the automotive industry to carry out five stages of
+work to achieving self-driving goals, and helping to form a unified understanding on concepts of
+automatic driving, unpiloted driving, intelligent driving, etc.
+As in the automotive industry, the intelligence level evaluation of telecommunication networks
+involves multi-faceted aspects such as use cases, network domains, workflows and services.
+Note that even though the automotive industry is a good example of intelligence grading, there are
+some fundamental differences between the automotive industry and telecommunication industry,
+including the following ones:
+– Telecommunication service providers offer a broad range of services, each with varying
+quality of service requirements, whereas the automotive industry provides a similar product
+to a limited number of consumer segments.
+– The end-user for the evaluation of intelligence level in the automotive industry is the
+consumer and hence it is important to keep intelligence levels simple and easily
+understandable and comparable. In the telecommunication industry, the situation is more
+complex given that end-users for the evaluation of intelligence levels are not only
+traditional consumers (end-users) of telecommunication services but typically include
+network operators themselves, network equipment providers, supervisors (e.g., national
+authorities), etc., who have different skills, expertise and experience. Such evaluation in the
+telecommunication industry needs to consider different technical domains and underlying
+service requirements.
+I.2 AI and automation in GSMA
+This clause describes the relation of the framework for evaluating intelligence level in future
+networks including IMT-2020, described in this Recommendation, with a related GSM Association
+(GSMA) specification [b-GSMA–AI].
+The key points in [b-GSMA–AI] which are relevant to the framework described in this
+Recommendation are:
+• Ability to deploy new applications and services using open application programming
+interfaces (API), transferrable analytics solutions, need for operation agility and efficiency,
+the requirement for intelligent networks built upon AI (including ML) technologies.
+NOTE 1 – The framework for evaluating intelligence level in future networks including IMT-2020,
+described in this Recommendation, is built on the architectural framework for machine learning in
+future networks including IMT-2020 described in [ITU-T Y.3172]. The evaluation of intelligence in
+combination with the architectural framework [ITU-T Y.3172] helps to satisfy the requirement for
+intelligent networks built upon AI (including ML) technologies.
+• Network automation and intelligence, which is introduced as the fourth dimension of
+IMT-2020 in addition to the other three fundamental dimensions (enhanced mobile
+broadband (eMBB), ultra-Reliable and low latency communications (URLLC), massive
+machine type communications (mMTC), will significantly improve operators' management
+efficiency.
+NOTE 2 – The framework for evaluating intelligence level in future networks including IMT-2020,
+described in this Recommendation, includes evaluation of automation along with AI (including ML)
+in various ML use cases. Thus, it enables measurement, evaluation and comparison of the networks
+with respect to the fourth dimension.
+• Automatic closed-loop under the operator provided intent or policy is introduced as the
+cornerstone of network automation. This closed-loop must be cross-domain and per-domain
+to address the challenges in managing future networks.
+NOTE 3 – ML pipeline along with MLFO and ML sandbox [ITU-T Y.3172] allows an efficient
+management of multi-level ML mechanism in operator's network. ML intent provides the ability to
+provide operator's input and policy. In this Recommendation, it is further extended with the method
+for evaluation of network intelligence level and corresponding architectural views.
+A harmonized classification system and supporting definitions regarding intelligent network are
+called for in [b-GSMA–AI]. This includes definition of intelligent network, identification of levels
+of intelligent network, definitions and levels on functional aspects and a step-wise progression
+through the levels.
+This Recommendation attempts to specify these definitions and levels and describes the framework
+to evaluate and progress the intelligence level of networks.
+I.3 Autonomous networks in TM Forum
+This clause describes the relation of the framework for evaluating network intelligence level in
+future networks including IMT-2020, described in this Recommendation, with a related TM Forum
+(TMF) [b-TMF-AUTO].
+The key points in [b-TMF-AUTO] which are relevant to the framework described in this
+Recommendation are:
+• Framework for autonomous networks: this includes autonomous domains for network
+transformation, network automation for operations transformation and business automation
+for operations transformation. Operations automation with knowledge as a service is
+identified as the core of production efficiency and business agility.
+• The following characteristics of autonomous networks are described in [b-TMF-AUTO]:
+Execution, awareness, analysis, decision, intent/experience, applicability.
+• The following levels of autonomous networks are described in [b-TMF-AUTO]:
+L0: manual operation and maintenance, L1: assisted operation and maintenance, L2: partial
+autonomous network, L3: conditional autonomous network, L4: high autonomous network,
+L5: full autonomous network.
+NOTE – The TMF framework is compatible with the approach presented in this Recommendation
+where the multi-level ML pipeline and corresponding architecture is used as a basis to enable closed
+loop automation across domains and per-domain. In addition, the autonomous network levels
+defined in [b-TMF-AUTO] are compatible with the levels of intelligence defined in this
+Recommendation.
+I.4 Autonomous networks in ETSI ISG ENI
+This clause describes the relation of the framework for evaluating network intelligence level in
+future networks including IMT-2020, described in this Recommendation, with the European
+Telecommunication Standards Institute (ETSI) Industry Specification Group (ISG) Experiential
+Networked Intelligence (ENI) definition of categories for AI application to networks.
+The following categories of AI-based network automation are defined in [b-ETSI ENI 007]:
+• Category 0. Manual O&M
+• Category 1. Assisted O&M
+• Category 2. Partial automation
+• Category 3. Conditional automation
+• Category 4. High automation
+• Category 5. Fully autonomic system
+The factors affecting the network autonomicity level from a technical point of view are identified as
+man-machine interface, decision making participation, data collection and analysis, degree of
+intelligence and environment adaptability.
+The factors affecting the network autonomicity level from a market point of view are identified as
+scheduling execution, perception monitoring, analysis and decision-making, customer experience
+and system capability. These are mapped to the categories described above based on the level of
+participation of human-operator.
+NOTE – The framework described in this Recommendation relates to the network autonomicity level from a
+technical point of view as defined by [b-ETSI ENI 007], considered along with the level of participation of
+human being operator.
+Appendix II
+Application of the method for evaluating network intelligence level on
+representative use cases
+(This appendix does not form an integral part of this Recommendation.)
+This appendix describes the application of the method for evaluating network intelligence level on
+the following representative use cases:
+• network coverage optimization,
+• network cutover,
+• alarm RCA and fault recovery,
+• network resource maintenance and management,
+• end to end (E2E) IoT service for utilities.
+For each use case, the specific network intelligence capability level of each dimension is assumed,
+and the evaluation result of each dimension is highlighted in the use case table.
+NOTE – For a given dimension, the highest network intelligence level is selected (see Table 7-2) among all
+the multiple network intelligence levels that match the identified network intelligence capability level. For
+example, for the "Action Implementation" dimension, L5 is selected even though L2, L3, L4 and L5 all
+match the "System" network intelligence capability level.
+Based on the evaluation table given below for the use case, the overall network intelligence level
+for the use case is determined. Suggestions concerning possible upgrading of the network
+intelligence levels are also provided for each use case.
+II.1 Network coverage optimization
+This clause describes the application of the method for evaluating network intelligence level on
+network coverage optimization workflow.
+Evaluation assumptions
+The intelligence capabilities of each dimension of this use case are assumed to be evaluated as
+follows:
+• Demand mapping: Human
+Rationale: Network coverage optimization demand mapping from coverage optimizing
+requirements to detailed work plan is manually completed by human (operator).
+• Data collection: Human and System
+Rationale: Human (operator) decides which data to collect (e.g., measurement report, key
+performance indicators (KPI), site information), system periodically collect specified data.
+For some area, coverage related data is automatically collected by system according to
+human defined minimization of drive tests (MDT) tasks.
+• Analysis: Human and System
+Rationale: Network coverage problem is automatically discovered by system according to
+human defined rules (e.g., using static thresholds and formulas), coverage optimization
+related solution can be suggested by system with the help of expert system.
+• Decision: Human
+Rationale: Coverage optimization solution is reviewed and decided by human (operator).
+Instructions of coverage related adjustment are issued by human (operator).
+• Action implementation: System
+Rationale: System automatically executes the new parameters according to instructions of
+coverage related adjustment.
+Evaluation results
+Table II.1 provides the result of the evaluation according to the above assumptions.
+Table II.1 – Evaluation of network intelligence level on network coverage optimization
+Level/Name vs Action Data collection Analysis Decision Demand
+Evaluation implementation mapping
+dimensions
+L0 Manual Human Human Human Human Human
+network
+operation
+L1 Assisted Human and Human and Human Human Human
+network System System
+operation
+L2 Preliminary System Human and Human and Human Human
+intelligence System System
+L3 Intermediate System System Human and Human and Human
+intelligence System System
+L4 Advanced System System System System Human and
+intelligence System
+L5 Full System System System System System
+intelligence
+Per-dimension network intelligence levels are assumed to have been evaluated as shown in
+Table II.1, the result of the evaluation being highlighted with orange coloured cells. ML-Int-level-
+004 from clause 7.3 is used to arrive at per-dimension network intelligence levels. By applying ML-
+Int-level-005 from clause 7.3 on Table II.1, this use case on network coverage optimization has a
+Level 2 (Preliminary Intelligence) overall network intelligence level.
+Upgrading suggestions
+To upgrade to the next network intelligence level, the data collection process would need to be
+completed automatically by the system according to system defined data collecting rules awhile the
+decision process would need to be completed automatically by the system according to human
+being defined rules.
+For example, massive multiple input multiple output (MIMO) is a key technology in radio network
+to deliver higher capacity and coverage. However, there are technical roadblocks to efficiently tune
+massive MIMO using automatic data collection and decision. One of the challenges comes from a
+fast selection and optimization of the appropriate beam pattern. KPIs such as the antenna tilt, the
+reference signal received power (RSRP), the interference and noise (INR) can be monitored and
+analysed automatically to select the best beam pattern based on AI which allows a learning and
+iterative approach. Thus, adding capability for automatic data collection and decision would raise
+the network intelligence level of the use case and hence enable better network coverage.
+II.2 Network cutover
+This clause describes the application of the method for evaluating network intelligence level on
+network cutover workflow.
+Evaluation assumptions
+The intelligence capabilities of each dimension of this use case are assumed to be evaluated as
+follows:
+• Demand mapping: Human
+Rationale: Manual analysis of current situations and the demand necessity are needed to
+convert the cutover operations into network operations.
+• Data collection: Human and System
+Rationale: Cutover related data (e.g., Alarm, Configuration, Log, external) are collected by
+system. Humans decide which data to collect.
+• Analysis: Human and System
+Rationale: Analysis for network cutover is performed with the assistance of system based
+on rules pre-set by humans.
+• Decision: Human
+Rationale: The decision is reviewed and decided by humans.
+• Action implementation: System
+Rationale: Based on the decision outcome, system automatically completes the cutover
+execution.
+Evaluation results
+Table II.2 provides the result of the evaluation according to the above assumptions.
+Table II.2 – Evaluation of network intelligence level on network cutover
+Level/Name vs
+Action Demand
+Evaluation Data collection Analysis Decision
+implementation mapping
+dimensions
+Manual Human Human Human Human Human
+network
+L0 operation
+Assisted Human and Human and Human Human Human
+network System System
+L1 operation
+Preliminary System Human and Human and Human Human
+L2 intelligence System System
+Intermediate System System Human and Human and Human
+L3 intelligence System System
+Advanced System System System System Human and
+L4 intelligence System
+Full System System System System System
+L5 intelligence
+Per-dimension network intelligence levels are assumed to have been evaluated as shown in
+Table II.2, the result of the evaluation being highlighted with orange coloured cells. ML-Int-level-
+004 from clause 7.3 is used to arrive at per-dimension network intelligence level. Also, applying
+ML-Int-level-005 from clause 7.3 on the evaluation Table II.2, this use case on network cutover has
+a Level 2 (Preliminary Intelligence) overall network intelligence level.
+Based on the evaluation table this use case is currently at Level 2 (Preliminary Intelligence). To
+reach Level 3 (Intermediate Intelligence), the system should implement automatic data collection
+and decision.
+II.3 Alarm RCA and fault recovery
+This clause describes the application of the method for evaluating network intelligence level on an
+alarm root cause analysis (RCA) and fault recovery.
+Evaluation assumptions
+The intelligence capabilities of each dimension of this use case are assumed to be evaluated as
+follows:
+• Demand mapping: Human and System
+Rationale: For specific alarm and fault types, based on the pre-set rules, alarm and fault
+recovery demand mapping is completed by the system. Demand mapping about fault
+prediction and early warning is manually completed by a human operator.
+• Data collection: System
+Rationale: The system can automatically collect the data (e.g., configuration management
+(CM), Alarm, performance management (PM), etc.) needed for alarm RCA according to
+system defined data collecting rules.
+• Analysis: Human and System
+Rationale: For specific alarm and fault types, the system can summarize the generated
+analysis rules (e.g., data pre-processing rules, analysis of formulas and thresholds, etc.)
+based on experts' experience, assist manual alarm RCA, generate association rules. The
+above alarm RCA rules are updated manually.
+• Decision: Human and System
+Rationale: For some specific alarm and fault types, based on the association rules and fault
+recovery proposals, the system can automatically decide the alarm root cause and fault
+recovery solution.
+• Action implementation: System
+Rationale: Based on the decision outcome, system can automatically perform alarm
+filtering and root cause association and perform specific operations in the fault recovery
+solution.
+Evaluation results
+Table II.3 provides the result of the evaluation according to the above assumptions.
+Table II.3 – Evaluation of network intelligence level on alarm RCA and fault recovery
+Level/Name vs Action Data Analysis Decision Demand
+Evaluation implementation collection mapping
+dimensions
+L0 Manual Human Human Human Human Human
+network
+operation
+L1 Assisted Human and Human and Human Human Human
+network System System
+operation
+L2 Preliminary System Human and Human and Human Human
+intelligence System System
+L3 Intermediate System System Human and Human and Human
+intelligence System System
+L4 Advanced System System System System Human and
+intelligence System
+L5 Full System System System System System
+intelligence
+Per-dimension network intelligence levels are assumed to have been evaluated as shown in
+Table II.3, the result of the evaluation being highlighted with orange coloured cells. ML-Int-level-
+004 from clause 7.3 is used to arrive at per-dimension network intelligence level. Also, applying
+ML-Int-level-005 from clause 7.3 on the evaluation Table II.3, this use case on alarm root cause
+analysis and fault recovery has a Level 2 (Preliminary Intelligence) overall network intelligence
+level.
+Based on the evaluation table, alarm RCA and fault recovery use case are at Level 3 (Intermediate
+intelligence). To upgrade to the next level, the analysis and decision processes would need to be
+completed automatically by the system according to system defined rules. For example, utilizing AI
+for correlation analysis of multi-dimensional data (e.g., alarm, performance, and network data),
+accurate location of alarm root cause and fault self-healing could be reached successfully.
+II.4 Network resource maintenance and management
+This clause describes the application of the method for evaluating network intelligence level on the
+network resource maintenance and management workflow.
+Evaluation assumptions
+The intelligence capabilities of each dimension of this use case are assumed to be evaluated as
+follows:
+• Demand mapping: Human
+Rationale: Translation on the requirements of network resource maintenance and
+management (e.g., resource allocation or customization for service providing and
+deployment) to detailed execution plan is manually completed by human (operator).
+• Data collection: Human and System
+Rationale: Resource related data (e.g., physical resource data, logical resource data) of
+which to be collected are decided by human (operator). In certain cases, resource related
+data are collected automatically by the system based on predefined rules by human.
+• Analysis: Human and System
+Rationale: Query and analysis on the collected resource data are performed based on
+human-defined criteria with the help of expert system to generate solutions for resource
+maintenance and management.
+• Decision: Human
+Rationale: The solution to perform resource maintenance and management (e.g., specific
+resource allocation for network slicing or routing adjustment) is reviewed and decided by
+human (operator).
+• Action implementation: System
+Rationale: The system can automatically perform resource allocation or change based on
+the decision result.
+Evaluation results
+Table II.4 provides the result of the evaluation according to the above assumptions.
+Table II.4 – Evaluation of network intelligence level on network
+resource maintenance and management
+Level/Name vs Action Data Analysis Decision Demand
+Evaluation implementation collection mapping
+dimensions
+L0 Manual Human Human Human Human Human
+network
+operation
+L1 Assisted Human and Human and Human Human Human
+network System System
+operation
+L2 Preliminary System Human and Human and Human Human
+intelligence System System
+L3 Intermediate System System Human and Human and Human
+intelligence System System
+L4 Advanced System System System System Human and
+intelligence System
+L5 Full System System System System System
+intelligence
+Per-dimension network intelligence levels are assumed to have been evaluated as shown in
+Table II.4, the result of the evaluation being highlighted with orange coloured cells. ML-Int-level-
+004 from clause 7.3 is used to arrive at per-dimension network intelligence level. Also, applying
+ML-Int-level-005 from clause 7.3 on the evaluation Table II.4, this use case on network resource
+maintenance and management has a Level 2 (Preliminary Intelligence) overall network intelligence
+level.
+To upgrade to a higher level, the capability of related dimensions would have to be improved
+accordingly. For example, to advance to Level 3 (Intermediate Intelligence), the data collection
+process would need to be completed automatically by the system with system defined rules while
+the decision process would need to be completed automatically by the system with human being
+defined rules.
+II.5 E2E IoT service for utilities
+This clause describes the application of the method for evaluating network intelligence level on E2E
+IoT service for utilities.
+Evaluation assumptions
+The intelligence capabilities of each dimension of this use case are assumed to be evaluated as
+follows:
+• Demand mapping: Human
+Rationale: Service planning and deployment of IoT service is manually completed by a
+human operator.
+• Data collection: Human and System
+Rationale: Human operator decides which data to collect for some data sources (e.g., PM,
+CM, alarm, probe, external), system periodically reports back the specified data. Some data
+sources (e.g., event traces) are initiated by human operator which may be for a limited time
+or a region.
+• Analysis: Human and System
+Rationale: Service assurance evaluations (such as anomaly detection, trend analysis,
+coverage gap, utilization) are performed by the system based on pre-set rules by human
+operator.
+• Decision: Human and System
+Rationale: Human operator defines policies to specify required action based on analysis
+results. E.g., a human-defined rule to delay data transmission to off-peak hours is triggered
+by the system when network utilization exceeds a threshold.
+• Action implementation: System
+Rationale: Based on the decision outcome, system automatically modifies required device
+parameters over the air interface.
+Evaluation results
+Table II.5 provides the result of the evaluation according to the above assumptions.
+Table II.5 – Evaluation of network intelligence level on E2E IoT service for utilities
+Level/Name vs Action Data Analysis Decision Demand
+Evaluation implementation collection mapping
+dimensions
+L0 Manual Human Human Human Human Human
+network
+operation
+L1 Assisted Human and Human and Human Human Human
+network System System
+operation
+L2 Preliminary System Human and Human and Human Human
+intelligence System System
+L3 Intermediate System System Human and Human and Human
+intelligence System System
+Table II.5 – Evaluation of network intelligence level on E2E IoT service for utilities
+Level/Name vs Action Data Analysis Decision Demand
+Evaluation implementation collection mapping
+dimensions
+L4 Advanced System System System System Human &
+intelligence System
+L5 Full System System System System System
+intelligence
+Per-dimension network intelligence levels are assumed to have been evaluated as shown in
+Table II.5, the result of the evaluation being highlighted with orange coloured cells. ML-Int-level-
+004 from clause 7.3 is used to arrive at per-dimension network intelligence level. Also, applying
+ML-Int-level-005 from clause 7.3 on the evaluation Table II-1, this use case on E2E IoT service for
+utilities has a Level 2 (Preliminary Intelligence) overall network intelligence level.
+The system needs to decide which data source would have to be activated for analysis to advance to
+Level 3 (Intermediate Intelligence). To further advance to Level 4 (Advanced Intelligence), the
+analysis and decision processes would need to be automatically done by the system and service
+planning and the deployment workflow would need to be automated using pre-specified templates.
+To reach Level 5 (Full Intelligence), intent-based service planning and deployment would need to
+be implemented.
+Bibliography
+[b-ITU-T Y.3100] Recommendation ITU-T Y.3100 (2017), Terms and definitions for
+IMT-2020 network.
+[b-ITU-T Y.3174] Recommendation ITU-T Y.3174, Framework for data handling to enable
+machine learning in future networks including IMT-2020.
+[b-SAE J3016] SAE J3016_201401, Taxonomy and Definitions for Terms Related to On-
+Road Motor Vehicle Automated Driving Systems.
+[b-GSMA–AI] AI & Automation: An Overview.
+<https://www.gsma.com/future networks/wiki/ai-automation-an-overview/.>
+[b-TMF-AUTO] A whitepaper of autonomous networks: empowering digital transformation
+for the telecoms industry.
+<https://www.tmforum.org/wp-content/uploads/2019/05/22553-Autonomous-Networks-
+whitepaper.pdf.>
+[b-ETSI ENI 007] ETSI GR ENI 007 V1.1.1 (2009); Experiential Networked Intelligence
+(ENI); ENI Definition of Categories for AI Application to Networks.
+SERIES OF ITU-T RECOMMENDATIONS
+Series A Organization of the work of ITU-T
+Series D Tariff and accounting principles and international telecommunication/ICT economic and policy
+issues
+Series E Overall network operation, telephone service, service operation and human factors
+Series F Non-telephone telecommunication services
+Series G Transmission systems and media, digital systems and networks
+Series H Audiovisual and multimedia systems
+Series I Integrated services digital network
+Series J Cable networks and transmission of television, sound programme and other multimedia signals
+Series K Protection against interference
+Series L Environment and ICTs, climate change, e-waste, energy efficiency; construction, installation
+and protection of cables and other elements of outside plant
+Series M Telecommunication management, including TMN and network maintenance
+Series N Maintenance: international sound programme and television transmission circuits
+Series O Specifications of measuring equipment
+Series P Telephone transmission quality, telephone installations, local line networks
+Series Q Switching and signalling, and associated measurements and tests
+Series R Telegraph transmission
+Series S Telegraph services terminal equipment
+Series T Terminals for telematic services
+Series U Telegraph switching
+Series V Data communication over the telephone network
+Series X Data networks, open system communications and security
+Series Y Global information infrastructure, Internet protocol aspects, next-generation networks,
+Internet of Things and smart cities
+Series Z Languages and general software aspects for telecommunication systems
+Printed in Switzerland
+Geneva, 2020

@@ -1,0 +1,18 @@
+Ottawa, 4 July 2024
+Reference(s): 8000-C12-202203868
+BY EMAIL
+Jason Ball
+Vice President, Legal
+Rogers Communications Canada Inc.
+1 Mount Pleasant, 4th Floor
+Toronto ON M4Y 2Y5
+Jason.Ball@rci.rogers.com
+Subject: Assessment of Rogers’ measures to improve reliability
+Dear Jason Ball,
+Today, the CRTC published the executive summary of the expert report completed by Xona Partners Inc. (Xona) on Rogers’ July 2022 outage.
+Based on Xona’s findings, the measures taken by Rogers have addressed the cause of the outage. Xona also made additional recommendations to Rogers to further enhance the reliability and resilience of their network, and Rogers has confirmed the implementation of all measures.
+In order to prevent future outages, Rogers must report to the Commission on: 1) whether the measures continue to effectively address reliability issues; and 2) progress made to separate the wireline and wireless core networks. The report must be provided by 4 July 2025.
+If you have any questions, please contact Noah Moser, Director of Broadband and Network Engineering, at noah.moser@crtc.gc.ca .
+Yours sincerely,
+Marc Morin
+Secretary General

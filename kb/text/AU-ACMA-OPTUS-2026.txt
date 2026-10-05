@@ -1,0 +1,16 @@
+The Australian Communications and Media Authority (ACMA) has today commenced proceedings in the Federal Court against Optus Mobile Pty Limited (Optus Mobile) in relation to the 18 September 2025 outage, which affected some people’s ability to connect to the emergency call service.
+The ACMA alleges that during the outage, Optus Mobile breached two separate legal obligations on 1,005 occasions in that it failed to:
+- give end-users who made emergency calls using an emergency telephone service supplied by Optus Mobile access to the emergency call service, and
+- ensure that those emergency calls were carried to the relevant termination point.
+ACMA Chair Nerida O’Loughlin said that the provision of access to the emergency call service is essential to protecting the Australian public.
+“Australians rightly expect that when they call Triple Zero, their call will connect. The circumstances of this outage meant that did not reliably occur, leaving people unable to connect to potentially life-saving services.
+“Giving access to the emergency call service is not optional, it is a fundamental legal obligation and the most important public safety responsibility telecommunications providers have,” Ms O’Loughlin said.
+The proceedings follow earlier enforcement action taken by the ACMA arising from the Optus November 2023 outage. Singtel Optus subsidiaries, including Optus Mobile, paid more than $12 million in infringement notice penalties imposed by the ACMA for breaches relating to emergency calls. These included failures to give access to the emergency call service during that outage.
+“The recurrence of a major network outage affecting emergency calls so soon after the November 2023 outage is a significant concern and one of the reasons the ACMA has decided to take this matter to court.
+“The ACMA will not hesitate to take strong enforcement action where alleged telco failures have jeopardised public access to the critical emergency call service,” Ms O’Loughlin said.
+The ACMA is seeking the following from the court:
+- declarations that Optus Mobile contravened the _Telecommunications (Consumer Protection and Service Standards) Act 1999_ on 1,005 occasions by failing to comply with obligations under sections 15 and 19 of the _Telecommunications (Emergency Call Service) Determination 2019_, and
+- an order that Optus Mobile pay pecuniary penalties to the Commonwealth for these contraventions.
+The maximum penalty available to the court is $250,000 per contravention.
+As this matter is now before the court, the ACMA will not be making any further comments at this time.
+MR 25/2026
