@@ -32,7 +32,8 @@ class AuditLog:
     def __init__(self, path: Path):
         self.path = Path(path)
         self.path.parent.mkdir(parents=True, exist_ok=True)
-        self.path.write_text("")
+        # "x" refuses an existing file, so a recorded log can never be truncated by a rerun
+        self.path.open("x").close()
         self.seq = 0
         self.prev = GENESIS
 

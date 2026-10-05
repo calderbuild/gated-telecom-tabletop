@@ -106,6 +106,7 @@ def cmd_replay(args):
     events = audit.load(src)
     sid = events[0]["data"]["scenario"]
     out = ROOT / "runs" / "scratch" / f"replay-{src.stem}.jsonl"
+    out.unlink(missing_ok=True)  # scratch output, regenerated each time
     Run(load_scenario(sid), Replay(events), out).run()
     pick = lambda evs: [
         (e["data"]["agent"], e["data"]["accepted"], e["data"]["reasons"])
@@ -163,6 +164,7 @@ def cmd_selftest(args):
     for sid in SCENARIOS:
         scenario = load_scenario(sid)
         out = ROOT / "runs" / "scratch" / f"selftest-{sid}.jsonl"
+        out.unlink(missing_ok=True)  # scratch output, regenerated each time
         Run(
             scenario,
             Mock(mock_responder(scenario, load_mandates())),
