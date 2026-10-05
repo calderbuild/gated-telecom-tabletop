@@ -19,6 +19,8 @@ from pathlib import Path
 from tabletop.audit import sha256
 
 DEEPSEEK_URL = "https://api.deepseek.com/chat/completions"
+ATTEMPTS = 6  # backoff 5, 10, 20, 40, 80 s rides out a ~2.5 min network drop
+FINAL_STATUS = {400, 401, 402, 422}  # bad format, bad key, no balance, bad params
 DEFAULT_MODEL = "deepseek-flash"
 
 
@@ -61,7 +63,7 @@ class DeepSeek:
             },
         )
         t0 = time.time()
-        for attempt in range(4):
+        for attempt in range(ATTEMPTS):
             try:
                 resp = json.loads(urllib.request.urlopen(req, timeout=600).read())
                 if not resp.get("choices"):
@@ -69,10 +71,8 @@ class DeepSeek:
                 break
             # connection resets and cut-off bodies surface as HTTPException/OSError/JSON errors, not URLError
             except (OSError, http.client.HTTPException, ValueError) as e:
-                status = getattr(e, "code", None)
-                if attempt == 3 or (
-                    status is not None and status < 500 and status != 429
-                ):
+                # only DeepSeek's own request errors are final; a proxy can answer 405 or 503 for a few seconds
+                if attempt == ATTEMPTS - 1 or getattr(e, "code", None) in FINAL_STATUS:
                     raise
                 time.sleep(5 * 2**attempt + random.uniform(0, 5))
         msg = resp["choices"][0]["message"]

@@ -28,7 +28,19 @@ def test_reset_and_cut_body_are_retried(monkeypatch):
     assert c.complete("s", "u", "t")["response_id"] == "r1"
 
 
-def test_gives_up_after_four_attempts(monkeypatch):
-    c = client(monkeypatch, [ConnectionResetError()] * 4)
+def test_gives_up_after_the_last_attempt(monkeypatch):
+    c = client(monkeypatch, [ConnectionResetError()] * llm.ATTEMPTS)
     with pytest.raises(ConnectionResetError):
+        c.complete("s", "u", "t")
+
+
+def http_error(code):
+    return llm.urllib.error.HTTPError("u", code, "x", {}, io.BytesIO(b""))
+
+
+def test_proxy_405_is_retried_but_a_bad_key_is_final(monkeypatch):
+    c = client(monkeypatch, [http_error(405), http_error(503), OK])
+    assert c.complete("s", "u", "t")["response_id"] == "r1"
+    c = client(monkeypatch, [http_error(401), OK])
+    with pytest.raises(llm.urllib.error.HTTPError):
         c.complete("s", "u", "t")
