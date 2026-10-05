@@ -19,7 +19,7 @@ from pathlib import Path
 from tabletop.audit import sha256
 
 DEEPSEEK_URL = "https://api.deepseek.com/chat/completions"
-DEFAULT_MODEL = "deepseek-v4-pro"
+DEFAULT_MODEL = "deepseek-flash"
 
 
 def load_env(path: Path):
