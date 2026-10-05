@@ -9,3 +9,4 @@ kb/raw/
 *.egg-info/
 .pytest_cache/
 runs/scratch/
+kb/toolkit/

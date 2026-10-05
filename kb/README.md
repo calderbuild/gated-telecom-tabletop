@@ -32,3 +32,12 @@ Official sources only. Each source is pinned by SHA-256 of the file as downloade
 
 ## Text layer
 Plain UTF-8. Keep article and clause headings on their own lines (`Article 9`, `12.9.2`, `§ 4.9`, `Annex III`) so the chunker can split on them. Arabic columns in bilingual PDFs are dropped. No paraphrase, no edits beyond whitespace and removing page headers/footers.
+
+## Loading into the ITU reference toolkit
+
+`python -m tabletop kb export` writes `kb/toolkit/InputDocs/` in the layout the ITU reference toolkit
+(github.com/CrashingGuru/ITUAIReadiness, `simulation/server/knowledge/ingest.py`) ingests into ChromaDB:
+one Markdown file per source under `UAE_Telecom_Policy/` or `Global_Telecom_Policy/` (the toolkit tags
+each with `document_category` from the folder), each starting with its title, issuer, URL, SHA-256 and
+status, plus an `Inputs.md` manifest. Copy the folder over the toolkit's `InputDocs/` and run its ingest.
+I have not run the toolkit ingest myself (it needs Ollama with nomic-embed-text and ChromaDB).

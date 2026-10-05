@@ -42,6 +42,9 @@ def cmd_kb(args):
         report = kb.fetch()
         print("\n".join(report) or "nothing to fetch")
         return 1 if any("FAILED" in r for r in report) else 0
+    elif args.action == "export":
+        out = kb.KB / "toolkit"
+        print(f"wrote {kb.export_toolkit(out)} sources to {out.relative_to(ROOT)}/InputDocs (ITU toolkit layout)")
     elif args.action == "search":
         for c in kb.Index().search(args.query, 8):
             print(f"{c['score']:7.2f} {c['chunk_id']:32} {c['ref'][:60]}")
@@ -210,7 +213,7 @@ def main(argv=None) -> int:
     p = argparse.ArgumentParser(prog="python -m tabletop", description=__doc__)
     sub = p.add_subparsers(dest="cmd", required=True)
     k = sub.add_parser("kb", help="build, verify, fetch or search the knowledge base")
-    k.add_argument("action", choices=["build", "verify", "fetch", "search"])
+    k.add_argument("action", choices=["build", "verify", "fetch", "search", "export"])
     k.add_argument("query", nargs="?", default="")
     sub.add_parser(
         "check-data", help="verify every mandate/rule quote is verbatim in the KB"
