@@ -1,0 +1,18 @@
+[project]
+name = "tabletop"
+version = "0.1.0"
+description = "Gated multi-institution telecom tabletop exercise (ITU AI for Good Lab Hackathon UAE 2026)"
+requires-python = ">=3.11"
+dependencies = ["fastapi>=0.110", "uvicorn>=0.29"]
+
+[project.optional-dependencies]
+dev = ["pytest>=8"]
+
+[tool.setuptools]
+packages = ["tabletop"]
+
+[tool.setuptools.package-data]
+tabletop = ["data/*.json", "data/scenarios/*.json", "static/*"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]

@@ -6,3 +6,6 @@ __pycache__/
 kb/raw/
 *.pyc
 .DS_Store
+*.egg-info/
+.pytest_cache/
+runs/scratch/
