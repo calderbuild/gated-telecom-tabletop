@@ -1,5 +1,27 @@
 # Gated multi-institution telecom tabletop
 
+[![reproduce](https://github.com/calderbuild/gated-telecom-tabletop/actions/workflows/reproduce.yml/badge.svg)](https://github.com/calderbuild/gated-telecom-tabletop/actions/workflows/reproduce.yml)
+
+The badge is a CI job that, on every push, runs the offline self-test and the tests, re-verifies the hash chain of every recorded run, replays one run per scenario from its recorded model responses (gate verdicts must match), and recomputes every number below from the logs (`git diff` must be empty).
+
+**Check it yourself in about two minutes (no API key, no cost):**
+
+```
+uv venv && uv pip install -e '.[dev]'
+python -m tabletop verify-log runs/S1/run1.jsonl   # hash chain intact
+python -m tabletop replay runs/S1/run1.jsonl       # same gate verdicts from the recorded responses
+python -m tabletop eval                            # recomputes eval/results.md
+python -m tabletop serve                           # replay page at http://127.0.0.1:8000
+```
+
+![Replay page: one strand per institution, accepted and rejected claims, the twin's invariants back to green](docs/fig/replay-page.png)
+
+![Pipeline mapped to the ITU-T Y.3172 nodes](docs/fig/fig1-architecture.png)
+
+![Gate rejection rate and gap recall, gated agents against the ungated baseline](docs/fig/fig2-results.png)
+
+The technical report is [docs/report.md](docs/report.md).
+
 An AI tabletop exercise for telecom incidents. Five to six institution agents (an operator's network operations centre, the telecom regulator, the data authority, the cyber security council, emergency services and the central bank) each get only their own share of a staged incident. Every claim they make passes a deterministic gate before it counts, approved actions change a digital twin of the network, and the coordinator derives policy gaps and maps each one to a global example.
 
 Built for the ITU AI for Good Lab Hackathon, United Arab Emirates 2026 (telecommunications domain). Solo entry.

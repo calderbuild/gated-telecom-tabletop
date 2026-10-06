@@ -96,7 +96,7 @@ section { margin-bottom: 28px; }
 /* twin */
 .metrics { display: grid; grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); gap: 8px; }
 .metric { background: var(--panel); border: 1px solid var(--rule); border-radius: 4px; padding: 8px 10px; }
-.metric .k { font-family: var(--mono); font-size: 12px; color: var(--ink-2); overflow-wrap: anywhere; }
+.metric .k { font-family: var(--mono); font-size: 12px; color: var(--ink-2); overflow-wrap: break-word; }
 .metric .v { font-family: var(--display); font-stretch: 125%; font-weight: 600; font-size: 1.05rem; margin-top: 2px; }
 .metric.broken { border-color: var(--reject); background: var(--reject-wash); }
 .metric.broken .v { color: var(--reject); }
@@ -254,8 +254,8 @@ async function init() {
   if (!runs.length) { $("summary").textContent = "No recorded runs in runs/. Record one with python -m tabletop run S1 --out runs/S1/run1.jsonl."; return; }
   const sel = $("run");
   sel.innerHTML = runs.map((r) => `<option value="${esc(r.scenario)}/${esc(r.name)}">${esc(r.scenario)} / ${esc(r.name)}${r.chain_ok ? "" : " (chain broken)"}</option>`).join("");
-  const want = new URLSearchParams(location.search).get("run");
-  if (want && runs.some((r) => `${r.scenario}/${r.name}` === want)) sel.value = want;
+  const want = new URLSearchParams(location.search).get("run") || "S1/run1";
+  if (runs.some((r) => `${r.scenario}/${r.name}` === want)) sel.value = want;
   sel.onchange = () => load(sel.value).catch(showErr);
   load(sel.value).catch(showErr);
 }
@@ -342,7 +342,7 @@ function renderTwin() {
   $("metrics").innerHTML = wanted.map((w) => {
     const v = m[w.metric];
     const holds = v === undefined ? true : (w.op === "==" ? v === w.value : w.op === ">=" ? v >= w.value : w.op === "<=" ? v <= w.value : true);
-    return `<div class="metric${holds ? "" : " broken"}"><div class="k">${esc(w.metric)}</div><div class="v">${v === undefined ? "–" : esc(fmt(v))}</div><div class="want">needs ${esc(w.op)} ${esc(fmt(w.value))}</div></div>`;
+    return `<div class="metric${holds ? "" : " broken"}"><div class="k">${esc(w.metric).replace(/([._])/g, "$1<wbr>")}</div><div class="v">${v === undefined ? "–" : esc(fmt(v))}</div><div class="want">needs ${esc(w.op)} ${esc(fmt(w.value))}</div></div>`;
   }).join("");
   const steps = R.ev.filter((e) => e.seq <= pos && (e.type === "twin_event" || e.type === "state_change"));
   $("twinlog").innerHTML = steps.map((e) => {
