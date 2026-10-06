@@ -12,7 +12,7 @@ When a telecom incident spreads beyond one company, the operator, the regulator,
 
 I built an AI tabletop in which each institution is an agent that sees only its own share of a staged incident. An agent can propose actions, obligations, gaps and messages to other institutions, but nothing it says counts until a deterministic gate accepts it. To pass, a claim must quote a verified source word for word from a passage that agent was actually shown, use a verb inside that institution's legal mandate, cite only injects it received, and give a deadline only if the rule table holds one. Accepted actions change a digital twin of the network, and invariants check whether the incident is actually fixed. At the debrief a coordinator derives the policy gaps and sets each against global examples, using text from the knowledge base. Every step lands in a hash-chained audit log that anyone can re-verify and replay.
 
-The model (DeepSeek-V4.1-Flash) retrieves context, proposes and explains. Code decides. The solution maps each pipeline node to UAE texts and to global practice, so the exercise doubles as a policy sandbox: it tests whether the rules, not only the network, hold up under an AI-caused incident.
+Of the agent roles in the call, the solution covers institutional participants (one agent per institution) and multi-agent coordination (the gate and coordinator), and each institution agent also acts as a policy and legal adviser for its own mandate. The model (DeepSeek-V4.1-Flash) retrieves context, proposes and explains. Code decides. Because every pipeline node is mapped to UAE texts and to global practice, the exercise is also a policy sandbox: it shows where the rules give out during an AI-caused incident, as well as where the network does.
 
 ## 2. Description of the use case
 
@@ -62,7 +62,7 @@ Requirements per node of the Y.3172 pipeline (section 4 gives the mapping):
 
 Per scenario, the dimensions the incident tests most (official names): S1: 13 Digital Infrastructure, 10 AI & Policies, 6 Human Interface. S3: 11 AI for Inclusion (the false lockouts fall on prepaid and roaming users), 10 AI & Policies, 9 Impacts of Humans in AI Integration (the fix is a human review queue). S2: 6 Human Interface, 10 AI & Policies, 5 Level of Integration of AI in Workflows (a GenAI bot wired into account tools).
 
-Each institution's mandate is sourced from UAE texts. Examples: NOC may `notify` REG under Licence 2/2026 Art. 12.9.2; REG may `open_incident` and `request_report` under the Telecom Law and `issue_direction` under the licence; DPA may `request_breach_report` and `assess_transfer` under Federal Decree-Law 45/2021 (PDPL); CSC may `issue_advisory` under the Cyber Strategy 2019. EMS and FIN verbs with no UAE legal basis in the KB are kept, marked as having an empty basis, and counted as a finding. Some UAE AI-governance documents could only be found as summaries; they are UNVERIFIED and the gate will not accept them as evidence.
+Each institution's mandate is sourced from UAE texts. Examples: NOC may `notify` REG under Licence 2/2026 Art. 12.9.2; REG may `issue_direction` under the licence, and `open_incident` and `request_report` rest only on the Telecom Law's general oversight power, a thin basis I count as a finding; DPA may `request_breach_report` and `assess_transfer` under Federal Decree-Law 45/2021 (PDPL); CSC may `issue_advisory` under the Cyber Strategy 2019, which is a TRA presentation rather than a legal text. EMS and FIN verbs with no UAE legal basis in the KB are kept, marked as having an empty basis, and counted as a finding. Some UAE AI-governance documents could only be found as summaries; they are UNVERIFIED and the gate will not accept them as evidence.
 
 ## 5. Error scenarios
 
@@ -85,8 +85,8 @@ Where the solution faces controversy, and how it handles it:
 - Fixing one thing breaks another. The twin encodes the trade-off as invariants. In S3, "unblock everyone" restores legitimate customers but fails the fraud-block invariant; the accepted fix is a model rollback plus a human review queue. In S2, "turn the bot off" stops the leak but fails the benign-service invariant; the accepted fix is restoring retrieval scope and disabling the account tool. The coordinator logs an objective conflict when an action repairs one invariant and breaks another.
 - Forensics versus privacy. In S1 the vendor wants subscriber logs to diagnose the fault, which pulls against PDPL cross-border rules. In the twin, the full export leaves subscriber identifiers offshore and fails an invariant; the minimised export (MSISDN and IMSI dropped) clears the pending request without them, and as a high-impact verb it needs human approval after the gate.
 - Who has to act. Several institutions can act on the same incident, and some duties have no owner. The duty matrix makes this explicit: a duty nobody accepted becomes a gap, and two institutions claiming an exclusive duty becomes an overlap.
-- The model may be wrong with confidence. The gate does not trust it: a fluent paraphrase of a clause is rejected as not verbatim, and the rejection is shown to the agent and logged. The replay page shows every rejected claim next to the source text it misquoted.
-- Is the AI being blamed fairly? No official report on the real outages names AI as the root cause. The AI optimiser and fraud model are labelled extrapolations, and the report says so.
+- Confidently wrong models. The gate does not trust the model: a fluent paraphrase of a clause is rejected as not verbatim, and the rejection is shown to the agent and logged. The replay page shows every rejected claim next to the source text it misquoted.
+- Fair blame. No official report on the real outages names AI as the root cause. The AI optimiser and fraud model are labelled extrapolations, and the report says so.
 
 ## 6. Evaluation
 
@@ -122,11 +122,11 @@ Gaps come from three places: the duty matrix (a duty nobody accepted), the rule 
 
 | Gap | UAE text | Global examples |
 |---|---|---|
-| No fixed outage-notification deadline | Licence 2/2026 Art. 12.9.2 "as soon as possible" | CRTC 2025-225: 2 h to the regulator, 30 min to 911 centres; 47 CFR 4.9: 120 min, PSAP 30 min; NIS2 Art. 23: 24 h early warning |
+| No fixed outage-notification deadline | Licence 2/2026 Art. 12.9.2 "as soon as possible" | CRTC 2025-225: 2 h to the regulator; 30 min to 911 centres for 9-1-1 outages (encouraged, not required, for other outages); 47 CFR 4.9: 120 min, PSAP 30 min; NIS2 Art. 23: 24 h early warning |
 | No duty to notify emergency services directly | Same article | CRTC 2025-225; 47 CFR 4.9(h); Australian Bean review response |
-| No control on automated or AI-driven network changes | None in the telecom texts collected. The closest UAE text, the Cabinet's 2026 Agentic AI framework, covers federal government services, and its text is not published | ITU-T Y.3172 and Y.3181 (ML sandbox before deployment); EU AI Act; FCC AT&T 2024 report |
+| No control on automated or AI-driven network changes | None in the telecom texts collected. The closest UAE text, the Cabinet's 2026 Agentic AI framework, covers federal government services, and its text is not published | ITU-T Y.3172 and Y.3181 (ML sandbox before deployment); EU AI Act; FCC AT&T 2024 report (a manual change placed without enough controls) |
 | Breach-notification deadline waits on unissued Executive Regulations | PDPL | GDPR Art. 33: 72 h |
-| Right to object to automated decisions has no procedure yet | PDPL | GDPR Art. 22 |
+| Right to object to automated decisions has no procedure yet | PDPL Art. 18 gives the right and human review on request; the Executive Regulations that would set the procedure are not issued (law-firm commentary in the KB) | GDPR Art. 22 |
 | No UAE rule on SIM-swap authentication or notification | None found in the KB | FCC 23-95; 47 CFR 64.2010; ACMA Optus and Telstra actions |
 | No duty to disclose that a customer is talking to an AI system | TDRA Consumer Protection Regulations Art. 26.7.2 rules out non-human agents in complaint conversations, but there is no general disclosure duty | EU AI Act; Moffatt v Air Canada |
 
