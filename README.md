@@ -25,7 +25,7 @@ inject (staged, per-institution) -> agent inbox -> mandate-scoped retrieval -> m
   -> every step appended to a hash-chained audit log
 ```
 
-The model (DeepSeek-V4-Pro through its OpenAI-compatible API) only retrieves context, proposes and explains. It decides nothing. Reasoning traces are the agent's structured rationale (observation, rule, inference) plus the model-reported reasoning text the API returns; neither is claimed to be a verified chain of thought.
+The model (DeepSeek-V4.1-Flash, `deepseek-flash`, through its OpenAI-compatible API) only retrieves context, proposes and explains. It decides nothing. Reasoning traces are the agent's structured rationale (observation, rule, inference) plus the model-reported reasoning text the API returns; neither is claimed to be a verified chain of thought.
 
 ## ITU-T Y.3172 mapping
 
@@ -67,7 +67,12 @@ python -m tabletop verify-log runs/S1/run1.jsonl
 python -m tabletop replay runs/S1/run1.jsonl # re-executes with recorded responses; gate verdicts must be identical
 python -m tabletop eval                      # recomputes every number above from runs/
 python -m tabletop serve                     # demo page at http://127.0.0.1:8000
+python -m tabletop check-data                # every mandate and rule quote is verbatim in the KB
+python -m tabletop kb export                 # KB in the ITU reference toolkit InputDocs layout
+python3 docs/build_docx.py                   # report docx from docs/report.md (needs pandoc, python-docx)
 ```
+
+The scored runs in `runs/S1..S3` use DeepSeek-V4.1-Flash. `runs/pro-v4/` keeps an earlier set made with DeepSeek-V4-Pro as a second-model record (see its README).
 
 Live runs need `DEEPSEEK_API_KEY` in `.env` (not committed): `python -m tabletop run S1 --out runs/S1/run4.jsonl`.
 
@@ -75,9 +80,24 @@ Live runs need `DEEPSEEK_API_KEY` in `.env` (not committed): `python -m tabletop
 
 See `kb/README.md`. Sources are pinned by SHA-256 with their official URL; `python -m tabletop kb verify` re-hashes them after `kb fetch`. Each source carries a status (VERIFIED, SECONDARY, UNVERIFIED, HISTORICAL); the gate accepts only VERIFIED sources as evidence for an obligation or a global example.
 
+## Layout
+
+| Path | What |
+|---|---|
+| `tabletop/` | engine, gate, coordinator, twin, audit, evals, CLI, demo page |
+| `tabletop/data/` | mandates, rule table, scenarios, frozen answer keys |
+| `kb/` | manifest, clause chunks and text layer of the 61 sources |
+| `runs/` | recorded, hash-chained audit logs |
+| `eval/` | generated results |
+| `docs/` | report, design context |
+
 ## Limits
 
 - The answer keys were written by me, before the first live run (their hashes are in every run's first event). Recall is relative to those keys.
 - The twin models the incident-relevant layer only; it is not a protocol emulator.
 - The HITL step is a scripted facilitator in recorded runs.
 - Some UAE AI-governance PDFs could not be fetched from the official hosts; they are in the KB as UNVERIFIED summaries and cannot back an accepted claim.
+
+## License
+
+Code: MIT (see `LICENSE`). The documents in `kb/` belong to their publishers and are included for research use with their source URLs; the MIT license does not cover them.
