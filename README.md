@@ -89,7 +89,7 @@ See `kb/README.md`. Sources are pinned by SHA-256 with their official URL; `pyth
 | `kb/` | manifest, clause chunks and text layer of the 61 sources |
 | `runs/` | recorded, hash-chained audit logs |
 | `eval/` | generated results |
-| `docs/` | report, design context |
+| `docs/` | report and the script that builds its docx |
 
 ## Limits
 
