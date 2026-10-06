@@ -1,10 +1,10 @@
 # AI for Good Sandbox Hackathon - CalderBuild - Gated Multi-Institution Telecom Tabletop
 
 Team leader: Luo Lin (Calder), Beijing Information Science and Technology University
-Team members: none (solo entry). Contact details: [fill in before submission]
-Github link: [fill in after the public repo is created]
+Team members: none (solo entry). Contact details: johnrobertdestiny@gmail.com
+Github link: https://github.com/calderbuild/gated-telecom-tabletop
 
-DRAFT for my own review. Every number in this report comes from `python -m tabletop eval` and is pasted from `eval/results.md`; none is typed by hand. Layout follows the official submission template.
+Every number in this report comes from `python -m tabletop eval` and is pasted from `eval/results.md`; none is typed by hand. Layout follows the official submission template.
 
 ## 1. Introduction
 
