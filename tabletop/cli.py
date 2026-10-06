@@ -103,23 +103,30 @@ def cmd_run(args):
     return 0
 
 
+DERIVED = {"claim", "baseline_claim", "state_change", "clock_check", "gap_detected", "run_end"}
+
+
+def derived(events: list[dict]) -> list:
+    """Everything code computes from the model's replies; model_call metadata is excluded."""
+    return [(e["type"], e["data"]) for e in events if e["type"] in DERIVED]
+
+
 def cmd_replay(args):
-    """Re-execute a recorded run with its recorded model responses and compare every gate verdict."""
+    """Re-execute a recorded run with its recorded model responses and compare every derived event:
+    gate verdicts, twin state changes, clock checks, detected gaps and the final invariant check."""
     src = Path(args.log)
     events = audit.load(src)
-    sid = events[0]["data"]["scenario"]
-    out = ROOT / "runs" / "scratch" / f"replay-{src.stem}.jsonl"
+    start = events[0]["data"]
+    out = ROOT / "runs" / "scratch" / f"replay-{src.parent.name}-{src.stem}.jsonl"
     out.unlink(missing_ok=True)  # scratch output, regenerated each time
-    Run(load_scenario(sid), Replay(events), out).run()
-    pick = lambda evs: [
-        (e["data"]["agent"], e["data"]["accepted"], e["data"]["reasons"])
-        for e in evs
-        if e["type"] == "claim"
-    ]
-    a, b = pick(events), pick(audit.load(out))
+    if start.get("mode") == "baseline":
+        baseline(load_scenario(start["scenario"]), Replay(events), out)
+    else:
+        Run(load_scenario(start["scenario"]), Replay(events), out).run()
+    a, b = derived(events), derived(audit.load(out))
     same = a == b
     print(
-        f"replayed {src.name}: {len(b)} claims, verdicts {'identical' if same else 'DIFFER'} to the recording"
+        f"replayed {src}: {len(b)} derived events, {'identical' if same else 'DIFFER'} to the recording"
     )
     return 0 if same else 1
 

@@ -53,3 +53,18 @@ def test_non_event_line_is_reported_not_raised(tmp_path):
     path = tmp_path / "log.jsonl"
     path.write_text("[1, 2]\n")
     assert not verify(path)[0]
+
+
+def test_baseline_with_unparseable_reply_still_closes_its_log(tmp_path):
+    from tabletop import engine
+
+    class Garbled:
+        name, model = "garbled", "m"
+
+        def complete(self, system, user, tag):
+            return {"text": "not json", "reasoning": None, "response_id": "r", "model": "m",
+                    "usage": {}, "latency_s": 0, "finish_reason": "stop"}
+
+    log = engine.baseline(engine.load_scenario("S1"), Garbled(), tmp_path / "b.jsonl")
+    ok, msg = verify(log)
+    assert ok, msg

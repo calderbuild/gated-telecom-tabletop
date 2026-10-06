@@ -411,6 +411,7 @@ def baseline(scenario: dict, provider, log_path: Path) -> Path:
     obj, err = parse_json(resp["text"])
     if err:
         log.append("parse_error", agent="baseline", tag=tag, error=err)
+        log.append("run_end", metrics={}, check={"holds": None}, accepted=None, steps={})
         return log.path
     ids = {c["chunk_id"] for c in retrieved}
     for claim in obj.get("claims", []):

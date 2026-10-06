@@ -3,18 +3,21 @@ on: [push, pull_request]
 jobs:
   reproduce:
     runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        python: ["3.11", "3.12"]
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5
         with:
-          python-version: "3.12"
+          python-version: ${{ matrix.python }}
       - run: pip install -e '.[dev]'
       - run: python -m tabletop selftest
       - run: python -m pytest -q
       - run: python -m tabletop check-data
       - name: verify every recorded log
         run: for f in runs/S*/*.jsonl; do python -m tabletop verify-log "$f"; done
-      - name: replay one run per scenario (recorded responses, no API calls)
-        run: for s in S1 S2 S3; do python -m tabletop replay runs/$s/run1.jsonl; done
+      - name: replay every run and baseline from recorded responses (no API calls)
+        run: for f in runs/S*/*.jsonl; do python -m tabletop replay "$f"; done
       - name: recompute every reported number
         run: python -m tabletop eval && git diff --exit-code eval/ README.md

@@ -10,6 +10,7 @@ from docx.shared import Inches, Pt
 
 HERE = Path(__file__).parent
 OUT = HERE / "out" / "report.docx"
+OUT.parent.mkdir(exist_ok=True)
 subprocess.run(["pandoc", str(HERE / "report.md"), "--resource-path", str(HERE), "-o", str(OUT)], check=True)
 d = docx.Document(OUT)
 for sec in d.sections:
