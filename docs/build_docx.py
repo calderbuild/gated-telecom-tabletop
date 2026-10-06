@@ -10,7 +10,7 @@ from docx.shared import Inches, Pt
 
 HERE = Path(__file__).parent
 OUT = HERE / "out" / "report.docx"
-subprocess.run(["pandoc", str(HERE / "report.md"), "-o", str(OUT)], check=True)
+subprocess.run(["pandoc", str(HERE / "report.md"), "--resource-path", str(HERE), "-o", str(OUT)], check=True)
 d = docx.Document(OUT)
 for sec in d.sections:
     sec.left_margin = sec.right_margin = Inches(0.7)

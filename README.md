@@ -69,6 +69,7 @@ python -m tabletop eval                      # recomputes every number above fro
 python -m tabletop serve                     # demo page at http://127.0.0.1:8000
 python -m tabletop check-data                # every mandate and rule quote is verbatim in the KB
 python -m tabletop kb export                 # KB in the ITU reference toolkit InputDocs layout
+python3 docs/figures.py                      # report figures from eval/results.json (needs matplotlib)
 python3 docs/build_docx.py                   # report docx from docs/report.md (needs pandoc, python-docx)
 ```
 
@@ -89,7 +90,7 @@ See `kb/README.md`. Sources are pinned by SHA-256 with their official URL; `pyth
 | `kb/` | manifest, clause chunks and text layer of the 61 sources |
 | `runs/` | recorded, hash-chained audit logs |
 | `eval/` | generated results |
-| `docs/` | report and the script that builds its docx |
+| `docs/` | report, its figures (`fig/`) and the scripts that build them |
 
 ## Limits
 
