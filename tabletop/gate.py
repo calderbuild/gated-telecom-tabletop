@@ -53,6 +53,12 @@ def _evidence(items, ctx, need_verified, need_global=False):
     return reasons
 
 
+def _audiences(ctx: dict, verb) -> set:
+    """Who a verb may address: the mandate's own "to" list (e.g. customers, public), else any institution."""
+    spec = ctx["mandate"]["verbs"].get(verb, {}).get("params", {}).get("to") if isinstance(verb, str) else None
+    return set(spec.split(" | ")) if isinstance(spec, str) else set(ctx["institutions"])
+
+
 def check(claim: dict, ctx: dict) -> list[str]:
     """Return the list of failure reasons; empty means accepted.
 
@@ -100,7 +106,7 @@ def check(claim: dict, ctx: dict) -> list[str]:
             reasons.append("SCHEMA:params")
         elif "to" in params and (
             not isinstance(params["to"], str)
-            or params["to"] not in ctx["institutions"]
+            or params["to"] not in _audiences(ctx, verb)
             or params["to"] == ctx["agent"]
         ):
             reasons.append(f"ROUTE:{params['to']}")

@@ -6,8 +6,8 @@ KB: 61 sources, 4079 chunks; status {'VERIFIED': 54, 'UNVERIFIED': 2, 'SECONDARY
 
 | Scenario | Runs (chain ok) | Claims | Rejected by gate | Citation validity (mean, min-max) | Action recall | Obligation recall | Gap recall, agents | Gap recall, agents + rules | Abstention | Loop restored | Ungated baseline: claims the gate would reject | Baseline gap recall ungated / gated |
 |---|---|---|---|---|---|---|---|---|---|---|---|---|
-| S1 | 3/3 | 2714 | 80 | 0.99 (0.99-0.99) | 0.86 (0.86-0.86) | 0.67 (0.67-0.67) | 1.00 (1.00-1.00) | 1.00 (1.00-1.00) | 3/3 | 3/3 | 80/115 | 0.3889 / 0.2222 |
-| S3 | 3/3 | 1506 | 84 | 0.99 (0.98-0.99) | 1.00 (1.00-1.00) | 0.83 (0.50-1.00) | 1.00 (1.00-1.00) | 1.00 (1.00-1.00) | 3/3 | 3/3 | 73/95 | 0.5333 / 0.4667 |
-| S2 | 3/3 | 1670 | 47 | 0.98 (0.98-0.98) | 0.83 (0.83-0.83) | 0.22 (0.00-0.33) | 0.94 (0.83-1.00) | 0.94 (0.83-1.00) | 3/3 | 2/3 | 44/81 | 0.3333 / 0.3333 |
+| S1 | 3/3 | 2889 | 97 | 0.98 (0.96-0.99) | 0.95 (0.86-1.00) | 0.56 (0.33-0.67) | 1.00 (1.00-1.00) | 1.00 (1.00-1.00) | 3/3 | 3/3 | 80/115 | 0.3889 / 0.2222 |
+| S3 | 3/3 | 1434 | 40 | 0.99 (0.99-0.99) | 1.00 (1.00-1.00) | 0.67 (0.50-1.00) | 1.00 (1.00-1.00) | 1.00 (1.00-1.00) | 3/3 | 3/3 | 73/95 | 0.5333 / 0.4667 |
+| S2 | 3/3 | 1664 | 49 | 0.98 (0.96-0.99) | 1.00 (1.00-1.00) | 0.67 (0.67-0.67) | 1.00 (1.00-1.00) | 1.00 (1.00-1.00) | 3/3 | 3/3 | 44/81 | 0.3333 / 0.3333 |
 
 Recall is measured against answer keys I wrote before the first live run (hash in each run_start event). It is relative to those keys, not to all possible gaps. Injects are synthetic.

@@ -95,3 +95,9 @@ def test_malformed_model_shapes_are_rejected_not_raised():
 def test_notify_to_self_or_unknown_is_a_route_error():
     assert any(r.startswith("ROUTE") for r in check(claim(params={"to": "NOC"}), CTX))
     assert any(r.startswith("ROUTE") for r in check(claim(params={"to": "FBI"}), CTX))
+
+
+def test_notify_reaches_audiences_the_mandate_lists():
+    ctx = {**CTX, "mandate": {"verbs": {"notify": {"params": {"to": "REG | customers"}}}}}
+    assert check(claim(params={"to": "customers"}), ctx) == []
+    assert any(r.startswith("ROUTE") for r in check(claim(params={"to": "EMS"}), ctx))
