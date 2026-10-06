@@ -101,3 +101,9 @@ def test_notify_reaches_audiences_the_mandate_lists():
     ctx = {**CTX, "mandate": {"verbs": {"notify": {"params": {"to": "REG | customers"}}}}}
     assert check(claim(params={"to": "customers"}), ctx) == []
     assert any(r.startswith("ROUTE") for r in check(claim(params={"to": "EMS"}), ctx))
+
+
+def test_malformed_obligation_evidence_is_rejected_not_a_crash():
+    for ev in ([{"chunk_id": ["UAE-LIC#1"], "quote": "x"}], 5):
+        c = {"type": "obligation", "owner": "NOC", "deadline_hours": 2, "inject_refs": ["S1-I2"], "evidence": ev}
+        assert check(c, CTX)

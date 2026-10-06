@@ -118,8 +118,8 @@ def check(claim: dict, ctx: dict) -> list[str]:
         if hours is not None:
             docs = {
                 ctx["chunks"][e["chunk_id"]]["doc_id"]
-                for e in evidence
-                if isinstance(e, dict) and e.get("chunk_id") in ctx["chunks"]
+                for e in (evidence if isinstance(evidence, list) else [])
+                if isinstance(e, dict) and isinstance(e.get("chunk_id"), str) and e["chunk_id"] in ctx["chunks"]
             }
             if not any(
                 r["doc_id"] in docs and r["hours"] == hours for r in ctx["rules"]
