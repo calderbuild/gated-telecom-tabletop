@@ -10,3 +10,4 @@ kb/raw/
 .pytest_cache/
 runs/scratch/
 kb/toolkit/
+docs/out/
